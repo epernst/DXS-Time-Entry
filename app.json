@@ -1,0 +1,26 @@
+{
+  "id": "d391a9da-a640-4a04-83dd-e2ed3ff77ee9",
+  "name": "DX-Job-Extension-1",
+  "publisher": "Default publisher",
+  "brief": "",
+  "description": "",
+  "version": "1.0.0.0",
+  "compatibilityId": "1.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "capabilities": [],
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "11.0.0.0",
+  "application": {
+    "version": "11.0.0.0",
+    "locale": "DK"
+  },
+  "idRange": {
+    "from": 50100,
+    "to": 70149
+  }
+}
