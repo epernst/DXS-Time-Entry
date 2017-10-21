@@ -1,4 +1,4 @@
-tableextension 62005 DxUnitOfMeasure extends "Unit of Measure"
+tableextension 62005 UnitOfMeasureTime extends "Unit of Measure"
 {
     fields
     {
@@ -13,18 +13,19 @@ tableextension 62005 DxUnitOfMeasure extends "Unit of Measure"
             Caption ='Time Rounding';
             trigger OnValidate();
             begin 
-                if ("Time Rounding" <> 0) and 
-                   ("Special Unit Calculation" <> "Special Unit Calculation"::Hour)
+                if ("Time Rounding" = 0) or 
+                   ("Special Unit Calculation" = "Special Unit Calculation"::Hour)
                 then
-                    error(
-                        NotHourSpecialUnitErr,
-                        FieldCaption("Special Unit Calculation"),
-                        "Special Unit Calculation"::Hour)
+                    exit;
+                error(
+                    NotHourSpecialUnitErr,
+                    FieldCaption("Special Unit Calculation"),
+                    "Special Unit Calculation"::Hour)
             end;
         }
     }
 
     var
-        NotHourSpecialUnitErr : Label 'It is only possible to use Time Rounding with units, where %1 is %2', Comment = '%1 Special Unit caption and %2 value', Maxlength=200;
+        NotHourSpecialUnitErr : Label 'It is only possible to use Time Rounding with units, where %1 is %2', Comment = '%1 Special Unit caption and %2 value', Maxlength=100;
 
 }
