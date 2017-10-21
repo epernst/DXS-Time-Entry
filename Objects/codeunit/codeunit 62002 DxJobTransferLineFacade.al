@@ -1,15 +1,5 @@
-codeunit 62001 DxJobFacade
+codeunit 62002 DxJobTransferLineFacade
 {
-    [EventSubscriber(ObjectType::Table, 210, 'OnAfterValidateEvent', 'Line Type', false, false)]
-    local procedure OnAfterValidateLineType(
-        var Rec : Record "Job Journal Line");
-    begin
-        with Rec do begin
-            if "Job No." <> '' then
-                Chargeable := ("Line Type" <> "Line Type"::Budget);
-        end;
-    end;
-
     [EventSubscriber(ObjectType::Codeunit, 1004, 'onAfterFromJnlLineToLedgEntry', '', false, false)]
     local procedure onAfterFromJnlLineToLedgEntry(
       var JobLedgerEntry : Record "Job Ledger Entry"; 

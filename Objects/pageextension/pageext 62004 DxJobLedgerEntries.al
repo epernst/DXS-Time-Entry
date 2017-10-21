@@ -1,4 +1,4 @@
-pageextension 62005 DxJobLedgerEntriesPage extends "Job Ledger Entries" 
+pageextension 62004 DxJobLedgerEntries extends "Job Ledger Entries" 
 {
   layout
   {

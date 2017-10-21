@@ -1,11 +1,11 @@
-pageextension 62003 DxJobListPage extends "Job List" 
+pageextension 62003 DxJobList extends "Job List" 
 {
 
   layout
   {
     addbefore("Job Details")
     {
-      part("Job Summery";"Job Summary FactBox")
+      part("Job Summery";DxJobSummaryFactBox)
       {
         ApplicationArea = All;
         Caption = 'Job Summery';

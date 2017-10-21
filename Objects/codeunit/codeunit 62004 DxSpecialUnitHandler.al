@@ -1,4 +1,4 @@
-codeunit 62004 SpecialUnitHandler
+codeunit 62004 DxSpecialUnitHandler
 {
     trigger OnRun();
     begin
@@ -57,7 +57,7 @@ codeunit 62004 SpecialUnitHandler
             if IsEmpty then exit('');
 
             FilterText := '';
-            findset;
+            FindSet;
             repeat
                 if FilterText <> '' then
                     FilterText += '|';

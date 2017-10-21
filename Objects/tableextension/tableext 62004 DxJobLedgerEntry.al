@@ -1,4 +1,4 @@
-tableextension 62004 DxJobLedgerEntryPage extends "Job Ledger Entry" 
+tableextension 62004 DxJobLedgerEntry extends "Job Ledger Entry" 
 {
     fields
     {

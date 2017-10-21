@@ -1,4 +1,4 @@
-tableextension 62001 DxJobExtension extends Job 
+tableextension 62001 DxJob extends Job 
 {
   fields
   {

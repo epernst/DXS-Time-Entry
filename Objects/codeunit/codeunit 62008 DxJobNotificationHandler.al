@@ -1,4 +1,4 @@
-codeunit 62008 HourUOMNotificationHandler
+codeunit 62008 DxJobNotificationHandler
 {
     trigger OnRun();
     begin
@@ -14,7 +14,7 @@ codeunit 62008 HourUOMNotificationHandler
            
     procedure CreateHourNotificationIfNoSetup();
     var
-        SpecialUnitHandler : Codeunit SpecialUnitHandler;
+        SpecialUnitHandler : Codeunit DxSpecialUnitHandler;
     begin
         if SpecialUnitHandler.GetUnitOfMeasureHour then exit;
         CreateHourSetupNotification;
@@ -22,7 +22,7 @@ codeunit 62008 HourUOMNotificationHandler
 
     local procedure CreateHourSetupNotification();
     var
-        SpecialUnitHandler : Codeunit SpecialUnitHandler;
+        SpecialUnitHandler : Codeunit DxSpecialUnitHandler;
         MyNotifications : Record "My Notifications";
         HourNotification : Notification;
     begin
@@ -31,8 +31,8 @@ codeunit 62008 HourUOMNotificationHandler
             id := GetNoHourUnitOfMeasureNotificationId;
             Message := NoHourUnitOfMeasureNotificationMsg;
             Scope := Scope::LocalScope;
-            AddAction(NoHourUnitOfMeasureSetupAct,Codeunit::HourUOMNotificationHandler,'RunSetupHourUnitOfMeasure');
-            AddAction(DismissFurtherNotificationsAct,Codeunit::HourUOMNotificationHandler,'DismissNotification');
+            AddAction(NoHourUnitOfMeasureSetupAct,Codeunit::DxJobNotificationHandler,'RunSetupHourUnitOfMeasure');
+            AddAction(DismissFurtherNotificationsAct,Codeunit::DxJobNotificationHandler,'DismissNotification');
             Send;
         end;
     end;

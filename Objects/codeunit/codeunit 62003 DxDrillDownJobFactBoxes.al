@@ -7,7 +7,7 @@ codeunit 62003 DxDrillDownJobFactBoxes
         DrillDownField : Option BillableHours,NonBillableHours,TotalSales,TotalCost,TotalProfit);
     var
         JobJournalLine : Record "Job Journal Line";
-        JobUOM : Codeunit SpecialUnitHandler;
+        JobUOM : Codeunit DxSpecialUnitHandler;
     begin
         with JobJournalLine do begin
             SetRange("Journal Template Name",JobJournalLine."Journal Template Name");
@@ -34,7 +34,7 @@ codeunit 62003 DxDrillDownJobFactBoxes
         DrillDownField : Option BillableHours,NonBillableHours,TotalSales,TotalCost,TotalProfit);
     var
         JobLedgerEntry : Record "Job Ledger Entry";
-        JobUOM : Codeunit SpecialUnitHandler;
+        JobUOM : Codeunit DxSpecialUnitHandler;
     begin
         with JobLedgerEntry do begin
             SetRange("Job No.",JobNo);

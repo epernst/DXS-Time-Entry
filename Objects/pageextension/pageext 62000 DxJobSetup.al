@@ -1,4 +1,4 @@
-pageextension 50103 JobSetupTime extends "Jobs Setup"
+pageextension 62000 DxJobSetup extends "Jobs Setup"
 {
     layout
     {

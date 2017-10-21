@@ -1,4 +1,4 @@
-pageextension 50155 UnitOfMeasure extends "Units of Measure"
+pageextension 62005 DxUnitsOfMeasure extends "Units of Measure"
 {
   layout
   {
@@ -14,6 +14,7 @@ pageextension 50155 UnitOfMeasure extends "Units of Measure"
             ToolTip = 'Specify how to round start and end time based entries in the jobs module. For example enter 0.25 to have 15 minutes as the minimum time to use.';
             ApplicationArea = All;          
             Editable = IsSpecialUnit;
+            ShowMandatory = IsSpecialUnit;
         }
     }
   }

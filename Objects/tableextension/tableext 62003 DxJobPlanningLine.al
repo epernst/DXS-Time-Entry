@@ -1,4 +1,4 @@
-tableextension 62002 JobJournalLineTime extends "Job Journal Line" 
+tableextension 62003 DxJobPlanningLine extends "Job Planning Line" 
 {
     fields
     {
@@ -6,15 +6,15 @@ tableextension 62002 JobJournalLineTime extends "Job Journal Line"
         {
             Caption = 'Start Time';
             trigger OnValidate();
-            var
-                SpecialUnitHandler : Codeunit SpecialUnitHandler;
+            var 
+                SpecialUnitHandler : Codeunit DxSpecialUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourUOM("Unit of Measure Code",FieldCaption("Start Date Time"),true) then begin
+                if not SpecialUnitHandler.ValidateHourUOM("Unit of Measure Code",FieldCaption("Start Time"),true) then begin
                     InitJobTimes;
                     exit;
                 end;
                 if "Start Time" = xRec."Start Time" then exit;
-                Validate("Start Date Time",CreateDateTime("Posting Date","Start Time"));
+                Validate("Start Date Time",CreateDateTime("Planning Date","Start Time"))
             end;
         }
         field(62001;"End Time";Time)
@@ -22,16 +22,16 @@ tableextension 62002 JobJournalLineTime extends "Job Journal Line"
             Caption = 'End Time';
             trigger OnValidate();
             var
-                SpecialUnitHandler : Codeunit SpecialUnitHandler;
+                SpecialUnitHandler : Codeunit DxSpecialUnitHandler;
             begin
                 if not SpecialUnitHandler.ValidateHourUOM("Unit of Measure Code",FieldCaption("End Time"),true) then begin
                     InitJobTimes;
                     exit;
                 end;
                 if "End Time" < "Start Time" then
-                    Validate("End Date Time",CreateDateTime("Posting Date"+1,"End Time"))
+                    Validate("End Date Time",CreateDateTime("Planning Date"+1,"End Time"))
                 else
-                    Validate("End Date Time",CreateDateTime("Posting Date","End Time"));
+                    Validate("End Date Time",CreateDateTime("Planning Date","End Time"));
             end;
         }
         field(62003;"Start Date Time";DateTime)
@@ -39,7 +39,7 @@ tableextension 62002 JobJournalLineTime extends "Job Journal Line"
             Caption = 'Start Date Time';
             trigger OnValidate();
             var
-                SpecialUnitHandler : Codeunit SpecialUnitHandler;
+                SpecialUnitHandler : Codeunit DxSpecialUnitHandler;
             begin
                 if not SpecialUnitHandler.ValidateHourUOM("Unit of Measure Code",FieldCaption("Start Date Time"),true) then begin
                     InitJobTimes;
@@ -57,7 +57,7 @@ tableextension 62002 JobJournalLineTime extends "Job Journal Line"
             Caption = 'End Date Time';
             trigger OnValidate();
             var
-                SpecialUnitHandler : Codeunit SpecialUnitHandler;
+                SpecialUnitHandler : Codeunit DxSpecialUnitHandler;
             begin
                 if not SpecialUnitHandler.ValidateHourUOM("Unit of Measure Code",FieldCaption("End Date Time"),true) then begin
                     InitJobTimes;
@@ -77,7 +77,7 @@ tableextension 62002 JobJournalLineTime extends "Job Journal Line"
             trigger OnValidate();
             var
                 UnitOfMeasure : Record "Unit of Measure";
-                SpecialUnitHandler : Codeunit SpecialUnitHandler;
+                SpecialUnitHandler : Codeunit DxSpecialUnitHandler;
             begin
                 if not SpecialUnitHandler.ValidateHourUOM("Unit of Measure Code",FieldCaption("Total Duration"),true) then begin
                     InitJobTimes;
@@ -98,6 +98,7 @@ tableextension 62002 JobJournalLineTime extends "Job Journal Line"
             end;
         }
     }
+    
     procedure InitJobTimes();
     begin
         "Start Time" := 0T;

@@ -1,4 +1,4 @@
-pageextension 62002 JobJournalPage extends "Job Journal" 
+pageextension 62002 DxJobJournal extends "Job Journal" 
 {
   layout
   {
@@ -34,7 +34,7 @@ pageextension 62002 JobJournalPage extends "Job Journal"
     }
     addfirst(FactBoxes)
     {
-      part(JobJournalSummeryFactBox;"Job Journal Summary FactBox")
+      part(JobJournalSummeryFactBox;DxJobJournalSummaryFactBox)
       {
         ApplicationArea = All;
         SubPageLink = 
@@ -65,7 +65,7 @@ pageextension 62002 JobJournalPage extends "Job Journal"
 
   local procedure GetTimeEditable() : Boolean;
     var
-      JobUOM : Codeunit SpecialUnitHandler;
+      JobUOM : Codeunit DxSpecialUnitHandler;
     begin
         exit(jobuom.IsUOMforHours("Unit of Measure Code"));
     end;
