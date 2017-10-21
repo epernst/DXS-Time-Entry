@@ -1,7 +1,7 @@
 codeunit 62001 DxJobFacade
 {
     [EventSubscriber(ObjectType::Table, 210, 'OnAfterValidateEvent', 'Line Type', false, false)]
-    local procedure T210_OnAfterValidate(
+    local procedure OnAfterValidateLineType(
         var Rec : Record "Job Journal Line");
     begin
         with Rec do begin
@@ -66,4 +66,3 @@ codeunit 62001 DxJobFacade
         end;
     end;
 }
-
