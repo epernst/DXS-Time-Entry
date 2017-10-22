@@ -1,4 +1,4 @@
-tableextension 62003 DxJobPlanningLine extends "Job Planning Line" 
+tableextension 62002 DxJobJournalLine extends "Job Journal Line" 
 {
     fields
     {
@@ -6,15 +6,15 @@ tableextension 62003 DxJobPlanningLine extends "Job Planning Line"
         {
             Caption = 'Start Time';
             trigger OnValidate();
-            var 
+            var
                 SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Time"),true) then begin
+                if not SpecialUnitHandler.ValidateHourUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Date Time"),true) then begin
                     InitJobTimes;
                     exit;
                 end;
                 if "Start Time" = xRec."Start Time" then exit;
-                Validate("Start Date Time",CreateDateTime("Planning Date","Start Time"))
+                Validate("Start Date Time",CreateDateTime("Posting Date","Start Time"));
             end;
         }
         field(62001;"End Time";Time)
@@ -29,9 +29,9 @@ tableextension 62003 DxJobPlanningLine extends "Job Planning Line"
                     exit;
                 end;
                 if "End Time" < "Start Time" then
-                    Validate("End Date Time",CreateDateTime("Planning Date"+1,"End Time"))
+                    Validate("End Date Time",CreateDateTime("Posting Date"+1,"End Time"))
                 else
-                    Validate("End Date Time",CreateDateTime("Planning Date","End Time"));
+                    Validate("End Date Time",CreateDateTime("Posting Date","End Time"));
             end;
         }
         field(62003;"Start Date Time";DateTime)
@@ -98,7 +98,6 @@ tableextension 62003 DxJobPlanningLine extends "Job Planning Line"
             end;
         }
     }
-    
     procedure InitJobTimes();
     begin
         "Start Time" := 0T;

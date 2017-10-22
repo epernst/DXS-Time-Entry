@@ -2,6 +2,13 @@ pageextension 62001 DxJobPlanningLines extends "Job Planning Lines"
 {
     layout
     {
+      modify("Unit of Measure Code"){
+        trigger OnAfterValidate();
+        begin
+          UpdatePage;
+        end;
+      }
+
       addafter(Reserve)
       {
         field("Start Time";"Start Time")
@@ -35,17 +42,18 @@ pageextension 62001 DxJobPlanningLines extends "Job Planning Lines"
     }
     trigger OnOpenPage();
     begin
-      IsTimeEditable := false;
+      UpdatePage;
     end;
     
     trigger OnNewRecord(BelowxRec : Boolean);
     begin
-      IsTimeEditable := GetTimeEditable;  
+      InitJobTimes;
+      UpdatePage;
     end;
 
     trigger OnAfterGetCurrRecord();
     begin
-      IsTimeEditable := GetTimeEditable;  
+      UpdatePage;
     end;
     
     var
@@ -53,10 +61,14 @@ pageextension 62001 DxJobPlanningLines extends "Job Planning Lines"
 
     local procedure GetTimeEditable() : Boolean;
       var
-        JobUOM : Codeunit DxSpecialUnitHandler;
+        DxHourlyUnitHandler : Codeunit DxHourlyUnitHandler;
       begin
-          exit(jobuom.IsUOMforHours("Unit of Measure Code"));
+          exit(DxHourlyUnitHandler.IsUOMforHours("Unit of Measure Code"));
+      end;
+
+    local procedure UpdatePage();
+      begin
+        IsTimeEditable := GetTimeEditable;
       end;
 
 }
-

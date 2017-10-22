@@ -4,7 +4,7 @@ pageextension 62005 DxUnitsOfMeasure extends "Units of Measure"
   {
     addbefore("International Standard Code")
     {
-        field("Special Unit Calculation";"Special Unit Calculation")
+        field("Hourly Unit";"Hourly Unit")
         {
             ToolTip = 'Specify if the unit of measure is either hour or distance based. Only used in the jobs module.';
             ApplicationArea = All;
@@ -13,14 +13,14 @@ pageextension 62005 DxUnitsOfMeasure extends "Units of Measure"
         {
             ToolTip = 'Specify how to round start and end time based entries in the jobs module. For example enter 0.25 to have 15 minutes as the minimum time to use.';
             ApplicationArea = All;          
-            Editable = IsSpecialUnit;
-            ShowMandatory = IsSpecialUnit;
+            Editable = IsHourlyUnit;
+            ShowMandatory = IsHourlyUnit;
         }
     }
   }
   trigger OnOpenPage();
   begin
-    IsSpecialUnit := false;
+    IsHourlyUnit := false;
   end;
   
   trigger OnNewRecord(BelowxRec : Boolean);
@@ -34,11 +34,11 @@ pageextension 62005 DxUnitsOfMeasure extends "Units of Measure"
   end;
   
   var
-    IsSpecialUnit : Boolean;
+    IsHourlyUnit : Boolean;
 
   local procedure UpdatePage();
   begin
-    IsSpecialUnit := "Special Unit Calculation" = "Special Unit Calculation"::Hour;  
+    IsHourlyUnit := "Hourly Unit";  
   end;
 
 }

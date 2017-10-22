@@ -1,48 +1,45 @@
-codeunit 62004 DxSpecialUnitHandler
+codeunit 62004 DxHourlyUnitHandler
 {
     trigger OnRun();
     begin
     end;
     
     var
-        CanOnlyUseWithTypeErr : Label '%1 can only be used with a %2, which have been setup as a "%3" of the type %4.';
+        CanOnlyUseWithTypeErr : Label '%1 can only be used with a %2, which have been setup as a "%3".';
 
-    procedure ValidateHourUOM(UnitOfMeasureCode : Code[10];TestFieldCaption : Text;ShowMessage : Boolean) : Boolean;
+    procedure ValidateHourUnitOfMeasure(UnitOfMeasureCode : Code[10];TestFieldCaption : Text;ShowMessage : Boolean) : Boolean;
     var
         UnitOfMeasure : Record "Unit of Measure";
     begin
         with UnitOfMeasure do begin
-            if get(UnitOfMeasureCode) and 
-                ("Special Unit Calculation" = "Special Unit Calculation"::Hour) 
-            then 
+            if get(UnitOfMeasureCode) and "Hourly Unit" then 
                 exit(true);
             if ShowMessage and GuiAllowed then
                 Message(
                     CanOnlyUseWithTypeErr,
                     TestFieldCaption,
                     TableCaption,
-                    FieldCaption("Special Unit Calculation"),
-                    "Special Unit Calculation"::Hour);
+                    FieldCaption("Hourly Unit"));
             exit(false);
         end;
     end;
 
-    procedure IsUOMforHours(UOMCode : Code[10]) : Boolean;
+    procedure IsUOMforHours(UnitOfMeasureCode : Code[10]) : Boolean;
     var
         UnitOfMeasure : Record "Unit of Measure";
     begin 
         with UnitOfMeasure do begin
-            if not get(UOMCode) then exit(false);
-            exit("Special Unit Calculation" = "Special Unit Calculation"::Hour);
+            if not get(UnitOfMeasureCode) then exit(false);
+            exit("Hourly Unit");
         end;
     end;
 
-    procedure GetUnitOfMeasureHour() : Boolean;
+    procedure HourlyUnitExits() : Boolean;
     var
         UnitOfMeasure : Record "Unit of Measure";
     begin 
         with UnitOfMeasure do begin
-            SetRange("Special Unit Calculation", "Special Unit Calculation"::Hour);
+            SetRange("Hourly Unit", true);
             exit(not IsEmpty);
         end;
     end;
@@ -53,7 +50,7 @@ codeunit 62004 DxSpecialUnitHandler
         FilterText : Text;
     begin 
         with UnitOfMeasure do begin
-            SetRange("Special Unit Calculation", "Special Unit Calculation"::Hour);
+            SetRange("Hourly Unit", true);
             if IsEmpty then exit('');
 
             FilterText := '';

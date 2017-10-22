@@ -1,4 +1,4 @@
-pageextension 62002 DxJobJournal extends "Job Journal" 
+pageextension 62006 DxResourceJournal extends "Resource Journal" 
 {
   layout
   {
@@ -14,23 +14,21 @@ pageextension 62002 DxJobJournal extends "Job Journal"
       {
         ApplicationArea = All;
         Editable = IsTimeEditable;
-        Visible = IsTimeEntryEnabled;
       }
       field("End Time";"End Time")
       {
         ApplicationArea = All;
         Editable = IsTimeEditable;
-        Visible = IsTimeEntryEnabled;
       }
       field("Start Date Time";"Start Date Time")
       {
-        Visible = IsTimeEntryEnabled;
+        Visible = false;
         Editable = IsTimeEditable;
         ApplicationArea = All;
       }
       field("End Date Time";"End Date Time")
       {
-        Visible = IsTimeEntryEnabled;
+        Visible = false;
         Editable = IsTimeEditable;
         ApplicationArea = All;
       }
@@ -40,24 +38,9 @@ pageextension 62002 DxJobJournal extends "Job Journal"
         ApplicationArea = All;
       }
     }
-    addfirst(FactBoxes)
-    {
-      part(JobJournalSummeryFactBox;DxJobJournalSummaryFactBox)
-      {
-        ApplicationArea = All;
-        SubPageLink = 
-          "Journal Template Name"=FIELD("Journal Template Name"),
-          "Journal Batch Name"=FIELD("Journal Batch Name"),
-          "Line No."=FIELD("Line No.");
-        Visible = true;
-      }
-    }
   }
   trigger OnOpenPage();
-  var 
-    TimePermissionHandler : Codeunit DxTimePermissionHandler;
   begin
-    IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled; 
     UpdatePage;
   end;
   
@@ -74,13 +57,12 @@ pageextension 62002 DxJobJournal extends "Job Journal"
   
   var
     IsTimeEditable : Boolean;
-    IsTimeEntryEnabled  : Boolean;
 
   local procedure GetTimeEditable() : Boolean;
     var
-      JobUOM : Codeunit DxHourlyUnitHandler;
+      DxHourlyUnitHandler : Codeunit DxHourlyUnitHandler;
     begin
-        exit(jobuom.IsUOMforHours("Unit of Measure Code"));
+        exit(DxHourlyUnitHandler.IsUOMforHours("Unit of Measure Code"));
     end;
 
   local procedure UpdatePage();
@@ -88,3 +70,4 @@ pageextension 62002 DxJobJournal extends "Job Journal"
       IsTimeEditable := GetTimeEditable;
     end;
 }
+

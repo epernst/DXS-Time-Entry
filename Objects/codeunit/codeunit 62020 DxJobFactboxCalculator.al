@@ -1,4 +1,4 @@
-codeunit 62000 DxJobFactboxCalculator
+codeunit 62020 DxJobFactboxCalculator
 {
     trigger OnRun();
     begin
@@ -15,7 +15,7 @@ codeunit 62000 DxJobFactboxCalculator
         var AvgPricePerUOM : Decimal);
     var
         Job : Record Job;
-        JobUOM : Codeunit DxSpecialUnitHandler;
+        JobUOM : Codeunit DxHourlyUnitHandler;
     begin
         if JobUOM.GetUnitOfMeasureHourFilter = '' THEN exit;
         if (not Job.GET(JobJournalLine."Job No.")) and (ViewType <> ViewType::TotalJobJournal) then exit;
@@ -47,7 +47,7 @@ codeunit 62000 DxJobFactboxCalculator
         var TotalProfit : Decimal;
         var AvgPricePerUOM : Decimal);
     var
-        JobUOM : Codeunit DxSpecialUnitHandler;
+        JobUOM : Codeunit DxHourlyUnitHandler;
     begin
         if Job."No." = '' then
             exit;
@@ -78,7 +78,7 @@ codeunit 62000 DxJobFactboxCalculator
         var AvgPricePerUOM : Decimal);
     var
         JobJournalLine: Record "Job Journal Line";
-        JobUOM : Codeunit DxSpecialUnitHandler;
+        JobUOM : Codeunit DxHourlyUnitHandler;
     begin
         with JobJournalLine do begin
             IF JobNo <> '' then
@@ -113,7 +113,7 @@ codeunit 62000 DxJobFactboxCalculator
         var AvgPricePerUOM : Decimal);
     var
         JobLedgerEntry: Record "Job Ledger Entry";
-        JobUOM : Codeunit DxSpecialUnitHandler;
+        JobUOM : Codeunit DxHourlyUnitHandler;
     begin
         with JobLedgerEntry do begin
             IF JobNo <> '' then
