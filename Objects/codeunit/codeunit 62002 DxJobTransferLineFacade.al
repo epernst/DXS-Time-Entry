@@ -1,6 +1,6 @@
 codeunit 62002 DxJobTransferLineFacade
 {
-    [EventSubscriber(ObjectType::Codeunit, 1004, 'onAfterFromJnlLineToLedgEntry', '', false, false)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'onAfterFromJnlLineToLedgEntry', '', false, false)]
     local procedure onAfterFromJnlLineToLedgEntry(
       var JobLedgerEntry : Record "Job Ledger Entry"; 
       JobJournalLine : Record "Job Journal Line");
@@ -14,7 +14,7 @@ codeunit 62002 DxJobTransferLineFacade
         end;
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, 1004, 'onAfterFromJnlToPlanningLine', '', false, false)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'onAfterFromJnlToPlanningLine', '', false, false)]
     local procedure onAfterFromJnlToPlanningLine(
       JobJournalLine : Record "Job Journal Line";
       var JobPlanningLine : Record "Job Planning Line");
@@ -28,7 +28,7 @@ codeunit 62002 DxJobTransferLineFacade
         end;
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, 1004, 'onAfterFromPlanningLineToJnlLine', '', false, false)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'onAfterFromPlanningLineToJnlLine', '', false, false)]
     local procedure onAfterFromPlanningLineToJnlLine(
       var JobJournalLine : Record "Job Journal Line";
       JobPlanningLine : Record "Job Planning Line");
@@ -42,7 +42,7 @@ codeunit 62002 DxJobTransferLineFacade
         end;
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, 1004, 'OnAfterFromJobLedgEntryToPlanningLine', '', false, false)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'OnAfterFromJobLedgEntryToPlanningLine', '', false, false)]
     local procedure onAfterFromJobLedgerEntryToPlanningLine(
         var JobPlanningLine : Record "Job Planning Line";
         JobLedgEntry : Record "Job Ledger Entry");

@@ -4,7 +4,7 @@ codeunit 62001 DxJobFacade
     begin
     end;
 
-    [EventSubscriber(ObjectType::Table, 210, 'OnAfterValidateEvent', 'Line Type', false, false)]
+    [EventSubscriber(ObjectType::Table, Database::"Job Journal Line", 'OnAfterValidateEvent', 'Line Type', false, false)]
     local procedure OnAfterValidateLineType(
         var Rec : Record "Job Journal Line");
     begin

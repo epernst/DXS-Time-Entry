@@ -1,6 +1,6 @@
-codeunit 62006 DxResJournalLineFacade
+Codeunit 62006 DxResJournalLineFacade
 {
-    [EventSubscriber(ObjectType::Table, 207, 'onAfterCopyResJnlLineFromJobJnlLine', '', false, false)]
+    [EventSubscriber(ObjectType::Table, Database::"Res. Journal Line", 'onAfterCopyResJnlLineFromJobJnlLine', '', false, false)]
     local procedure onAfterFromJnlLineToLedgEntry(
         var ResJnlLine : Record "Res. Journal Line"; 
         JobJnlLine : Record "Job Journal Line");

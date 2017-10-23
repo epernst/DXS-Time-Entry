@@ -1,6 +1,6 @@
 codeunit 62009 DxResLedgerEntryFacade
 {
-    [EventSubscriber(ObjectType::Table, 203, 'OnAfterCopyFromResJnlLine', '', false, false)]
+    [EventSubscriber(ObjectType::Table, Database::"Res. Ledger Entry", 'OnAfterCopyFromResJnlLine', '', false, false)]
     local procedure OnAfterCopyFromResJnlLine(
         var ResLedgerEntry : Record "Res. Ledger Entry"; 
         ResJournalLine : Record "Res. Journal Line");

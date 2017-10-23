@@ -25,8 +25,8 @@ codeunit 62000 DxTimeAppManager
     begin
         NavApp.RestoreArchiveData(Database::DxTimeEntrySetup);
 
-      GLSourceNameMgt.PopulateSourceTable;
-      RemoveAssistedSetup;
+      //GLSourceNameMgt.PopulateSourceTable;
+      //RemoveAssistedSetup;
     end;
 
     local procedure AddUserAccess(AssignToUser : GUID;PermissionSet : Code[20]);
