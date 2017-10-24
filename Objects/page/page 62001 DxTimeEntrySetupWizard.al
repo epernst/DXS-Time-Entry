@@ -36,21 +36,27 @@ page 62001 DxTimeEntrySetupWizard
             group(StartStep)
             {
                 Caption = '';
-                Visible=StartStepVisible;
+                Visible = StartStepVisible;
                 group(WelcomeToSetup)
                 {
                     Caption = 'Welcome to Time Entry Setup';
-                    Visible = HourlyUnitsStepVisible;
                     group(Welcome)
                     {
-                        InstructionalText = 'This "Time Entry App" allow you to use Start and end times when entering into the job planning liens, job or resource journals. It uses the entries to calculate the actual used quantity in hours.';
+                        Caption = '';
+                        InstructionalText = 'This Time Entry App will allow you to enter Start and End times into job planning lines, job journals or resource journals.';
+                    }
+                    group(Welcome2)
+                    {
+                        Caption = '';
+                        InstructionalText = 'The app will use the entries to calculate the actual used time as a quantity in hours. The times are posted on the job and resource ledger entries.';
                     }
                 }
                 group(LetsGo)
                 {
-                    Caption='Let''s go!';
+                    Caption = 'Let''s go!';
                     group(LetsGoGo)
                     {
+                        Caption = '';
                         InstructionalText = 'This wizard will take you through the setup in just a few steps, and you are ready to use it.';
                     }
                 }
@@ -58,64 +64,83 @@ page 62001 DxTimeEntrySetupWizard
 
             group(HourlyUnitsStep)
             {
-                Caption = '';
-                InstructionalText = 'Use start and end times with all entris or limit to hourly units of measure codes?';
+                Caption = 'Where to use Start and End times?';
+                InstructionalText = 'Use start and end times with all entries or limit to hourly units of measure codes?';
                 Visible = HourlyUnitsStepVisible;
 
                 group(HourlyUnits)
                 {
-                    InstructionalText = 'Allow only use of start and end times with unit of measure codes(ex. HOUR). if selected, then the next page will allow you to specify which unit of measure codes to use.';
+                    Caption = '';
                     field("Hourly Units Only";"Hourly Units Only")
                     {
+                        Caption = 'Only with hourly marked unit of measure codes (recommended)?';
                         ApplicationArea = All;
                         
                         trigger OnValidate();
                         begin
+                            NextActionEnabled := true;
                             UnitOfMeasureVisible := "Hourly Units Only";
                             AllUnits := NOT "Hourly Units Only";                       
                         end;
                     }
                     field(AllUnits;AllUnits)
                     {
-                        Caption = 'All Units Allowed';
+                        Caption = 'Use in all type of entries, no matter unit of measure?';
                         ApplicationArea = All;
                         
                         trigger OnValidate();
                         begin
+                            NextActionEnabled := true;
                             "Hourly Units Only" := not AllUnits;
                             UnitOfMeasureVisible := "Hourly Units Only"                         
                         end;
                     }
-                }   
-                group(UnitOfMeasures)
-                {
-                    InstructionalText = 'Please specify which unit of measure codes to use as "hourly". ';
-                    Visible = UnitOfMeasureVisible;
-                    Caption = '';
-                    part(UnitOfMeasurePart;DxUnitOfMeasurePart)
+                    group(SelectToGo)
                     {
-                        ApplicationArea = All;
-                        Caption=' ';
+                        Caption = '';
+                        InstructionalText = 'If selected, then the next page will allow you to specify which unit of measure codes to use.';
                     }
-                }
-            
+                }   
             }
-
             
-            group(Step2)
+            group(UnitOfMeasureStep)
             {
-                InstructionalText = 'You have allow only to use start and end times with unit of measure codes(ex. HOUR), marked as "Hourly Unis". Please select the hourly unit of measure codes.';
-                Visible = Step2Visible;
-
-            }
-            group(Step3)
-            {
-                Visible=Step3Visible;
-                group(Group23)
+                InstructionalText = 'Please specify which unit of measure codes to use as "hourly". ';
+                Caption = '';
+                Visible = UnitOfMeasureStepVisible;
+                part(UnitOfMeasurePart;DxUnitOfMeasurePart)
                 {
-                    InstructionalText = 'Step3 - Replace this text with some instructions.';
+                    ApplicationArea = All;
+                    Caption = '';
                 }
-                group("That's it!")
+            }
+            group(HourlyUnitOfMeasureStep)
+            {
+                InstructionalText = 'For the hourly units, also specify how they are rounded. Default value is "0.25", which will round up to nearest 15 minutes. "1" would round up a full hour.  .';
+                Caption = '';
+                Visible = HourlyUnitOfMeasureStepVisible;
+                part(HourlyUnitOfMeasurePart;DxUnitOfMeasurePart)
+                {
+                    ApplicationArea = All;
+                    Caption = '';
+                }
+            }
+            group(MultiDayStep)
+            {
+                Caption = '';
+                Visible = MultiDayStepVisible;
+                InstructionalText = 'Do you want to allow times to pass midnight, or be multiple days?';
+            }
+            group(FinishStep)
+            {
+                Caption = '';
+                Visible = FinishStepVisible;
+                group(FinishStepInstuction)
+                {
+                    Caption = '';
+                    InstructionalText = 'Only thing left is to Finish. This will enable the app and make it visible to your users.';
+                }
+                group(ThatsIt)
                 {
                     Caption = 'That''s it!';
                     group(Group25)
@@ -174,20 +199,23 @@ page 62001 DxTimeEntrySetupWizard
         MediaRepositoryDone : Record "Media Repository";
         MediaResourcesStandard : Record "Media Resources";
         MediaResourcesDone : Record "Media Resources";
-        Step : Option Start,HourlyUnitsStep,Step2,Finish;
+        Step : Option Start,HourlyUnitsStep,UnitOfMeasureStep,HourlyUnitOfMeasureStep,MultiDayStep,Finish;
+        LastStep : Option Start,HourlyUnitsStep,UnitOfMeasureStep,HourlyUnitOfMeasureStep,MultiDayStep,Finish;
         AllUnits : Boolean;
+        HasHourlyUnitsOfMeasure : Boolean;
         UnitOfMeasureVisible : Boolean;
         TopBannerVisible : Boolean;
         StartStepVisible : Boolean;
         HourlyUnitsStepVisible : Boolean;
-        Step2Visible : Boolean;
-        Step3Visible : Boolean;
+        HourlyUnitOfMeasureStepVisible : Boolean;
+        UnitOfMeasureStepVisible : Boolean;
+        MultiDayStepVisible : Boolean;
         FinishStepVisible : Boolean;
         FinishActionEnabled : Boolean;
         BackActionEnabled : Boolean;
         NextActionEnabled : Boolean;
         TempUnitOfMeasure : Record "Unit of Measure" temporary;
-
+        NoHourlyUnitsSelectedErr : Label 'You have not selected any hourly units of measures. Please select at least one, before you continue.';
 
     trigger OnInit();
     begin
@@ -203,9 +231,10 @@ page 62001 DxTimeEntrySetupWizard
             TransferFields(TimeEntrySetup);
         Insert;
 
-        AllUnits := NOT "Hourly Units Only";                       
+        AllUnits := false;  
         Step := Step::Start;
         EnableControls;
+
     end;
 
     local procedure EnableControls();
@@ -217,27 +246,16 @@ page 62001 DxTimeEntrySetupWizard
                 ShowStartStep;
             Step::HourlyUnitsStep:
                 ShowHourlyUnitsStep;
-            Step::Step2:
-                ShowStep2;
+            Step::UnitOfMeasureStep:
+                ShowUnitOfMeasureStep;
+            Step::HourlyUnitOfMeasureStep:
+                ShowHourlyUnitOfMeasureStep;
+            Step::MultiDayStep:
+                ShowMultiDayStep;
             Step::Finish:
-                ShowStep3;
+                ShowMultiDayStep;
         end;
     end;
-
-    local procedure StoreTimeEntrySetup();
-    var
-        TimeEntrySetup : Record DxTimeEntrySetup;
-    begin
-        if not TimeEntrySetup.Get then begin
-            TimeEntrySetup.Init;
-            TimeEntrySetup.Insert;
-        end;
-
-        TimeEntrySetup.TransferFields(Rec,false);
-        TimeEntrySetup.Modify(true);
-        Commit;
-    end;
-
 
     local procedure FinishAction();
     begin
@@ -247,6 +265,7 @@ page 62001 DxTimeEntrySetupWizard
 
     local procedure NextStep(Backwards : Boolean);
     begin
+        LastStep := Step;
         if Backwards then
             Step := Step - 1
         else
@@ -269,19 +288,56 @@ page 62001 DxTimeEntrySetupWizard
         UnitOfMeasureVisible := "Hourly Units Only";
 
         FinishActionEnabled := false;
+        NextActionEnabled := "Hourly Units Only";
         BackActionEnabled := false;
     end;
 
-    local procedure ShowStep2();
+    local procedure ShowUnitOfMeasureStep();
     begin
-        Step2Visible := true;
+        if not "Hourly Units Only" then begin
+            if LastStep < Step then
+                step += 1
+            else 
+                step -= 1; 
+            NextStep(LastStep > step);
+            Exit;
+        end;
+
+        UnitOfMeasureStepVisible := true;
         FinishActionEnabled := true;
+        NextActionEnabled := true;
+        BackActionEnabled := true;
+
+        SetUnitOfMeasure(false);
+    end;
+    local procedure ShowHourlyUnitOfMeasureStep();
+    begin
+        if not "Hourly Units Only" then begin
+            if LastStep < Step then
+                step += 1
+            else 
+                step -= 1; 
+            NextStep(LastStep > step);
+            Exit;
+        end;
+        CurrPage.UnitOfMeasurePart.Page.Get(TempUnitOfMeasure);
+        if not HasHourlyUnitsOfMeasureTemp(true) then begin
+            step := LastStep;
+            Message(NoHourlyUnitsSelectedErr);
+            NextStep(true);
+            Exit;           
+        end;
+
+        SetUnitOfMeasure(true);
+        HourlyUnitOfMeasureStepVisible := true;
+        FinishActionEnabled := true;
+        NextActionEnabled := true;
         BackActionEnabled := true;
     end;
 
-    local procedure ShowStep3();
+    local procedure ShowMultiDayStep();
     begin
-        Step3Visible := true;
+        MultiDayStepVisible := true;
 
         NextActionEnabled := false;
         FinishActionEnabled := true;
@@ -295,8 +351,9 @@ page 62001 DxTimeEntrySetupWizard
 
         StartStepVisible := false;
         HourlyUnitsStepVisible := false;
-        Step2Visible := false;
-        Step3Visible := false;
+        UnitOfMeasureStepVisible := false;
+        HourlyUnitOfMeasureStepVisible := false;
+        MultiDayStepVisible := false;
         FinishStepVisible := false;
         UnitOfMeasureVisible := false;
     end;
@@ -312,32 +369,72 @@ page 62001 DxTimeEntrySetupWizard
                 TopBannerVisible := MediaResourcesDone."Media Reference".HASVALUE;
     end;
 
-    local procedure SetUnitOfMeasure();
+    local procedure SetUnitOfMeasure(HourlyUnitsFilter : Boolean);
     var
         UnitOfMeasure : Record "Unit of Measure";
     begin
         TempUnitOfMeasure.deleteall;
+        HasHourlyUnitsOfMeasure := false;
         with UnitOfMeasure do begin
+            if HourlyUnitsFilter then
+                SetRange("Hourly Unit");
             if IsEmpty then exit;
             FindSet;
             repeat 
                 TempUnitOfMeasure.TransferFields(UnitOfMeasure);
                 TempUnitOfMeasure.insert;
+                if "Hourly Unit" then HasHourlyUnitsOfMeasure := true;
             until next = 0;
+            if HourlyUnitsFilter then
+                CurrPage.HourlyUnitOfMeasurePart.Page.Set(TempUnitOfMeasure)
+            else
+                CurrPage.UnitOfMeasurePart.Page.Set(TempUnitOfMeasure);            
         end;
     end;
-    local procedure StoreUnitOfMeasure();
+
+    local procedure StoreUnitOfMeasure(HourlyUnitsFilter : Boolean);
     var
         UnitOfMeasure : Record "Unit of Measure";
     begin
+        HasHourlyUnitsOfMeasure := false;
+        if HourlyUnitsFilter then
+            CurrPage.HourLyUnitOfMeasurePart.Page.Get(TempUnitOfMeasure)
+        else
+            CurrPage.UnitOfMeasurePart.Page.Get(TempUnitOfMeasure);
         with TempUnitOfMeasure do begin
             if IsEmpty then exit;
             FindSet;
             repeat 
                 UnitOfMeasure.TransferFields(TempUnitOfMeasure);
                 if UnitOfMeasure.Modify then;
+                if "Hourly Unit" then HasHourlyUnitsOfMeasure := true;
             until next = 0;
         end;
+    end;
+    local procedure HasHourlyUnitsOfMeasureTemp(HourlyUnitsFilter : Boolean) : Boolean;
+    begin
+        if HourlyUnitsFilter then
+            CurrPage.HourLyUnitOfMeasurePart.Page.Get(TempUnitOfMeasure)
+        else
+            CurrPage.UnitOfMeasurePart.Page.Get(TempUnitOfMeasure);
+        with TempUnitOfMeasure do begin
+            SetRange("Hourly Unit", true);
+            exit(isempty);
+        end;
+    end;
+
+    local procedure StoreTimeEntrySetup();
+    var
+        TimeEntrySetup : Record DxTimeEntrySetup;
+    begin
+        if not TimeEntrySetup.Get then begin
+            TimeEntrySetup.Init;
+            TimeEntrySetup.Insert;
+        end;
+
+        TimeEntrySetup.TransferFields(Rec,false);
+        TimeEntrySetup.Modify(true);
+        Commit;
     end;
 
 }

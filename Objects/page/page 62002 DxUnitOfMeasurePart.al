@@ -1,9 +1,10 @@
 page 62002 DxUnitOfMeasurePart
 {
+    Caption = 'Units Of Measure';
     PageType = ListPart;
     SourceTable = "Unit of Measure";
     SourceTableTemporary = true;
-    InsertAllowed = false;
+    DeleteAllowed = false;
     LinksAllowed = false;
 
     layout
@@ -14,19 +15,25 @@ page 62002 DxUnitOfMeasurePart
             {
                 field(Code;Code)
                 {
-                    Editable = false;
+                    ApplicationArea = All;
+                    Style = Favorable;
+                    StyleExpr = IsHourlyUnit;
                 }
                 field(Description;Description)
                 {
-                    Editable = false;
+                    ApplicationArea = All;
+                    Style = Favorable;
+                    StyleExpr = IsHourlyUnit;
                 }
                 field("Hourly Unit";"Hourly Unit")
                 {
-                    
+                    Visible = NOT HourlyUnitsFiltered;
+                    ApplicationArea = All;                    
                 }
                 field("Time Rounding";"Time Rounding")
                 {
-                    Editable = IsRoudingEditable;
+                    Visible = HourlyUnitsFiltered;
+                    ApplicationArea = All;
                 }
             }
         }
@@ -45,20 +52,34 @@ page 62002 DxUnitOfMeasurePart
         }
     }
     var
-        IsRoudingEditable : Boolean;
+        HourlyUnitsFiltered : Boolean;
+        IsRoudingVisible : Boolean;
+        IsHourlyUnit : Boolean;
+        InternationalStandardCode : Label 'HUR';
+
+    trigger OnOpenPage();
+    begin
+        HourlyUnitsFiltered := GetFilter("Hourly Unit") <> '';
+
+    end;
 
     trigger OnAfterGetCurrRecord();
     begin 
         UpdatePage
     end;
 
-    local procedure UpdatePage();
-    begin 
-        IsRoudingEditable := "Hourly Unit";
-    end;
-
-    procedure Set(var TempUnitOfMeasure : Record "Unit of Measure" Temporary );
+    procedure Set(var TempUnitOfMeasure : Record "Unit of Measure" temporary);
     begin 
         Copy(TempUnitOfMeasure,true);
+    end;
+
+    procedure Get(var TempUnitOfMeasure : Record "Unit of Measure" temporary);
+    begin 
+        TempUnitOfMeasure.Copy(Rec,true);
+    end;
+
+    local procedure UpdatePage();
+    begin 
+        IsHourlyUnit := "Hourly Unit" or ("International Standard Code" = InternationalStandardCode);
     end;
 }

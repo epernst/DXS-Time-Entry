@@ -22,9 +22,11 @@ table 62000 DxTimeEntrySetup
         {
             Caption = 'Hourly Units Only';
         }
-        field(4;"Allow Entries to Pass Midnight";Boolean)
+        field(4;"Allow Entries to Pass Midnight";Option)
         {
             Caption = 'Allow Entries to Pass Midnight';
+            OptionMembers=No,Day,MultiDays;
+            OptionCaption = 'No,24 hours max,Multiple days';
         }
         field(5;"Fields To Show";Option)
         {
