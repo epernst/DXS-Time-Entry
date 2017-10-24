@@ -1,6 +1,6 @@
 page 62002 DxUnitOfMeasurePart
 {
-    PageType = List;
+    PageType = ListPart;
     SourceTable = "Unit of Measure";
     SourceTableTemporary = true;
     InsertAllowed = false;
@@ -29,9 +29,6 @@ page 62002 DxUnitOfMeasurePart
                     Editable = IsRoudingEditable;
                 }
             }
-        }
-        area(factboxes)
-        {
         }
     }
 

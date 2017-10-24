@@ -13,7 +13,7 @@ page 62001 DxTimeEntrySetupWizard
             {
                 Caption = '';
                 Editable = false;
-                Visible = TopBannerVisible AND NOT Step3Visible;
+                Visible = TopBannerVisible AND NOT FinishStepVisible;
                 field(MediaResourcesStandard;MediaResourcesStandard."Media Reference")
                 {
                   ApplicationArea = All;
@@ -21,11 +21,11 @@ page 62001 DxTimeEntrySetupWizard
                   ShowCaption = false;
                 }
             }
-            group(TopBannersEnd)
+            group(TopBannersFinish)
             {
                 Caption = '';
                 Editable = false;
-                Visible = TopBannerVisible AND Step3Visible;
+                Visible = TopBannerVisible AND FinishStepVisible;
                 field(MediaResourcesDone;MediaResourcesDone."Media Reference")
                 {
                   Editable=false;
@@ -92,8 +92,15 @@ page 62001 DxTimeEntrySetupWizard
                     InstructionalText = 'Please specify which unit of measure codes to use as "hourly". ';
                     Visible = UnitOfMeasureVisible;
                     Caption = '';
+                    part(UnitOfMeasurePart;DxUnitOfMeasurePart)
+                    {
+                        ApplicationArea = All;
+                        Caption=' ';
+                    }
                 }
+            
             }
+
             
             group(Step2)
             {
@@ -179,6 +186,8 @@ page 62001 DxTimeEntrySetupWizard
         FinishActionEnabled : Boolean;
         BackActionEnabled : Boolean;
         NextActionEnabled : Boolean;
+        TempUnitOfMeasure : Record "Unit of Measure" temporary;
+
 
     trigger OnInit();
     begin
@@ -302,4 +311,33 @@ page 62001 DxTimeEntrySetupWizard
             then
                 TopBannerVisible := MediaResourcesDone."Media Reference".HASVALUE;
     end;
+
+    local procedure SetUnitOfMeasure();
+    var
+        UnitOfMeasure : Record "Unit of Measure";
+    begin
+        TempUnitOfMeasure.deleteall;
+        with UnitOfMeasure do begin
+            if IsEmpty then exit;
+            FindSet;
+            repeat 
+                TempUnitOfMeasure.TransferFields(UnitOfMeasure);
+                TempUnitOfMeasure.insert;
+            until next = 0;
+        end;
+    end;
+    local procedure StoreUnitOfMeasure();
+    var
+        UnitOfMeasure : Record "Unit of Measure";
+    begin
+        with TempUnitOfMeasure do begin
+            if IsEmpty then exit;
+            FindSet;
+            repeat 
+                UnitOfMeasure.TransferFields(TempUnitOfMeasure);
+                if UnitOfMeasure.Modify then;
+            until next = 0;
+        end;
+    end;
+
 }
