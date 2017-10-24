@@ -73,27 +73,9 @@ page 62001 DxTimeEntrySetupWizard
                     Caption = '';
                     field("Hourly Units Only";"Hourly Units Only")
                     {
-                        Caption = 'Only with hourly marked unit of measure codes (recommended)?';
+                        Caption = 'Only hourly units of measure (recommended)?';
                         ApplicationArea = All;
                         
-                        trigger OnValidate();
-                        begin
-                            NextActionEnabled := true;
-                            UnitOfMeasureVisible := "Hourly Units Only";
-                            AllUnits := NOT "Hourly Units Only";                       
-                        end;
-                    }
-                    field(AllUnits;AllUnits)
-                    {
-                        Caption = 'Use in all type of entries, no matter unit of measure?';
-                        ApplicationArea = All;
-                        
-                        trigger OnValidate();
-                        begin
-                            NextActionEnabled := true;
-                            "Hourly Units Only" := not AllUnits;
-                            UnitOfMeasureVisible := "Hourly Units Only"                         
-                        end;
                     }
                     group(SelectToGo)
                     {
@@ -130,6 +112,32 @@ page 62001 DxTimeEntrySetupWizard
                 Caption = '';
                 Visible = MultiDayStepVisible;
                 InstructionalText = 'Do you want to allow times to pass midnight, or be multiple days?';
+                field("Allow Entries to Pass Midnight";"Allow Entries to Pass Midnight")
+                {
+                }
+                field("Fields To Show";"Fields To Show")
+                {
+                    trigger OnValidate();
+                    begin
+                        //UpdatePage;
+                    end;
+                }
+                group(ShowMix)
+                {
+                    //Visible = IsMixSelected;
+                    field("Show Start Times";"Show Start Times")
+                    {
+                    }
+                    field("Show End Times";"Show End Times")
+                    {
+                    }
+                    field("Show Start Date-Times";"Show Start Date-Times")
+                    {
+                    }
+                    field("Show End Date-Times";"Show End Date-Times")
+                    {
+                    }
+                }
             }
             group(FinishStep)
             {
@@ -201,7 +209,6 @@ page 62001 DxTimeEntrySetupWizard
         MediaResourcesDone : Record "Media Resources";
         Step : Option Start,HourlyUnitsStep,UnitOfMeasureStep,HourlyUnitOfMeasureStep,MultiDayStep,Finish;
         LastStep : Option Start,HourlyUnitsStep,UnitOfMeasureStep,HourlyUnitOfMeasureStep,MultiDayStep,Finish;
-        AllUnits : Boolean;
         HasHourlyUnitsOfMeasure : Boolean;
         UnitOfMeasureVisible : Boolean;
         TopBannerVisible : Boolean;
@@ -231,7 +238,6 @@ page 62001 DxTimeEntrySetupWizard
             TransferFields(TimeEntrySetup);
         Insert;
 
-        AllUnits := false;  
         Step := Step::Start;
         EnableControls;
 
@@ -253,7 +259,7 @@ page 62001 DxTimeEntrySetupWizard
             Step::MultiDayStep:
                 ShowMultiDayStep;
             Step::Finish:
-                ShowMultiDayStep;
+                ShowFinishStep;
         end;
     end;
 
@@ -285,10 +291,9 @@ page 62001 DxTimeEntrySetupWizard
     local procedure ShowHourlyUnitsStep();
     begin
         HourlyUnitsStepVisible := true;
-        UnitOfMeasureVisible := "Hourly Units Only";
 
         FinishActionEnabled := false;
-        NextActionEnabled := "Hourly Units Only";
+        NextActionEnabled := True;
         BackActionEnabled := false;
     end;
 
@@ -327,7 +332,7 @@ page 62001 DxTimeEntrySetupWizard
             NextStep(true);
             Exit;           
         end;
-
+        TempUnitOfMeasure.SetRange("Hourly Unit",true);
         SetUnitOfMeasure(true);
         HourlyUnitOfMeasureStepVisible := true;
         FinishActionEnabled := true;
@@ -339,7 +344,16 @@ page 62001 DxTimeEntrySetupWizard
     begin
         MultiDayStepVisible := true;
 
-        NextActionEnabled := false;
+        NextActionEnabled := true;
+        BackActionEnabled := true;
+        FinishActionEnabled := true;
+    end;
+    local procedure ShowFinishStep();
+    begin
+        FinishStepVisible := true;
+
+        NextActionEnabled := true;
+        BackActionEnabled := true;
         FinishActionEnabled := true;
     end;
 
@@ -386,9 +400,9 @@ page 62001 DxTimeEntrySetupWizard
                 if "Hourly Unit" then HasHourlyUnitsOfMeasure := true;
             until next = 0;
             if HourlyUnitsFilter then
-                CurrPage.HourlyUnitOfMeasurePart.Page.Set(TempUnitOfMeasure)
+                CurrPage.HourlyUnitOfMeasurePart.Page.Set(TempUnitOfMeasure,HourlyUnitsFilter)
             else
-                CurrPage.UnitOfMeasurePart.Page.Set(TempUnitOfMeasure);            
+                CurrPage.UnitOfMeasurePart.Page.Set(TempUnitOfMeasure,HourlyUnitsFilter);            
         end;
     end;
 

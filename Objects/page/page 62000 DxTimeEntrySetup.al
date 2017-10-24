@@ -60,6 +60,7 @@ page 62000 DxTimeEntrySetup
 
     procedure UpdatePage();
     begin
+        IsMixSelected := "Fields To Show" = "Fields To Show"::Mix;
     end;
 
     procedure InitSetupRecord();

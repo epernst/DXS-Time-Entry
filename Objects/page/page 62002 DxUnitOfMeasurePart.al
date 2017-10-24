@@ -59,8 +59,8 @@ page 62002 DxUnitOfMeasurePart
 
     trigger OnOpenPage();
     begin
-        HourlyUnitsFiltered := GetFilter("Hourly Unit") <> '';
-
+        if HourlyUnitsFiltered then
+            SetRange("Hourly Unit", true);
     end;
 
     trigger OnAfterGetCurrRecord();
@@ -68,9 +68,10 @@ page 62002 DxUnitOfMeasurePart
         UpdatePage
     end;
 
-    procedure Set(var TempUnitOfMeasure : Record "Unit of Measure" temporary);
+    procedure Set(var TempUnitOfMeasure : Record "Unit of Measure" temporary; FilterHourlyOnly : Boolean);
     begin 
         Copy(TempUnitOfMeasure,true);
+        HourlyUnitsFiltered := FilterHourlyOnly;
     end;
 
     procedure Get(var TempUnitOfMeasure : Record "Unit of Measure" temporary);
