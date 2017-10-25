@@ -64,30 +64,33 @@ page 62001 DxTimeEntrySetupWizard
 
             group(HourlyUnitsStep)
             {
-                Caption = 'Where to use Start and End times?';
-                InstructionalText = 'Use start and end times with all entries or limit to hourly units of measure codes?';
+                Caption = '';
                 Visible = HourlyUnitsStepVisible;
+                    group(LimitUse)
+                    {
+                        Caption = 'Where to use Start and End times?';
+                        InstructionalText = 'Limit the use of Start and End times to selected hourly units of measure codes?';
+                    }
+                    group(LimitUse2)
+                    {
+                        Caption = '';
+                        InstructionalText = ' If not selected then it will be possible to use Start and End times on all entries. If selected, then on the next step you must specify which unit of measure codes to use.';
+                    }
 
                 group(HourlyUnits)
                 {
                     Caption = '';
                     field("Hourly Units Only";"Hourly Units Only")
                     {
-                        Caption = 'Only hourly units of measure (recommended)?';
                         ApplicationArea = All;
                         
-                    }
-                    group(SelectToGo)
-                    {
-                        Caption = '';
-                        InstructionalText = 'If selected, then the next page will allow you to specify which unit of measure codes to use.';
                     }
                 }   
             }
             
             group(UnitOfMeasureStep)
             {
-                InstructionalText = 'Please specify which unit of measure codes to use as "hourly". ';
+                InstructionalText = 'Please specify which unit of measure codes to use as "Hourly Units". I have already marked codes which might be hours. ';
                 Caption = '';
                 Visible = UnitOfMeasureStepVisible;
                 part(UnitOfMeasurePart;DxUnitOfMeasurePart)
@@ -95,16 +98,10 @@ page 62001 DxTimeEntrySetupWizard
                     ApplicationArea = All;
                     Caption = '';
                 }
-            }
-            group(HourlyUnitOfMeasureStep)
-            {
-                InstructionalText = 'For the hourly units, also specify how they are rounded. Default value is "0.25", which will round up to nearest 15 minutes. "1" would round up a full hour.  .';
-                Caption = '';
-                Visible = HourlyUnitOfMeasureStepVisible;
-                part(HourlyUnitOfMeasurePart;DxUnitOfMeasurePart)
+                group(TimeRounding)
                 {
-                    ApplicationArea = All;
                     Caption = '';
+                    InstructionalText = 'Hourly Units also need a Time Rounding. Default value "0.25" will round up to nearest 15 minute interval. "1" will round up to nearest full hour.';
                 }
             }
             group(MultiDayStep)
@@ -114,28 +111,35 @@ page 62001 DxTimeEntrySetupWizard
                 InstructionalText = 'Do you want to allow times to pass midnight, or be multiple days?';
                 field("Allow Entries to Pass Midnight";"Allow Entries to Pass Midnight")
                 {
+                    ApplicationArea = All;
                 }
                 field("Fields To Show";"Fields To Show")
                 {
+                    ApplicationArea = All;
                     trigger OnValidate();
                     begin
-                        //UpdatePage;
+                        ShowMixTimes := "Fields To Show" = "Fields To Show"::Mix;
                     end;
                 }
                 group(ShowMix)
                 {
-                    //Visible = IsMixSelected;
+                    Caption = '';
+                    Visible = ShowMixTimes;
                     field("Show Start Times";"Show Start Times")
                     {
+                        ApplicationArea = All;
                     }
                     field("Show End Times";"Show End Times")
                     {
+                        ApplicationArea = All;
                     }
                     field("Show Start Date-Times";"Show Start Date-Times")
                     {
+                        ApplicationArea = All;
                     }
                     field("Show End Date-Times";"Show End Date-Times")
                     {
+                        ApplicationArea = All;
                     }
                 }
             }
@@ -153,6 +157,7 @@ page 62001 DxTimeEntrySetupWizard
                     Caption = 'That''s it!';
                     group(Group25)
                     {
+                        Caption = '';
                         InstructionalText = 'To save this setup, choose Finish.';
                     }
                 }
@@ -165,11 +170,11 @@ page 62001 DxTimeEntrySetupWizard
         {
             action(ActionBack)
             {
-                ApplicationArea=All;
-                Caption='Back';
-                Enabled=BackActionEnabled;
-                Image=PreviousRecord;
-                InFooterBar=true;
+                ApplicationArea = All;
+                Caption ='Back';
+                Enabled = BackActionEnabled;
+                Image = PreviousRecord;
+                InFooterBar = true;
                 trigger OnAction();
                 begin
                     NextStep(true);
@@ -177,11 +182,11 @@ page 62001 DxTimeEntrySetupWizard
             }
             action(ActionNext)
             {
-                ApplicationArea=All;
-                Caption='Next';
-                Enabled=NextActionEnabled;
-                Image=NextRecord;
-                InFooterBar=true;
+                ApplicationArea = All;
+                Caption = 'Next';
+                Enabled = NextActionEnabled;
+                Image = NextRecord;
+                InFooterBar = true;
                 trigger OnAction();
                 begin
                     NextStep(false);
@@ -191,9 +196,9 @@ page 62001 DxTimeEntrySetupWizard
             {
                 ApplicationArea = All;
                 Caption = 'Finish';
-                Enabled=FinishActionEnabled;
-                Image=Approve;
-                InFooterBar=true;
+                Enabled = FinishActionEnabled;
+                Image = Approve;
+                InFooterBar = true;
                 trigger OnAction();
                 begin
                     FinishAction;
@@ -207,14 +212,14 @@ page 62001 DxTimeEntrySetupWizard
         MediaRepositoryDone : Record "Media Repository";
         MediaResourcesStandard : Record "Media Resources";
         MediaResourcesDone : Record "Media Resources";
-        Step : Option Start,HourlyUnitsStep,UnitOfMeasureStep,HourlyUnitOfMeasureStep,MultiDayStep,Finish;
-        LastStep : Option Start,HourlyUnitsStep,UnitOfMeasureStep,HourlyUnitOfMeasureStep,MultiDayStep,Finish;
+        Step : Option Start,HourlyUnitsStep,UnitOfMeasureStep,MultiDayStep,Finish;
+        LastStep : Option Start,HourlyUnitsStep,UnitOfMeasureStep,MultiDayStep,Finish;
         HasHourlyUnitsOfMeasure : Boolean;
+        ShowMixTimes : Boolean;
         UnitOfMeasureVisible : Boolean;
         TopBannerVisible : Boolean;
         StartStepVisible : Boolean;
         HourlyUnitsStepVisible : Boolean;
-        HourlyUnitOfMeasureStepVisible : Boolean;
         UnitOfMeasureStepVisible : Boolean;
         MultiDayStepVisible : Boolean;
         FinishStepVisible : Boolean;
@@ -240,7 +245,7 @@ page 62001 DxTimeEntrySetupWizard
 
         Step := Step::Start;
         EnableControls;
-
+        ResetTempUnitOfMeasure;
     end;
 
     local procedure EnableControls();
@@ -254,8 +259,6 @@ page 62001 DxTimeEntrySetupWizard
                 ShowHourlyUnitsStep;
             Step::UnitOfMeasureStep:
                 ShowUnitOfMeasureStep;
-            Step::HourlyUnitOfMeasureStep:
-                ShowHourlyUnitOfMeasureStep;
             Step::MultiDayStep:
                 ShowMultiDayStep;
             Step::Finish:
@@ -266,6 +269,8 @@ page 62001 DxTimeEntrySetupWizard
     local procedure FinishAction();
     begin
         StoreTimeEntrySetup;
+        if "Hourly Units Only" then
+            StoreUnitOfMeasure;
         CurrPage.Close;
     end;
 
@@ -284,77 +289,63 @@ page 62001 DxTimeEntrySetupWizard
     begin
         StartStepVisible := true;
 
-        FinishActionEnabled := false;
         BackActionEnabled := false;
     end;
 
     local procedure ShowHourlyUnitsStep();
     begin
         HourlyUnitsStepVisible := true;
-
-        FinishActionEnabled := false;
-        NextActionEnabled := True;
-        BackActionEnabled := false;
     end;
 
     local procedure ShowUnitOfMeasureStep();
     begin
         if not "Hourly Units Only" then begin
-            if LastStep < Step then
-                step += 1
-            else 
-                step -= 1; 
+            Step := SkipStep;
             NextStep(LastStep > step);
             Exit;
         end;
 
         UnitOfMeasureStepVisible := true;
-        FinishActionEnabled := true;
-        NextActionEnabled := true;
-        BackActionEnabled := true;
 
-        SetUnitOfMeasure(false);
-    end;
-    local procedure ShowHourlyUnitOfMeasureStep();
-    begin
-        if not "Hourly Units Only" then begin
-            if LastStep < Step then
-                step += 1
-            else 
-                step -= 1; 
-            NextStep(LastStep > step);
-            Exit;
-        end;
-        CurrPage.UnitOfMeasurePart.Page.Get(TempUnitOfMeasure);
-        if not HasHourlyUnitsOfMeasureTemp(true) then begin
-            step := LastStep;
-            Message(NoHourlyUnitsSelectedErr);
-            NextStep(true);
-            Exit;           
-        end;
-        TempUnitOfMeasure.SetRange("Hourly Unit",true);
-        SetUnitOfMeasure(true);
-        HourlyUnitOfMeasureStepVisible := true;
-        FinishActionEnabled := true;
-        NextActionEnabled := true;
-        BackActionEnabled := true;
+        CurrPage.UnitOfMeasurePart.Page.Set(TempUnitOfMeasure);
     end;
 
     local procedure ShowMultiDayStep();
+    var
+        OldStep : Integer;
     begin
-        MultiDayStepVisible := true;
+        if not "Hourly Units Only" then begin
+            Step := SkipStep;
+            NextStep(LastStep > Step);
+            Exit;
+        end;
+        if LastStep = LastStep::UnitOfMeasureStep  then
+            CurrPage.UnitOfMeasurePart.Page.Get(TempUnitOfMeasure);
+        if not HasHourlyUnitsOfMeasureTemp then begin
+            OldStep := Step;
+            Step := LastStep;
+            LastStep := OldStep;
+            Message(NoHourlyUnitsSelectedErr);
+            EnableControls;
+            Exit;           
+        end;
 
-        NextActionEnabled := true;
-        BackActionEnabled := true;
+        ShowMixTimes := "Fields To Show" = "Fields To Show"::Mix;
+        MultiDayStepVisible := true;
         FinishActionEnabled := true;
     end;
     local procedure ShowFinishStep();
     begin
         FinishStepVisible := true;
+        NextActionEnabled := false;
 
-        NextActionEnabled := true;
-        BackActionEnabled := true;
         FinishActionEnabled := true;
+    end;
+    local procedure SkipStep() : Integer;
+    begin
+        if LastStep < Step then
+            Exit(Step + 1);
+        Exit(Step - 1); 
     end;
 
     local procedure ResetControls();
@@ -366,7 +357,6 @@ page 62001 DxTimeEntrySetupWizard
         StartStepVisible := false;
         HourlyUnitsStepVisible := false;
         UnitOfMeasureStepVisible := false;
-        HourlyUnitOfMeasureStepVisible := false;
         MultiDayStepVisible := false;
         FinishStepVisible := false;
         UnitOfMeasureVisible := false;
@@ -383,38 +373,26 @@ page 62001 DxTimeEntrySetupWizard
                 TopBannerVisible := MediaResourcesDone."Media Reference".HASVALUE;
     end;
 
-    local procedure SetUnitOfMeasure(HourlyUnitsFilter : Boolean);
+    local procedure ResetTempUnitOfMeasure();
     var
         UnitOfMeasure : Record "Unit of Measure";
     begin
-        TempUnitOfMeasure.deleteall;
-        HasHourlyUnitsOfMeasure := false;
+        TempUnitOfMeasure.DeleteAll;
         with UnitOfMeasure do begin
-            if HourlyUnitsFilter then
-                SetRange("Hourly Unit");
             if IsEmpty then exit;
             FindSet;
             repeat 
                 TempUnitOfMeasure.TransferFields(UnitOfMeasure);
-                TempUnitOfMeasure.insert;
-                if "Hourly Unit" then HasHourlyUnitsOfMeasure := true;
+                TempUnitOfMeasure.Insert;
             until next = 0;
-            if HourlyUnitsFilter then
-                CurrPage.HourlyUnitOfMeasurePart.Page.Set(TempUnitOfMeasure,HourlyUnitsFilter)
-            else
-                CurrPage.UnitOfMeasurePart.Page.Set(TempUnitOfMeasure,HourlyUnitsFilter);            
         end;
     end;
 
-    local procedure StoreUnitOfMeasure(HourlyUnitsFilter : Boolean);
+    local procedure StoreUnitOfMeasure();
     var
         UnitOfMeasure : Record "Unit of Measure";
     begin
         HasHourlyUnitsOfMeasure := false;
-        if HourlyUnitsFilter then
-            CurrPage.HourLyUnitOfMeasurePart.Page.Get(TempUnitOfMeasure)
-        else
-            CurrPage.UnitOfMeasurePart.Page.Get(TempUnitOfMeasure);
         with TempUnitOfMeasure do begin
             if IsEmpty then exit;
             FindSet;
@@ -425,15 +403,15 @@ page 62001 DxTimeEntrySetupWizard
             until next = 0;
         end;
     end;
-    local procedure HasHourlyUnitsOfMeasureTemp(HourlyUnitsFilter : Boolean) : Boolean;
+    local procedure HasHourlyUnitsOfMeasureTemp() : Boolean;
+    var
+        NotEmpty : Boolean;
     begin
-        if HourlyUnitsFilter then
-            CurrPage.HourLyUnitOfMeasurePart.Page.Get(TempUnitOfMeasure)
-        else
-            CurrPage.UnitOfMeasurePart.Page.Get(TempUnitOfMeasure);
         with TempUnitOfMeasure do begin
             SetRange("Hourly Unit", true);
-            exit(isempty);
+            NotEmpty := Not IsEmpty;
+            SetRange("Hourly Unit");
+            exit(NotEmpty);
         end;
     end;
 
@@ -447,6 +425,7 @@ page 62001 DxTimeEntrySetupWizard
         end;
 
         TimeEntrySetup.TransferFields(Rec,false);
+        TimeEntrySetup."Time Based Entries Enabled" := true;
         TimeEntrySetup.Modify(true);
         Commit;
     end;

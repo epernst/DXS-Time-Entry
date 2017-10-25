@@ -22,45 +22,28 @@ page 62002 DxUnitOfMeasurePart
                 field(Description;Description)
                 {
                     ApplicationArea = All;
-                    Style = Favorable;
+                    Style = Attention;
                     StyleExpr = IsHourlyUnit;
                 }
                 field("Hourly Unit";"Hourly Unit")
                 {
-                    Visible = NOT HourlyUnitsFiltered;
                     ApplicationArea = All;                    
                 }
                 field("Time Rounding";"Time Rounding")
                 {
-                    Visible = HourlyUnitsFiltered;
                     ApplicationArea = All;
                 }
             }
         }
     }
-
-    actions
-    {
-        area(processing)
-        {
-            action(ActionName)
-            {
-                trigger OnAction();
-                begin
-                end;
-            }
-        }
-    }
     var
-        HourlyUnitsFiltered : Boolean;
         IsRoudingVisible : Boolean;
         IsHourlyUnit : Boolean;
-        InternationalStandardCode : Label 'HUR';
+        InternationalStandardCodeLbl : Label 'HUR';
 
     trigger OnOpenPage();
     begin
-        if HourlyUnitsFiltered then
-            SetRange("Hourly Unit", true);
+        UpdatePage
     end;
 
     trigger OnAfterGetCurrRecord();
@@ -68,10 +51,9 @@ page 62002 DxUnitOfMeasurePart
         UpdatePage
     end;
 
-    procedure Set(var TempUnitOfMeasure : Record "Unit of Measure" temporary; FilterHourlyOnly : Boolean);
+    procedure Set(var TempUnitOfMeasure : Record "Unit of Measure" temporary);
     begin 
         Copy(TempUnitOfMeasure,true);
-        HourlyUnitsFiltered := FilterHourlyOnly;
     end;
 
     procedure Get(var TempUnitOfMeasure : Record "Unit of Measure" temporary);
@@ -81,6 +63,20 @@ page 62002 DxUnitOfMeasurePart
 
     local procedure UpdatePage();
     begin 
-        IsHourlyUnit := "Hourly Unit" or ("International Standard Code" = InternationalStandardCode);
+        IsHourlyUnit := "Hourly Unit" or IsInternationalStandardCode(Code) or IsInternationalStandardCode("International Standard Code");
+    end;
+    
+    local procedure IsInternationalStandardCode(CodeToCheck : Code[10]) :  Boolean;
+    var
+        IsIntStdCode : Boolean;
+    begin 
+        if CodeToCheck = InternationalStandardCodeLbl then exit(true);
+        OnCheckInternationalCode(CodeToCheck,IsIntStdCode);
+        exit(IsIntStdCode);
+    end;
+
+    [IntegrationEvent(false,false)]
+    local procedure OnCheckInternationalCode(CodeToCheck : Code[10]; var IsHourlyCode : Boolean);
+    begin
     end;
 }
