@@ -41,11 +41,11 @@ codeunit 62011 DxAssistedSetup
     local procedure InitializeSetup();
     begin
         with Setup do
-        if IsEmpty then begin
-            Init;
-            Insert;
-        end else
-            Get;
+            if IsEmpty then begin
+                Init;
+                Insert;
+            end else
+                Get;
     end;
 
     local procedure AddToAssistedSetup(var TempAggregatedAssistedSetup : Record "Aggregated Assisted Setup" temporary);
@@ -57,8 +57,7 @@ codeunit 62011 DxAssistedSetup
         with TempAggregatedAssistedSetup do begin
             //GLSourceNameIcon.GetIcon(TempBlob);
             //TempBlob.Blob.CREATEINSTREAM(InStr);
-            //InsertAssistedSetupIcon(HelpResource.Get240PXIconCode,InStr);
-            
+            //InsertAssistedSetupIcon(HelpResource.Get240PXIconCode,InStr);            
 
             AddExtensionAssistedSetup(
                 Page::DxTimeEntrySetupWizard,

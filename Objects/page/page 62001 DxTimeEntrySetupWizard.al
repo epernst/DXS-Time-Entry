@@ -1,9 +1,9 @@
 page 62001 DxTimeEntrySetupWizard
 {
-    CaptionML=ENU='Time Entry Setup';
+    Caption = 'Time Entry Setup';
     PageType = NavigatePage;
     SourceTable = DxTimeEntrySetup;
-    SourceTableTemporary=true;
+    SourceTableTemporary = true;
 
     layout
     {
@@ -66,16 +66,17 @@ page 62001 DxTimeEntrySetupWizard
             {
                 Caption = '';
                 Visible = HourlyUnitsStepVisible;
-                    group(LimitUse)
-                    {
-                        Caption = 'Where to use Start and End times?';
-                        InstructionalText = 'Limit the use of Start and End times to selected hourly units of measure codes?';
-                    }
-                    group(LimitUse2)
-                    {
-                        Caption = '';
-                        InstructionalText = ' If not selected then it will be possible to use Start and End times on all entries. If selected, then on the next step you must specify which unit of measure codes to use.';
-                    }
+
+                group(LimitUse)
+                {
+                    Caption = 'Where to use Start and End times?';
+                    InstructionalText = 'Limit the use of Start and End times to selected hourly units of measure codes?';
+                }
+                group(LimitUse2)
+                {
+                    Caption = '';
+                    InstructionalText = ' If not selected then Start and End times can be used on all entries. If selected, then on the next step you must specify which unit of measure codes to use.';
+                }
 
                 group(HourlyUnits)
                 {
@@ -155,7 +156,7 @@ page 62001 DxTimeEntrySetupWizard
                 group(ThatsIt)
                 {
                     Caption = 'That''s it!';
-                    group(Group25)
+                    group(ThatsItGrp)
                     {
                         Caption = '';
                         InstructionalText = 'To save this setup, choose Finish.';
@@ -419,15 +420,18 @@ page 62001 DxTimeEntrySetupWizard
     var
         TimeEntrySetup : Record DxTimeEntrySetup;
     begin
-        if not TimeEntrySetup.Get then begin
-            TimeEntrySetup.Init;
-            TimeEntrySetup.Insert;
-        end;
+        with TimeEntrySetup do begin
+            if not Get then begin
+                Init;
+                Insert;
+            end;
 
-        TimeEntrySetup.TransferFields(Rec,false);
-        TimeEntrySetup."Time Based Entries Enabled" := true;
-        TimeEntrySetup.Modify(true);
-        Commit;
+            TransferFields(Rec,false);
+            "Time Based Entries Enabled" := true;
+            Status := Status::Completed;
+            Modify(true);
+            Commit;
+        end;
     end;
 
 }
