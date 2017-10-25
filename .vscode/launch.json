@@ -10,7 +10,7 @@
 			"name": "Launch",
 			"tenant": "",
 			"authentication": "UserPassword",
-			"startupObjectId": 62001
+			"startupObjectId": 201
 		}
 	]
 }

@@ -14,30 +14,31 @@ pageextension 62002 DxJobJournal extends "Job Journal"
       {
         ApplicationArea = All;
         Editable = IsTimeEditable;
-        Visible = IsTimeEntryEnabled;
+        Visible = IsStartTimeVisible;
       }
       field("End Time";"End Time")
       {
         ApplicationArea = All;
         Editable = IsTimeEditable;
-        Visible = IsTimeEntryEnabled;
+        Visible = IsEndTimeVisible;
       }
       field("Start Date Time";"Start Date Time")
       {
-        Visible = IsTimeEntryEnabled;
-        Editable = IsTimeEditable;
         ApplicationArea = All;
+        Visible = IsStartDateTimeVisible;
+        Editable = IsTimeEditable;
       }
       field("End Date Time";"End Date Time")
       {
-        Visible = IsTimeEntryEnabled;
-        Editable = IsTimeEditable;
         ApplicationArea = All;
+        Visible = IsEndDateTimeVisible;
+        Editable = IsTimeEditable;
       }
       field("Total Duration";"Total Duration")
       {
-        Editable = IsTimeEditable;
         ApplicationArea = All;
+        Visible = IsTimeEntryEnabled;
+        Editable = IsTimeEditable;
       }
     }
     addfirst(FactBoxes)
@@ -58,7 +59,16 @@ pageextension 62002 DxJobJournal extends "Job Journal"
     TimePermissionHandler : Codeunit DxTimePermissionHandler;
   begin
     IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled; 
+    with TimeEntrySetup do begin
+        if not Get then Init;
+        IsEndDateTimeVisible := IsTimeEntryEnabled and "Show End Date-Times"; 
+        IsEndTimeVisible := IsTimeEntryEnabled and "Show End Times"; 
+        IsStartDateTimeVisible := IsTimeEntryEnabled and "Show Start Date-Times"; 
+        IsStartTimeVisible := IsTimeEntryEnabled and "Show Start Times"; 
+    end;
+
     UpdatePage;
+
   end;
   
   trigger OnNewRecord(BelowxRec : Boolean);
@@ -73,14 +83,19 @@ pageextension 62002 DxJobJournal extends "Job Journal"
   end;
   
   var
+    TimeEntrySetup : Record DxTimeEntrySetup;
     IsTimeEditable : Boolean;
     IsTimeEntryEnabled  : Boolean;
+    IsStartTimeVisible : Boolean;
+    IsEndTimeVisible : Boolean;
+    IsStartDateTimeVisible : Boolean;
+    IsEndDateTimeVisible : Boolean;
 
   local procedure GetTimeEditable() : Boolean;
     var
       JobUOM : Codeunit DxHourlyUnitHandler;
     begin
-        exit(jobuom.IsUOMforHours("Unit of Measure Code"));
+        exit(JobUOM.IsUOMforHours("Unit of Measure Code"));
     end;
 
   local procedure UpdatePage();

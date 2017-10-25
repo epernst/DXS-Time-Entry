@@ -15,11 +15,8 @@ codeunit 62010 DxTimePermissionHandler
     var
         TimeEntrySetup : Record DxTimeEntrySetup;
     begin
-        if timeEntrySetup.get and 
-            TimeEntrySetup."Time Based Entries Enabled"
-        then 
-            exit(true);
-        exit(false);
+        with TimeEntrySetup do
+            EXIT(Get and "Time Based Entries Enabled");
     end;
 
     procedure CanChangeUnitOfMeasure() : Boolean;

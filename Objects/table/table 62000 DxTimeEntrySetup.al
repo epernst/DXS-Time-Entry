@@ -78,6 +78,12 @@ table 62000 DxTimeEntrySetup
         field(9;"Show End Date-Times";Boolean)
         {
         }
+        field(12;Status;Option)
+        {
+            Caption = 'Status';
+            OptionCaption = 'Not Completed,Completed,Not Started,Seen,Watched,Read, ';
+            OptionMembers = "Not Completed",Completed,"Not Started",Seen,Watched,Read," ";
+        }
         
     }
     keys
