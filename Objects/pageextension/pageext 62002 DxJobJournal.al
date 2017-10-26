@@ -78,9 +78,9 @@ pageextension 62002 DxJobJournal extends "Job Journal"
             IsEndTimeVisible := IsTimeEntryEnabled and "Show End Times"; 
             IsStartDateTimeVisible := IsTimeEntryEnabled and "Show Start Date-Times"; 
             IsStartTimeVisible := IsTimeEntryEnabled and "Show Start Times"; 
-      end;
+        end;
 
-      UpdatePage;
+        UpdatePage;
     end;
     
     trigger OnNewRecord(BelowxRec : Boolean);

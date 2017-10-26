@@ -5,9 +5,25 @@ codeunit 62011 DxAssistedSetup
     end;
     
     var
-        Setup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxTimeEntrySetup;
         SetupNameLbl : Label 'Set up Start and End Time Entry';
         RequiredPermissionMissingErr : Label 'You have not been granted required access rights to start the Assisted Setup.\\The Assisted Setup for G/L Source Names is about assigning the required permissions to users.  To be able to assign permissions you need to be granted either the SUPER og SECURITY permission set.';
+
+    [EventSubscriber(ObjectType::Table, Database::"Aggregated Assisted Setup", 'OnRegisterAssistedSetup', '', true, false)]
+    local procedure OnRegisterAssistedSetup(var TempAggregatedAssistedSetup : Record "Aggregated Assisted Setup" temporary);
+    begin
+        if not TimeEntrySetup.WritePermission then exit;
+        InitializeSetup;
+        AddToAssistedSetup(TempAggregatedAssistedSetup);
+    end;
+
+    [EventSubscriber(ObjectType::Table, Database::"Aggregated Assisted Setup", 'OnUpdateAssistedSetupStatus', '', true, false)]
+    local procedure OnUpdateAssistedSetupStatus(var TempAggregatedAssistedSetup : Record "Aggregated Assisted Setup" temporary);
+    begin
+        TimeEntrySetup.Get;
+        with TempAggregatedAssistedSetup DO
+            SetStatus(TempAggregatedAssistedSetup,Page::DxTimeEntrySetupWizard,TimeEntrySetup.Status);
+    end;
 
     procedure VerifyUserAccess();
     var
@@ -22,25 +38,10 @@ codeunit 62011 DxAssistedSetup
         END;
     end;
 
-    [EventSubscriber(ObjectType::Table, Database::"Aggregated Assisted Setup", 'OnRegisterAssistedSetup', '', true, false)]
-    local procedure OnRegisterAssistedSetup(var TempAggregatedAssistedSetup : Record "Aggregated Assisted Setup" temporary);
-    begin
-        if not Setup.WritePermission then exit;
-        InitializeSetup;
-        AddToAssistedSetup(TempAggregatedAssistedSetup);
-    end;
-
-    [EventSubscriber(ObjectType::Table, Database::"Aggregated Assisted Setup", 'OnUpdateAssistedSetupStatus', '', true, false)]
-    local procedure OnUpdateAssistedSetupStatus(var TempAggregatedAssistedSetup : Record "Aggregated Assisted Setup" temporary);
-    begin
-        Setup.GET;
-        with TempAggregatedAssistedSetup DO
-            SetStatus(TempAggregatedAssistedSetup,Page::DxTimeEntrySetupWizard,Setup.Status);
-    end;
 
     local procedure InitializeSetup();
     begin
-        with Setup do
+        with TimeEntrySetup do
             if IsEmpty then begin
                 Init;
                 Insert;
@@ -63,8 +64,8 @@ codeunit 62011 DxAssistedSetup
                 Page::DxTimeEntrySetupWizard,
                 SetupNameLbl,
                 true,
-                Setup.RecordId,
-                Setup.Status,
+                TimeEntrySetup.RecordId,
+                TimeEntrySetup.Status,
                 ''); //HelpResource.Get240PXIconCode
         END;
     end;

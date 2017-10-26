@@ -7,16 +7,18 @@ table 62000 DxTimeEntrySetup
         {
             Caption = 'Primary Key';
         }
-        field(2;"Time Based Entries Enabled";Boolean)
+        field(2;"Time App Enabled";Boolean)
         {
-            Caption='Time Based Entries Enabled';
+            Caption = 'Time App Enabled';
             trigger OnValidate();
             var
                 HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
+                AssistedSetup : Record "Assisted Setup";
             begin
-                if not "Time Based Entries Enabled" then exit;
+                if not "Time App Enabled" then exit;
                 VerifySetupBeforeEnabling(true);
                 Status := Status::Completed;
+                AssistedSetup.SetStatus(PAGE::DxTimeEntrySetupWizard,AssistedSetup.Status::Completed);
             end;
         }
         field(3;"Hourly Units Only";Boolean)
@@ -113,7 +115,7 @@ table 62000 DxTimeEntrySetup
 
     procedure GetSetupIfEnabled() : Boolean;
     begin
-        exit(Get and "Time Based Entries Enabled");
+        exit(Get and "Time App Enabled");
     end;
 
     local procedure VerifySetupBeforeEnabling(ShowError : Boolean) : Boolean;
@@ -159,4 +161,12 @@ table 62000 DxTimeEntrySetup
                 end;                    
         end;
     end;
+
+    procedure CreateHourlyNotificationIfNoSetup();
+    var
+        TimeNotificationHandler : Codeunit DxTimeNotificationHandler;
+    begin
+        TimeNotificationHandler.CreateHourlyNotificationIfNoSetup;
+    end;
+
 }

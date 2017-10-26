@@ -48,7 +48,7 @@ codeunit 62000 DxTimeUpgrade
 
     procedure GetAppId() : Guid;
     begin
-        exit('00000000-0000-0000-0000-00000000000');
+        exit('d391a9da-a640-4a04-83dd-e2ed3ff77ee9');
     end;
 
 }

@@ -150,12 +150,13 @@ page 62001 DxTimeEntrySetupWizard
                 Visible = RegistrationStepVisible;
                 group(RegistrationStepInstruction)
                 {
+                    Caption = '';
                     InstructionalText = 'Enter the Registration details.';
                     field("Registration E-Mail Address";"Registration E-Mail Address")
                     {
                         ApplicationArea = All;
                         ShowMandatory = true;
-                        ToolTip = 'Your registration will only be stored in Dynamics365. Your E-Mail Address is not shared with anyone.';
+                        ToolTip = 'Your registration will only be stored in Dynamics 365. Your E-Mail Address is not shared with anyone.';
                         trigger OnValidate();
                         begin
                             NextActionEnabled := "Registration E-Mail Address" <> '';
@@ -249,6 +250,7 @@ page 62001 DxTimeEntrySetupWizard
         NextActionEnabled : Boolean;
         TempUnitOfMeasure : Record "Unit of Measure" temporary;
         NoHourlyUnitsSelectedErr : Label 'You have not selected any hourly units of measures. Please select at least one, before you continue.';
+        SetupNotCompleteQst : Label 'Dx Time App setup have not been completed.\\Are you sure you want to exit?';
 
     trigger OnInit();
     begin
@@ -258,8 +260,10 @@ page 62001 DxTimeEntrySetupWizard
     trigger OnOpenPage();
     var
         TimeEntrySetup : Record DxTimeEntrySetup;
+        AssistedSetup : Codeunit DxAssistedSetup;
     begin
-        init;
+        AssistedSetup.VerifyUserAccess;
+        Init;
         if TimeEntrySetup.Get then
             TransferFields(TimeEntrySetup);
         Insert;
@@ -291,6 +295,8 @@ page 62001 DxTimeEntrySetupWizard
 
     local procedure FinishAction();
     begin
+        Status := Status::Completed;
+            
         StoreTimeEntrySetup;
         if "Hourly Units Only" then
             StoreUnitOfMeasure;
@@ -323,8 +329,7 @@ page 62001 DxTimeEntrySetupWizard
     local procedure ShowUnitOfMeasureStep();
     begin
         if not "Hourly Units Only" then begin
-            Step := SkipStep;
-            NextStep(LastStep > step);
+            NextStep(LastStep > Step);
             Exit;
         end;
 
@@ -337,14 +342,9 @@ page 62001 DxTimeEntrySetupWizard
     var
         OldStep : Integer;
     begin
-        if not "Hourly Units Only" then begin
-            Step := SkipStep;
-            NextStep(LastStep > Step);
-            Exit;
-        end;
         if LastStep = LastStep::UnitOfMeasureStep  then
             CurrPage.UnitOfMeasurePart.Page.Get(TempUnitOfMeasure);
-        if not HasHourlyUnitsOfMeasureTemp then begin
+        if "Hourly Units Only" and (not HasHourlyUnitsOfMeasureTemp) then begin
             OldStep := Step;
             Step := LastStep;
             LastStep := OldStep;
@@ -353,6 +353,7 @@ page 62001 DxTimeEntrySetupWizard
             Exit;           
         end;
 
+        Validate("Fields To Show");
         ShowMixTimes := "Fields To Show" = "Fields To Show"::Mix;
         MultiDayStepVisible := true;
         FinishActionEnabled := false;
@@ -372,6 +373,7 @@ page 62001 DxTimeEntrySetupWizard
 
         FinishActionEnabled := true;
     end;
+
     local procedure SkipStep() : Integer;
     begin
         if LastStep < Step then
@@ -389,14 +391,15 @@ page 62001 DxTimeEntrySetupWizard
         HourlyUnitsStepVisible := false;
         UnitOfMeasureStepVisible := false;
         MultiDayStepVisible := false;
+        RegistrationStepVisible := false;
         FinishStepVisible := false;
         UnitOfMeasureVisible := false;
     end;
 
     local procedure LoadTopBanners();
     begin
-        if MediaRepositoryStandard.Get('AssistedSetup-NoText-400px.png',Format(CURRENTCLIENTTYPE)) and
-            MediaRepositoryDone.Get('AssistedSetupDone-NoText-400px.png',Format(CURRENTCLIENTTYPE))
+        if MediaRepositoryStandard.Get('AssistedSetup-NoText-400px.png',Format(CurrentClientType)) and
+            MediaRepositoryDone.Get('AssistedSetupDone-NoText-400px.png',Format(CurrentClientType))
         then
             if MediaResourcesStandard.Get(MediaRepositoryStandard."Media Resources Ref") and
                 MediaResourcesDone.Get(MediaRepositoryDone."Media Resources Ref")
@@ -457,8 +460,7 @@ page 62001 DxTimeEntrySetupWizard
             end;
 
             TransferFields(Rec,false);
-            "Time Based Entries Enabled" := true;
-            Status := Status::Completed;
+            "Time App Enabled" := true;
             Modify(true);
             Commit;
         end;

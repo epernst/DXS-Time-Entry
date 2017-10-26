@@ -12,7 +12,7 @@ page 62000 DxTimeEntrySetup
             group(General)
             {
                 Caption = 'General';
-                field("Time Based Entries Enabled";"Time Based Entries Enabled")
+                field("Time Based Entries Enabled";"Time App Enabled")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Enables the app. If not enabled, then the start and end times cannot be entered and will to be shown.';
@@ -21,6 +21,10 @@ page 62000 DxTimeEntrySetup
                 {
                     ApplicationArea = All;
                     ToolTip = 'Allow only time entry on lines using unit of measure codes marked as "Hourly Units".';
+                    trigger OnValidate();
+                    begin
+                        CreateHourlyNotificationIfNoSetup;
+                    end;
                 }
                 field("Allow Entries to Pass Midnight";"Allow Entries to Pass Midnight")
                 {
@@ -92,6 +96,7 @@ page 62000 DxTimeEntrySetup
     trigger OnOpenPage();
     begin
         InitSetupRecord;
+        CreateHourlyNotificationIfNoSetup;
         UpdatePage;
     end;
 
@@ -107,4 +112,5 @@ page 62000 DxTimeEntrySetup
             Insert;
         end;
     end;
+
 }

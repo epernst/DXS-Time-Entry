@@ -28,6 +28,8 @@ tableextension 62002 DxJobJournalLine extends "Job Journal Line"
                     InitStartEndTimes;
                     exit;
                 end;
+                if "Posting Date" = 0D then
+                    "Posting Date" := WorkDate;
                 if "End Time" < "Start Time" then
                     Validate("End Date Time",CreateDateTime("Posting Date"+1,"End Time"))
                 else
@@ -46,10 +48,12 @@ tableextension 62002 DxJobJournalLine extends "Job Journal Line"
                     exit;
                 end;
                 if "Start Date Time" = xRec."Start Date Time" then exit;
-                if "Start Date Time" > "End Date Time" then
-                    "End Date Time" := "Start Date Time";
-                Validate("End Date Time");
                 "Start Time" := DT2Time("Start Date Time");
+
+                if ("Start Date Time" > "End Date Time") AND ("End Date Time" <> 0DT) then begin
+                    "End Date Time" := "Start Date Time";
+                    Validate("End Date Time");
+                end;
             end;
         }
         field(62004;"End Date Time";DateTime)
@@ -86,7 +90,8 @@ tableextension 62002 DxJobJournalLine extends "Job Journal Line"
                     exit;
                 end;
                 if "Total Duration" = 0 then exit;
-                UnitOfMeasure.get("Unit of Measure Code");
+                if (not UnitOfMeasure.get("Unit of Measure Code")) or (UnitOfMeasure."Time Rounding" = 0) then
+                    UnitOfMeasure."Time Rounding" := 0.25; // Default to setup
                 Validate(
                     Quantity, 
                     Round( 

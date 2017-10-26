@@ -32,7 +32,12 @@ codeunit 62004 DxHourlyUnitHandler
     procedure IsHourlyUnit(UnitOfMeasureCode : Code[10]) : Boolean;
     var
         UnitOfMeasure : Record "Unit of Measure";
+        TimeEntrySetup : Record DxTimeEntrySetup;
     begin 
+        with TimeEntrySetup do begin 
+            if not GetSetupIfEnabled then exit(false);   
+            if not "Hourly Units Only" then exit(true);
+        end;
         with UnitOfMeasure do begin
             if not get(UnitOfMeasureCode) then exit(false);
             exit("Hourly Unit");

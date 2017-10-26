@@ -16,6 +16,7 @@ codeunit 62012 DxTimeChecker
         ErrorText : Text;
         IsValidated : Boolean;
     begin
+        IsValidated := true;
         with TimeEntrySetup do begin
             if not GetSetupIfEnabled then exit(false);
             case "Allow Entries to Pass Midnight" of

@@ -15,7 +15,7 @@ codeunit 62019 DxSandBoxSetup
             Get;
             "Hourly Units Only" := true;
             Validate("Fields To Show","Fields To Show"::Times);
-           "Time Based Entries Enabled" := true;
+           "Time App Enabled" := true;
            Insert;  
 
         end;
