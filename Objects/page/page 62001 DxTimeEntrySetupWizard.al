@@ -144,6 +144,25 @@ page 62001 DxTimeEntrySetupWizard
                     }
                 }
             }
+            group(RegistrationStep)
+            {
+                Caption = '';
+                Visible = RegistrationStepVisible;
+                group(RegistrationStepInstruction)
+                {
+                    InstructionalText = 'Enter the Registration details.';
+                    field("Registration E-Mail Address";"Registration E-Mail Address")
+                    {
+                        ApplicationArea = All;
+                        ShowMandatory = true;
+                        ToolTip = 'Your registration will only be stored in Dynamics365. Your E-Mail Address is not shared with anyone.';
+                        trigger OnValidate();
+                        begin
+                            NextActionEnabled := "Registration E-Mail Address" <> '';
+                        end;
+                    }
+                }
+            }
             group(FinishStep)
             {
                 Caption = '';
@@ -213,8 +232,8 @@ page 62001 DxTimeEntrySetupWizard
         MediaRepositoryDone : Record "Media Repository";
         MediaResourcesStandard : Record "Media Resources";
         MediaResourcesDone : Record "Media Resources";
-        Step : Option Start,HourlyUnitsStep,UnitOfMeasureStep,MultiDayStep,Finish;
-        LastStep : Option Start,HourlyUnitsStep,UnitOfMeasureStep,MultiDayStep,Finish;
+        Step : Option Start,HourlyUnitsStep,UnitOfMeasureStep,MultiDayStep,RegistrationStep,Finish;
+        LastStep : Option Start,HourlyUnitsStep,UnitOfMeasureStep,MultiDayStep,RegistrationStep,Finish;
         HasHourlyUnitsOfMeasure : Boolean;
         ShowMixTimes : Boolean;
         UnitOfMeasureVisible : Boolean;
@@ -223,6 +242,7 @@ page 62001 DxTimeEntrySetupWizard
         HourlyUnitsStepVisible : Boolean;
         UnitOfMeasureStepVisible : Boolean;
         MultiDayStepVisible : Boolean;
+        RegistrationStepVisible : Boolean;
         FinishStepVisible : Boolean;
         FinishActionEnabled : Boolean;
         BackActionEnabled : Boolean;
@@ -262,6 +282,8 @@ page 62001 DxTimeEntrySetupWizard
                 ShowUnitOfMeasureStep;
             Step::MultiDayStep:
                 ShowMultiDayStep;
+            Step::RegistrationStep:
+                ShowRegistrationStep;
             Step::Finish:
                 ShowFinishStep;
         end;
@@ -333,7 +355,15 @@ page 62001 DxTimeEntrySetupWizard
 
         ShowMixTimes := "Fields To Show" = "Fields To Show"::Mix;
         MultiDayStepVisible := true;
-        FinishActionEnabled := true;
+        FinishActionEnabled := false;
+    end;
+    local procedure ShowRegistrationStep();
+    var
+        OldStep : Integer;
+    begin
+        RegistrationStepVisible := true;
+        FinishActionEnabled := false;
+        NextActionEnabled := "Registration E-Mail Address" <> '';
     end;
     local procedure ShowFinishStep();
     begin
