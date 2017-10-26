@@ -7,7 +7,7 @@ codeunit 62003 DxDrillDownJobFactBoxes
         DrillDownField : Option BillableHours,NonBillableHours,TotalSales,TotalCost,TotalProfit);
     var
         JobJournalLine : Record "Job Journal Line";
-        JobUOM : Codeunit DxHourlyUnitHandler;
+        HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
     begin
         with JobJournalLine do begin
             SetRange("Journal Template Name",JobJournalLine."Journal Template Name");
@@ -16,12 +16,12 @@ codeunit 62003 DxDrillDownJobFactBoxes
             case DrillDownField of
                 DrillDownField::BillableHours :
                     begin
-                        SetFilter("Unit of Measure Code",JobUOM.GetUnitOfMeasureHourFilter);
+                        SetFilter("Unit of Measure Code",HourlyUnitHandler.GetHourlyUnitOfMeasureFilter);
                         SetRange(Chargeable,true);
                     end;
                 DrillDownField::NonBillableHours :
                     begin
-                        SetFilter("Unit of Measure Code",JobUOM.GetUnitOfMeasureHourFilter);
+                        SetFilter("Unit of Measure Code",HourlyUnitHandler.GetHourlyUnitOfMeasureFilter);
                         SetRange(Chargeable,false);
                     end;
             end;
@@ -34,7 +34,7 @@ codeunit 62003 DxDrillDownJobFactBoxes
         DrillDownField : Option BillableHours,NonBillableHours,TotalSales,TotalCost,TotalProfit);
     var
         JobLedgerEntry : Record "Job Ledger Entry";
-        JobUOM : Codeunit DxHourlyUnitHandler;
+        HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
     begin
         with JobLedgerEntry do begin
             SetRange("Job No.",JobNo);
@@ -42,13 +42,13 @@ codeunit 62003 DxDrillDownJobFactBoxes
             case DrillDownField of
                 DrillDownField::BillableHours :
                     begin
-                        SetRange("Unit of Measure Code",JobUOM.GetUnitOfMeasureHourFilter);
-                        SETFILTER("Total Price (LCY)",'<>%1',0);
+                        SetRange("Unit of Measure Code",HourlyUnitHandler.GetHourlyUnitOfMeasureFilter);
+                        SetFilter("Total Price (LCY)",'<>%1',0);
                     end;
                 DrillDownField::NonBillableHours :
                     begin
-                        SetRange("Unit of Measure Code",JobUOM.GetUnitOfMeasureHourFilter);
-                        SETFILTER("Total Price (LCY)",'%1',0);
+                        SetRange("Unit of Measure Code",HourlyUnitHandler.GetHourlyUnitOfMeasureFilter);
+                        SetFilter("Total Price (LCY)",'%1',0);
                     end;
                 end;
             PAGE.RUN(PAGE::"Job Ledger Entries",JobLedgerEntry);

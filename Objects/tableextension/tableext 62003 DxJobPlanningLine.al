@@ -9,7 +9,7 @@ tableextension 62003 DxJobPlanningLine extends "Job Planning Line"
             var 
                 SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Time"),true) then begin
+                if not SpecialUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Time"),true) then begin
                     InitJobTimes;
                     exit;
                 end;
@@ -24,7 +24,7 @@ tableextension 62003 DxJobPlanningLine extends "Job Planning Line"
             var
                 SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourUnitOfMeasure("Unit of Measure Code",FieldCaption("End Time"),true) then begin
+                if not SpecialUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("End Time"),true) then begin
                     InitJobTimes;
                     exit;
                 end;
@@ -41,7 +41,7 @@ tableextension 62003 DxJobPlanningLine extends "Job Planning Line"
             var
                 SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Date Time"),true) then begin
+                if not SpecialUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Date Time"),true) then begin
                     InitJobTimes;
                     exit;
                 end;
@@ -59,7 +59,7 @@ tableextension 62003 DxJobPlanningLine extends "Job Planning Line"
             var
                 SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourUnitOfMeasure("Unit of Measure Code",FieldCaption("End Date Time"),true) then begin
+                if not SpecialUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("End Date Time"),true) then begin
                     InitJobTimes;
                     exit;
                 end;
@@ -79,7 +79,7 @@ tableextension 62003 DxJobPlanningLine extends "Job Planning Line"
                 UnitOfMeasure : Record "Unit of Measure";
                 SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourUnitOfMeasure("Unit of Measure Code",FieldCaption("Total Duration"),true) then begin
+                if not SpecialUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Total Duration"),true) then begin
                     InitJobTimes;
                     exit;
                 end;

@@ -1,4 +1,4 @@
-codeunit 62000 DxTimeAppManager
+codeunit 62000 DxTimeUpgrade
 {
     var
         UpdateSetupPermissionSet : Label 'TIMEENTRY-SETUP';

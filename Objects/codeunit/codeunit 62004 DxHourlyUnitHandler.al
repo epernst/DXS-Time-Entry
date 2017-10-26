@@ -5,12 +5,17 @@ codeunit 62004 DxHourlyUnitHandler
     end;
     
     var
-        CanOnlyUseWithTypeErr : Label '%1 can only be used with a %2, which have been setup as a "%3".';
+        CanOnlyUseWithTypeErr : Label '%1 can only be used with a %2, which have been setup as a "%3".', Comment = '%1-fieldcaption %2-unit of measure table %3-hourly unit';
 
-    procedure ValidateHourUnitOfMeasure(UnitOfMeasureCode : Code[10];TestFieldCaption : Text;ShowMessage : Boolean) : Boolean;
+    procedure ValidateHourlyUnitOfMeasure(UnitOfMeasureCode : Code[10];TestFieldCaption : Text;ShowMessage : Boolean) : Boolean;
     var
         UnitOfMeasure : Record "Unit of Measure";
-    begin
+        TimeEntrySetup : Record DxTimeEntrySetup;
+    begin      
+        with TimeEntrySetup do begin 
+            if not GetSetupIfEnabled then exit(false);   
+            if not "Hourly Units Only" then exit(true);
+        end;
         with UnitOfMeasure do begin
             if get(UnitOfMeasureCode) and "Hourly Unit" then 
                 exit(true);
@@ -24,7 +29,7 @@ codeunit 62004 DxHourlyUnitHandler
         end;
     end;
 
-    procedure IsUOMforHours(UnitOfMeasureCode : Code[10]) : Boolean;
+    procedure IsHourlyUnit(UnitOfMeasureCode : Code[10]) : Boolean;
     var
         UnitOfMeasure : Record "Unit of Measure";
     begin 
@@ -44,7 +49,7 @@ codeunit 62004 DxHourlyUnitHandler
         end;
     end;
     
-    procedure GetUnitOfMeasureHourFilter() : Text;
+    procedure GetHourlyUnitOfMeasureFilter() : Text;
     var
         UnitOfMeasure : Record "Unit of Measure";
         FilterText : Text;

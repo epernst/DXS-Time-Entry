@@ -2,73 +2,73 @@ pageextension 62001 DxJobPlanningLines extends "Job Planning Lines"
 {
     layout
     {
-      modify("Unit of Measure Code"){
-        trigger OnAfterValidate();
-        begin
-          UpdatePage;
-        end;
-      }
+        modify("Unit of Measure Code"){
+            trigger OnAfterValidate();
+            begin
+                UpdatePage;
+            end;
+        }
 
-      addafter(Reserve)
-      {
-        field("Start Time";"Start Time")
+        addafter(Reserve)
         {
-          ApplicationArea = All;
-          Editable = IsTimeEditable;
+            field("Start Time";"Start Time")
+            {
+                ApplicationArea = All;
+                Editable = IsTimeEditable;
+            }
+            field("End Time";"End Time")
+            {
+                ApplicationArea = All;
+                Editable = IsTimeEditable;
+            }
+            field("Start Date Time";"Start Date Time")
+            {
+                ApplicationArea = All;
+                Visible = false;
+                Editable = IsTimeEditable;
+            }
+            field("End Date Time";"End Date Time")
+            {
+                ApplicationArea = All;
+                Visible = false;
+                Editable = IsTimeEditable;
+            }
+            field("Total Duration";"Total Duration")
+            {
+                ApplicationArea = All;
+                Editable = IsTimeEditable;
+            }
         }
-        field("End Time";"End Time")
-        {
-          ApplicationArea = All;
-          Editable = IsTimeEditable;
-        }
-        field("Start Date Time";"Start Date Time")
-        {
-          Visible = false;
-          Editable = IsTimeEditable;
-          ApplicationArea = All;
-        }
-        field("End Date Time";"End Date Time")
-        {
-          Visible = false;
-          Editable = IsTimeEditable;
-          ApplicationArea = All;
-        }
-        field("Total Duration";"Total Duration")
-        {
-          Editable = IsTimeEditable;
-          ApplicationArea = All;
-        }
-      }
     }
     trigger OnOpenPage();
     begin
-      UpdatePage;
+        UpdatePage;
     end;
     
     trigger OnNewRecord(BelowxRec : Boolean);
     begin
-      InitJobTimes;
-      UpdatePage;
+        InitJobTimes;
+        UpdatePage;
     end;
 
     trigger OnAfterGetCurrRecord();
     begin
-      UpdatePage;
+        UpdatePage;
     end;
     
     var
       IsTimeEditable : Boolean;
 
-    local procedure GetTimeEditable() : Boolean;
+      local procedure GetTimeEditable() : Boolean;
       var
-        DxHourlyUnitHandler : Codeunit DxHourlyUnitHandler;
+          HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
       begin
-          exit(DxHourlyUnitHandler.IsUOMforHours("Unit of Measure Code"));
+          exit(HourlyUnitHandler.IsHourlyUnit("Unit of Measure Code"));
       end;
 
-    local procedure UpdatePage();
+      local procedure UpdatePage();
       begin
-        IsTimeEditable := GetTimeEditable;
+         IsTimeEditable := GetTimeEditable;
       end;
 
 }

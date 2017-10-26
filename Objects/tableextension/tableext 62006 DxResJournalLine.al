@@ -7,9 +7,9 @@ tableextension 62006 DxResJournalLine extends "Res. Journal Line"
             Caption = 'Start Time';
             trigger OnValidate();
             var
-                SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
+                HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Date Time"),true) then begin
+                if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Date Time"),true) then begin
                     InitJobTimes;
                     exit;
                 end;
@@ -22,9 +22,9 @@ tableextension 62006 DxResJournalLine extends "Res. Journal Line"
             Caption = 'End Time';
             trigger OnValidate();
             var
-                SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
+                HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourUnitOfMeasure("Unit of Measure Code",FieldCaption("End Time"),true) then begin
+                if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("End Time"),true) then begin
                     InitJobTimes;
                     exit;
                 end;
@@ -39,9 +39,9 @@ tableextension 62006 DxResJournalLine extends "Res. Journal Line"
             Caption = 'Start Date Time';
             trigger OnValidate();
             var
-                SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
+                HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Date Time"),true) then begin
+                if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Date Time"),true) then begin
                     InitJobTimes;
                     exit;
                 end;
@@ -57,9 +57,9 @@ tableextension 62006 DxResJournalLine extends "Res. Journal Line"
             Caption = 'End Date Time';
             trigger OnValidate();
             var
-                SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
+                HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourUnitOfMeasure("Unit of Measure Code",FieldCaption("End Date Time"),true) then begin
+                if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("End Date Time"),true) then begin
                     InitJobTimes;
                     exit;
                 end;
@@ -77,9 +77,9 @@ tableextension 62006 DxResJournalLine extends "Res. Journal Line"
             trigger OnValidate();
             var
                 UnitOfMeasure : Record "Unit of Measure";
-                SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
+                HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourUnitOfMeasure("Unit of Measure Code",FieldCaption("Total Duration"),true) then begin
+                if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Total Duration"),true) then begin
                     InitJobTimes;
                     exit;
                 end;

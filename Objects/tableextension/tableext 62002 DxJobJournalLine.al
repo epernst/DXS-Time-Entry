@@ -7,10 +7,10 @@ tableextension 62002 DxJobJournalLine extends "Job Journal Line"
             Caption = 'Start Time';
             trigger OnValidate();
             var
-                SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
+                HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Date Time"),true) then begin
-                    InitJobTimes;
+                if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Date Time"),true) then begin
+                    InitStartEndTimes;
                     exit;
                 end;
                 if "Start Time" = xRec."Start Time" then exit;
@@ -22,10 +22,10 @@ tableextension 62002 DxJobJournalLine extends "Job Journal Line"
             Caption = 'End Time';
             trigger OnValidate();
             var
-                SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
+                HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourUnitOfMeasure("Unit of Measure Code",FieldCaption("End Time"),true) then begin
-                    InitJobTimes;
+                if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("End Time"),true) then begin
+                    InitStartEndTimes;
                     exit;
                 end;
                 if "End Time" < "Start Time" then
@@ -39,10 +39,10 @@ tableextension 62002 DxJobJournalLine extends "Job Journal Line"
             Caption = 'Start Date Time';
             trigger OnValidate();
             var
-                SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
+                HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Date Time"),true) then begin
-                    InitJobTimes;
+                if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Date Time"),true) then begin
+                    InitStartEndTimes;
                     exit;
                 end;
                 if "Start Date Time" = xRec."Start Date Time" then exit;
@@ -57,16 +57,18 @@ tableextension 62002 DxJobJournalLine extends "Job Journal Line"
             Caption = 'End Date Time';
             trigger OnValidate();
             var
-                SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
+                HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
+                TimeChecker : Codeunit DxTimeChecker;
             begin
-                if not SpecialUnitHandler.ValidateHourUnitOfMeasure("Unit of Measure Code",FieldCaption("End Date Time"),true) then begin
-                    InitJobTimes;
+                if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("End Date Time"),true) then begin
+                    InitStartEndTimes;
                     exit;
                 end;
                 if ("Start Date Time" = 0DT) or ("End Date Time" = 0DT) then begin
                     "Total Duration" := 0;
                     exit;
                 end;
+                TimeChecker.ValidateStartAndEndTimes("Start Date Time","End Date Time",true);
                 Validate("Total Duration","End Date Time"-"Start Date Time");
                 "End Time" := DT2Time("End Date Time");
             end;
@@ -77,18 +79,18 @@ tableextension 62002 DxJobJournalLine extends "Job Journal Line"
             trigger OnValidate();
             var
                 UnitOfMeasure : Record "Unit of Measure";
-                SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
+                HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourUnitOfMeasure("Unit of Measure Code",FieldCaption("Total Duration"),true) then begin
-                    InitJobTimes;
+                if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Total Duration"),true) then begin
+                    InitStartEndTimes;
                     exit;
                 end;
                 if "Total Duration" = 0 then exit;
                 UnitOfMeasure.get("Unit of Measure Code");
                 Validate(
                     Quantity, 
-                    ROUND(
-                        ROUND("Total Duration"/3600000,0.00001),
+                    Round( 
+                        Round("Total Duration"/3600000,0.00001),
                         UnitOfMeasure."Time Rounding",
                         '>'));
                 if (CurrFieldNo = FieldNo("Total Duration")) and 
@@ -98,7 +100,7 @@ tableextension 62002 DxJobJournalLine extends "Job Journal Line"
             end;
         }
     }
-    procedure InitJobTimes();
+    procedure InitStartEndTimes();
     begin
         "Start Time" := 0T;
         "Start Date Time" := 0DT;

@@ -26,8 +26,8 @@ table 62000 DxTimeEntrySetup
         field(4;"Allow Entries to Pass Midnight";Option)
         {
             Caption = 'Allow Entries to Pass Midnight';
-            OptionMembers= No,Day,"Multi-Days";
-            OptionCaption = 'No,24 hours max,Multiple days';
+            OptionMembers= No,NextDay,MultipleDays;
+            OptionCaption = 'No,Yes - Next Day,Yes - Multiple Days';
         }
         field(5;"Fields To Show";Option)
         {
@@ -110,6 +110,12 @@ table 62000 DxTimeEntrySetup
     var
         NoHourlyUnitsCannotEnableErr : Label 'You need to setup at least one unit of measure as an Hourly Unit, before you can enable the Time Entry App.';
         NoRegistrationEmailAddressErr : Label 'You need to enter a valid email adress, before you can enable the app.';
+
+    procedure GetSetupIfEnabled() : Boolean;
+    begin
+        exit(Get and "Time Based Entries Enabled");
+    end;
+
     local procedure VerifySetupBeforeEnabling(ShowError : Boolean) : Boolean;
     var
         HourlyUnitHandler : Codeunit DxHourlyUnitHandler;

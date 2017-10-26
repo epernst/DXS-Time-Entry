@@ -60,9 +60,9 @@ pageextension 62006 DxResourceJournal extends "Resource Journal"
 
   local procedure GetTimeEditable() : Boolean;
     var
-      DxHourlyUnitHandler : Codeunit DxHourlyUnitHandler;
+      HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
     begin
-        exit(DxHourlyUnitHandler.IsUOMforHours("Unit of Measure Code"));
+        exit(HourlyUnitHandler.IsHourlyUnit("Unit of Measure Code"));
     end;
 
   local procedure UpdatePage();

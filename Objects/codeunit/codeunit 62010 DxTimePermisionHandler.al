@@ -16,7 +16,7 @@ codeunit 62010 DxTimePermissionHandler
         TimeEntrySetup : Record DxTimeEntrySetup;
     begin
         with TimeEntrySetup do
-            EXIT(Get and "Time Based Entries Enabled");
+            exit(Get and "Time Based Entries Enabled");
     end;
 
     procedure CanChangeUnitOfMeasure() : Boolean;

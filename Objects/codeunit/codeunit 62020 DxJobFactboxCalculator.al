@@ -15,9 +15,9 @@ codeunit 62020 DxJobFactboxCalculator
         var AvgPricePerUOM : Decimal);
     var
         Job : Record Job;
-        JobUOM : Codeunit DxHourlyUnitHandler;
+        HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
     begin
-        if JobUOM.GetUnitOfMeasureHourFilter = '' THEN exit;
+        if HourlyUnitHandler.GetHourlyUnitOfMeasureFilter = '' then exit;
         if (not Job.GET(JobJournalLine."Job No.")) and (ViewType <> ViewType::TotalJobJournal) then exit;
 
         BillableHours := 0;
@@ -47,11 +47,11 @@ codeunit 62020 DxJobFactboxCalculator
         var TotalProfit : Decimal;
         var AvgPricePerUOM : Decimal);
     var
-        JobUOM : Codeunit DxHourlyUnitHandler;
+        HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
     begin
         if Job."No." = '' then
             exit;
-        if JobUOM.GetUnitOfMeasureHourFilter = '' THEN exit;
+        if HourlyUnitHandler.GetHourlyUnitOfMeasureFilter = '' then exit;
 
         BillableHours := 0;
         NonBillableHours := 0;
@@ -78,22 +78,22 @@ codeunit 62020 DxJobFactboxCalculator
         var AvgPricePerUOM : Decimal);
     var
         JobJournalLine: Record "Job Journal Line";
-        JobUOM : Codeunit DxHourlyUnitHandler;
+        HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
     begin
         with JobJournalLine do begin
-            IF JobNo <> '' then
+            if JobNo <> '' then
                 SetRange("Job No.",JobNo);
-            CALCSUMS("Total Cost (LCY)","Total Price (LCY)");
+            CalcSums("Total Cost (LCY)","Total Price (LCY)");
             TotalSales := "Total Price (LCY)";
             TotalCost := "Total Cost (LCY)";
 
-            SetFilter("Unit of Measure Code",JobUOM.GetUnitOfMeasureHourFilter);
+            SetFilter("Unit of Measure Code",HourlyUnitHandler.GetHourlyUnitOfMeasureFilter);
             SetRange(Chargeable,true);
-            CALCSUMS(Quantity);
+            CalcSums(Quantity);
             BillableHours := Quantity;
 
             SetRange(Chargeable,false);
-            CALCSUMS(Quantity);
+            CalcSums(Quantity);
             NonBillableHours := Quantity;
 
             AvgPricePerUOM :=
@@ -113,24 +113,24 @@ codeunit 62020 DxJobFactboxCalculator
         var AvgPricePerUOM : Decimal);
     var
         JobLedgerEntry: Record "Job Ledger Entry";
-        JobUOM : Codeunit DxHourlyUnitHandler;
+        HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
     begin
         with JobLedgerEntry do begin
             IF JobNo <> '' then
                 SetRange("Job No.",JobNo);
             SetRange("Entry Type","Entry Type"::Usage);
-            CALCSUMS("Total Cost (LCY)","Total Price (LCY)","Line Amount (LCY)");
+            CalcSums("Total Cost (LCY)","Total Price (LCY)","Line Amount (LCY)");
             TotalSales := "Line Amount (LCY)";
             TotalCost := "Total Cost (LCY)";
 
-            SetRange("Unit of Measure Code",JobUOM.GetUnitOfMeasureHourFilter);
+            SetRange("Unit of Measure Code",HourlyUnitHandler.GetHourlyUnitOfMeasureFilter);
             SETFILTER("Total Price (LCY)",'<>%1',0);
 
-            CALCSUMS(Quantity);
+            CalcSums(Quantity);
             BillableHours := Quantity;
 
             SETFILTER("Total Price (LCY)",'%1',0);
-            CALCSUMS(Quantity);
+            CalcSums(Quantity);
             NonBillableHours := Quantity;
 
             AvgPricePerUOM :=
