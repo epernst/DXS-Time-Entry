@@ -84,9 +84,19 @@ page 62001 DxTimeEntrySetupWizard
                     field("Hourly Units Only";"Hourly Units Only")
                     {
                         ApplicationArea = All;
-                        
                     }
                 }   
+                group(DefaultTimeRounding)
+                {
+                    Caption = '';
+                    Visible = not "Hourly Units Only";
+                    InstructionalText = 'Please enter need a Time Default Rounding. Default value "0.25" will round up to nearest 15 minute interval. "1" will round up to nearest full hour.';
+                    field("Default Time Rounding";"Default Time Rounding")
+                    {
+                        ToolTip = 'Specify how to round start and end time based entries. For example enter 0.25 to have 15 minutes as the minimum time to use. The field is mandatory if "Hourly Units Only" has not been selected.';
+                        ApplicationArea = All;          
+                    }
+                }
             }
             
             group(UnitOfMeasureStep)

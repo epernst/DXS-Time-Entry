@@ -1,9 +1,9 @@
 {
   "id": "d391a9da-a640-4a04-83dd-e2ed3ff77ee9",
-  "name": "DX-Job-Extension-1",
-  "publisher": "Default publisher",
-  "brief": "",
-  "description": "",
+  "name": "Dx365 Time Entry",
+  "publisher": "Dx Solutions",
+  "brief": "Allow entry of start and end times in journals and planning lines.",
+  "description": "This app allow the user to enter start and end times (as opposed to just quantities) into resource and job journals and job planning lines.",
   "version": "1.0.0.0",
   "compatibilityId": "1.0.0.0",
   "privacyStatement": "",
@@ -20,7 +20,7 @@
     "locale": "DK"
   },
   "idRange": {
-    "from": 50100,
-    "to": 70149
+    "from": 62000,
+    "to": 62099
   }
 }
