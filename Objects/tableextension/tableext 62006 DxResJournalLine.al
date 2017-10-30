@@ -10,7 +10,7 @@ tableextension 62006 DxResJournalLine extends "Res. Journal Line"
                 HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
                 if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Date Time"),true) then begin
-                    InitJobTimes;
+                    InitStartEndTimes;
                     exit;
                 end;
                 if "Start Time" = xRec."Start Time" then exit;
@@ -25,9 +25,11 @@ tableextension 62006 DxResJournalLine extends "Res. Journal Line"
                 HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
                 if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("End Time"),true) then begin
-                    InitJobTimes;
+                    InitStartEndTimes;
                     exit;
                 end;
+                if "Posting Date" = 0D then
+                    "Posting Date" := WorkDate;
                 if "End Time" < "Start Time" then
                     Validate("End Date Time",CreateDateTime("Posting Date"+1,"End Time"))
                 else
@@ -42,14 +44,16 @@ tableextension 62006 DxResJournalLine extends "Res. Journal Line"
                 HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
                 if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Date Time"),true) then begin
-                    InitJobTimes;
+                    InitStartEndTimes;
                     exit;
                 end;
                 if "Start Date Time" = xRec."Start Date Time" then exit;
-                if "Start Date Time" > "End Date Time" then
-                    "End Date Time" := "Start Date Time";
-                Validate("End Date Time");
                 "Start Time" := DT2Time("Start Date Time");
+
+                if ("Start Date Time" > "End Date Time") AND ("End Date Time" <> 0DT) then begin
+                    "End Date Time" := "Start Date Time";
+                    Validate("End Date Time");
+                end;
             end;
         }
         field(62004;"End Date Time";DateTime)
@@ -58,16 +62,19 @@ tableextension 62006 DxResJournalLine extends "Res. Journal Line"
             trigger OnValidate();
             var
                 HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
+                TimeChecker : Codeunit DxTimeChecker;
             begin
                 if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("End Date Time"),true) then begin
-                    InitJobTimes;
+                    InitStartEndTimes;
                     exit;
                 end;
                 if ("Start Date Time" = 0DT) or ("End Date Time" = 0DT) then begin
                     "Total Duration" := 0;
                     exit;
                 end;
-                Validate("Total Duration","End Date Time"-"Start Date Time");
+                TimeChecker.ValidateStartAndEndTimes("Start Date Time","End Date Time",true);
+                if CurrFieldNo <> FieldNo("Total Duration") then 
+                    Validate("Total Duration","End Date Time"-"Start Date Time");
                 "End Time" := DT2Time("End Date Time");
             end;
         }
@@ -80,25 +87,22 @@ tableextension 62006 DxResJournalLine extends "Res. Journal Line"
                 HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
                 if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Total Duration"),true) then begin
-                    InitJobTimes;
+                    InitStartEndTimes;
                     exit;
                 end;
                 if "Total Duration" = 0 then exit;
-                UnitOfMeasure.get("Unit of Measure Code");
                 Validate(
                     Quantity, 
-                    ROUND(
-                        ROUND("Total Duration"/3600000,0.00001),
-                        UnitOfMeasure."Time Rounding",
+                    Round( 
+                        Round("Total Duration"/3600000,0.00001),
+                        UnitOfMeasure.GetTimeRounding("Unit of Measure Code"),
                         '>'));
-                if (CurrFieldNo = FieldNo("Total Duration")) and 
-                    ("Start Date Time" <> 0DT) 
-                then 
-                    "End Date Time" := "Start Date Time" + "Total Duration";
+                if (CurrFieldNo = FieldNo("Total Duration")) then 
+                    Validate("End Date Time","Start Date Time" + "Total Duration");
             end;
         }
     }
-    procedure InitJobTimes();
+    procedure InitStartEndTimes();
     begin
         "Start Time" := 0T;
         "Start Date Time" := 0DT;

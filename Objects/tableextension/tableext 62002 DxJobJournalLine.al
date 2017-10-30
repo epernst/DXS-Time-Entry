@@ -73,7 +73,8 @@ tableextension 62002 DxJobJournalLine extends "Job Journal Line"
                     exit;
                 end;
                 TimeChecker.ValidateStartAndEndTimes("Start Date Time","End Date Time",true);
-                Validate("Total Duration","End Date Time"-"Start Date Time");
+                if CurrFieldNo <> FieldNo("Total Duration") then 
+                    Validate("Total Duration","End Date Time"-"Start Date Time");
                 "End Time" := DT2Time("End Date Time");
             end;
         }
@@ -90,21 +91,18 @@ tableextension 62002 DxJobJournalLine extends "Job Journal Line"
                     exit;
                 end;
                 if "Total Duration" = 0 then exit;
-                if (not UnitOfMeasure.get("Unit of Measure Code")) or (UnitOfMeasure."Time Rounding" = 0) then
-                    UnitOfMeasure."Time Rounding" := 0.25; // Default to setup
                 Validate(
                     Quantity, 
                     Round( 
                         Round("Total Duration"/3600000,0.00001),
-                        UnitOfMeasure."Time Rounding",
+                        UnitOfMeasure.GetTimeRounding("Unit of Measure Code"),
                         '>'));
-                if (CurrFieldNo = FieldNo("Total Duration")) and 
-                    ("Start Date Time" <> 0DT) 
-                then 
-                    "End Date Time" := "Start Date Time" + "Total Duration";
+                if (CurrFieldNo = FieldNo("Total Duration")) then 
+                    Validate("End Date Time","Start Date Time" + "Total Duration");
             end;
         }
     }
+    
     procedure InitStartEndTimes();
     begin
         "Start Time" := 0T;
@@ -114,4 +112,3 @@ tableextension 62002 DxJobJournalLine extends "Job Journal Line"
         "Total Duration" := 0;         
     end;
 }
-

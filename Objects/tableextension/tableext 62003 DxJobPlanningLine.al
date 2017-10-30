@@ -7,10 +7,10 @@ tableextension 62003 DxJobPlanningLine extends "Job Planning Line"
             Caption = 'Start Time';
             trigger OnValidate();
             var 
-                SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
+                HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Time"),true) then begin
-                    InitJobTimes;
+                if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Time"),true) then begin
+                    InitStartEndTimes;
                     exit;
                 end;
                 if "Start Time" = xRec."Start Time" then exit;
@@ -22,13 +22,15 @@ tableextension 62003 DxJobPlanningLine extends "Job Planning Line"
             Caption = 'End Time';
             trigger OnValidate();
             var
-                SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
+                HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("End Time"),true) then begin
-                    InitJobTimes;
+                if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("End Time"),true) then begin
+                    InitStartEndTimes;
                     exit;
                 end;
-                if "End Time" < "Start Time" then
+                 if "Planning Date" = 0D then
+                    "Planning Date" := WorkDate;
+               if "End Time" < "Start Time" then
                     Validate("End Date Time",CreateDateTime("Planning Date"+1,"End Time"))
                 else
                     Validate("End Date Time",CreateDateTime("Planning Date","End Time"));
@@ -39,17 +41,19 @@ tableextension 62003 DxJobPlanningLine extends "Job Planning Line"
             Caption = 'Start Date Time';
             trigger OnValidate();
             var
-                SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
+                HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Date Time"),true) then begin
-                    InitJobTimes;
+                if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Start Date Time"),true) then begin
+                    InitStartEndTimes;
                     exit;
                 end;
                 if "Start Date Time" = xRec."Start Date Time" then exit;
-                if "Start Date Time" > "End Date Time" then
-                    "End Date Time" := "Start Date Time";
-                Validate("End Date Time");
                 "Start Time" := DT2Time("Start Date Time");
+
+                if ("Start Date Time" > "End Date Time") AND ("End Date Time" <> 0DT) then begin
+                    "End Date Time" := "Start Date Time";
+                    Validate("End Date Time");
+                end;
             end;
         }
         field(62004;"End Date Time";DateTime)
@@ -57,17 +61,20 @@ tableextension 62003 DxJobPlanningLine extends "Job Planning Line"
             Caption = 'End Date Time';
             trigger OnValidate();
             var
-                SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
+                HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
+                TimeChecker : Codeunit DxTimeChecker;
             begin
-                if not SpecialUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("End Date Time"),true) then begin
-                    InitJobTimes;
+                if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("End Date Time"),true) then begin
+                    InitStartEndTimes;
                     exit;
                 end;
                 if ("Start Date Time" = 0DT) or ("End Date Time" = 0DT) then begin
                     "Total Duration" := 0;
                     exit;
                 end;
-                Validate("Total Duration","End Date Time"-"Start Date Time");
+                TimeChecker.ValidateStartAndEndTimes("Start Date Time","End Date Time",true);
+                if CurrFieldNo <> FieldNo("Total Duration") then 
+                    Validate("Total Duration","End Date Time"-"Start Date Time");
                 "End Time" := DT2Time("End Date Time");
             end;
         }
@@ -77,29 +84,26 @@ tableextension 62003 DxJobPlanningLine extends "Job Planning Line"
             trigger OnValidate();
             var
                 UnitOfMeasure : Record "Unit of Measure";
-                SpecialUnitHandler : Codeunit DxHourlyUnitHandler;
+                HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
             begin
-                if not SpecialUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Total Duration"),true) then begin
-                    InitJobTimes;
+                if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("Total Duration"),true) then begin
+                    InitStartEndTimes;
                     exit;
                 end;
                 if "Total Duration" = 0 then exit;
-                UnitOfMeasure.get("Unit of Measure Code");
                 Validate(
                     Quantity, 
-                    ROUND(
-                        ROUND("Total Duration"/3600000,0.00001),
-                        UnitOfMeasure."Time Rounding",
+                    Round( 
+                        Round("Total Duration"/3600000,0.00001),
+                        UnitOfMeasure.GetTimeRounding("Unit of Measure Code"),
                         '>'));
-                if (CurrFieldNo = FieldNo("Total Duration")) and 
-                    ("Start Date Time" <> 0DT) 
-                then 
-                    "End Date Time" := "Start Date Time" + "Total Duration";
+                if (CurrFieldNo = FieldNo("Total Duration")) then 
+                    Validate("End Date Time","Start Date Time" + "Total Duration");
             end;
         }
     }
     
-    procedure InitJobTimes();
+    procedure InitStartEndTimes();
     begin
         "Start Time" := 0T;
         "Start Date Time" := 0DT;
@@ -108,4 +112,3 @@ tableextension 62003 DxJobPlanningLine extends "Job Planning Line"
         "Total Duration" := 0;         
     end;
 }
-

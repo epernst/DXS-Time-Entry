@@ -40,6 +40,15 @@ codeunit 62007 DxTimeNotificationFacade
         TimeNotificationHandler.CreateHourlyNotificationIfNoSetup;
     end;
 
+    [EventSubscriber(ObjectType::Page, Page::"Units of Measure", 'OnOpenPageEvent', '', false, false)]
+    local procedure OnOpenUnitsOfMeasurePage();
+    var
+        TimeNotificationHandler : Codeunit DxTimeNotificationHandler;
+    begin
+        TimeNotificationHandler.CreateSetupNotificationIfNoSetup;
+        TimeNotificationHandler.CreateHourlyNotificationIfNoSetup;
+    end;
+
     [EventSubscriber(ObjectType::Page, Page::"O365 Activities", 'OnOpenPageEvent', '', false, false)]
     local procedure OnOpenD365ActivitiesPage();
     var

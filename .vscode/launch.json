@@ -5,12 +5,12 @@
 		{
 			"type": "al",
 			"request": "launch",
-			"server": "https://dxtenerifeoctdk.northeurope.cloudapp.azure.com",
+			"server": "https://dxtenoctdk.northeurope.cloudapp.azure.com",
 			"serverInstance": "NAV",
 			"name": "Launch",
 			"tenant": "",
 			"authentication": "UserPassword",
-			"startupObjectId": 201
+			"startupObjectId": 209
 		}
 	]
 }

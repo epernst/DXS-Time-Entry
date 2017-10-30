@@ -1,23 +1,23 @@
 codeunit 62002 DxJobTransferLineFacade
 {
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'onAfterFromJnlLineToLedgEntry', '', false, false)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'OnAfterFromJnlLineToLedgEntry', '', false, false)]
     local procedure onAfterFromJnlLineToLedgEntry(
-      var JobLedgerEntry : Record "Job Ledger Entry"; 
-      JobJournalLine : Record "Job Journal Line");
+        var JobLedgerEntry : Record "Job Ledger Entry"; 
+        JobJournalLine : Record "Job Journal Line");
     begin
         with JobLedgerEntry do begin
-          "Start Time" := JobJournalLine."Start Time";
-          "End Time" := JobJournalLine."End Time";
-          "Start Date Time" := JobJournalLine."Start Date Time";
-          "End Date Time" := JobJournalLine."End Date Time";
-          "Total Duration" := JobJournalLine."Total Duration";
+            "Start Time" := JobJournalLine."Start Time";
+            "End Time" := JobJournalLine."End Time";
+            "Start Date Time" := JobJournalLine."Start Date Time";
+            "End Date Time" := JobJournalLine."End Date Time";
+            "Total Duration" := JobJournalLine."Total Duration";
         end;
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'onAfterFromJnlToPlanningLine', '', false, false)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'OnAfterFromJnlToPlanningLine', '', false, false)]
     local procedure onAfterFromJnlToPlanningLine(
-      JobJournalLine : Record "Job Journal Line";
-      var JobPlanningLine : Record "Job Planning Line");
+        var JobPlanningLine : Record "Job Planning Line";
+        JobJournalLine : Record "Job Journal Line");
     begin
         with JobPlanningLine do begin
             "Start Time" := JobJournalLine."Start Time";
@@ -28,12 +28,12 @@ codeunit 62002 DxJobTransferLineFacade
         end;
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'onAfterFromPlanningLineToJnlLine', '', false, false)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'OnAfterFromPlanningLineToJnlLine', '', false, false)]
     local procedure onAfterFromPlanningLineToJnlLine(
-      var JobJournalLine : Record "Job Journal Line";
-      JobPlanningLine : Record "Job Planning Line");
+        var JobJournalLine : Record "Job Journal Line";
+        JobPlanningLine : Record "Job Planning Line");
     begin
-        with JobJournalLine DO begin
+        with JobJournalLine do begin
             "Start Time" := JobPlanningLine."Start Time";
             "End Time" := JobPlanningLine."End Time";
             "Start Date Time" := JobPlanningLine."Start Date Time";

@@ -8,9 +8,8 @@ codeunit 62001 DxJobFacade
     local procedure OnAfterValidateLineType(
         var Rec : Record "Job Journal Line");
     begin
-        with Rec do begin
+        with Rec do 
             if "Job No." <> '' then
                 Chargeable := ("Line Type" <> "Line Type"::Budget);
-        end;
     end;
 }

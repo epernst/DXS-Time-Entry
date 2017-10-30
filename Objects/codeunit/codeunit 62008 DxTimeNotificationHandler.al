@@ -5,11 +5,11 @@ codeunit 62008 DxTimeNotificationHandler
     end;
     
     var
-        NoSetupNotificationLbl : Label 'Dx Time - App Not Enabled';
-        NoSetupNotificationMsg : Label 'Dx Time - App has been installed, but it has not been setup and enabled.';
+        NoSetupNotificationLbl : Label 'Dx365 Time - App Not Enabled';
+        NoSetupNotificationMsg : Label 'The "Dx365 Time App" to allow entry of start and end times has been installed, but it has not been setup and enabled.';
         NoSetupNotificationAct : Label 'Enable now.';
-        NoSetupNotificationName : Label 'Dx Time Entry App not enabled.';
-        NoSetupNotificationDesc : Label 'Warns if Dx Time App have been installed, but not been setup and enabled.';
+        NoSetupNotificationName : Label 'Dx365 Time App is not enabled.';
+        NoSetupNotificationDesc : Label 'Warns if Dx365 Time App have been installed, but not been setup and enabled.';
         NoHourUnitOfMeasureNotificationLbl : Label 'No Hourly Unit Setup';
         NoHourUnitOfMeasureNotificationMsg : Label 'No Hourly Unit of Measure Codes have been setup to support time based entry.';
         NoHourUnitOfMeasureSetupAct : Label 'Select or create hourly based Unit of Measure codes.';
@@ -29,6 +29,35 @@ codeunit 62008 DxTimeNotificationHandler
     end;
 
     local procedure CreateSetupNotification();
+    var
+        MyNotifications : Record "My Notifications";
+        TimePermissionHandler : Codeunit DxTimePermissionHandler;
+        TimeNotification : Notification;
+    begin
+        if not MyNotifications.IsEnabled(GetNoSetupNotificationId) then exit;
+
+        with TimeNotification do begin
+            Id := GetNoSetupNotificationId;
+            Message := NoSetupNotificationMsg;
+            Scope := Scope::LocalScope;
+            AddAction(NoSetupNotificationAct,Codeunit::DxTimeNotificationHandler,'RunAssistedSetup');
+            AddAction(DismissFurtherNotificationsAct,Codeunit::DxTimeNotificationHandler,'DismissNotification');
+            Send;
+        end;
+    end;
+
+    procedure CreateNotificationIfInvalidRegistration();
+    var
+        TimePermissionHandler : Codeunit DxTimePermissionHandler;
+        TimeEntrySetup : Record DxTimeEntrySetup;
+        HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
+    begin
+        if not TimePermissionHandler.IsSetupEnabled then exit;
+        if not TimeEntrySetup.ValidateRegistration then
+            CreateInvalidRegistrationNotification;
+    end;
+
+    local procedure CreateInvalidRegistrationNotification();
     var
         MyNotifications : Record "My Notifications";
         TimePermissionHandler : Codeunit DxTimePermissionHandler;
@@ -142,6 +171,7 @@ codeunit 62008 DxTimeNotificationHandler
     begin
         exit('ad92ae2c-dbed-49ff-aa0c-5998f08b49f1');        
     end;
+    
     local procedure AppRegistrationRequiredNotificationId() : Guid;
     begin
         exit('686f522d-6d91-4611-98e9-eec52ecbdbc6');        

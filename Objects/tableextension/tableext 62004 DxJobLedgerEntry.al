@@ -10,11 +10,7 @@ tableextension 62004 DxJobLedgerEntry extends "Job Ledger Entry"
         {
             Caption='End Time';
         }
-        field(62002;"Total Time";Decimal)
-        {
-            Caption='Total Time';
-        }
-          field(62003;"Start Date Time";DateTime)
+        field(62003;"Start Date Time";DateTime)
         {
             Caption = 'Start Date Time';
         }

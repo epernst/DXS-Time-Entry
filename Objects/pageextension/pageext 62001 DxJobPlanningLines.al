@@ -2,6 +2,14 @@ pageextension 62001 DxJobPlanningLines extends "Job Planning Lines"
 {
     layout
     {
+        modify("No.")
+        {
+            trigger OnAfterValidate();
+            begin
+                UpdatePage;
+            end;
+        }
+
         modify("Unit of Measure Code"){
             trigger OnAfterValidate();
             begin
@@ -14,40 +22,60 @@ pageextension 62001 DxJobPlanningLines extends "Job Planning Lines"
             field("Start Time";"Start Time")
             {
                 ApplicationArea = All;
+                ToolTip = 'For time based entries enter the start time here.';
                 Editable = IsTimeEditable;
+                Enabled = IsTimeEntryEnabled;
+                Visible = IsStartTimeVisible;
             }
             field("End Time";"End Time")
             {
                 ApplicationArea = All;
+                ToolTip = 'For time based entries enter the end time here.';
                 Editable = IsTimeEditable;
+                Enabled = IsTimeEntryEnabled;
+                Visible = IsEndTimeVisible;
             }
             field("Start Date Time";"Start Date Time")
             {
                 ApplicationArea = All;
-                Visible = false;
+                ToolTip = 'For time based entries enter the start date-time here.';
                 Editable = IsTimeEditable;
+                Enabled = IsTimeEntryEnabled;
+                Visible = IsStartDateTimeVisible;
             }
             field("End Date Time";"End Date Time")
             {
                 ApplicationArea = All;
-                Visible = false;
+                ToolTip = 'For time based entries enter the end date-time here.';
                 Editable = IsTimeEditable;
+                Enabled = IsTimeEntryEnabled;
+                Visible = IsEndDateTimeVisible;
             }
             field("Total Duration";"Total Duration")
             {
                 ApplicationArea = All;
+                ToolTip = 'For time based entries the total duration will show here.';
+                Enabled = IsTimeEntryEnabled;
                 Editable = IsTimeEditable;
+                Visible = IsTimeEntryEnabled;
             }
         }
     }
+
     trigger OnOpenPage();
     begin
+        SetEnabledOnOpen;
         UpdatePage;
     end;
     
+    trigger OnInsertRecord(BelowxRec : Boolean) : Boolean;
+    begin
+        UpdatePage;
+    end;
+
     trigger OnNewRecord(BelowxRec : Boolean);
     begin
-        InitJobTimes;
+        InitStartEndTimes;
         UpdatePage;
     end;
 
@@ -55,20 +83,34 @@ pageextension 62001 DxJobPlanningLines extends "Job Planning Lines"
     begin
         UpdatePage;
     end;
-    
+  
     var
-      IsTimeEditable : Boolean;
+        TimeEntrySetup : Record DxTimeEntrySetup;
+        IsTimeEditable : Boolean;
+        IsTimeEntryEnabled  : Boolean;
+        IsStartTimeVisible : Boolean;
+        IsEndTimeVisible : Boolean;
+        IsStartDateTimeVisible : Boolean;
+        IsEndDateTimeVisible : Boolean;
 
-      local procedure GetTimeEditable() : Boolean;
-      var
-          HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
-      begin
-          exit(HourlyUnitHandler.IsHourlyUnit("Unit of Measure Code"));
-      end;
+    local procedure UpdatePage();
+    var
+        HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
+    begin
+        IsTimeEditable := HourlyUnitHandler.IsHourlyUnit("Unit of Measure Code");
+    end;
 
-      local procedure UpdatePage();
-      begin
-         IsTimeEditable := GetTimeEditable;
-      end;
-
+    local procedure SetEnabledOnOpen();
+    var 
+        TimePermissionHandler : Codeunit DxTimePermissionHandler;
+    begin
+        IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled; 
+        with TimeEntrySetup do begin
+            if not Get then Init;
+            IsEndDateTimeVisible := IsTimeEntryEnabled and "Show End Date-Times"; 
+            IsEndTimeVisible := IsTimeEntryEnabled and "Show End Times"; 
+            IsStartDateTimeVisible := IsTimeEntryEnabled and "Show Start Date-Times"; 
+            IsStartTimeVisible := IsTimeEntryEnabled and "Show Start Times"; 
+        end;
+    end;
 }

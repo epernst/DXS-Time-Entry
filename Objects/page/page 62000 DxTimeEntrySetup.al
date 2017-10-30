@@ -1,5 +1,6 @@
 page 62000 DxTimeEntrySetup
 {
+    Caption = 'Dx365 Time Entry Setup';
     PageType = Card;
     SourceTable = DxTimeEntrySetup;
     DeleteAllowed = false;
@@ -23,8 +24,15 @@ page 62000 DxTimeEntrySetup
                     ToolTip = 'Allow only time entry on lines using unit of measure codes marked as "Hourly Units".';
                     trigger OnValidate();
                     begin
-                        CreateHourlyNotificationIfNoSetup;
+                        if "Hourly Units Only" then
+                            NoHourlyUnitsSetupNotification;
                     end;
+                }
+                field("Default Time Rounding";"Default Time Rounding")
+                {
+                    ToolTip = 'Specify how to round start and end time based entries. For example enter 0.25 to have 15 minutes as the minimum time to use. The field is mandatory if "Hourly Units Only" has not been selected.';
+                    ApplicationArea = All;          
+                    ShowMandatory = not HourlyUnitsOnly;
                 }
                 field("Allow Entries to Pass Midnight";"Allow Entries to Pass Midnight")
                 {
@@ -91,18 +99,20 @@ page 62000 DxTimeEntrySetup
     }
 
     var
+        HourlyUnitsOnly : Boolean;
         IsMixSelected : Boolean;
 
     trigger OnOpenPage();
     begin
         InitSetupRecord;
-        CreateHourlyNotificationIfNoSetup;
+        NoHourlyUnitsSetupNotification;
         UpdatePage;
     end;
 
     procedure UpdatePage();
     begin
         IsMixSelected := "Fields To Show" = "Fields To Show"::Mix;
+        HourlyUnitsOnly := "Hourly Units Only";  
     end;
 
     procedure InitSetupRecord();

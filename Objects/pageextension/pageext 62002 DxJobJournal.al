@@ -2,6 +2,14 @@ pageextension 62002 DxJobJournal extends "Job Journal"
 {
     layout
     {
+        modify("No.")
+        {
+            trigger OnAfterValidate();
+            begin
+                UpdatePage;
+            end;
+        }
+
         modify("Unit of Measure Code")
         {
             trigger OnAfterValidate();
@@ -9,6 +17,7 @@ pageextension 62002 DxJobJournal extends "Job Journal"
                 UpdatePage;
             end;
         }
+
         addafter("Unit of Measure Code")
         {
             field("Start Time";"Start Time")
@@ -56,7 +65,7 @@ pageextension 62002 DxJobJournal extends "Job Journal"
         {
             part(JobJournalSummeryFactBox;DxJobJournalSummaryFactBox)
             {
-                ToolTip = 'Shows a summery of the current job and total job journal.';
+                ToolTip = 'Shows a summery of the current job and a job journal total.';
                 Enabled = IsTimeEntryEnabled;
                 ApplicationArea = All;
                 SubPageLink = 
@@ -67,22 +76,18 @@ pageextension 62002 DxJobJournal extends "Job Journal"
             }
         }
     }
-    trigger OnOpenPage();
-    var 
-        TimePermissionHandler : Codeunit DxTimePermissionHandler;
-    begin
-        IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled; 
-        with TimeEntrySetup do begin
-            if not Get then Init;
-            IsEndDateTimeVisible := IsTimeEntryEnabled and "Show End Date-Times"; 
-            IsEndTimeVisible := IsTimeEntryEnabled and "Show End Times"; 
-            IsStartDateTimeVisible := IsTimeEntryEnabled and "Show Start Date-Times"; 
-            IsStartTimeVisible := IsTimeEntryEnabled and "Show Start Times"; 
-        end;
 
+    trigger OnOpenPage();
+    begin
+        SetEnabledOnOpen;
         UpdatePage;
     end;
     
+    trigger OnInsertRecord(BelowxRec : Boolean) : Boolean;
+    begin
+        UpdatePage;
+    end;
+
     trigger OnNewRecord(BelowxRec : Boolean);
     begin
         InitStartEndTimes;
@@ -103,15 +108,24 @@ pageextension 62002 DxJobJournal extends "Job Journal"
     IsStartDateTimeVisible : Boolean;
     IsEndDateTimeVisible : Boolean;
 
-    local procedure GetTimeEditable() : Boolean;
+    local procedure UpdatePage();
     var
         HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
     begin
-        exit(HourlyUnitHandler.IsHourlyUnit("Unit of Measure Code"));
+        IsTimeEditable := HourlyUnitHandler.IsHourlyUnit("Unit of Measure Code");
     end;
 
-    local procedure UpdatePage();
+    local procedure SetEnabledOnOpen();
+    var 
+        TimePermissionHandler : Codeunit DxTimePermissionHandler;
     begin
-        IsTimeEditable := GetTimeEditable;
+        IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled; 
+        with TimeEntrySetup do begin
+            if not Get then Init;
+            IsEndDateTimeVisible := IsTimeEntryEnabled and "Show End Date-Times"; 
+            IsEndTimeVisible := IsTimeEntryEnabled and "Show End Times"; 
+            IsStartDateTimeVisible := IsTimeEntryEnabled and "Show Start Date-Times"; 
+            IsStartTimeVisible := IsTimeEntryEnabled and "Show Start Times"; 
+        end;
     end;
 }

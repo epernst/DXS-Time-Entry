@@ -1,4 +1,5 @@
 tableextension 62001 DxJob extends Job 
+// To be removed?
 {
   fields
   {

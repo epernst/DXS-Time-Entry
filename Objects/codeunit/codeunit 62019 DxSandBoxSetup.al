@@ -1,6 +1,5 @@
 codeunit 62019 DxSandBoxSetup
-{
-    
+{ 
     trigger OnRun();
     begin
         SetupSandbox;
