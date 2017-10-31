@@ -1,4 +1,4 @@
-codeunit 62020 DxJobFactboxCalculator
+codeunit 62030 DxJobFactboxCalculator
 {
     trigger OnRun();
     begin
@@ -18,7 +18,7 @@ codeunit 62020 DxJobFactboxCalculator
         HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
     begin
         if HourlyUnitHandler.GetHourlyUnitOfMeasureFilter = '' then exit;
-        if (not Job.GET(JobJournalLine."Job No.")) and (ViewType <> ViewType::TotalJobJournal) then exit;
+        if (not Job.Get(JobJournalLine."Job No.")) and (ViewType <> ViewType::TotalJobJournal) then exit;
 
         BillableHours := 0;
         NonBillableHours := 0;

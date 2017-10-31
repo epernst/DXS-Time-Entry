@@ -270,7 +270,7 @@ page 62001 DxTimeEntrySetupWizard
     trigger OnOpenPage();
     var
         TimeEntrySetup : Record DxTimeEntrySetup;
-        AssistedSetup : Codeunit DxAssistedSetup;
+        AssistedSetup : Codeunit DxTimeAssistedSetup;
     begin
         AssistedSetup.VerifyUserAccess;
         Init;

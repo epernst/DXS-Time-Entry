@@ -1,4 +1,4 @@
-codeunit 62011 DxAssistedSetup
+codeunit 62011 DxTimeAssistedSetup
 {
     trigger OnRun();
     begin
@@ -33,13 +33,14 @@ codeunit 62011 DxAssistedSetup
             //SETRANGE("User Security ID",USERSECURITYID);
             SetRange("User Name",UserId);
             SetFilter("Role ID",'%1|%2','SUPER','SECURITY');
-            if IsEmpty THEN
+            if IsEmpty then
                 Error(RequiredPermissionMissingErr);
-        END;
+        end;
     end;
 
-
     local procedure InitializeSetup();
+    var
+        ResourceHelper : Codeunit DxTimeResourceHelper;
     begin
         with TimeEntrySetup do
             if IsEmpty then begin
@@ -47,18 +48,21 @@ codeunit 62011 DxAssistedSetup
                 Insert;
             end else
                 Get;
+
+        ResourceHelper.InitializeResources;
     end;
 
     local procedure AddToAssistedSetup(var TempAggregatedAssistedSetup : Record "Aggregated Assisted Setup" temporary);
     var
         TempBlob : Record TempBlob;
-        //GLSourceNameIcon : Codeunit 70009232;
+        DxTimeIcon : Codeunit DxTimeIcon240x240;
+        ResourceHelper : Codeunit DxTimeResourceHelper;
         InStr : InStream;
     begin
         with TempAggregatedAssistedSetup do begin
-            //GLSourceNameIcon.GetIcon(TempBlob);
-            //TempBlob.Blob.CREATEINSTREAM(InStr);
-            //InsertAssistedSetupIcon(HelpResource.Get240PXIconCode,InStr);            
+            DxTimeIcon.GetIcon(TempBlob);
+            TempBlob.Blob.CREATEINSTREAM(InStr);
+            InsertAssistedSetupIcon(ResourceHelper.Get240PXIconCode,InStr);            
 
             AddExtensionAssistedSetup(
                 Page::DxTimeEntrySetupWizard,
@@ -66,7 +70,7 @@ codeunit 62011 DxAssistedSetup
                 true,
                 TimeEntrySetup.RecordId,
                 TimeEntrySetup.Status,
-                ''); //HelpResource.Get240PXIconCode
-        END;
+                ResourceHelper.Get240PXIconCode); 
+        end;
     end;
 }
