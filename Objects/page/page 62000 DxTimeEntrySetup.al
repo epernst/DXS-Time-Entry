@@ -97,6 +97,21 @@ page 62000 DxTimeEntrySetup
             }
         }
     }
+    actions
+    {
+        area(Navigation)
+        {
+            action(HelpResources)
+            {
+                Caption = 'Time Help Resources';
+                Image = Picture;
+                Promoted = true;
+                ApplicationArea = All;
+                RunObject = page DxTimeHelpResources;
+                ToolTip = 'Resources and links used by the app.';
+            }    
+            }
+    }
 
     var
         HourlyUnitsOnly : Boolean;

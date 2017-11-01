@@ -22,5 +22,6 @@
   "idRange": {
     "from": 62000,
     "to": 62099
-  }
+  },
+  "packageCachePath": "../../resources" 
 }

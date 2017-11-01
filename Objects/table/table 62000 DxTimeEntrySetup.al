@@ -1,6 +1,6 @@
 table 62000 DxTimeEntrySetup
 {
-    Caption = 'Time Entry Setup';
+    Caption = 'Dx365 Time Entry Setup';
     fields
     {
         field(1;"Primary Key";Code[10])
@@ -40,7 +40,7 @@ table 62000 DxTimeEntrySetup
         {
             Caption = 'Fields To Show';
             OptionMembers = Times,"Date Times",Both,Mix;
-            OptionCaption = 'Times,Date and Times,Both,Mix';  
+            OptionCaption = 'Times,Date and Times,Both,Mix or all';  
             trigger OnValidate();
             begin
                 if ("Fields To Show" = xrec."Fields To Show") or
@@ -94,11 +94,16 @@ table 62000 DxTimeEntrySetup
         {
             Caption = 'Registration E-Mail Address';
             trigger OnValidate();
+            var
+                MailManagement : Codeunit "Mail Management";
             begin 
-                if "Registration E-Mail Address" = xRec."Registration E-Mail Address" then exit;
+                "Registration E-Mail Address" := DelChr("Registration E-Mail Address",'<>');
                 if (xRec."Registration E-Mail Address" <> '') then
                     if not Confirm(ChangeRegistrationQst,false,FieldCaption("Registration E-Mail Address"),FieldCaption("Registration Id")) then
                         error('');
+                if "Registration E-Mail Address" = '' then exit;
+
+                MailManagement.ValidateEmailAddressField("Registration E-Mail Address");
                 ValidateRegistration; 
             end;
         }

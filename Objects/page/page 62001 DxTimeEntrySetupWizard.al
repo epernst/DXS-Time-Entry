@@ -1,6 +1,6 @@
 page 62001 DxTimeEntrySetupWizard
 {
-    Caption = 'Time Entry Setup';
+    Caption = 'Dx365 Time Entry Setup Wizard';
     PageType = NavigatePage;
     SourceTable = DxTimeEntrySetup;
     SourceTableTemporary = true;
