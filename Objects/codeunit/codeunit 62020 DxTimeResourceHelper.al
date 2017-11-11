@@ -21,22 +21,21 @@ codeunit 62020 DxTimeResourceHelper
     var
         HelpResource : Record DxTimeHelpResource;
     begin
-        with HelpResource do begin
+        with HelpResource do 
             if Get(SetupCode) then
-            exit(Url);
-        end;
+                exit(Url);
     end;
 
     procedure StartVideo(SetupCode : Code[50]);
     var
-        VideoLink : Page 1821;
-        ClientTypeMgt : Codeunit 4;
+        VideoLink : Page "Video link";
+        ClientTypeMgt : Codeunit ClientTypeManagement;
     begin
         if ClientTypeMgt.IsCommonWebClientType then begin
-        VideoLink.SetURL(GetHelpUrl(SetupCode));
-        VideoLink.RUNMODAL;
-        END ELSE
-        HYPERLINK(GetHelpUrl(SetupCode));
+            VideoLink.SetURL(GetHelpUrl(SetupCode));
+            VideoLink.RunModal;
+        end else
+            Hyperlink(GetHelpUrl(SetupCode));
     end;
 
     procedure GetSetupHelpCode() : Code[50];
@@ -104,28 +103,28 @@ codeunit 62020 DxTimeResourceHelper
 
     local procedure InitAssistedSetupHelpPageUrl();
     var
-        SetupHelpUrl : Label 'http://Objects4NAV.com/DXTIME';
+        SetupHelpUrl : Label 'http://Objects4NAV.com/DXTIME', Locked=true;
     begin
         InitUrl(GetSetupHelpCode,SetupHelpUrl);
     end;
 
     local procedure InitAssistedSetupEmbedVideoUrl();
     var
-        SetupVideoUrl : Label 'https://www.youtube.com/embed/TYo1ZJ5jizs';
+        SetupVideoUrl : Label 'https://www.youtube.com/embed/TYo1ZJ5jizs', Locked=true;
     begin
         InitUrl(GetSetupVideoCode,SetupVideoUrl);
     end;
 
     local procedure InitUsageHelpPageUrl();
     var
-        UsageHelpUrl : Label 'http://Objects4NAV.com/DXTIME';
+        UsageHelpUrl : Label 'http://Objects4NAV.com/DXTIME', Locked=true;
     begin
         InitUrl(GetUsageHelpCode,UsageHelpUrl);
     end;
 
     local procedure InitUsageHelpEmbedVideoUrl();
     var
-        UsageVideoUrl : Label 'https://www.youtube.com/embed/Xj5TATt7Pns';
+        UsageVideoUrl : Label 'https://www.youtube.com/embed/Xj5TATt7Pns', Locked=true;
     begin
         InitUrl(GetUsageVideoCode,UsageVideoUrl);
     end;
@@ -192,7 +191,7 @@ codeunit 62020 DxTimeResourceHelper
         END;
     end;
 
-    local procedure InitIcon(IconCode : Code[50];IconDescription : Text;TempBlob : Record TempBlob);
+    local procedure InitIcon(IconCode : Code[50]; IconDescription : Text; TempBlob : Record TempBlob);
     var
         HelpResource : Record DxTimeHelpResource;
         InStr : InStream;

@@ -19,7 +19,9 @@ tableextension 62005 DxUnitOfMeasure extends "Unit of Measure"
         }
         field(62001;"Time Rounding";Decimal)
         {
-            Caption ='Time Rounding';
+            Caption = 'Time Rounding';
+            BlankZero = true;
+            
             trigger OnValidate();
             begin 
                 if "Time Rounding" = xRec."Time Rounding" then exit;
