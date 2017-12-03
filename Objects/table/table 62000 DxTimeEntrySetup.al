@@ -18,8 +18,8 @@ table 62000 DxTimeEntrySetup
                 if "Time App Enabled" then begin
                     VerifySetupBeforeEnabling(GuiAllowed);
                     Status := Status::Completed; 
-                    if "First Enabled Date" = 0DT then
-                        "First Enabled Date" := CurrentDateTime;
+                    if "Enabled Date" = 0DT then
+                        "Enabled Date" := CurrentDateTime;
                 end else 
                     Status := status::"Not Completed";
                 
@@ -29,6 +29,7 @@ table 62000 DxTimeEntrySetup
         field(3;"Hourly Units Only";Boolean)
         {
             Caption = 'Hourly Units Only';
+            InitValue = true;
         }
         field(4;"Allow Entries to Pass Midnight";Option)
         {
@@ -41,9 +42,10 @@ table 62000 DxTimeEntrySetup
             Caption = 'Fields To Show';
             OptionMembers = Times,"Date Times",Both,Mix;
             OptionCaption = 'Times,Date and Times,Both,Mix or all';  
+
             trigger OnValidate();
             begin
-                if ("Fields To Show" = xrec."Fields To Show") or
+                if ("Fields To Show" = xRec."Fields To Show") or
                     ("Fields To Show" = "Fields To Show"::Mix) 
                 then 
                     exit;
@@ -68,12 +70,22 @@ table 62000 DxTimeEntrySetup
         {
             Caption = 'Show End Date-Times';
         }
-        field(10;"First Enabled Date";DateTime)
+        field(10;"Installation Date Time";DateTime)
+        {
+            Caption = 'Installation Date Time';
+            Editable = false;
+        }
+        field(11;"Last Update Date Time";DateTime)
+        {
+            Caption = 'Last Update Date Time';
+            Editable = false;
+        }
+        field(12;"Enabled Date";DateTime)
         {
             Caption = 'First Enabled Date';
             Editable = false;
         }
-        field(12;Status;Option)
+        field(13;Status;Option)
         {
             Caption = 'Status';
             OptionCaption = 'Not Completed,Completed,Not Started,Seen,Watched,Read, ';
@@ -128,6 +140,11 @@ table 62000 DxTimeEntrySetup
             Caption = 'Next Registration Verification';
             Editable = false;
         }
+        field(50;"Current Version";Text[20])
+        {
+            Caption = 'Current Version';
+            Editable = false;
+        }
     }
     keys
     {
@@ -137,27 +154,12 @@ table 62000 DxTimeEntrySetup
         }
     }
 
-    trigger OnInsert();
-    begin
-    end;
-
-    trigger OnModify();
-    begin
-    end;
-
-    trigger OnDelete();
-    begin
-    end;
-
-    trigger OnRename();
-    begin
-    end;
 
     var
         NoHourlyUnitsCannotEnableErr : Label 'You need to setup at least one unit of measure as an Hourly Unit, before you can enable the Time Entry App.';
-        NoRegistrationEmailAddressErr : Label 'You need to enter a valid email adress, before you can enable the app.';
+        NoRegistrationEmailAddressErr : Label 'You need to enter a valid email address, before you can enable the app.';
         RoundingMustBeEnteredErr : Label '%1 must be specified when %2 is selected. For example 0.25 will round to 15 minutes.';
-        ChangeRegistrationQst : Label 'Changing the %1, without changing the assosicated %2, may cause the app to stop working.';
+        ChangeRegistrationQst : Label 'Changing the %1, without changing the associated %2, may cause the app to stop working.';
     
     procedure GetSetupIfEnabled() : Boolean;
     begin

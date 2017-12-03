@@ -1,17 +1,17 @@
-codeunit 62023 DxTimeIcon240x240
+codeunit 62043 DxTimeIcon240x240
 {
     trigger OnRun();
     begin
     end;
-
+    
     procedure GetIcon(var TempBlob : Record TempBlob);
     begin
         TempBlob.FromBase64String(IconSource);
     end;
-
+    
     local procedure IconSource() : Text;
     begin
-        EXIT(
+        exit(
             'iVBORw0KGgoAAAANSUhEUgAAAPAAAADwCAYAAAA+VemSAAAAB3RJTUUH4QofCAkyRACGngAAAAlwSFlzAABOIAAATiABFn2Z3gAAAARnQU1BAACxjwv8YQUAAAhkSURBVHja7' +
             'ZlJdhxWEMN8sdwvB/L9lG0WfhrcA1gkFthK/EWiJVu/Pj4+fonITfAAIqLAIpPgAUREgUUmwQOIiAKLTIIHWODf3/98LEHfewk8wAK0UArcCx5gAVooBe4FD7AALZQC94IHWI' +
             'AWSoF7wQMsQAulwL3gARaghVLgXvAAC9BCKXAveIAFaKEUuBc8wAK0UArcCx5gAVooBe4FD7AALZQC94IHWIAWSoF7wQMsQAulwL3gARaghVLgXvAAC9BCKXAveIAFaKEUuBc' +
@@ -35,7 +35,7 @@ codeunit 62023 DxTimeIcon240x240
             '6egFD7A4GPqGdtLTCx5gcTT07eyipw88wNpw6JvZRVcfeICl4dC3sou+PvAAS+Ohb2QHfT3gAVYGRN/GDjp7wAMsDIi+iR309oAHaB8RfYf1+7d3gAdoHxF9g+XbL9wfD9A8J' +
             'PrtNN5egc+OiX5vCsqrwCfHRL81BeVV4HODot+YhjdX4DOjot+VivIqcPyo6Peko7wKHD0q+i3peGsFjh0Xnf8KyqvAceOic19DeRU4amB03msorgLHjIzOeRXlVWB8ZHS+63' +
             'hfBcaGRmdqQHkVGBsbnacF5VXgt4+NztGGd1VgkUnwACKiwCKT4AFERIFFJvkP15QpNbDBl4IAAAAASUVORK5CYII='
-
+            
             
             );
     end;

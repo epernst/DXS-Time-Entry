@@ -1,7 +1,7 @@
 codeunit 62000 DxTimeUpgrade
 {
     var
-        UpdateSetupPermissionSet : Label 'TIMEENTRY-SETUP';
+        UpdateSetupPermissionSet: Label 'TIME-ENTRY-SETUP';
 
     trigger OnRun();
     begin
@@ -9,14 +9,14 @@ codeunit 62000 DxTimeUpgrade
 
     procedure OnNavAppUpgradePerDatabase();
     var
-        AccessControl : Record "Access Control";
+        AccessControl: Record "Access Control";
     begin
         with AccessControl do begin
-            SetFilter("Role ID",'%1|%2','SUPER','SECURITY');
+            SetFilter("Role ID", '%1|%2', 'SUPER', 'SECURITY');
             if IsEmpty then exit;
             FindSet;
             repeat
-                AddUserAccess("User Security ID",UpdateSetupPermissionSet);
+                AddUserAccess("User Security ID", UpdateSetupPermissionSet);
             until Next = 0;
         end;
     end;
@@ -24,17 +24,17 @@ codeunit 62000 DxTimeUpgrade
     procedure OnNavAppUpgradePerCompany();
     begin
         NavApp.RestoreArchiveData(Database::DxTimeEntrySetup);
-
-      //GLSourceNameMgt.PopulateSourceTable;
-      //RemoveAssistedSetup;
+        NavApp.RestoreArchiveData(Database::DxTimeHelpResource);
+        //GLSourceNameMgt.PopulateSourceTable;
+        //RemoveAssistedSetup;
     end;
 
-    local procedure AddUserAccess(AssignToUser : GUID;PermissionSet : Code[20]);
+    local procedure AddUserAccess(AssignToUser: Guid; PermissionSet: Code[20]);
     var
-        AccessControl : Record "Access Control";
-        AppId : Guid;
+        AccessControl: Record "Access Control";
+        AppId: Guid;
     begin
-        Evaluate(AppId,GetAppId);
+        Evaluate(AppId, GetAppId);
         with AccessControl do begin
             Init;
             "User Security ID" := AssignToUser;
@@ -46,7 +46,7 @@ codeunit 62000 DxTimeUpgrade
         end;
     end;
 
-    procedure GetAppId() : Guid;
+    procedure GetAppId(): Guid;
     begin
         exit('d391a9da-a640-4a04-83dd-e2ed3ff77ee9');
     end;

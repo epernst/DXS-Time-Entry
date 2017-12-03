@@ -1,18 +1,18 @@
-codeunit 62022 DxTimeIcon150x150
+codeunit 62042 DxTimeIcon150x150
 {
 
     trigger OnRun();
     begin
     end;
-
+    
     procedure GetIcon(var TempBlob : Record TempBlob);
     begin
         TempBlob.FromBase64String(IconSource);
     end;
-
+    
     local procedure IconSource() : Text;
     begin
-        EXIT(
+        exit(
             'iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAYAAAA8AXHiAAAAB3RJTUUH4QofCAoPN0WZTAAAAAlwSFlzAABOIAAATiABFn2Z3gAAAARnQU1BAACxjwv8YQUAAARLSURBVHja7' +
             'd0xdlNBEERRb4z9sSD2J1IHsqz/NTOvu/oFFYKqay7gYwd8PR6PL2NWBy9gMoMXMJnBC5jM4AV25u+/P4+KoXcRlrDaBi8grMzgBYSVGbyAsDKDFxBWZvACwsoMXkBYmcELCC' +
             'szeAFhZQYvIKzM4AWElRm8gLAygxcQVmbwAsLKDF5AWJnBCwgrM3gBYWUGLyCszOAFhJUZvICwMoMXEFZm8ALCygxeQFiZwQsIKzN4AWFlBi8grMzgBYSVGbyAsDKDFxBWZvA' +

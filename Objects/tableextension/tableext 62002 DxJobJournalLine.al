@@ -81,6 +81,7 @@ tableextension 62002 DxJobJournalLine extends "Job Journal Line"
         field(62005;"Total Duration";Duration)
         {
             Caption = 'Total Duration';
+            
             trigger OnValidate();
             var
                 UnitOfMeasure : Record "Unit of Measure";

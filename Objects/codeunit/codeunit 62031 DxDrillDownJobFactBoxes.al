@@ -1,4 +1,4 @@
-codeunit 62003 DxDrillDownJobFactBoxes
+codeunit 62031 DxDrillDownJobFactBoxes
 {
     procedure DrillDownJobJournal(
         JournalTemplateName : Code[20];
@@ -6,52 +6,52 @@ codeunit 62003 DxDrillDownJobFactBoxes
         JobNo : Code[20];
         DrillDownField : Option BillableHours,NonBillableHours,TotalSales,TotalCost,TotalProfit);
     var
-        JobJournalLine : Record "Job Journal Line";
-        HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
+        JobJournalLine: Record "Job Journal Line";
+        HourlyUnitHandler: Codeunit DxHourlyUnitHandler;
     begin
         with JobJournalLine do begin
             SetRange("Journal Template Name",JobJournalLine."Journal Template Name");
             SetRange("Journal Batch Name",JobJournalLine."Journal Batch Name");
             SetRange("Job No.",JobJournalLine."Job No.");
             case DrillDownField of
-                DrillDownField::BillableHours :
+                DrillDownField::BillableHours:
                     begin
                         SetFilter("Unit of Measure Code",HourlyUnitHandler.GetHourlyUnitOfMeasureFilter);
                         SetRange(Chargeable,true);
                     end;
-                DrillDownField::NonBillableHours :
+                DrillDownField::NonBillableHours:
                     begin
                         SetFilter("Unit of Measure Code",HourlyUnitHandler.GetHourlyUnitOfMeasureFilter);
                         SetRange(Chargeable,false);
                     end;
             end;
-            PAGE.RUN(PAGE::"Job Journal",JobJournalLine);
+            Page.Run(Page::"Job Journal",JobJournalLine);
         end;
     end;
-
+    
     procedure DrillDownJobLedgerEntry(
         JobNo : Code[20];
         DrillDownField : Option BillableHours,NonBillableHours,TotalSales,TotalCost,TotalProfit);
     var
-        JobLedgerEntry : Record "Job Ledger Entry";
-        HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
+        JobLedgerEntry: Record "Job Ledger Entry";
+        HourlyUnitHandler: Codeunit DxHourlyUnitHandler;
     begin
         with JobLedgerEntry do begin
             SetRange("Job No.",JobNo);
             SetRange("Entry Type","Entry Type"::Usage);
             case DrillDownField of
-                DrillDownField::BillableHours :
+                DrillDownField::BillableHours:
                     begin
                         SetRange("Unit of Measure Code",HourlyUnitHandler.GetHourlyUnitOfMeasureFilter);
                         SetFilter("Total Price (LCY)",'<>%1',0);
                     end;
-                DrillDownField::NonBillableHours :
+                DrillDownField::NonBillableHours:
                     begin
                         SetRange("Unit of Measure Code",HourlyUnitHandler.GetHourlyUnitOfMeasureFilter);
                         SetFilter("Total Price (LCY)",'%1',0);
                     end;
-                end;
-            PAGE.RUN(PAGE::"Job Ledger Entries",JobLedgerEntry);
+            end;
+            Page.Run(Page::"Job Ledger Entries",JobLedgerEntry);
         end;
     end;
 }

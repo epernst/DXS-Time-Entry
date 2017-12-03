@@ -37,12 +37,12 @@ page 62000 DxTimeEntrySetup
                 field("Allow Entries to Pass Midnight";"Allow Entries to Pass Midnight")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'May a ending time pass midnigth, or may stretch over multiple days?';
+                    ToolTip = 'May a ending time pass midnight, or may stretch over multiple days?';
                 }
                 field("Fields To Show";"Fields To Show")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Which start and end times should be visible? Only regular times (i.e. 12:00) or Date-Times. If you allow entries to pass midnight or stretch over mulitiple days, then Date-Times are recommended.';
+                    ToolTip = 'Which start and end times should be visible? Only regular times (i.e. 12:00) or Date-Times. If you allow entries to pass midnight or stretch over multiple days, then Date-Times are recommended.';
                     trigger OnValidate();
                     begin
                         UpdatePage;
@@ -87,12 +87,19 @@ page 62000 DxTimeEntrySetup
                 {
                     ApplicationArea = All;
                     ShowMandatory = true;
-                    ToolTip = 'The registration id will be recived by email, after registration. Without this Id, then the App will remain in trail mode.';
+                    ToolTip = 'The registration id will be received by email, after registration. Without this Id, then the App will remain in trail mode.';
                 }
                 field("Next Registration Verification";"Next Registration Verification")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Shows when the registration needs to be renewed.';
+                }
+                field(AppVersion;AppVersion)
+                {
+                    Caption = 'App Version Id';
+                    ApplicationArea = All;
+                    ToolTip = 'Shows the current app version id.';
+                    Editable = false;
                 }
             }
         }
@@ -116,11 +123,15 @@ page 62000 DxTimeEntrySetup
     var
         HourlyUnitsOnly : Boolean;
         IsMixSelected : Boolean;
+        TimeAppInfo : ModuleInfo;
+        AppVersion : Text;
 
     trigger OnOpenPage();
     begin
         InitSetupRecord;
         NoHourlyUnitsSetupNotification;
+        NavApp.GetCurrentModuleInfo(TimeAppInfo); 
+        AppVersion := Format(TimeAppInfo.DataVersion);
         UpdatePage;
     end;
 

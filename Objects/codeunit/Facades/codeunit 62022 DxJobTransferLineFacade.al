@@ -1,7 +1,7 @@
-codeunit 62002 DxJobTransferLineFacade
+codeunit 62022 DxJobTransferLineFacade
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'OnAfterFromJnlLineToLedgEntry', '', false, false)]
-    local procedure onAfterFromJnlLineToLedgEntry(
+    local procedure onAfterFromJnlLineToLedgerEntry(
         var JobLedgerEntry : Record "Job Ledger Entry"; 
         JobJournalLine : Record "Job Journal Line");
     begin

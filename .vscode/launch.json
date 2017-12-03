@@ -1,15 +1,16 @@
 {
 	"version": "0.2.0",
 	"configurations": [
-
 		{
 			"type": "al",
 			"request": "launch",
-			"server": "https://dxfindk19101.northeurope.cloudapp.azure.com",
+			"server": "https://nav11dk-ctp17.northeurope.cloudapp.azure.com:7049",
 			"serverInstance": "NAV",
-			"name": "Launch",
+			"name": "Publish",
 			"tenant": "",
-			"authentication": "UserPassword"
+			"authentication": "UserPassword",
+			"startupObjectId": 201
+			
 		}
 	]
 }

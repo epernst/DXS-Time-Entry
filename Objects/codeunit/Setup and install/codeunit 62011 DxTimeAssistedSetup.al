@@ -30,7 +30,7 @@ codeunit 62011 DxTimeAssistedSetup
         AccessControl : Record "Access Control";
     begin
         with AccessControl do begin
-            //SETRANGE("User Security ID",USERSECURITYID);
+            //SetRange("User Security ID",UserSecurityID);
             SetRange("User Name",UserId);
             SetFilter("Role ID",'%1|%2','SUPER','SECURITY');
             if IsEmpty then
@@ -39,8 +39,6 @@ codeunit 62011 DxTimeAssistedSetup
     end;
 
     local procedure InitializeSetup();
-    var
-        ResourceHelper : Codeunit DxTimeResourceHelper;
     begin
         with TimeEntrySetup do
             if IsEmpty then begin
@@ -48,8 +46,6 @@ codeunit 62011 DxTimeAssistedSetup
                 Insert;
             end else
                 Get;
-
-        ResourceHelper.InitializeResources;
     end;
 
     local procedure AddToAssistedSetup(var TempAggregatedAssistedSetup : Record "Aggregated Assisted Setup" temporary);
@@ -61,7 +57,7 @@ codeunit 62011 DxTimeAssistedSetup
     begin
         with TempAggregatedAssistedSetup do begin
             DxTimeIcon.GetIcon(TempBlob);
-            TempBlob.Blob.CREATEINSTREAM(InStr);
+            TempBlob.Blob.CreateInStream(InStr);
             InsertAssistedSetupIcon(ResourceHelper.Get240PXIconCode,InStr);            
 
             AddExtensionAssistedSetup(
