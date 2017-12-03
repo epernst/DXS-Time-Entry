@@ -20,7 +20,7 @@ pageextension 62006 DxResourceJournal extends "Resource Journal"
 
         addafter("Unit of Measure Code")
         {
-            field("Start Time";"Start Time")
+            field("Start Time";"DXS Start Time")
             {
                 ApplicationArea = All;
                 ToolTip = 'For time based entries enter the start time here.';
@@ -28,7 +28,7 @@ pageextension 62006 DxResourceJournal extends "Resource Journal"
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsStartTimeVisible;
             }
-            field("End Time";"End Time")
+            field("End Time";"DXS End Time")
             {
                 ApplicationArea = All;
                 ToolTip = 'For time based entries enter the end time here.';
@@ -36,7 +36,7 @@ pageextension 62006 DxResourceJournal extends "Resource Journal"
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsEndTimeVisible;
             }
-            field("Start Date Time";"Start Date Time")
+            field("Start Date Time";"DXS Start Date Time")
             {
                 ApplicationArea = All;
                 ToolTip = 'For time based entries enter the start date-time here.';
@@ -44,7 +44,7 @@ pageextension 62006 DxResourceJournal extends "Resource Journal"
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsStartDateTimeVisible;
             }
-            field("End Date Time";"End Date Time")
+            field("End Date Time";"DXS End Date Time")
             {
                 ApplicationArea = All;
                 ToolTip = 'For time based entries enter the end date-time here.';
@@ -52,7 +52,7 @@ pageextension 62006 DxResourceJournal extends "Resource Journal"
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsEndDateTimeVisible;
             }
-            field("Total Duration";"Total Duration")
+            field("Total Duration";"DXS Total Duration")
             {
                 ApplicationArea = All;
                 ToolTip = 'For time based entries the total duration will show here.';

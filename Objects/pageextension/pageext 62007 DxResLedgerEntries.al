@@ -4,7 +4,7 @@ pageextension 62007 DxResourceLedgerEntries extends "Resource Ledger Entries"
     {
         addafter("Unit of Measure Code")
         {
-            field("Start Time";"Start Time")
+            field("Start Time";"DXS Start Time")
             {
                 ApplicationArea = All;
                 ToolTip = 'The start time of the entry.';
@@ -12,7 +12,7 @@ pageextension 62007 DxResourceLedgerEntries extends "Resource Ledger Entries"
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsStartTimeVisible;
             }
-            field("End Time";"End Time")
+            field("End Time";"DXS End Time")
             {
                 ApplicationArea = All;
                 ToolTip = 'The end time pf the entry.';
@@ -20,7 +20,7 @@ pageextension 62007 DxResourceLedgerEntries extends "Resource Ledger Entries"
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsEndTimeVisible;
             }
-            field("Start Date Time";"Start Date Time")
+            field("Start Date Time";"DXS Start Date Time")
             {
                 ApplicationArea = All;
                 ToolTip = 'The start date and time of the entry.';
@@ -28,7 +28,7 @@ pageextension 62007 DxResourceLedgerEntries extends "Resource Ledger Entries"
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsStartDateTimeVisible;
             }
-            field("End Date Time";"End Date Time")
+            field("End Date Time";"DXS End Date Time")
             {
                 ApplicationArea = All;
                 ToolTip = 'The end date and time of the entry.';
@@ -36,7 +36,7 @@ pageextension 62007 DxResourceLedgerEntries extends "Resource Ledger Entries"
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsEndDateTimeVisible;
             }
-            field("Total Duration";"Total Duration")
+            field("Total Duration";"DXS Total Duration")
             {
                 ApplicationArea = All;
                 ToolTip = 'The duration of the entry.';

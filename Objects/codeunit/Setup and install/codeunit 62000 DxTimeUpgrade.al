@@ -19,14 +19,18 @@ codeunit 62000 DxTimeUpgrade
                 AddUserAccess("User Security ID", UpdateSetupPermissionSet);
             until Next = 0;
         end;
+        NavApp.RestoreArchiveData(Database::DxTimeHelpResource);
     end;
 
     procedure OnNavAppUpgradePerCompany();
     begin
         NavApp.RestoreArchiveData(Database::DxTimeEntrySetup);
-        NavApp.RestoreArchiveData(Database::DxTimeHelpResource);
-        //GLSourceNameMgt.PopulateSourceTable;
-        //RemoveAssistedSetup;
+        NavApp.RestoreArchiveData(Database::"Job Journal Line");
+        NavApp.RestoreArchiveData(Database::"Job Planning Line");
+        NavApp.RestoreArchiveData(Database::"Job Ledger Entry");
+        NavApp.RestoreArchiveData(Database::"Res. Journal Line");
+        NavApp.RestoreArchiveData(Database::"Res. Ledger Entry");
+        NavApp.RestoreArchiveData(Database::"Unit of Measure");
     end;
 
     local procedure AddUserAccess(AssignToUser: Guid; PermissionSet: Code[20]);

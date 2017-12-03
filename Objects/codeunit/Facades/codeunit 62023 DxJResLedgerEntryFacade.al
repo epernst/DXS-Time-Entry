@@ -6,11 +6,11 @@ codeunit 62023 DxResLedgerEntryFacade
         ResJournalLine: Record "Res. Journal Line");
     begin
         with ResLedgerEntry do begin
-            "Start Time" := ResJournalLine."Start Time";
-            "End Time" := ResJournalLine."End Time";
-            "Start Date Time" := ResJournalLine."Start Date Time";
-            "End Date Time" := ResJournalLine."End Date Time";
-            "Total Duration" := ResJournalLine."Total Duration";
+            "DXS Start Time" := ResJournalLine."DXS Start Time";
+            "DXS End Time" := ResJournalLine."DXS End Time";
+            "DXS Start Date Time" := ResJournalLine."DXS Start Date Time";
+            "DXS End Date Time" := ResJournalLine."DXS End Date Time";
+            "DXS Total Duration" := ResJournalLine."DXS Total Duration";
         end;
     end;
 }

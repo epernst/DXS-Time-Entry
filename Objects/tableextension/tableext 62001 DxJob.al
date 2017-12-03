@@ -2,7 +2,7 @@ tableextension 62001 DxJob extends Job
 {
     fields
     {
-        field(62001; "Invoiceable Amount"; Decimal)
+        field(62001; "DXS Invoiceable Amount"; Decimal)
         {
             CalcFormula = Sum ("Job Planning Line"."Line Amount" WHERE ("Job No." = FIELD ("No."),
                                                                "Contract Line" = CONST (true),
