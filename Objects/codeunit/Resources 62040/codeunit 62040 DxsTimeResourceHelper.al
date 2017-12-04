@@ -1,4 +1,4 @@
-codeunit 62040 DxTimeResourceHelper
+codeunit 62040 DxsTimeResourceHelper
 {
     trigger OnRun();
     begin

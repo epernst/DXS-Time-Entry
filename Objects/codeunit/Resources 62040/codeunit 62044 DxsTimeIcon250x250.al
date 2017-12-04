@@ -1,4 +1,4 @@
-codeunit 62044 DxTimeIcon250x250
+codeunit 62044 DxsTimeIcon250x250
 {
 
     trigger OnRun();
