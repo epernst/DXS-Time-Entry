@@ -1,4 +1,4 @@
-codeunit 62050 DxTimeEntryTest
+codeunit 62050 DxsTimeEntryTest
 {
     Subtype = Test;
 

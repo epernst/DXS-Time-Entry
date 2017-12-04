@@ -1,7 +1,7 @@
-codeunit 62006 DxTimeInstaller
+codeunit 62006 DxsTimeInstaller
 {
     Subtype = Install;
-    Permissions = tabledata DxTimeEntrySetup = rim;
+    Permissions = tabledata DxsTimeEntrySetup = rim;
 
     trigger OnInstallAppPerCompany();
     var
@@ -16,7 +16,7 @@ codeunit 62006 DxTimeInstaller
 
     trigger OnInstallAppPerDatabase();
     var
-        ResourceHelper : Codeunit DxTimeResourceHelper;
+        ResourceHelper : Codeunit DxsTimeResourceHelper;
     begin
         ResourceHelper.InitializeResources;
     end;
@@ -42,9 +42,8 @@ codeunit 62006 DxTimeInstaller
 
     local procedure InitializeNewSetup();
     var
-        Setup: Record DxTimeEntrySetup;
-        DataMigration: Codeunit "DXS Time Data Migration";
-
+        Setup: Record DxsTimeEntrySetup;
+        DataMigration: Codeunit DxsTimeDataMigration;
     begin
         with Setup do begin
             if not IsEmpty then exit;
@@ -53,13 +52,13 @@ codeunit 62006 DxTimeInstaller
             "Installation Date Time" := CurrentDateTime;
             Insert;           
         end;
-        
+
         DataMigration.MigrateFromNAV2017;
     end;
 
     local procedure ReInitializeSetup();
     var
-        Setup: Record DxTimeEntrySetup;
+        Setup: Record DxsTimeEntrySetup;
     begin
         with Setup do begin
             Get;

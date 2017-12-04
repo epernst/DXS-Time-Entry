@@ -1,4 +1,4 @@
-codeunit 62011 DxTimeNotificationHandler
+codeunit 62011 DxsTimeNotificationHandler
 {
     trigger OnRun();
     begin
@@ -20,7 +20,7 @@ codeunit 62011 DxTimeNotificationHandler
 
     procedure CreateSetupNotificationIfNoSetup();
     var
-        TimePermissionHandler: Codeunit DxTimePermissionHandler;
+        TimePermissionHandler: Codeunit DxsTimePermissionHandler;
     begin
         if TimePermissionHandler.IsSetupEnabled then exit;
         if not TimePermissionHandler.CanChangeTimeSetup then exit;
@@ -31,7 +31,7 @@ codeunit 62011 DxTimeNotificationHandler
     local procedure CreateSetupNotification();
     var
         MyNotifications: Record "My Notifications";
-        TimePermissionHandler: Codeunit DxTimePermissionHandler;
+        TimePermissionHandler: Codeunit DxsTimePermissionHandler;
         TimeNotification: Notification;
     begin
         if not MyNotifications.IsEnabled(GetNoSetupNotificationId) then exit;
@@ -40,17 +40,17 @@ codeunit 62011 DxTimeNotificationHandler
             Id := GetNoSetupNotificationId;
             Message := NoSetupNotificationMsg;
             Scope := Scope::LocalScope;
-            AddAction(NoSetupNotificationAct, Codeunit::DxTimeNotificationHandler, 'RunAssistedSetup');
-            AddAction(DismissNotificationAct, Codeunit::DxTimeNotificationHandler, 'DismissNotification');
+            AddAction(NoSetupNotificationAct, Codeunit::DxsTimeNotificationHandler, 'RunAssistedSetup');
+            AddAction(DismissNotificationAct, Codeunit::DxsTimeNotificationHandler, 'DismissNotification');
             Send;
         end;
     end;
 
     procedure CreateNotificationIfInvalidRegistration();
     var
-        TimeEntrySetup: Record DxTimeEntrySetup;
-        HourlyUnitHandler: Codeunit DxHourlyUnitHandler;
-        TimePermissionHandler: Codeunit DxTimePermissionHandler;
+        TimeEntrySetup: Record DxsTimeEntrySetup;
+        HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
+        TimePermissionHandler: Codeunit DxsTimePermissionHandler;
     begin
         if not TimePermissionHandler.IsSetupEnabled then exit;
         if not TimeEntrySetup.ValidateRegistration then
@@ -60,7 +60,7 @@ codeunit 62011 DxTimeNotificationHandler
     local procedure CreateInvalidRegistrationNotification();
     var
         MyNotifications: Record "My Notifications";
-        TimePermissionHandler: Codeunit DxTimePermissionHandler;
+        TimePermissionHandler: Codeunit DxsTimePermissionHandler;
         TimeNotification: Notification;
     begin
         if not MyNotifications.IsEnabled(GetNoSetupNotificationId) then exit;
@@ -70,17 +70,17 @@ codeunit 62011 DxTimeNotificationHandler
             Id := GetNoSetupNotificationId;
             Message := NoSetupNotificationMsg;
             Scope := Scope::LocalScope;
-            AddAction(NoSetupNotificationAct, Codeunit::DxTimeNotificationHandler, 'RunAssistedSetup');
-            AddAction(DismissNotificationAct, Codeunit::DxTimeNotificationHandler, 'DismissNotification');
+            AddAction(NoSetupNotificationAct, Codeunit::DxsTimeNotificationHandler, 'RunAssistedSetup');
+            AddAction(DismissNotificationAct, Codeunit::DxsTimeNotificationHandler, 'DismissNotification');
             Send;
         end;
     end;
 
     procedure CreateHourlyNotificationIfNoSetup();
     var
-        TimeEntrySetup: Record DxTimeEntrySetup;
-        HourlyUnitHandler: Codeunit DxHourlyUnitHandler;
-        TimePermissionHandler: Codeunit DxTimePermissionHandler;
+        TimeEntrySetup: Record DxsTimeEntrySetup;
+        HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
+        TimePermissionHandler: Codeunit DxsTimePermissionHandler;
     begin
         if not TimePermissionHandler.IsSetupEnabled then exit;
         if not TimeEntrySetup."Hourly Units Only" then exit;
@@ -92,7 +92,7 @@ codeunit 62011 DxTimeNotificationHandler
     var
         MyNotifications: Record "My Notifications";
         UnitOfMeasure: Record "Unit of Measure";
-        HourlyUnitHandler: Codeunit DxHourlyUnitHandler;
+        HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
         TimeNotification: Notification;
     begin
         if not UnitOfMeasure.WritePermission then exit;
@@ -102,16 +102,16 @@ codeunit 62011 DxTimeNotificationHandler
             Id := GetNoHourUnitOfMeasureNotificationId;
             Message := NoHourUnitOfMeasureNotificationMsg;
             Scope := Scope::LocalScope;
-            AddAction(NoHourUnitOfMeasureSetupAct, Codeunit::DxTimeNotificationHandler, 'RunSetupHourUnitOfMeasure');
-            AddAction(DismissNotificationAct, Codeunit::DxTimeNotificationHandler, 'DismissNotification');
+            AddAction(NoHourUnitOfMeasureSetupAct, Codeunit::DxsTimeNotificationHandler, 'RunSetupHourUnitOfMeasure');
+            AddAction(DismissNotificationAct, Codeunit::DxsTimeNotificationHandler, 'DismissNotification');
             Send;
         end;
     end;
 
     procedure RunAssistedSetup(TimeNotification: Notification);
     var
-        TimeEntrySetup: Record DxTimeEntrySetup;
-        TimeEntrySetupWizard: Page DxTimeEntrySetupWizard;
+        TimeEntrySetup: Record DxsTimeEntrySetup;
+        TimeEntrySetupWizard: Page DxsTimeEntrySetupWizard;
     begin
         TimeEntrySetupWizard.RunModal;
     end;

@@ -1,6 +1,6 @@
-codeunit 62005 DxJobFactboxUpdater
+codeunit 62005 DxsJobFactboxUpdater
 {
-    procedure UpdateJobJurnalData(
+    procedure UpdateJobJournalData(
         JobJournalLine : Record "Job Journal Line";
         var BillableHours : array [5] of Decimal;
         var NonBillableHours : array [5] of Decimal;
@@ -9,7 +9,7 @@ codeunit 62005 DxJobFactboxUpdater
         var TotalProfit : array [5] of Decimal;
         var AvgPricePerUOM : array [5] of Decimal);
     var
-        JobFactboxCalculation : Codeunit DxJobFactboxCalculator;
+        JobFactboxCalculation : Codeunit DxsJobFactboxCalculator;
         ViewType : Option CurrentJobJournal,JobLedgerEntry,TotalJobJournal;
     begin
         JobFactboxCalculation.CalcJobJnlFactBoxData(
@@ -49,7 +49,7 @@ codeunit 62005 DxJobFactboxUpdater
         var TotalProfit : array [5] of Decimal;
         var AvgPricePerUOM : array [5] of Decimal);
   var
-        DxJobJnlFactboxCalculator : Codeunit DxJobFactboxCalculator;
+        DxJobJnlFactboxCalculator : Codeunit DxsJobFactboxCalculator;
   begin
     DxJobJnlFactboxCalculator.CalcJobFactBoxData(
       Job,

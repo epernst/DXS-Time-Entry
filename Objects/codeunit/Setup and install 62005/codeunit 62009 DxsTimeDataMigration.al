@@ -1,4 +1,4 @@
-codeunit 62009 "DXS Time Data Migration"
+codeunit 62009 DxsTimeDataMigration
 {
     
     var
@@ -68,7 +68,7 @@ codeunit 62009 "DXS Time Data Migration"
     local procedure MigrateJobsSetupFields();
     var
         AllObjects: Record AllObj;
-        TimeEntrySetup: Record DxTimeEntrySetup;
+        TimeEntrySetup: Record DxsTimeEntrySetup;
         UnitOfMeasure: Record "Unit of Measure";
         DXSJobsSetup: RecordRef;
     begin
@@ -103,6 +103,14 @@ codeunit 62009 "DXS Time Data Migration"
             if not Find then
                 Insert(true);
         end;
+    end;
+
+    procedure GetAppId(): Guid;
+    var
+        AppInfo : ModuleInfo;
+    begin
+        NavApp.GetCurrentModuleInfo(AppInfo); 
+        exit(AppInfo.Id);
     end;
 
 }

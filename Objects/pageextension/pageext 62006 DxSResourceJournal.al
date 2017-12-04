@@ -1,4 +1,4 @@
-pageextension 62006 DxResourceJournal extends "Resource Journal" 
+pageextension 62006 DxsResourceJournal extends "Resource Journal" 
 {
     layout
     {
@@ -85,7 +85,7 @@ pageextension 62006 DxResourceJournal extends "Resource Journal"
     end;
   
   var
-    TimeEntrySetup : Record DxTimeEntrySetup;
+    TimeEntrySetup : Record DxsTimeEntrySetup;
     IsTimeEditable : Boolean;
     IsTimeEntryEnabled  : Boolean;
     IsStartTimeVisible : Boolean;
@@ -95,14 +95,14 @@ pageextension 62006 DxResourceJournal extends "Resource Journal"
 
     local procedure UpdatePage();
     var
-        HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
+        HourlyUnitHandler : Codeunit DxsHourlyUnitHandler;
     begin
         IsTimeEditable := HourlyUnitHandler.IsHourlyUnit("Unit of Measure Code");
     end;
 
     local procedure SetEnabledOnOpen();
     var 
-        TimePermissionHandler : Codeunit DxTimePermissionHandler;
+        TimePermissionHandler : Codeunit DxsTimePermissionHandler;
     begin
         IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled; 
         with TimeEntrySetup do begin

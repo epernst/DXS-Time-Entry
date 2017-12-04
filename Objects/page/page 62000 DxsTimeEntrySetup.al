@@ -1,8 +1,8 @@
-page 62000 DxTimeEntrySetup
+page 62000 DxsTimeEntrySetup
 {
     Caption = 'Dx365 Time Entry Setup';
     PageType = Card;
-    SourceTable = DxTimeEntrySetup;
+    SourceTable = DxsTimeEntrySetup;
     DeleteAllowed = false;
     InsertAllowed = false;
 
@@ -114,7 +114,7 @@ page 62000 DxTimeEntrySetup
                 Image = Picture;
                 Promoted = true;
                 ApplicationArea = All;
-                RunObject = page DxTimeHelpResources;
+                RunObject = page DxsTimeHelpResources;
                 ToolTip = 'Resources and links used by the app.';
             }    
             }

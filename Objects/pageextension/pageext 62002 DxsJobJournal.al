@@ -1,4 +1,4 @@
-pageextension 62002 DxJobJournal extends "Job Journal"
+pageextension 62002 DxsJobJournal extends "Job Journal"
 {
     layout
     {
@@ -64,7 +64,7 @@ pageextension 62002 DxJobJournal extends "Job Journal"
         }
         addfirst(FactBoxes)
         {
-            part(JobJournalSummeryFactBox; DxJobJournalSummaryFactBox)
+            part(JobJournalSummeryFactBox; DxsJobJournalSummaryFactBox)
             {
                 ToolTip = 'Shows a summery of the current job and a job journal total.';
                 Enabled = IsTimeEntryEnabled;
@@ -86,12 +86,12 @@ pageextension 62002 DxJobJournal extends "Job Journal"
                 Caption = 'Dx365 Time';
                 action(DxTimeEntrySetup)
                 {
-                    AccessByPermission = TableData DxTimeEntrySetup = R;
+                    AccessByPermission = TableData DxsTimeEntrySetup = R;
                     ApplicationArea = All;
                     Caption = 'Time Entry Setup';
                     Image = ServiceHours;
                     RunPageMode = Edit;
-                    RunObject = Page DxTimeEntrySetup;
+                    RunObject = Page DxsTimeEntrySetup;
                     ToolTip = 'Show the page setup of the Dx365 Time Entry App, which handles and enables entry of begin and end times in journals.';
                 }
             }
@@ -121,7 +121,7 @@ pageextension 62002 DxJobJournal extends "Job Journal"
     end;
 
     var
-        TimeEntrySetup: Record DxTimeEntrySetup;
+        TimeEntrySetup: Record DxsTimeEntrySetup;
         IsTimeEditable: Boolean;
         IsTimeEntryEnabled: Boolean;
         IsStartTimeVisible: Boolean;
@@ -131,14 +131,14 @@ pageextension 62002 DxJobJournal extends "Job Journal"
 
     local procedure UpdatePage();
     var
-        HourlyUnitHandler: Codeunit DxHourlyUnitHandler;
+        HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
     begin
         IsTimeEditable := HourlyUnitHandler.IsHourlyUnit("Unit of Measure Code");
     end;
 
     local procedure SetEnabledOnOpen();
     var
-        TimePermissionHandler: Codeunit DxTimePermissionHandler;
+        TimePermissionHandler: Codeunit DxsTimePermissionHandler;
     begin
         IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled;
         with TimeEntrySetup do

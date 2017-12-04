@@ -1,4 +1,4 @@
-Codeunit 62021 DxResJournalLineFacade
+Codeunit 62021 DxsResJournalLineFacade
 {
     
     [EventSubscriber(ObjectType::Table, Database::"Res. Journal Line", 'onAfterCopyResJnlLineFromJobJnlLine', '', false, false)]

@@ -1,4 +1,4 @@
-page 62002 DxUnitOfMeasurePart
+page 62002 DxsUnitOfMeasurePart
 {
     Caption = 'Units Of Measure';
     PageType = ListPart;

@@ -1,4 +1,4 @@
-pageextension 62007 DxResourceLedgerEntries extends "Resource Ledger Entries" 
+pageextension 62007 DxsResourceLedgerEntries extends "Resource Ledger Entries" 
 {
     layout
     {
@@ -54,7 +54,7 @@ pageextension 62007 DxResourceLedgerEntries extends "Resource Ledger Entries"
     end;
       
     var
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
         IsTimeEditable : Boolean;
         IsTimeEntryEnabled  : Boolean;
         IsStartTimeVisible : Boolean;
@@ -64,7 +64,7 @@ pageextension 62007 DxResourceLedgerEntries extends "Resource Ledger Entries"
 
     local procedure SetEnabledOnOpen();
     var 
-        TimePermissionHandler : Codeunit DxTimePermissionHandler;
+        TimePermissionHandler : Codeunit DxsTimePermissionHandler;
     begin
         IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled; 
         with TimeEntrySetup do begin

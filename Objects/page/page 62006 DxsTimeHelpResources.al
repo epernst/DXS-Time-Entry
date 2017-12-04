@@ -1,9 +1,9 @@
-page 62006 DxTimeHelpResources
+page 62006 DxsTimeHelpResources
 {
     Caption = 'Dx365 Time Help Resources';
     Editable = false;
     PageType = List;
-    SourceTable = DxTimeHelpResource;
+    SourceTable = DxsTimeHelpResource;
 
     layout
     {
@@ -33,7 +33,7 @@ page 62006 DxTimeHelpResources
 
     trigger OnOpenPage();
     var
-        ResourceHelper : Codeunit DxTimeResourceHelper;
+        ResourceHelper : Codeunit DxsTimeResourceHelper;
     begin
         ResourceHelper.InitializeResources;
     end;

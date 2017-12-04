@@ -1,4 +1,4 @@
-tableextension 62005 DxUnitOfMeasure extends "Unit of Measure"
+tableextension 62005 DxsUnitOfMeasure extends "Unit of Measure"
 {
     fields
     {
@@ -7,7 +7,7 @@ tableextension 62005 DxUnitOfMeasure extends "Unit of Measure"
             Caption = 'Hourly Unit';
             trigger OnValidate();
             var
-                TimeEntrySetup : Record DxTimeEntrySetup;
+                TimeEntrySetup : Record DxsTimeEntrySetup;
             begin 
                 if "DXS Hourly Unit" = xRec."DXS Hourly Unit" then exit;
                 if "DXS Hourly Unit" then begin
@@ -50,9 +50,9 @@ tableextension 62005 DxUnitOfMeasure extends "Unit of Measure"
 
     procedure GetTimeRounding(UnitOfMeasureCode : Code[10]) : Decimal;
     var
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
         UnitOfMeasure : Record "Unit of Measure";
-        HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
+        HourlyUnitHandler : Codeunit DxsHourlyUnitHandler;
     begin
         if UnitOfMeasure.get(UnitOfMeasureCode) and (UnitOfMeasure."DXS Time Rounding" <> 0) then
             exit(UnitOfMeasure."DXS Time Rounding");

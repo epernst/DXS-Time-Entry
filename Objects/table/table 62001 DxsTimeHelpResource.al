@@ -1,4 +1,4 @@
-table 62001 DxTimeHelpResource
+table 62001 DxsTimeHelpResource
 {
     Caption = 'Dx365 Time Help Resource';
     DataPerCompany = false;

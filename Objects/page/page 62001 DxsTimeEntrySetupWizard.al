@@ -1,8 +1,8 @@
-page 62001 DxTimeEntrySetupWizard
+page 62001 DxsTimeEntrySetupWizard
 {
     Caption = 'Dx365 Time Entry Setup Wizard';
     PageType = NavigatePage;
-    SourceTable = DxTimeEntrySetup;
+    SourceTable = DxsTimeEntrySetup;
     SourceTableTemporary = true;
 
     layout
@@ -104,7 +104,7 @@ page 62001 DxTimeEntrySetupWizard
                 InstructionalText = 'Please specify which unit of measure codes to use as "Hourly Units". I have already marked codes which might be hours. ';
                 Caption = '';
                 Visible = UnitOfMeasureStepVisible;
-                part(UnitOfMeasurePart;DxUnitOfMeasurePart)
+                part(UnitOfMeasurePart;DxsUnitOfMeasurePart)
                 {
                     ApplicationArea = All;
                     Caption = '';
@@ -269,8 +269,8 @@ page 62001 DxTimeEntrySetupWizard
 
     trigger OnOpenPage();
     var
-        TimeEntrySetup : Record DxTimeEntrySetup;
-        AssistedSetup : Codeunit DxTimeAssistedSetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
+        AssistedSetup : Codeunit DxsTimeAssistedSetup;
     begin
         AssistedSetup.VerifyUserAccess;
         Init;
@@ -461,7 +461,7 @@ page 62001 DxTimeEntrySetupWizard
 
     local procedure StoreTimeEntrySetup();
     var
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
     begin
         with TimeEntrySetup do begin
             if not Get then begin

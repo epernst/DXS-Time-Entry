@@ -1,4 +1,4 @@
-table 62000 DxTimeEntrySetup
+table 62000 DxsTimeEntrySetup
 {
     Caption = 'Dx365 Time Entry Setup';
     fields
@@ -12,7 +12,7 @@ table 62000 DxTimeEntrySetup
             Caption = 'Time App Enabled';
             trigger OnValidate();
             var
-                HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
+                HourlyUnitHandler : Codeunit DxsHourlyUnitHandler;
                 AssistedSetup : Record "Assisted Setup";
             begin
                 if "Time App Enabled" then begin
@@ -23,7 +23,7 @@ table 62000 DxTimeEntrySetup
                 end else 
                     Status := status::"Not Completed";
                 
-                AssistedSetup.SetStatus(Page::DxTimeEntrySetupWizard,Status);
+                AssistedSetup.SetStatus(Page::DxsTimeEntrySetupWizard,Status);
             end;
         }
         field(3;"Hourly Units Only";Boolean)
@@ -168,7 +168,7 @@ table 62000 DxTimeEntrySetup
 
     local procedure VerifySetupBeforeEnabling(ShowError : Boolean) : Boolean;
     var
-        HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
+        HourlyUnitHandler : Codeunit DxsHourlyUnitHandler;
     begin
         if "Hourly Units Only" and (not HourlyUnitHandler.HourlyUnitExits) then begin
             if ShowError then
@@ -212,7 +212,7 @@ table 62000 DxTimeEntrySetup
 
     procedure NoHourlyUnitsSetupNotification();
     var
-        TimeNotificationHandler : Codeunit DxTimeNotificationHandler;
+        TimeNotificationHandler : Codeunit DxsTimeNotificationHandler;
     begin
         TimeNotificationHandler.CreateHourlyNotificationIfNoSetup;
     end;
@@ -241,7 +241,7 @@ table 62000 DxTimeEntrySetup
 
     procedure NoValidRegistrationNotification();
     var
-        TimeNotificationHandler : Codeunit DxTimeNotificationHandler;
+        TimeNotificationHandler : Codeunit DxsTimeNotificationHandler;
     begin
         TimeNotificationHandler.CreateNotificationIfInvalidRegistration;
     end;

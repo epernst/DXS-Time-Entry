@@ -1,18 +1,18 @@
-codeunit 62007 DxTimeUpgrade
+codeunit 62007 DxsTimeUpgrade
 {
     Subtype = Upgrade;
 
     var
-        DataMigration: Codeunit "DXS Time Data Migration";
+        DataMigration: Codeunit DxsTimeDataMigration;
         
     procedure OnNavAppUpgradePerDatabase();
     begin
-        NavApp.RestoreArchiveData(Database::DxTimeHelpResource);
+        NavApp.RestoreArchiveData(Database::DxsTimeHelpResource);
     end;
 
     procedure OnNavAppUpgradePerCompany();
     begin
-        NavApp.RestoreArchiveData(Database::DxTimeEntrySetup);
+        NavApp.RestoreArchiveData(Database::DxsTimeEntrySetup);
         NavApp.RestoreArchiveData(Database::"Job Journal Line");
         NavApp.RestoreArchiveData(Database::"Job Planning Line");
         NavApp.RestoreArchiveData(Database::"Job Ledger Entry");

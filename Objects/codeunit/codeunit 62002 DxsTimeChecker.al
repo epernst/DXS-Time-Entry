@@ -1,4 +1,4 @@
-codeunit 62002 DxTimeChecker
+codeunit 62002 DxsTimeChecker
 {
     trigger OnRun();
     begin
@@ -11,7 +11,7 @@ codeunit 62002 DxTimeChecker
 
     procedure ValidateStartAndEndTimes(StartDateTime : DateTime; EndDateTime : DateTime; ShowError : Boolean) : Boolean;
     var
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
         ErrorText : Text;
         IsValidated : Boolean;
     begin

@@ -1,4 +1,4 @@
-pageextension 62005 DxUnitsOfMeasure extends "Units of Measure"
+pageextension 62005 DxsUnitsOfMeasure extends "Units of Measure"
 {
     layout
     {
@@ -27,12 +27,12 @@ pageextension 62005 DxUnitsOfMeasure extends "Units of Measure"
                 Caption = 'Dx365 Time';
                 action(DxTimeEntrySetup)
                 {
-                    AccessByPermission = TableData DxTimeEntrySetup=R;
+                    AccessByPermission = TableData DxsTimeEntrySetup=R;
                     ApplicationArea = All;
                     Caption = 'Time Entry Setup';
                     Image = Setup;
                     RunPageMode = Edit;
-                    RunObject = Page DxTimeEntrySetup;
+                    RunObject = Page DxsTimeEntrySetup;
                     ToolTip = 'Show the page setup of the Dx365 Time Entry App, which handles and enables entry of begin and end times in journals.';
                 }
             }

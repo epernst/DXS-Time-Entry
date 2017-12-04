@@ -1,4 +1,4 @@
-pageextension 62004 DxJobLedgerEntries extends "Job Ledger Entries" 
+pageextension 62004 DxsJobLedgerEntries extends "Job Ledger Entries" 
 {
     layout
     {
@@ -54,7 +54,7 @@ pageextension 62004 DxJobLedgerEntries extends "Job Ledger Entries"
     end;
       
     var
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
         IsTimeEditable : Boolean;
         IsTimeEntryEnabled  : Boolean;
         IsStartTimeVisible : Boolean;
@@ -64,7 +64,7 @@ pageextension 62004 DxJobLedgerEntries extends "Job Ledger Entries"
 
     local procedure SetEnabledOnOpen();
     var 
-        TimePermissionHandler : Codeunit DxTimePermissionHandler;
+        TimePermissionHandler : Codeunit DxsTimePermissionHandler;
     begin
         IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled; 
         with TimeEntrySetup do begin

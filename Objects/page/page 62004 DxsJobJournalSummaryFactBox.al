@@ -1,8 +1,8 @@
-page 62004 DxJobJournalSummaryFactBox
+page 62004 DxsJobJournalSummaryFactBox
 {
     Caption = 'Job Summary';
-    PageType=CardPart;
-    SourceTable="Job Journal Line";
+    PageType = CardPart;
+    SourceTable = "Job Journal Line";
 
     layout
     {
@@ -242,7 +242,7 @@ page 62004 DxJobJournalSummaryFactBox
     end;
 
     var
-        DrillDownFactbox : Codeunit DxDrillDownJobFactBoxes;
+        DrillDownFactbox : Codeunit DxsDrillDownJobFactBoxes;
         BillableHours : array [5] of Decimal;
         NonBillableHours : array [5] of Decimal;
         TotalSales : array [5] of Decimal;
@@ -254,9 +254,9 @@ page 62004 DxJobJournalSummaryFactBox
 
     procedure UpdateData(JobJournalLine : Record "Job Journal Line");
     var
-        UpdateFactbox : Codeunit DxJobFactboxUpdater;
+        UpdateFactbox : Codeunit DxsJobFactboxUpdater;
     begin
         if not Job.GET("Job No.") then Job.INIT;
-        UpdateFactbox.UpdateJobJurnalData(JobJournalLine,BillableHours,NonBillableHours,TotalSales,TotalCost,TotalProfit,AvgPricePerUOM);    
+        UpdateFactbox.UpdateJobJournalData(JobJournalLine,BillableHours,NonBillableHours,TotalSales,TotalCost,TotalProfit,AvgPricePerUOM);    
     end;
 }

@@ -19,7 +19,7 @@ codeunit 62040 DxsTimeResourceHelper
     
     procedure GetHelpUrl(SetupCode : Code[50]) : Text;
     var
-        HelpResource: Record DxTimeHelpResource;
+        HelpResource: Record DxsTimeHelpResource;
     begin
         with HelpResource do
         if Get(SetupCode) then
@@ -133,7 +133,7 @@ codeunit 62040 DxsTimeResourceHelper
     var
         TempBlob: Record TempBlob;
         IconDescription: Label 'Dx365 Time Icon 70x70';
-        DxTimeIcon: Codeunit DxTimeIcon70x70;
+        DxTimeIcon: Codeunit DxsTimeIcon70x70;
     begin
         DxTimeIcon.GetIcon(TempBlob);
         InitIcon(Get70PXIconCode,IconDescription,TempBlob);
@@ -143,7 +143,7 @@ codeunit 62040 DxsTimeResourceHelper
     var
         TempBlob: Record TempBlob;
         IconDescription: Label 'Dx365 Time Icon 150x150';
-        DxTimeIcon: Codeunit DxTimeIcon150x150;
+        DxTimeIcon: Codeunit DxsTimeIcon150x150;
     begin
         DxTimeIcon.GetIcon(TempBlob);
         InitIcon(Get150PXIconCode,IconDescription,TempBlob);
@@ -153,7 +153,7 @@ codeunit 62040 DxsTimeResourceHelper
     var
         TempBlob: Record TempBlob;
         IconDescription: Label 'Dx365 Time Icon 240x240';
-        DxTimeIcon: Codeunit DxTimeIcon240x240;
+        DxTimeIcon: Codeunit DxsTimeIcon240x240;
     begin
         DxTimeIcon.GetIcon(TempBlob);
         InitIcon(Get70PXIconCode,IconDescription,TempBlob);
@@ -163,7 +163,7 @@ codeunit 62040 DxsTimeResourceHelper
     var
         TempBlob: Record TempBlob;
         IconDescription: Label 'Dx365 Time Icon 250x250';
-        DxTimeIcon: Codeunit DxTimeIcon250x250;
+        DxTimeIcon: Codeunit DxsTimeIcon250x250;
     begin
         DxTimeIcon.GetIcon(TempBlob);
         InitIcon(Get250PXIconCode,IconDescription,TempBlob);
@@ -173,7 +173,7 @@ codeunit 62040 DxsTimeResourceHelper
     var
         TempBlob: Record TempBlob;
         IconDescription: Label 'Dx365 Time Icon 417x417';
-        DxTimeIcon: Codeunit DxTimeIcon417x417;
+        DxTimeIcon: Codeunit DxsTimeIcon417x417;
     begin
         DxTimeIcon.GetIcon(TempBlob);
         InitIcon(Get417PXIconCode,IconDescription,TempBlob);
@@ -181,7 +181,7 @@ codeunit 62040 DxsTimeResourceHelper
     
     local procedure InitUrl(UrlCode : Code[50];UrlLink : Text);
     var
-        DxTimeHelpResource: Record DxTimeHelpResource;
+        DxTimeHelpResource: Record DxsTimeHelpResource;
     begin
         with DxTimeHelpResource do
         if not Get(UrlCode) then begin
@@ -193,7 +193,7 @@ codeunit 62040 DxsTimeResourceHelper
     
     local procedure InitIcon(IconCode : Code[50]; IconDescription : Text; TempBlob : Record TempBlob);
     var
-        HelpResource: Record DxTimeHelpResource;
+        HelpResource: Record DxsTimeHelpResource;
         InStr: InStream;
     begin
         with HelpResource do

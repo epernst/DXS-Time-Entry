@@ -1,11 +1,11 @@
-codeunit 62008 DxTimeAssistedSetup
+codeunit 62008 DxsTimeAssistedSetup
 {
     trigger OnRun();
     begin
     end;
     
     var
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
         SetupNameLbl : Label 'Set up Start and End Time Entry';
         RequiredPermissionMissingErr : Label 'You have not been granted required access rights to start the Assisted Setup.\\The Assisted Setup for G/L Source Names is about assigning the required permissions to users.  To be able to assign permissions you need to be granted either the SUPER og SECURITY permission set.';
 
@@ -22,7 +22,7 @@ codeunit 62008 DxTimeAssistedSetup
     begin
         TimeEntrySetup.Get;
         with TempAggregatedAssistedSetup DO
-            SetStatus(TempAggregatedAssistedSetup,Page::DxTimeEntrySetupWizard,TimeEntrySetup.Status);
+            SetStatus(TempAggregatedAssistedSetup,Page::DxsTimeEntrySetupWizard,TimeEntrySetup.Status);
     end;
 
     procedure VerifyUserAccess();
@@ -51,8 +51,8 @@ codeunit 62008 DxTimeAssistedSetup
     local procedure AddToAssistedSetup(var TempAggregatedAssistedSetup : Record "Aggregated Assisted Setup" temporary);
     var
         TempBlob : Record TempBlob;
-        DxTimeIcon : Codeunit DxTimeIcon240x240;
-        ResourceHelper : Codeunit DxTimeResourceHelper;
+        DxTimeIcon : Codeunit DxsTimeIcon240x240;
+        ResourceHelper : Codeunit DxsTimeResourceHelper;
         InStr : InStream;
     begin
         with TempAggregatedAssistedSetup do begin
@@ -61,7 +61,7 @@ codeunit 62008 DxTimeAssistedSetup
             InsertAssistedSetupIcon(ResourceHelper.Get240PXIconCode,InStr);            
 
             AddExtensionAssistedSetup(
-                Page::DxTimeEntrySetupWizard,
+                Page::DxsTimeEntrySetupWizard,
                 SetupNameLbl,
                 true,
                 TimeEntrySetup.RecordId,

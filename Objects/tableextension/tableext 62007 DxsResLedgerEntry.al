@@ -1,4 +1,4 @@
-tableextension 62007 DxResLedgerEntry extends "Res. Ledger Entry" 
+tableextension 62007 DxsResLedgerEntry extends "Res. Ledger Entry" 
 {
     fields
     {
