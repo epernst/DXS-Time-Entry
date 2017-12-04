@@ -1,4 +1,4 @@
-codeunit 62019 DxTimeInstaller
+codeunit 62006 DxTimeInstaller
 {
     Subtype = Install;
     Permissions = tabledata DxTimeEntrySetup = rim;
@@ -43,6 +43,8 @@ codeunit 62019 DxTimeInstaller
     local procedure InitializeNewSetup();
     var
         Setup: Record DxTimeEntrySetup;
+        DataMigration: Codeunit "DXS Time Data Migration";
+
     begin
         with Setup do begin
             if not IsEmpty then exit;
@@ -51,6 +53,8 @@ codeunit 62019 DxTimeInstaller
             "Installation Date Time" := CurrentDateTime;
             Insert;           
         end;
+        
+        DataMigration.MigrateFromNAV2017;
     end;
 
     local procedure ReInitializeSetup();

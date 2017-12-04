@@ -5,7 +5,8 @@ codeunit 62004 DxHourlyUnitHandler
     end;
     
     var
-        CanOnlyUseWithTypeErr: Label '%1 can only be used with a %2, which have been setup as a "%3".', Comment = '%1-fieldcaption %2-unit of measure table %3-hourly unit';
+        CanOnlyUseWithHourlyUnitTypeErr: Label '%1 can only be used with a %2, which have been setup as a "%3".', 
+            Comment = '%1-FieldCaption %2-unit of measure table %3-hourly unit';
         
     procedure ValidateHourlyUnitOfMeasure(UnitOfMeasureCode : Code[10];TestFieldCaption : Text;ShowMessage : Boolean) : Boolean;
     var
@@ -21,10 +22,10 @@ codeunit 62004 DxHourlyUnitHandler
                 exit(true);
             if ShowMessage and GuiAllowed then
                 Message(
-                        CanOnlyUseWithTypeErr,
-                        TestFieldCaption,
-                        TableCaption,
-                        FieldCaption("DXS Hourly Unit"));
+                    CanOnlyUseWithHourlyUnitTypeErr,
+                    TestFieldCaption,
+                    TableCaption,
+                    FieldCaption("DXS Hourly Unit"));
             exit(false);
         end;
     end;
@@ -66,8 +67,7 @@ codeunit 62004 DxHourlyUnitHandler
             FilterText := '';
             FindSet;
             repeat
-                if FilterText <> '' then
-                    FilterText += '|';
+                if FilterText <> '' then FilterText += '|';
                 FilterText += Code;
             until Next = 0;
         end;

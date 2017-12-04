@@ -1,4 +1,4 @@
-codeunit 62011 DxTimeAssistedSetup
+codeunit 62008 DxTimeAssistedSetup
 {
     trigger OnRun();
     begin

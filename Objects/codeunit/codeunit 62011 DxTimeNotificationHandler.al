@@ -1,22 +1,22 @@
-codeunit 62008 DxTimeNotificationHandler
+codeunit 62011 DxTimeNotificationHandler
 {
     trigger OnRun();
     begin
     end;
 
     var
-        DismissFurtherNotificationsAct: Label 'Dont show this message again.';
+        DismissNotificationAct: Label 'Don''t show this message again.';
         NoHourUnitOfMeasureNotificationLbl: Label 'No Hourly Unit Setup';
         NoHourUnitOfMeasureNotificationMsg: Label 'No Hourly Unit of Measure Codes have been setup to support time based entry.';
         NoHourUnitOfMeasureSetupAct: Label 'Select or create hourly based Unit of Measure codes.';
         NoHourUnitOfMeasureSetupDesc: Label 'Warns if no Hourly Unit of Measure codes have been setup.';
-        NoHourUnitOfMeasureSetupName: Label 'Dx Time - Hourly Unit of Measure Setup missing.';
+        NoHourUnitOfMeasureSetupName: Label 'DX365 Time Entry - Hourly Unit of Measure Setup missing.';
         NoSetupNotificationAct: Label 'Enable now.';
-        NoSetupNotificationDesc: Label 'Warns if Dx365 Time App have been installed, but not been setup and enabled.';
-        NoSetupNotificationLbl: Label 'Dx365 Time - App Not Enabled';
-        NoSetupNotificationMsg: Label 'The "Dx365 Time App" to allow entry of start and end times has been installed, but it has not been setup and enabled.';
-        NoSetupNotificationName: Label 'Dx365 Time App is not enabled.';
-        WatchVideoNotificationAct: Label 'Watch video help.';
+        NoSetupNotificationDesc: Label 'Warns if DX365 Time Entry have been installed, but not been setup and enabled.';
+        NoSetupNotificationLbl: Label 'DX365 Time Entry - App Not Enabled';
+        NoSetupNotificationMsg: Label 'DX365 Time Entry App to allow entry of start and end times has been installed, but it has not been setup and enabled.';
+        NoSetupNotificationName: Label 'DX365 Time Entry App is not enabled.';
+        WatchVideoNotificationAct: Label 'See how to do it. Watch video help.';
 
     procedure CreateSetupNotificationIfNoSetup();
     var
@@ -36,13 +36,12 @@ codeunit 62008 DxTimeNotificationHandler
     begin
         if not MyNotifications.IsEnabled(GetNoSetupNotificationId) then exit;
 
-        with TimeNotification do
-        begin
+        with TimeNotification do begin
             Id := GetNoSetupNotificationId;
             Message := NoSetupNotificationMsg;
             Scope := Scope::LocalScope;
             AddAction(NoSetupNotificationAct, Codeunit::DxTimeNotificationHandler, 'RunAssistedSetup');
-            AddAction(DismissFurtherNotificationsAct, Codeunit::DxTimeNotificationHandler, 'DismissNotification');
+            AddAction(DismissNotificationAct, Codeunit::DxTimeNotificationHandler, 'DismissNotification');
             Send;
         end;
     end;
@@ -72,7 +71,7 @@ codeunit 62008 DxTimeNotificationHandler
             Message := NoSetupNotificationMsg;
             Scope := Scope::LocalScope;
             AddAction(NoSetupNotificationAct, Codeunit::DxTimeNotificationHandler, 'RunAssistedSetup');
-            AddAction(DismissFurtherNotificationsAct, Codeunit::DxTimeNotificationHandler, 'DismissNotification');
+            AddAction(DismissNotificationAct, Codeunit::DxTimeNotificationHandler, 'DismissNotification');
             Send;
         end;
     end;
@@ -104,7 +103,7 @@ codeunit 62008 DxTimeNotificationHandler
             Message := NoHourUnitOfMeasureNotificationMsg;
             Scope := Scope::LocalScope;
             AddAction(NoHourUnitOfMeasureSetupAct, Codeunit::DxTimeNotificationHandler, 'RunSetupHourUnitOfMeasure');
-            AddAction(DismissFurtherNotificationsAct, Codeunit::DxTimeNotificationHandler, 'DismissNotification');
+            AddAction(DismissNotificationAct, Codeunit::DxTimeNotificationHandler, 'DismissNotification');
             Send;
         end;
     end;
