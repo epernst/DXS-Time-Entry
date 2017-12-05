@@ -4,7 +4,7 @@
 		{
 			"type": "al",
 			"request": "launch",
-			"server": "https://nav11dk-ctp17.northeurope.cloudapp.azure.com:7049",
+			"server": "https://dxsolutions11.northeurope.cloudapp.azure.com",
 			"serverInstance": "NAV",
 			"name": "Publish",
 			"tenant": "",
