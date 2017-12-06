@@ -1,26 +1,24 @@
 {
   "id": "d391a9da-a640-4a04-83dd-e2ed3ff77ee9",
-  "name": "Dx365 Time Entry",
-  "publisher": "Dx Solutions",
+  "name": "DXS Time Entry",
+  "publisher": "DXSolutions",
   "brief": "Allow entry of start and end times in journals and planning lines.",
   "description": "This app allow the user to enter start and end times (as opposed to just quantities) into resource and job journals and job planning lines.",
   "version": "1.0.0.0",
   "compatibilityId": "1.0.0.0",
-  "privacyStatement": "",
-  "EULA": "",
-  "help": "",
-  "url": "",
+  "privacyStatement": "https://dynamicsuser.net/p/privacy",
+  "EULA": "https://dynamicsuser.net/nav/b/admin",
+  "help": "https://dynamicsuser.net/nav/b/admin",
+  "url": "https://dynamicsuser.net/nav/b/admin",
   "logo": "",
   "capabilities": [],
   "dependencies": [],
   "screenshots": [],
   "platform": "11.0.0.0",
-  "application": {
-    "version": "11.0.0.0",
-    "locale": "DK"
-  },
+  "application": "11.0.0.0",
   "idRange": {
     "from": 62000,
-    "to": 62099
-  }
+    "to": 62199
+  },
+  "features": "TranslationFile" 
 }
