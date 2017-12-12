@@ -1,4 +1,4 @@
-codeunit 62002 DxJobTransferLineFacade
+codeunit 62022 DxsJobTransferLineFacade
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'OnAfterFromJnlLineToLedgEntry', '', false, false)]
     local procedure onAfterFromJnlLineToLedgEntry(
