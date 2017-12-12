@@ -4,12 +4,12 @@ pageextension 62005 DxUnitsOfMeasure extends "Units of Measure"
     {
         addbefore("International Standard Code")
         {
-            field("Hourly Unit";"Hourly Unit")
+            field("Hourly Unit";"DXS Hourly Unit")
             {
                 ToolTip = 'Specify if this unit of measure is used as an hourly unit, for entry of start and end times in journals.';
                 ApplicationArea = All;
             }
-            field("Time Rounding";"Time Rounding")
+            field("Time Rounding";"DXS Time Rounding")
             {
                 ToolTip = 'Specify how to round start and end time based entries. For example enter 0.25 to have 15 minutes as the minimum time to use.';
                 ApplicationArea = All;          
@@ -59,6 +59,6 @@ pageextension 62005 DxUnitsOfMeasure extends "Units of Measure"
 
     local procedure UpdatePage();
     begin
-        IsHourlyUnit := "Hourly Unit";  
+        IsHourlyUnit := "DXS Hourly Unit";  
     end;
 }

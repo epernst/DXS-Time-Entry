@@ -443,7 +443,7 @@ page 62001 DxTimeEntrySetupWizard
             repeat 
                 UnitOfMeasure.TransferFields(TempUnitOfMeasure);
                 if UnitOfMeasure.Modify then;
-                if "Hourly Unit" then HasHourlyUnitsOfMeasure := true;
+                if "DXS Hourly Unit" then HasHourlyUnitsOfMeasure := true;
             until next = 0;
         end;
     end;
@@ -452,9 +452,9 @@ page 62001 DxTimeEntrySetupWizard
         NotEmpty : Boolean;
     begin
         with TempUnitOfMeasure do begin
-            SetRange("Hourly Unit", true);
+            SetRange("DXS Hourly Unit", true);
             NotEmpty := Not IsEmpty;
-            SetRange("Hourly Unit");
+            SetRange("DXS Hourly Unit");
             exit(NotEmpty);
         end;
     end;

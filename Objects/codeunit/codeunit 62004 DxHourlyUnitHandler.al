@@ -17,14 +17,14 @@ codeunit 62004 DxHourlyUnitHandler
             if not "Hourly Units Only" then exit(true);
         end;
         with UnitOfMeasure do begin
-            if get(UnitOfMeasureCode) and "Hourly Unit" then 
+            if get(UnitOfMeasureCode) and "DXS Hourly Unit" then 
                 exit(true);
             if ShowMessage and GuiAllowed then
                 Message(
                     CanOnlyUseWithTypeErr,
                     TestFieldCaption,
                     TableCaption,
-                    FieldCaption("Hourly Unit"));
+                    FieldCaption("DXS Hourly Unit"));
             exit(false);
         end;
     end;
@@ -40,7 +40,7 @@ codeunit 62004 DxHourlyUnitHandler
         end;
         with UnitOfMeasure do begin
             if not get(UnitOfMeasureCode) then exit(false);
-            exit("Hourly Unit");
+            exit("DXS Hourly Unit");
         end;
     end;
 
@@ -49,7 +49,7 @@ codeunit 62004 DxHourlyUnitHandler
         UnitOfMeasure : Record "Unit of Measure";
     begin 
         with UnitOfMeasure do begin
-            SetRange("Hourly Unit", true);
+            SetRange("DXS Hourly Unit", true);
             exit(not IsEmpty);
         end;
     end;
@@ -60,7 +60,7 @@ codeunit 62004 DxHourlyUnitHandler
         FilterText : Text;
     begin 
         with UnitOfMeasure do begin
-            SetRange("Hourly Unit", true);
+            SetRange("DXS Hourly Unit", true);
             if IsEmpty then exit('');
 
             FilterText := '';

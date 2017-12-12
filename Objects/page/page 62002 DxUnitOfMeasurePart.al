@@ -25,11 +25,11 @@ page 62002 DxUnitOfMeasurePart
                     Style = Attention;
                     StyleExpr = IsHourlyUnit;
                 }
-                field("Hourly Unit";"Hourly Unit")
+                field("Hourly Unit";"DXS Hourly Unit")
                 {
                     ApplicationArea = All;                    
                 }
-                field("Time Rounding";"Time Rounding")
+                field("Time Rounding";"DXS Time Rounding")
                 {
                     ApplicationArea = All;
                 }
@@ -63,7 +63,7 @@ page 62002 DxUnitOfMeasurePart
 
     local procedure UpdatePage();
     begin 
-        IsHourlyUnit := "Hourly Unit" or IsInternationalStandardCode(Code) or IsInternationalStandardCode("International Standard Code");
+        IsHourlyUnit := "DXS Hourly Unit" or IsInternationalStandardCode(Code) or IsInternationalStandardCode("International Standard Code");
     end;
     
     local procedure IsInternationalStandardCode(CodeToCheck : Code[10]) :  Boolean;
