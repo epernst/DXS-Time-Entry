@@ -345,7 +345,7 @@ page 62001 DxsTimeEntrySetupWizard
 
         UnitOfMeasureStepVisible := true;
 
-        CurrPage.UnitOfMeasurePart.Page.Set(TempUnitOfMeasure);
+        CurrPage.UnitOfMeasurePart.Page.SetRecords(TempUnitOfMeasure);
     end;
 
     local procedure ShowMultiDayStep();
@@ -353,7 +353,7 @@ page 62001 DxsTimeEntrySetupWizard
         OldStep : Integer;
     begin
         if LastStep = LastStep::UnitOfMeasureStep  then
-            CurrPage.UnitOfMeasurePart.Page.Get(TempUnitOfMeasure);
+            CurrPage.UnitOfMeasurePart.Page.GetRecords(TempUnitOfMeasure);
         if "Hourly Units Only" and (not HasHourlyUnitsOfMeasureTemp) then begin
             OldStep := Step;
             Step := LastStep;

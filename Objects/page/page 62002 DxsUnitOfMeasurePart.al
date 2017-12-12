@@ -51,12 +51,12 @@ page 62002 DxsUnitOfMeasurePart
         UpdatePage
     end;
 
-    procedure Set(var TempUnitOfMeasure : Record "Unit of Measure" temporary);
+    procedure SetRecords(var TempUnitOfMeasure : Record "Unit of Measure" temporary);
     begin 
         Copy(TempUnitOfMeasure,true);
     end;
 
-    procedure Get(var TempUnitOfMeasure : Record "Unit of Measure" temporary);
+    procedure GetRecords(var TempUnitOfMeasure : Record "Unit of Measure" temporary);
     begin 
         TempUnitOfMeasure.Copy(Rec,true);
     end;
