@@ -6,11 +6,11 @@ Codeunit 62023 DxsResJournalLineFacade
         JobJnlLine : Record "Job Journal Line");
     begin
         with ResJnlLine do begin
-           "Start Time" := JobJnlLine."Start Time";
-           "End Time" := JobJnlLine."End Time";
-           "Start Date Time" := JobJnlLine."Start Date Time";
-           "End Date Time" := JobJnlLine."End Date Time";
-           "Total Duration" := JobJnlLine."Total Duration";
+           "DXS Start Time" := JobJnlLine."DXS Start Time";
+           "DXS End Time" := JobJnlLine."DXS End Time";
+           "DXS Start Date Time" := JobJnlLine."DXS Start Date Time";
+           "DXS End Date Time" := JobJnlLine."DXS End Date Time";
+           "DXS Total Duration" := JobJnlLine."DXS Total Duration";
         end;
     end;
 
