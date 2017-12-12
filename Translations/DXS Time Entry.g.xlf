@@ -933,122 +933,122 @@
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Time Entry Setup</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Table</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 1663593181 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 1663593181 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Primary Key</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 1890373723 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 1890373723 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Time App Enabled</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 3164394312 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 3164394312 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hourly Units Only</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 3471255111 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 3471255111 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Allow Entries to Pass Midnight</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 3471255111 - Property 62802879" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 3471255111 - Property 62802879" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>No,Yes - Next Day,Yes - Multiple Days</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 764527443 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 764527443 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Fields To Show</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 764527443 - Property 62802879" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 764527443 - Property 62802879" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Times,Date and Times,Both,Mix</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 483798663 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 483798663 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show Start Times</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 826663310 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 826663310 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show End Times</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 3247912144 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 3247912144 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show Start Date-Times</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 34218621 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 34218621 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show End Date-Times</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 2537496757 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 2537496757 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>First Enabled Date</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 513339096 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 513339096 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Status</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 513339096 - Property 62802879" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 513339096 - Property 62802879" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Not Completed,Completed,Not Started,Seen,Watched,Read, </source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 2839332712 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 2839332712 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Default Time Rounding</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 661833578 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 661833578 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Registration E-Mail Address</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 155626315 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 155626315 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Installation Id</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 1635236888 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 1635236888 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Registration Id</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - Field 1413240321 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - Field 1413240321 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Next Registration Verification</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - NamedType 3820715896" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - NamedType 3820715896" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>You need to setup at least one unit of measure as an Hourly Unit, before you can enable the Time Entry App.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Label</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - NamedType 3032302345" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - NamedType 3032302345" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>You need to enter a valid email adress, before you can enable the app.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Label</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - NamedType 2283111442" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - NamedType 2283111442" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 must be specified when %2 is selected. For example 0.25 will round to 15 minutes.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Label</note>
         </trans-unit>
-        <trans-unit id="Table 4118145414 - NamedType 1884663683" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 325460675 - NamedType 1884663683" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Changing the %1, without changing the assosicated %2, may cause the app to stop working.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Label</note>
