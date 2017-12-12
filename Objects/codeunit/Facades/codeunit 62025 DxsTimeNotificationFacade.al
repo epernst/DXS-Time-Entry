@@ -1,4 +1,4 @@
-codeunit 62007 DxTimeNotificationFacade
+codeunit 62025 DxsTimeNotificationFacade
 {
     trigger OnRun();
     begin
