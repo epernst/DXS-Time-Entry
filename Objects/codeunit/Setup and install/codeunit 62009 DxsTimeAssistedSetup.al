@@ -8,8 +8,7 @@ codeunit 62009 DxsTimeAssistedSetup
         TimeEntrySetup : Record DxsTimeEntrySetup;
         SetupNameLbl : Label 'Setup DXS Time Entry extension';
         SetupDescriptionLbl : Label 'Setup the DXS Time Entry extension to allow entry of start and ending times.';
-        SetupKeywordsTxt : Label 'Jobs, Resources';
-        IconInstream: InStream;
+        SetupKeywordsTxt : Label 'Jobs, Resources, Project Management, Time';
         RequiredPermissionMissingErr : Label 'You have not been granted required access rights to start the Assisted Setup.\\The Assisted Setup for G/L Source Names is about assigning the required permissions to users.  To be able to assign permissions you need to be granted either the SUPER og SECURITY permission set.';
 
     [EventSubscriber(ObjectType::Table, Database::"Aggregated Assisted Setup", 'OnRegisterAssistedSetup', '', true, false)]
@@ -40,7 +39,6 @@ codeunit 62009 DxsTimeAssistedSetup
                 Error(RequiredPermissionMissingErr);
         END;
     end;
-
 
     local procedure InitializeSetup();
     begin
