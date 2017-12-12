@@ -1,3 +1,4 @@
 *.app
 Translations/*.g.xlf
 Translations/DXS Time Entry.g.xlf
+.alpackages/
