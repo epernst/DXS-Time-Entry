@@ -14,7 +14,7 @@ page 62000 DxsTimeEntrySetup
             group(General)
             {
                 Caption = 'General';
-                field("Time Based Entries Enabled";"Time App Enabled")
+                field("App Enabled";"App Enabled")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Enables the app. If not enabled, then the start and end times cannot be entered and will to be shown.';
