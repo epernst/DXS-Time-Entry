@@ -1,4 +1,4 @@
-codeunit 62012 DxTimeChecker
+codeunit 62002 DxsTimeChecker
 {
     trigger OnRun();
     begin

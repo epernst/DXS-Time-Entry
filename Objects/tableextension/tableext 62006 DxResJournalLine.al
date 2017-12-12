@@ -62,7 +62,7 @@ tableextension 62006 DxResJournalLine extends "Res. Journal Line"
             trigger OnValidate();
             var
                 HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
-                TimeChecker : Codeunit DxTimeChecker;
+                TimeChecker : Codeunit DxsTimeChecker;
             begin
                 if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code",FieldCaption("End Date Time"),true) then begin
                     InitStartEndTimes;
