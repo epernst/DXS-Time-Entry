@@ -6,7 +6,7 @@ codeunit 62009 DxsTimeAssistedSetup
     
     var
         TimeEntrySetup : Record DxsTimeEntrySetup;
-        SetupNameLbl : Label 'DXS Time Entry Setup';
+        SetupNameLbl : Label 'Setup DXS Time Entry extension';
         SetupDescriptionLbl : Label 'Setup the DXS Time Entry extension to allow entry of start and ending times.';
         SetupKeywordsTxt : Label 'Jobs,Resources';
         IconInstream: InStream;
@@ -55,12 +55,14 @@ codeunit 62009 DxsTimeAssistedSetup
     local procedure AddToAssistedSetup(var TempAggregatedAssistedSetup : Record "Aggregated Assisted Setup" temporary);
     var
         TempBlob : Record TempBlob;
-        HelpResource: Codeunit DxsTimeResourceHelper;
+        DxTimeIcon : Codeunit DxsTimeIcon240x240;
+        ResourceHelper : Codeunit DxsTimeResourceHelper;
         InStr : InStream;
     begin
         with TempAggregatedAssistedSetup do begin
-            GetIconInstream(IconInstream);
-            InsertAssistedSetupIcon(HelpResource.Get240PXIconCode,IconInstream);            
+            DxTimeIcon.GetIcon(TempBlob);
+            TempBlob.Blob.CreateInStream(InStr);
+            InsertAssistedSetupIcon(ResourceHelper.Get240PXIconCode,InStr);            
 
             AddExtensionAssistedSetup(
                 Page::DxsTimeEntrySetupWizard,
@@ -68,7 +70,7 @@ codeunit 62009 DxsTimeAssistedSetup
                 true,
                 TimeEntrySetup.RecordId,
                 TimeEntrySetup.Status,
-                HelpResource.Get240PXIconCode);
+                ResourceHelper.Get240PXIconCode);
         end;
     end;
 
@@ -76,6 +78,10 @@ codeunit 62009 DxsTimeAssistedSetup
     local procedure OnRegisterBusinessSetup(var TempBusinessSetup: Record "Business Setup" temporary);
     var
         TimeEntrySetup: Record DxsTimeEntrySetup;
+        TempBlob : Record TempBlob;
+        DxTimeIcon : Codeunit DxsTimeIcon240x240;
+        ResourceHelper : Codeunit DxsTimeResourceHelper;
+        InStr : InStream;
     begin
         if not TimeEntrySetup.WritePermission then exit;
 
@@ -88,8 +94,9 @@ codeunit 62009 DxsTimeAssistedSetup
             Page::"DxsTimeEntrySetup",
             GetAppName);
 
-        GetIconInstream(IconInstream);
-        TempBusinessSetup.SetBusinessSetupIcon(TempBusinessSetup,IconInstream);            
+        DxTimeIcon.GetIcon(TempBlob);
+        TempBlob.Blob.CreateInStream(InStr);
+        TempBusinessSetup.SetBusinessSetupIcon(TempBusinessSetup,InStr);            
     end;
 
     local procedure GetIconInstream(var InStr: InStream);
