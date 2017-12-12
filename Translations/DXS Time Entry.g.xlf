@@ -3,83 +3,83 @@
   <file datatype="xml" source-language="en-US" original="DXS Time Entry">
     <body>
       <group id="body">
+        <trans-unit id="Codeunit 1429388701 - NamedType 1325720567" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The end time must be on the same date as the start date-time.</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1429388701 - NamedType 1696550571" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You need to create a new line to enter an end time after %1.</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1429388701 - NamedType 61022435" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The end date-time %1 is too late. It can only be same or next day from %2.</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1829421745 - NamedType 1683352720" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 can only be used with a %2, which have been setup as a "%3".</source>
           <note from="Developer" annotates="general" priority="2">%1-fieldcaption %2-unit of measure table %3-hourly unit</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1618642280 - NamedType 11906307" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 4134209201 - NamedType 11906307" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dx365 Time - App Not Enabled</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1618642280 - NamedType 3580538078" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 4134209201 - NamedType 3580538078" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The "Dx365 Time App" to allow entry of start and end times has been installed, but it has not been setup and enabled.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1618642280 - NamedType 2209600855" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 4134209201 - NamedType 2209600855" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Enable now.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1618642280 - NamedType 3560183984" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 4134209201 - NamedType 3560183984" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dx365 Time App is not enabled.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1618642280 - NamedType 2341522694" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 4134209201 - NamedType 2341522694" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Warns if Dx365 Time App have been installed, but not been setup and enabled.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1618642280 - NamedType 1254644315" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 4134209201 - NamedType 1254644315" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>No Hourly Unit Setup</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1618642280 - NamedType 3210064806" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 4134209201 - NamedType 3210064806" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>No Hourly Unit of Measure Codes have been setup to support time based entry.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1618642280 - NamedType 1383284001" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 4134209201 - NamedType 1383284001" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select or create hourly based Unit of Measure codes.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1618642280 - NamedType 594944330" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 4134209201 - NamedType 594944330" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dx Time - Hourly Unit of Measure Setup missing.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1618642280 - NamedType 1868610076" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 4134209201 - NamedType 1868610076" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Warns if no Hourly Unit of Measure codes have been setup.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1618642280 - NamedType 792521069" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 4134209201 - NamedType 792521069" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Watch video help.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1618642280 - NamedType 3921350548" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 4134209201 - NamedType 3921350548" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dont show this message again.</source>
-          <note from="Developer" annotates="general" priority="2" />
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 1685727716 - NamedType 1325720567" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The end time must be on the same date as the start date-time.</source>
-          <note from="Developer" annotates="general" priority="2" />
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 1685727716 - NamedType 1696550571" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>You need to create a new line to enter an end time after %1.</source>
-          <note from="Developer" annotates="general" priority="2" />
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 1685727716 - NamedType 61022435" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The end date-time %1 is too late. It can only be same or next day from %2.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
@@ -173,17 +173,17 @@
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3928045947 - NamedType 2523365561" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 608413750 - NamedType 2523365561" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>TIMEENTRY-SETUP</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1029997375 - NamedType 2223675934" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 3659473797 - NamedType 2223675934" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Set up Start and End Time Entry</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1029997375 - NamedType 2069865725" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 3659473797 - NamedType 2069865725" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>You have not been granted required access rights to start the Assisted Setup.\\The Assisted Setup for G/L Source Names is about assigning the required permissions to users.  To be able to assign permissions you need to be granted either the SUPER og SECURITY permission set.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
