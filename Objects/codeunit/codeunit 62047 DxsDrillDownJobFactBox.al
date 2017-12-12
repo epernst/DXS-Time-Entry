@@ -1,4 +1,4 @@
-codeunit 62003 DxDrillDownJobFactBoxes
+codeunit 62047 DxsDrillDownJobFactBox
 {
     procedure DrillDownJobJournal(
         JournalTemplateName : Code[20];

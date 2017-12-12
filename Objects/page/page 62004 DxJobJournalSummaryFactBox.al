@@ -242,7 +242,7 @@ page 62004 DxJobJournalSummaryFactBox
     end;
 
     var
-        DrillDownFactbox : Codeunit DxDrillDownJobFactBoxes;
+        DrillDownFactbox : Codeunit DxsDrillDownJobFactBox;
         BillableHours : array [5] of Decimal;
         NonBillableHours : array [5] of Decimal;
         TotalSales : array [5] of Decimal;
