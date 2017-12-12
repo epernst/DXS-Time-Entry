@@ -1,4 +1,4 @@
-codeunit 62004 DxHourlyUnitHandler
+codeunit 62004 DxsHourlyUnitHandler
 {
     trigger OnRun();
     begin

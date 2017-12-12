@@ -22,7 +22,7 @@ codeunit 62009 DxsTimeAssistedSetup
     begin
         TimeEntrySetup.Get;
         with TempAggregatedAssistedSetup DO
-            SetStatus(TempAggregatedAssistedSetup,Page::DxTimeEntrySetupWizard,TimeEntrySetup.Status);
+            SetStatus(TempAggregatedAssistedSetup,Page::DxsTimeEntrySetupWizard,TimeEntrySetup.Status);
     end;
 
     procedure VerifyUserAccess();
@@ -61,7 +61,7 @@ codeunit 62009 DxsTimeAssistedSetup
             //InsertAssistedSetupIcon(HelpResource.Get240PXIconCode,InStr);            
 
             AddExtensionAssistedSetup(
-                Page::DxTimeEntrySetupWizard,
+                Page::DxsTimeEntrySetupWizard,
                 SetupNameLbl,
                 true,
                 TimeEntrySetup.RecordId,

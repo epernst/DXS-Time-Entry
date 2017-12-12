@@ -4,7 +4,7 @@ pageextension 62003 DxsJobList extends "Job List"
     {
         addbefore("Job Details")
         {
-            part("Job Summery";DxJobSummaryFactBox)
+            part("Job Summery";DxsJobSummaryFactBox)
             {
               ApplicationArea = All;
               Caption = 'Job Summery';

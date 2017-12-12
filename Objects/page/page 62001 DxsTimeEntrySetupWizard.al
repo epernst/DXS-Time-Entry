@@ -1,4 +1,4 @@
-page 62001 DxTimeEntrySetupWizard
+page 62001 DxsTimeEntrySetupWizard
 {
     Caption = 'Time Entry Setup';
     PageType = NavigatePage;
@@ -104,7 +104,7 @@ page 62001 DxTimeEntrySetupWizard
                 InstructionalText = 'Please specify which unit of measure codes to use as "Hourly Units". I have already marked codes which might be hours. ';
                 Caption = '';
                 Visible = UnitOfMeasureStepVisible;
-                part(UnitOfMeasurePart;DxUnitOfMeasurePart)
+                part(UnitOfMeasurePart;DxsUnitOfMeasurePart)
                 {
                     ApplicationArea = All;
                     Caption = '';

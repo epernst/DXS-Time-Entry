@@ -1,4 +1,4 @@
-codeunit 62010 DxTimePermissionHandler
+codeunit 62010 DxsTimePermissionHandler
 {
     trigger OnRun();
     begin

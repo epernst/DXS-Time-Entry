@@ -1,4 +1,4 @@
-page 62005 DxJobSummaryFactBox
+page 62005 DxsJobSummaryFactBox
 {
     Caption = 'Job Summary';
     PageType = CardPart;

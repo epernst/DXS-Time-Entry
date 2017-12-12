@@ -95,14 +95,14 @@ pageextension 62006 DxsResourceJournal extends "Resource Journal"
 
     local procedure UpdatePage();
     var
-        HourlyUnitHandler: Codeunit DxHourlyUnitHandler;
+        HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
     begin
         IsTimeEditable := HourlyUnitHandler.IsHourlyUnit("Unit of Measure Code");
     end;
 
     local procedure SetEnabledOnOpen();
     var
-        TimePermissionHandler: Codeunit DxTimePermissionHandler;
+        TimePermissionHandler: Codeunit DxsTimePermissionHandler;
     begin
         IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled;
         if not TimeEntrySetup.Get then TimeEntrySetup.Init;

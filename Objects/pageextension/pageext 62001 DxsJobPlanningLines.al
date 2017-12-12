@@ -95,14 +95,14 @@ pageextension 62001 DxsJobPlanningLines extends "Job Planning Lines"
 
     local procedure UpdatePage();
     var
-        HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
+        HourlyUnitHandler : Codeunit DxsHourlyUnitHandler;
     begin
         IsTimeEditable := HourlyUnitHandler.IsHourlyUnit("Unit of Measure Code");
     end;
 
     local procedure SetEnabledOnOpen();
     var 
-        TimePermissionHandler : Codeunit DxTimePermissionHandler;
+        TimePermissionHandler : Codeunit DxsTimePermissionHandler;
     begin
         IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled; 
         with TimeEntrySetup do begin

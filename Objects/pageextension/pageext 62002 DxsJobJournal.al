@@ -63,7 +63,7 @@ pageextension 62002 DxsJobJournal extends "Job Journal"
         }
         addfirst(FactBoxes)
         {
-            part(JobJournalSummeryFactBox; DxJobJournalSummaryFactBox)
+            part(JobJournalSummeryFactBox; DxsJobJournalSummaryFactBox)
             {
                 ToolTip = 'Shows a summery of the current job and a job journal total.';
                 Enabled = IsTimeEntryEnabled;
@@ -110,14 +110,14 @@ pageextension 62002 DxsJobJournal extends "Job Journal"
 
     local procedure UpdatePage();
     var
-        HourlyUnitHandler: Codeunit DxHourlyUnitHandler;
+        HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
     begin
         IsTimeEditable := HourlyUnitHandler.IsHourlyUnit("Unit of Measure Code");
     end;
 
     local procedure SetEnabledOnOpen();
     var
-        TimePermissionHandler: Codeunit DxTimePermissionHandler;
+        TimePermissionHandler: Codeunit DxsTimePermissionHandler;
     begin
         IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled;
         if not TimeEntrySetup.Get then TimeEntrySetup.Init;

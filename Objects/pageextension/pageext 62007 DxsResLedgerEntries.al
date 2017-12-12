@@ -64,7 +64,7 @@ pageextension 62007 DxsResourceLedgerEntries extends "Resource Ledger Entries"
 
     local procedure SetEnabledOnOpen();
     var
-        TimePermissionHandler: Codeunit DxTimePermissionHandler;
+        TimePermissionHandler: Codeunit DxsTimePermissionHandler;
     begin
         IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled;
         if not TimeEntrySetup.Get then TimeEntrySetup.Init;

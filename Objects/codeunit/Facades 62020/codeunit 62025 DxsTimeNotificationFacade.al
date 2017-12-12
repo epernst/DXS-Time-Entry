@@ -31,7 +31,7 @@ codeunit 62025 DxsTimeNotificationFacade
         TimeNotificationHandler.CreateHourlyNotificationIfNoSetup;
     end;
 
-    [EventSubscriber(ObjectType::Page, Page::DxTimeEntrySetup, 'OnOpenPageEvent', '', false, false)]
+    [EventSubscriber(ObjectType::Page, Page::DxsTimeEntrySetup, 'OnOpenPageEvent', '', false, false)]
     local procedure OnOpenDxTimeEntrySetupPage();
     var
         TimeNotificationHandler : Codeunit DxsTimeNotificationHandler;

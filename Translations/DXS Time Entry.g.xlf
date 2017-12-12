@@ -18,7 +18,7 @@
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1829421745 - NamedType 1683352720" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 4267511960 - NamedType 1683352720" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 can only be used with a %2, which have been setup as a "%3".</source>
           <note from="Developer" annotates="general" priority="2">%1-fieldcaption %2-unit of measure table %3-hourly unit</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
@@ -193,747 +193,747 @@
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Page 4118145414 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Dx365 Time Entry Setup</source>
+        <trans-unit id="Page 325460675 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Time Entry Setup</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Page</note>
         </trans-unit>
-        <trans-unit id="Page 4118145414 - Control 2445482498 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 325460675 - Control 2445482498 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4118145414 - Control 2923665893 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 325460675 - Control 2923665893 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Enables the app. If not enabled, then the start and end times cannot be entered and will to be shown.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4118145414 - Control 3164394312 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 325460675 - Control 3164394312 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Allow only time entry on lines using unit of measure codes marked as "Hourly Units".</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4118145414 - Control 2839332712 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 325460675 - Control 2839332712 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specify how to round start and end time based entries. For example enter 0.25 to have 15 minutes as the minimum time to use. The field is mandatory if "Hourly Units Only" has not been selected.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4118145414 - Control 3471255111 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 325460675 - Control 3471255111 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>May a ending time pass midnigth, or may stretch over multiple days?</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4118145414 - Control 764527443 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 325460675 - Control 764527443 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Which start and end times should be visible? Only regular times (i.e. 12:00) or Date-Times. If you allow entries to pass midnight or stretch over mulitiple days, then Date-Times are recommended.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4118145414 - Control 3094895897 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 325460675 - Control 3094895897 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4118145414 - Control 483798663 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 325460675 - Control 483798663 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show Start Times i.e. "8:00 AM".</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4118145414 - Control 826663310 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 325460675 - Control 826663310 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show End Times i.e. "6:00 PM".</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4118145414 - Control 3247912144 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 325460675 - Control 3247912144 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show Start Date-Times i.e. "2018-05-12 8:00".</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4118145414 - Control 34218621 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 325460675 - Control 34218621 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show Start Date-Times i.e. "2018-05-13 11:00".</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4118145414 - Control 684573827 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 325460675 - Control 684573827 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Registration</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4118145414 - Control 661833578 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 325460675 - Control 661833578 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The Time Entry App will be registered on this E-Mail Address. When registering the registration key will be sent to this E-Mail Address.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4118145414 - Control 1635236888 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 325460675 - Control 1635236888 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The registration id will be recived by email, after registration. Without this Id, then the App will remain in trail mode.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4118145414 - Control 1413240321 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 325460675 - Control 1413240321 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows when the registration needs to be renewed.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Time Entry Setup</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Page</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 1781509865 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 1781509865 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 3940792929 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 3940792929 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 1608380974 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 1608380974 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 392510610 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 392510610 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Welcome to Time Entry Setup</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 3800514526 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 3800514526 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 3800514526 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 3800514526 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>This Time Entry App will allow you to enter Start and End times into job planning lines, job journals or resource journals.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 197798452 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 197798452 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 197798452 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 197798452 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The app will use the entries to calculate the actual used time as a quantity in hours. The times are posted on the job and resource ledger entries.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 926340698 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 926340698 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Let's go!</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 522249930 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 522249930 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 522249930 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 522249930 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>This wizard will take you through the setup in just a few steps, and you are ready to use it.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 14469630 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 14469630 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 1390919282 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 1390919282 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Where to use Start and End times?</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 1390919282 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 1390919282 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Limit the use of Start and End times to selected hourly units of measure codes?</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 2486829736 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 2486829736 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 2486829736 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 2486829736 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source> If not selected then Start and End times can be used on all entries. If selected, then on the next step you must specify which unit of measure codes to use.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 3035001180 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 3035001180 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 4045745568 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 4045745568 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 4045745568 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 4045745568 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Please enter need a Time Default Rounding. Default value "0.25" will round up to nearest 15 minute interval. "1" will round up to nearest full hour.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 2839332712 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 2839332712 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specify how to round start and end time based entries. For example enter 0.25 to have 15 minutes as the minimum time to use. The field is mandatory if "Hourly Units Only" has not been selected.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 3692446863 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 3692446863 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Please specify which unit of measure codes to use as "Hourly Units". I have already marked codes which might be hours. </source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 3692446863 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 3692446863 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 556009180 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 556009180 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 1338265257 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 1338265257 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 1338265257 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 1338265257 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hourly Units also need a Time Rounding. Default value "0.25" will round up to nearest 15 minute interval. "1" will round up to nearest full hour.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 1763852465 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 1763852465 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 1763852465 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 1763852465 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Do you want to allow times to pass midnight, or be multiple days?</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 3094895897 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 3094895897 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 3108214341 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 3108214341 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 2624789901 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 2624789901 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 2624789901 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 2624789901 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Enter the Registration details.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 661833578 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 661833578 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Your registration will only be stored in Dynamics 365. Your E-Mail Address is not shared with anyone.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 1471121939 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 1471121939 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 2630724845 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 2630724845 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 2630724845 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 2630724845 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Only thing left is to Finish. This will enable the app and make it visible to your users.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 3565160585 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 3565160585 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>That's it!</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 4285215846 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 4285215846 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Control 4285215846 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Control 4285215846 - Property 1968111052" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>To save this setup, choose Finish.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Action 2438272767 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Action 2438272767 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Back</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Action</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Action 914282563 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Action 914282563 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Next</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Action</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - Action 3259912055 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - Action 3259912055 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Finish</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Action</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - NamedType 65011919" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - NamedType 65011919" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>You have not selected any hourly units of measures. Please select at least one, before you continue.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Label</note>
         </trans-unit>
-        <trans-unit id="Page 3152964723 - NamedType 1797426583" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2153793238 - NamedType 1797426583" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dx Time App setup have not been completed.\\Are you sure you want to exit?</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Label</note>
         </trans-unit>
-        <trans-unit id="Page 941401040 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 4066828969 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Units Of Measure</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Page</note>
         </trans-unit>
-        <trans-unit id="Page 941401040 - NamedType 2197395594" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 4066828969 - NamedType 2197395594" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>HUR</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Label</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Summary</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Page</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 1368504227 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 1368504227 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Journal - This job</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 594946709 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 594946709 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, billable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 594946709 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 594946709 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of billable hours for this job in this job journal.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 435291776 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 435291776 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, non-billable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 435291776 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 435291776 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of non-billable hours for this job in this job journal.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 2800899053 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 2800899053 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total sales, job</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 2800899053 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 2800899053 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows sales total for this job in this job journal.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 3176013300 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 3176013300 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total costs, job</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 3176013300 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 3176013300 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the cost total for this job in this job journal.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 901009415 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 901009415 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total profit, job</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 901009415 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 901009415 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the total profit this job in this job journal.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 3093833773 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 3093833773 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price per hour</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 3093833773 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 3093833773 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the average price per hour job in this job journal.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 1510562767 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 1510562767 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Usage</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 1023732855 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 1023732855 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, billable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 1023732855 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 1023732855 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of billable hours previously used for this job.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 322472564 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 322472564 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, not billable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 322472564 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 322472564 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of non-billable hours previously used for this job.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 4077116427 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 4077116427 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total sales, job</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 4077116427 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 4077116427 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the total sales previously posted for this job.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 156439238 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 156439238 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total costs, job</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 156439238 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 156439238 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the total costs previously posted for this job.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 2176402649 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 2176402649 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total profit, job</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 2176402649 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 2176402649 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the total previously posted for this job.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 1818440539 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 1818440539 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price per hour</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 1818440539 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 1818440539 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the average hourly rate previously used for this job.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 245426702 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 245426702 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Journal - All Jobs</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 1192641878 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 1192641878 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, billable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 1192641878 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 1192641878 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of billable hours for, all job in this journal.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 2704350009 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 2704350009 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, not billable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 2704350009 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 2704350009 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of non-billable hours, for all job in this journal.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 3439419810 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 3439419810 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total sales, job</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 3439419810 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 3439419810 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of total sales, for all job in this journal.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 4282497511 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 4282497511 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total costs, job</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 4282497511 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 4282497511 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of total costs, for all job in this journal.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 4089492500 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 4089492500 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total profit, job</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 4089492500 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 4089492500 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of total profit, for all job in this journal.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 1180743922 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 1180743922 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price per hour</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 4153547581 - Control 1180743922 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1552200236 - Control 1180743922 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the average hourly rate, for all job in this journal.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 1756772374 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1096477163 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Summary</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Page</note>
         </trans-unit>
-        <trans-unit id="Page 1756772374 - Control 3996203218 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1096477163 - Control 3996203218 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Journal</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 1756772374 - Control 158053822 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1096477163 - Control 158053822 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, chargeable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 1756772374 - Control 4062395002 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1096477163 - Control 4062395002 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, non-chargeable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 1756772374 - Control 2393736861 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1096477163 - Control 2393736861 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price per hour</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 1756772374 - Control 1690309038 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1096477163 - Control 1690309038 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Time Sheets</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 1756772374 - Control 797442019 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1096477163 - Control 797442019 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, chargeable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 1756772374 - Control 57250719 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1096477163 - Control 57250719 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, non-chargeable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 1756772374 - Control 3866586150 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1096477163 - Control 3866586150 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Usage</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 1756772374 - Control 796250634 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1096477163 - Control 796250634 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, chargeable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 1756772374 - Control 3406763362 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1096477163 - Control 3406763362 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, non-chargeable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 1756772374 - Control 2958164510 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1096477163 - Control 2958164510 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total sales, job</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 1756772374 - Control 3694632347 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1096477163 - Control 3694632347 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total costs, job</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 1756772374 - Control 213745400 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1096477163 - Control 213745400 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total profit, job</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="Page 1756772374 - Control 1818440539 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1096477163 - Control 1818440539 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price per hour</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 538464709 - Control 2169532623 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 197615396 - Control 2169532623 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the start time here.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 538464709 - Control 4240670190 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 197615396 - Control 4240670190 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the end time here.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 538464709 - Control 2185728859 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 197615396 - Control 2185728859 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the start date-time here.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 538464709 - Control 233366074 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 197615396 - Control 233366074 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the end date-time here.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 538464709 - Control 502811504 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 197615396 - Control 502811504 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries the total duration will show here.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2590852366 - Control 2169532623 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 3798851643 - Control 2169532623 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the start time here.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2590852366 - Control 4240670190 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 3798851643 - Control 4240670190 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the end time here.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2590852366 - Control 2185728859 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 3798851643 - Control 2185728859 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the start date-time here.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2590852366 - Control 233366074 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 3798851643 - Control 233366074 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the end date-time here.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2590852366 - Control 502811504 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 3798851643 - Control 502811504 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries the total duration will show here.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2590852366 - Control 1559338389 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 3798851643 - Control 1559338389 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows a summery of the current job and a job journal total.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2371377467 - Control 3126759025 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 1909519398 - Control 3126759025 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Summery</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 336797192 - Control 2169532623 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 4060569225 - Control 2169532623 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The start time of the entry.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 336797192 - Control 4240670190 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 4060569225 - Control 4240670190 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The end time pf the entry.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 336797192 - Control 2185728859 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 4060569225 - Control 2185728859 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The start date and time of the entry.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 336797192 - Control 233366074 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 4060569225 - Control 233366074 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The end date and time of the entry.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 336797192 - Control 502811504 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 4060569225 - Control 502811504 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The duration of the entry.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 131035572 - Control 2253295877 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2144844773 - Control 2253295877 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specify if this unit of measure is used as an hourly unit, for entry of start and end times in journals.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 131035572 - Control 1207132617 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2144844773 - Control 1207132617 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specify how to round start and end time based entries. For example enter 0.25 to have 15 minutes as the minimum time to use.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 131035572 - Action 423656215 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2144844773 - Action 423656215 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dx365 Time</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Action</note>
         </trans-unit>
-        <trans-unit id="PageExtension 131035572 - Action 4118145414 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2144844773 - Action 4118145414 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Time Entry Setup</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Action</note>
         </trans-unit>
-        <trans-unit id="PageExtension 131035572 - Action 4118145414 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2144844773 - Action 4118145414 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show the page setup of the Dx365 Time Entry App, which handles and enables entry of begin and end times in journals.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Action</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3698451081 - Control 2169532623 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 1152018784 - Control 2169532623 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the start time here.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3698451081 - Control 4240670190 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 1152018784 - Control 4240670190 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the end time here.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3698451081 - Control 2185728859 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 1152018784 - Control 2185728859 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the start date-time here.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3698451081 - Control 233366074 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 1152018784 - Control 233366074 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the end date-time here.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3698451081 - Control 502811504 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 1152018784 - Control 502811504 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries the total duration will show here.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4176381627 - Control 2169532623 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 1441215446 - Control 2169532623 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The start time of the entry.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4176381627 - Control 4240670190 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 1441215446 - Control 4240670190 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The end time pf the entry.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4176381627 - Control 2185728859 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 1441215446 - Control 2185728859 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The start date and time of the entry.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4176381627 - Control 233366074 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 1441215446 - Control 233366074 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The end date and time of the entry.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4176381627 - Control 502811504 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 1441215446 - Control 502811504 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The duration of the entry.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>

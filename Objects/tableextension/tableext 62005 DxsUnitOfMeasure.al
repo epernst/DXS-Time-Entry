@@ -50,7 +50,7 @@ tableextension 62005 DxsUnitOfMeasure extends "Unit of Measure"
     var
         TimeEntrySetup: Record DxsTimeEntrySetup;
         UnitOfMeasure: Record "Unit of Measure";
-        HourlyUnitHandler: Codeunit DxHourlyUnitHandler;
+        HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
         myInt: Record DxsTimeEntrySetup;
     begin
         if UnitOfMeasure.get(UnitofMeasureCode) and(UnitOfMeasure."DXS Time Rounding" <> 0) then
