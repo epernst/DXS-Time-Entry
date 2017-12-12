@@ -183,11 +183,6 @@ table 62000 DxsTimeEntrySetup
                 error(NoHourlyUnitsCannotEnableErr);
             exit(false);
         end;
-        if "Registration E-Mail Address" = '' then begin
-            if ShowError then
-                Error(NoRegistrationEmailAddressErr);
-            exit(false);
-        end;
         exit(true);
     end;
 

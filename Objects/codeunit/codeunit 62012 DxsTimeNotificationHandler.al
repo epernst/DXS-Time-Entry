@@ -5,15 +5,15 @@ codeunit 62012 DxsTimeNotificationHandler
     end;
     
     var
-        NoSetupNotificationLbl : Label 'Dx365 Time - App Not Enabled';
-        NoSetupNotificationMsg : Label 'The "Dx365 Time App" to allow entry of start and end times has been installed, but it has not been setup and enabled.';
+        NoSetupNotificationLbl : Label 'DXS Time Entry extension is not enabled';
+        NoSetupNotificationMsg : Label 'The DXS Time Entry extension to allow entry of start and end times has been installed, but it has not been setup and enabled.';
         NoSetupNotificationAct : Label 'Enable now.';
-        NoSetupNotificationName : Label 'Dx365 Time App is not enabled.';
-        NoSetupNotificationDesc : Label 'Warns if Dx365 Time App have been installed, but not been setup and enabled.';
+        NoSetupNotificationName : Label 'DXS Time Entry extension is not enabled.';
+        NoSetupNotificationDesc : Label 'Warns if the DXS Time Entry extension has been installed, but not been setup and enabled.';
         NoHourUnitOfMeasureNotificationLbl : Label 'No Hourly Unit Setup';
         NoHourUnitOfMeasureNotificationMsg : Label 'No Hourly Unit of Measure Codes have been setup to support time based entry.';
         NoHourUnitOfMeasureSetupAct : Label 'Select or create hourly based Unit of Measure codes.';
-        NoHourUnitOfMeasureSetupName : Label 'Dx Time - Hourly Unit of Measure Setup missing.';
+        NoHourUnitOfMeasureSetupName : Label 'DXS Time Entry - Hourly Unit of Measure Setup missing.';
         NoHourUnitOfMeasureSetupDesc : Label 'Warns if no Hourly Unit of Measure codes have been setup.';
         WatchVideoNotificationAct : Label 'Watch video help.';
         DismissFurtherNotificationsAct : Label 'Dont show this message again.';

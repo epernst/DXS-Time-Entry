@@ -6,7 +6,10 @@ codeunit 62009 DxsTimeAssistedSetup
     
     var
         TimeEntrySetup : Record DxsTimeEntrySetup;
-        SetupNameLbl : Label 'Set up Start and End Time Entry';
+        SetupNameLbl : Label 'DXS Time Entry Setup';
+        SetupDescriptionLbl : Label 'Setup the DXS Time Entry extension to allow entry of start and ending times.';
+        SetupKeywordsTxt : Label 'Jobs,Resources';
+        IconInstream: InStream;
         RequiredPermissionMissingErr : Label 'You have not been granted required access rights to start the Assisted Setup.\\The Assisted Setup for G/L Source Names is about assigning the required permissions to users.  To be able to assign permissions you need to be granted either the SUPER og SECURITY permission set.';
 
     [EventSubscriber(ObjectType::Table, Database::"Aggregated Assisted Setup", 'OnRegisterAssistedSetup', '', true, false)]
@@ -52,13 +55,12 @@ codeunit 62009 DxsTimeAssistedSetup
     local procedure AddToAssistedSetup(var TempAggregatedAssistedSetup : Record "Aggregated Assisted Setup" temporary);
     var
         TempBlob : Record TempBlob;
-        //GLSourceNameIcon : Codeunit 70009232;
+        HelpResource: Codeunit DxsTimeResourceHelper;
         InStr : InStream;
     begin
         with TempAggregatedAssistedSetup do begin
-            //GLSourceNameIcon.GetIcon(TempBlob);
-            //TempBlob.Blob.CREATEINSTREAM(InStr);
-            //InsertAssistedSetupIcon(HelpResource.Get240PXIconCode,InStr);            
+            GetIconInstream(IconInstream);
+            InsertAssistedSetupIcon(HelpResource.Get240PXIconCode,IconInstream);            
 
             AddExtensionAssistedSetup(
                 Page::DxsTimeEntrySetupWizard,
@@ -66,7 +68,45 @@ codeunit 62009 DxsTimeAssistedSetup
                 true,
                 TimeEntrySetup.RecordId,
                 TimeEntrySetup.Status,
-                ''); //HelpResource.Get240PXIconCode
-        END;
+                HelpResource.Get240PXIconCode);
+        end;
     end;
+
+    [EventSubscriber(ObjectType::Table, Database::"Business Setup",'OnRegisterBusinessSetup', '', true, true)]
+    local procedure OnRegisterBusinessSetup(var TempBusinessSetup: Record "Business Setup" temporary);
+    var
+        TimeEntrySetup: Record DxsTimeEntrySetup;
+    begin
+        if not TimeEntrySetup.WritePermission then exit;
+
+        TempBusinessSetup.InsertExtensionBusinessSetup(
+            TempBusinessSetup,
+            SetupNameLbl,
+            SetupDescriptionLbl,
+            SetupKeywordsTxt,
+            TempBusinessSetup.Area::Jobs,
+            Page::"DxsTimeEntrySetup",
+            GetAppName);
+
+        GetIconInstream(IconInstream);
+        TempBusinessSetup.SetBusinessSetupIcon(TempBusinessSetup,IconInstream);            
+    end;
+
+    local procedure GetIconInstream(var InStr: InStream);
+    var
+        TempBlob : Record TempBlob;
+        IconCodeunit: Codeunit DxsTimeIcon240x240;
+    begin
+        IconCodeunit.GetIcon(TempBlob);
+        TempBlob.Blob.CREATEINSTREAM(InStr);
+    end;
+
+    procedure GetAppName(): Text;
+    var
+        AppInfo: ModuleInfo;
+    begin
+        NavApp.GetCurrentModuleInfo(AppInfo);
+        exit(AppInfo.Name);
+    end;
+    
 }

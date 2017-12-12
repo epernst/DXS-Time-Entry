@@ -1,10 +1,11 @@
 page 62000 DxsTimeEntrySetup
 {
-    Caption = 'Time Entry Setup';
+    Caption = 'DXS Time Entry Setup';
     PageType = Card;
     SourceTable = DxsTimeEntrySetup;
     DeleteAllowed = false;
     InsertAllowed = false;
+    UsageCategory = Administration;
 
     layout
     {
@@ -77,6 +78,7 @@ page 62000 DxsTimeEntrySetup
             group(Registration)
             {
                 Caption = 'Registration';
+                Visible = false;
                 field("Registration E-Mail Address";"Registration E-Mail Address")
                 {
                     ApplicationArea = All;
