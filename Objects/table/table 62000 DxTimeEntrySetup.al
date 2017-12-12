@@ -205,7 +205,7 @@ table 62000 DxsTimeEntrySetup
 
     procedure NoHourlyUnitsSetupNotification();
     var
-        TimeNotificationHandler : Codeunit DxTimeNotificationHandler;
+        TimeNotificationHandler : Codeunit DxsTimeNotificationHandler;
     begin
         TimeNotificationHandler.CreateHourlyNotificationIfNoSetup;
     end;
@@ -234,7 +234,7 @@ table 62000 DxsTimeEntrySetup
 
     procedure NoValidRegistrationNotification();
     var
-        TimeNotificationHandler : Codeunit DxTimeNotificationHandler;
+        TimeNotificationHandler : Codeunit DxsTimeNotificationHandler;
     begin
         TimeNotificationHandler.CreateNotificationIfInvalidRegistration;
     end;

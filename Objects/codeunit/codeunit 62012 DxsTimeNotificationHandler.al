@@ -1,4 +1,4 @@
-codeunit 62008 DxTimeNotificationHandler
+codeunit 62012 DxsTimeNotificationHandler
 {
     trigger OnRun();
     begin
@@ -40,8 +40,8 @@ codeunit 62008 DxTimeNotificationHandler
             Id := GetNoSetupNotificationId;
             Message := NoSetupNotificationMsg;
             Scope := Scope::LocalScope;
-            AddAction(NoSetupNotificationAct,Codeunit::DxTimeNotificationHandler,'RunAssistedSetup');
-            AddAction(DismissFurtherNotificationsAct,Codeunit::DxTimeNotificationHandler,'DismissNotification');
+            AddAction(NoSetupNotificationAct,Codeunit::DxsTimeNotificationHandler,'RunAssistedSetup');
+            AddAction(DismissFurtherNotificationsAct,Codeunit::DxsTimeNotificationHandler,'DismissNotification');
             Send;
         end;
     end;
@@ -69,8 +69,8 @@ codeunit 62008 DxTimeNotificationHandler
             Id := GetNoSetupNotificationId;
             Message := NoSetupNotificationMsg;
             Scope := Scope::LocalScope;
-            AddAction(NoSetupNotificationAct,Codeunit::DxTimeNotificationHandler,'RunAssistedSetup');
-            AddAction(DismissFurtherNotificationsAct,Codeunit::DxTimeNotificationHandler,'DismissNotification');
+            AddAction(NoSetupNotificationAct,Codeunit::DxsTimeNotificationHandler,'RunAssistedSetup');
+            AddAction(DismissFurtherNotificationsAct,Codeunit::DxsTimeNotificationHandler,'DismissNotification');
             Send;
         end;
     end;
@@ -100,8 +100,8 @@ codeunit 62008 DxTimeNotificationHandler
             Id := GetNoHourUnitOfMeasureNotificationId;
             Message := NoHourUnitOfMeasureNotificationMsg;
             Scope := Scope::LocalScope;
-            AddAction(NoHourUnitOfMeasureSetupAct,Codeunit::DxTimeNotificationHandler,'RunSetupHourUnitOfMeasure');
-            AddAction(DismissFurtherNotificationsAct,Codeunit::DxTimeNotificationHandler,'DismissNotification');
+            AddAction(NoHourUnitOfMeasureSetupAct,Codeunit::DxsTimeNotificationHandler,'RunSetupHourUnitOfMeasure');
+            AddAction(DismissFurtherNotificationsAct,Codeunit::DxsTimeNotificationHandler,'DismissNotification');
             Send;
         end;
     end;
