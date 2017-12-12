@@ -1,4 +1,4 @@
-codeunit 62001 DxJobFacade
+codeunit 62020 DxsJobJournalLineFacade
 {
     trigger OnRun();
     begin
