@@ -59,6 +59,7 @@ pageextension 62006 DxsResourceJournal extends "Resource Journal"
                 Enabled = IsTimeEntryEnabled;
                 Editable = IsTimeEditable;
                 Visible = IsTimeEntryEnabled;
+                QuickEntry = false;
             }
         }
     }

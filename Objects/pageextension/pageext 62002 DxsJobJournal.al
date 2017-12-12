@@ -59,6 +59,7 @@ pageextension 62002 DxsJobJournal extends "Job Journal"
                 Enabled = IsTimeEntryEnabled;
                 Editable = IsTimeEditable;
                 Visible = IsTimeEntryEnabled;
+                QuickEntry = false;
             }
         }
         addfirst(FactBoxes)
