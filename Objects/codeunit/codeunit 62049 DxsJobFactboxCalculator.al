@@ -1,4 +1,4 @@
-codeunit 62020 DxJobFactboxCalculator
+codeunit 62049 DxsJobFactboxCalculator
 {
     trigger OnRun();
     begin

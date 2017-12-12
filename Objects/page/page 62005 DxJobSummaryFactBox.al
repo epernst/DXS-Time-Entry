@@ -110,7 +110,7 @@ page 62005 DxJobSummaryFactBox
 
         procedure UpdateData(Job : Record Job);
         var
-            UpdateFactbox : Codeunit DxJobFactboxUpdater;
+            UpdateFactbox : Codeunit DxsJobFactboxUpdater;
         begin
             if not Job.GET(Job."No.") then Job.INIT;
             UpdateFactbox.UpdateJobData(Job,BillableHours,NonBillableHours,TotalSales,TotalCost,TotalProfit,AvgPricePerUOM);    

@@ -254,7 +254,7 @@ page 62004 DxJobJournalSummaryFactBox
 
     procedure UpdateData(JobJournalLine : Record "Job Journal Line");
     var
-        UpdateFactbox : Codeunit DxJobFactboxUpdater;
+        UpdateFactbox : Codeunit DxsJobFactboxUpdater;
     begin
         if not Job.GET("Job No.") then Job.INIT;
         UpdateFactbox.UpdateJobJurnalData(JobJournalLine,BillableHours,NonBillableHours,TotalSales,TotalCost,TotalProfit,AvgPricePerUOM);    
