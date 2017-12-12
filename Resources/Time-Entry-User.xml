@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<PermissionSets>
+  <PermissionSet RoleID="DXS-TimeEntry-User" RoleName="DXS Time Entry: User">
+    <Permission>
+      <ObjectType>TableData</ObjectType>
+      <ObjectID>62000</ObjectID>
+      <ReadPermission>Yes</ReadPermission>
+      <InsertPermission>No</InsertPermission>
+      <ModifyPermission>No</ModifyPermission>
+      <DeletePermission>No</DeletePermission>
+      <ExecutePermission>No</ExecutePermission>
+      <SecurityFilter />
+    </Permission>
+    <Permission>
+      <ObjectType>TableData</ObjectType>
+      <ObjectID>62001</ObjectID>
+      <ReadPermission>Yes</ReadPermission>
+      <InsertPermission>No</InsertPermission>
+      <ModifyPermission>No</ModifyPermission>
+      <DeletePermission>No</DeletePermission>
+      <ExecutePermission>No</ExecutePermission>
+      <SecurityFilter />
+    </Permission>
+  </PermissionSet>
+</PermissionSets>
