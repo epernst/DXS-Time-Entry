@@ -7,7 +7,7 @@ tableextension 62005 DxUnitOfMeasure extends "Unit of Measure"
             Caption = 'Hourly Unit';
             trigger OnValidate();
             var
-                TimeEntrySetup : Record DxTimeEntrySetup;
+                TimeEntrySetup : Record DxsTimeEntrySetup;
             begin 
                 if "Hourly Unit" = xRec."Hourly Unit" then exit;
                 if "Hourly Unit" then begin
@@ -48,10 +48,10 @@ tableextension 62005 DxUnitOfMeasure extends "Unit of Measure"
 
     procedure GetTimeRounding(UnitOfMeasureCode : Code[10]) : Decimal;
     var
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
         UnitOfMeasure : Record "Unit of Measure";
         HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
-        myInt : Record DxTimeEntrySetup;
+        myInt : Record DxsTimeEntrySetup;
     begin
         if UnitOfMeasure.get(UnitofMeasureCode) and (UnitOfMeasure."Time Rounding" <> 0) then
             exit(Unitofmeasure."Time Rounding");

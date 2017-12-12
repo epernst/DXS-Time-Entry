@@ -85,7 +85,7 @@ pageextension 62006 DxResourceJournal extends "Resource Journal"
     end;
   
   var
-    TimeEntrySetup : Record DxTimeEntrySetup;
+    TimeEntrySetup : Record DxsTimeEntrySetup;
     IsTimeEditable : Boolean;
     IsTimeEntryEnabled  : Boolean;
     IsStartTimeVisible : Boolean;

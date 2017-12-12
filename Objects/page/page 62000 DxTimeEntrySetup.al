@@ -2,7 +2,7 @@ page 62000 DxTimeEntrySetup
 {
     Caption = 'Dx365 Time Entry Setup';
     PageType = Card;
-    SourceTable = DxTimeEntrySetup;
+    SourceTable = DxsTimeEntrySetup;
     DeleteAllowed = false;
     InsertAllowed = false;
 

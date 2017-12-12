@@ -85,7 +85,7 @@ pageextension 62001 DxJobPlanningLines extends "Job Planning Lines"
     end;
   
     var
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
         IsTimeEditable : Boolean;
         IsTimeEntryEnabled  : Boolean;
         IsStartTimeVisible : Boolean;

@@ -3,11 +3,6 @@
   <file datatype="xml" source-language="en-US" original="DXS Time Entry">
     <body>
       <group id="body">
-        <trans-unit id="Codeunit 3928045947 - NamedType 2523365561" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>TIMEENTRY-SETUP</source>
-          <note from="Developer" annotates="general" priority="2" />
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
-        </trans-unit>
         <trans-unit id="Codeunit 1829421745 - NamedType 1683352720" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 can only be used with a %2, which have been setup as a "%3".</source>
           <note from="Developer" annotates="general" priority="2">%1-fieldcaption %2-unit of measure table %3-hourly unit</note>
@@ -73,16 +68,6 @@
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1029997375 - NamedType 2223675934" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Set up Start and End Time Entry</source>
-          <note from="Developer" annotates="general" priority="2" />
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 1029997375 - NamedType 2069865725" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>You have not been granted required access rights to start the Assisted Setup.\\The Assisted Setup for G/L Source Names is about assigning the required permissions to users.  To be able to assign permissions you need to be granted either the SUPER og SECURITY permission set.</source>
-          <note from="Developer" annotates="general" priority="2" />
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
-        </trans-unit>
         <trans-unit id="Codeunit 1685727716 - NamedType 1325720567" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The end time must be on the same date as the start date-time.</source>
           <note from="Developer" annotates="general" priority="2" />
@@ -95,6 +80,111 @@
         </trans-unit>
         <trans-unit id="Codeunit 1685727716 - NamedType 61022435" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The end date-time %1 is too late. It can only be same or next day from %2.</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 245899503 - NamedType 133915093" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SETUPHELP</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 2556269663 - NamedType 4131345173" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SETUPVIDEO</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 2471557953 - NamedType 2635079363" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>USAGEHELP</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 4138924577 - NamedType 2068054355" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>USAGEVIDEO</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 2424527569 - NamedType 2197034666" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DXTIME_70PXICON</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 2331078000 - NamedType 2197034666" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DXTIME_150PXICON</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 2571162554 - NamedType 2197034666" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DXTIME_240PXICON</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 1033616249 - NamedType 2197034666" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DXTIME_250PXICON</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 1920203142 - NamedType 2197034666" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DXTIME_417PXICON</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 3844081278 - NamedType 3031047135" maxWidth="999" size-unit="char" translate="no" xml:space="preserve">
+          <source>http://Objects4NAV.com/DXTIME</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 3245760214 - NamedType 2950263455" maxWidth="999" size-unit="char" translate="no" xml:space="preserve">
+          <source>https://www.youtube.com/embed/TYo1ZJ5jizs</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 1060900626 - NamedType 1032451233" maxWidth="999" size-unit="char" translate="no" xml:space="preserve">
+          <source>http://Objects4NAV.com/DXTIME</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 1302256473 - NamedType 2565882737" maxWidth="999" size-unit="char" translate="no" xml:space="preserve">
+          <source>https://www.youtube.com/embed/Xj5TATt7Pns</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 2484516267 - NamedType 1288258319" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dx365 Time Icon 70x70</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 3378677603 - NamedType 1288258319" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dx365 Time Icon 150x150</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 4000611587 - NamedType 1288258319" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dx365 Time Icon 240x240</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 151507459 - NamedType 1288258319" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dx365 Time Icon 250x250</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3955256770 - Method 1328106787 - NamedType 1288258319" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dx365 Time Icon 417x417</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3928045947 - NamedType 2523365561" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TIMEENTRY-SETUP</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1029997375 - NamedType 2223675934" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set up Start and End Time Entry</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1029997375 - NamedType 2069865725" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You have not been granted required access rights to start the Assisted Setup.\\The Assisted Setup for G/L Source Names is about assigning the required permissions to users.  To be able to assign permissions you need to be granted either the SUPER og SECURITY permission set.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
@@ -962,6 +1052,26 @@
           <source>Changing the %1, without changing the assosicated %2, may cause the app to stop working.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Label</note>
+        </trans-unit>
+        <trans-unit id="Table 1023304035 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dx365 Time Help Resource</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table - Table</note>
+        </trans-unit>
+        <trans-unit id="Table 1023304035 - Field 3004954119 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
+        </trans-unit>
+        <trans-unit id="Table 1023304035 - Field 4165234317 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Url</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
+        </trans-unit>
+        <trans-unit id="Table 1023304035 - Field 4036313429 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Icon</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
         <trans-unit id="TableExtension 3989399733 - Field 2073831526 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Invoicable Amount</source>

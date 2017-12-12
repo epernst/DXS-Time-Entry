@@ -7,7 +7,7 @@ codeunit 62019 DxSandBoxSetup
     
     local procedure SetupSandbox();
     var
-        Setup : Record DxTimeEntrySetup;
+        Setup : Record DxsTimeEntrySetup;
     begin
         with Setup do begin
             if not IsEmpty then exit;    

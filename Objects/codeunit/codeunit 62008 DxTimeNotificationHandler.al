@@ -49,7 +49,7 @@ codeunit 62008 DxTimeNotificationHandler
     procedure CreateNotificationIfInvalidRegistration();
     var
         TimePermissionHandler : Codeunit DxTimePermissionHandler;
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
         HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
     begin
         if not TimePermissionHandler.IsSetupEnabled then exit;
@@ -78,7 +78,7 @@ codeunit 62008 DxTimeNotificationHandler
     procedure CreateHourlyNotificationIfNoSetup();
     var
         TimePermissionHandler : Codeunit DxTimePermissionHandler;
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
         HourlyUnitHandler : Codeunit DxHourlyUnitHandler;
     begin
         if not TimePermissionHandler.IsSetupEnabled then exit;
@@ -108,7 +108,7 @@ codeunit 62008 DxTimeNotificationHandler
     
     procedure RunAssistedSetup(TimeNotification : Notification);
     var
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
         TimeEntrySetupWizard : Page DxTimeEntrySetupWizard;
     begin
         TimeEntrySetupWizard.RunModal;

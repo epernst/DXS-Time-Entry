@@ -23,7 +23,7 @@ codeunit 62000 DxTimeUpgrade
 
     procedure OnNavAppUpgradePerCompany();
     begin
-        NavApp.RestoreArchiveData(Database::DxTimeEntrySetup);
+        NavApp.RestoreArchiveData(Database::DxsTimeEntrySetup);
 
       //GLSourceNameMgt.PopulateSourceTable;
       //RemoveAssistedSetup;

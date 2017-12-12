@@ -10,7 +10,7 @@ codeunit 62004 DxHourlyUnitHandler
     procedure ValidateHourlyUnitOfMeasure(UnitOfMeasureCode : Code[10];TestFieldCaption : Text;ShowMessage : Boolean) : Boolean;
     var
         UnitOfMeasure : Record "Unit of Measure";
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
     begin      
         with TimeEntrySetup do begin 
             if not GetSetupIfEnabled then exit(false);   
@@ -32,7 +32,7 @@ codeunit 62004 DxHourlyUnitHandler
     procedure IsHourlyUnit(UnitOfMeasureCode : Code[10]) : Boolean;
     var
         UnitOfMeasure : Record "Unit of Measure";
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
     begin 
         with TimeEntrySetup do begin 
             if not GetSetupIfEnabled then exit(false);   

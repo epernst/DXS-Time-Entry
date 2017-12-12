@@ -100,7 +100,7 @@ pageextension 62002 DxJobJournal extends "Job Journal"
     end;
   
   var
-    TimeEntrySetup : Record DxTimeEntrySetup;
+    TimeEntrySetup : Record DxsTimeEntrySetup;
     IsTimeEditable : Boolean;
     IsTimeEntryEnabled  : Boolean;
     IsStartTimeVisible : Boolean;

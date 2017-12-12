@@ -2,7 +2,7 @@ page 62001 DxTimeEntrySetupWizard
 {
     Caption = 'Time Entry Setup';
     PageType = NavigatePage;
-    SourceTable = DxTimeEntrySetup;
+    SourceTable = DxsTimeEntrySetup;
     SourceTableTemporary = true;
 
     layout
@@ -269,7 +269,7 @@ page 62001 DxTimeEntrySetupWizard
 
     trigger OnOpenPage();
     var
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
         AssistedSetup : Codeunit DxAssistedSetup;
     begin
         AssistedSetup.VerifyUserAccess;
@@ -461,7 +461,7 @@ page 62001 DxTimeEntrySetupWizard
 
     local procedure StoreTimeEntrySetup();
     var
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
     begin
         with TimeEntrySetup do begin
             if not Get then begin

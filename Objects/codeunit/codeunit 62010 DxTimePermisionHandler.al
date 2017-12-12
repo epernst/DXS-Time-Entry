@@ -6,14 +6,14 @@ codeunit 62010 DxTimePermissionHandler
     
     procedure CanChangeTimeSetup() : Boolean;
     var
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
     begin
         exit(TimeEntrySetup.WritePermission);
     end;
 
     procedure IsSetupEnabled() : Boolean;
     var
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
     begin
         exit(TimeEntrySetup.GetSetupIfEnabled);
     end;
@@ -21,7 +21,7 @@ codeunit 62010 DxTimePermissionHandler
     procedure CanChangeUnitOfMeasure() : Boolean;
     var
         UnitOfMeasure : Record "Unit of Measure";
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
     begin
         exit(UnitOfMeasure.WritePermission and TimeEntrySetup.WritePermission);
     end;

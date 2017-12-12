@@ -27,7 +27,7 @@ pageextension 62005 DxUnitsOfMeasure extends "Units of Measure"
                 Caption = 'Dx365 Time';
                 action(DxTimeEntrySetup)
                 {
-                    AccessByPermission = TableData DxTimeEntrySetup=R;
+                    AccessByPermission = TableData DxsTimeEntrySetup=R;
                     ApplicationArea = All;
                     Caption = 'Time Entry Setup';
                     Image = Setup;

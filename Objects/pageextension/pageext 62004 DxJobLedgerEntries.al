@@ -54,7 +54,7 @@ pageextension 62004 DxJobLedgerEntries extends "Job Ledger Entries"
     end;
       
     var
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
         IsTimeEditable : Boolean;
         IsTimeEntryEnabled  : Boolean;
         IsStartTimeVisible : Boolean;

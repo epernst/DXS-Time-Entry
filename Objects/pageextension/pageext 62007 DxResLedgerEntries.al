@@ -54,7 +54,7 @@ pageextension 62007 DxResourceLedgerEntries extends "Resource Ledger Entries"
     end;
       
     var
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
         IsTimeEditable : Boolean;
         IsTimeEntryEnabled  : Boolean;
         IsStartTimeVisible : Boolean;

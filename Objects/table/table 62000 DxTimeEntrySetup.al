@@ -1,4 +1,4 @@
-table 62000 DxTimeEntrySetup
+table 62000 DxsTimeEntrySetup
 {
     Caption = 'Time Entry Setup';
     fields

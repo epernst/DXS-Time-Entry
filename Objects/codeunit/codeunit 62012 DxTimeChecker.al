@@ -12,7 +12,7 @@ codeunit 62012 DxTimeChecker
 
     procedure ValidateStartAndEndTimes(StartDateTime : DateTime; EndDateTime : DateTime; ShowError : Boolean) : Boolean;
     var
-        TimeEntrySetup : Record DxTimeEntrySetup;
+        TimeEntrySetup : Record DxsTimeEntrySetup;
         ErrorText : Text;
         IsValidated : Boolean;
     begin
