@@ -1,4 +1,4 @@
-pageextension 62003 DxJobList extends "Job List" 
+pageextension 62003 DxsJobList extends "Job List" 
 {
     layout
     {

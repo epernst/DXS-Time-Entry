@@ -1,4 +1,4 @@
-pageextension 62001 DxJobPlanningLines extends "Job Planning Lines" 
+pageextension 62001 DxsJobPlanningLines extends "Job Planning Lines" 
 {
     layout
     {

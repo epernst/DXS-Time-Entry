@@ -1,13 +1,29 @@
-pageextension 62007 DxResourceLedgerEntries extends "Resource Ledger Entries"
+pageextension 62002 DxsJobJournal extends "Job Journal"
 {
     layout
     {
+        modify("No.")
+        {
+            trigger OnAfterValidate();
+            begin
+                UpdatePage;
+            end;
+        }
+
+        modify("Unit of Measure Code")
+        {
+            trigger OnAfterValidate();
+            begin
+                UpdatePage;
+            end;
+        }
+
         addafter("Unit of Measure Code")
         {
             field("Start Time"; "DXS Start Time")
             {
                 ApplicationArea = All;
-                ToolTip = 'The start time of the entry.';
+                ToolTip = 'For time based entries enter the start time here.';
                 Editable = IsTimeEditable;
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsStartTimeVisible;
@@ -15,7 +31,7 @@ pageextension 62007 DxResourceLedgerEntries extends "Resource Ledger Entries"
             field("End Time"; "DXS End Time")
             {
                 ApplicationArea = All;
-                ToolTip = 'The end time pf the entry.';
+                ToolTip = 'For time based entries enter the end time here.';
                 Editable = IsTimeEditable;
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsEndTimeVisible;
@@ -23,7 +39,7 @@ pageextension 62007 DxResourceLedgerEntries extends "Resource Ledger Entries"
             field("Start Date Time"; "DXS Start Date Time")
             {
                 ApplicationArea = All;
-                ToolTip = 'The start date and time of the entry.';
+                ToolTip = 'For time based entries enter the start date-time here.';
                 Editable = IsTimeEditable;
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsStartDateTimeVisible;
@@ -31,7 +47,7 @@ pageextension 62007 DxResourceLedgerEntries extends "Resource Ledger Entries"
             field("End Date Time"; "DXS End Date Time")
             {
                 ApplicationArea = All;
-                ToolTip = 'The end date and time of the entry.';
+                ToolTip = 'For time based entries enter the end date-time here.';
                 Editable = IsTimeEditable;
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsEndDateTimeVisible;
@@ -39,10 +55,24 @@ pageextension 62007 DxResourceLedgerEntries extends "Resource Ledger Entries"
             field("Total Duration"; "DXS Total Duration")
             {
                 ApplicationArea = All;
-                ToolTip = 'The duration of the entry.';
+                ToolTip = 'For time based entries the total duration will show here.';
                 Enabled = IsTimeEntryEnabled;
                 Editable = IsTimeEditable;
                 Visible = IsTimeEntryEnabled;
+            }
+        }
+        addfirst(FactBoxes)
+        {
+            part(JobJournalSummeryFactBox; DxJobJournalSummaryFactBox)
+            {
+                ToolTip = 'Shows a summery of the current job and a job journal total.';
+                Enabled = IsTimeEntryEnabled;
+                ApplicationArea = All;
+                SubPageLink =
+                    "Journal Template Name" = FIELD ("Journal Template Name"),
+                    "Journal Batch Name" = FIELD ("Journal Batch Name"),
+                    "Line No." = FIELD ("Line No.");
+                Visible = true;
             }
         }
     }
@@ -50,7 +80,23 @@ pageextension 62007 DxResourceLedgerEntries extends "Resource Ledger Entries"
     trigger OnOpenPage();
     begin
         SetEnabledOnOpen;
-        IsTimeEditable := false;
+        UpdatePage;
+    end;
+
+    trigger OnInsertRecord(BelowxRec: Boolean): Boolean;
+    begin
+        UpdatePage;
+    end;
+
+    trigger OnNewRecord(BelowxRec: Boolean);
+    begin
+        InitStartEndTimes;
+        UpdatePage;
+    end;
+
+    trigger OnAfterGetCurrRecord();
+    begin
+        UpdatePage;
     end;
 
     var
@@ -61,6 +107,13 @@ pageextension 62007 DxResourceLedgerEntries extends "Resource Ledger Entries"
         IsEndTimeVisible: Boolean;
         IsStartDateTimeVisible: Boolean;
         IsEndDateTimeVisible: Boolean;
+
+    local procedure UpdatePage();
+    var
+        HourlyUnitHandler: Codeunit DxHourlyUnitHandler;
+    begin
+        IsTimeEditable := HourlyUnitHandler.IsHourlyUnit("Unit of Measure Code");
+    end;
 
     local procedure SetEnabledOnOpen();
     var

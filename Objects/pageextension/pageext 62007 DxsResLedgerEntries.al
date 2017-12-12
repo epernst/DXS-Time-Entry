@@ -1,29 +1,13 @@
-pageextension 62002 DxJobJournal extends "Job Journal"
+pageextension 62007 DxsResourceLedgerEntries extends "Resource Ledger Entries"
 {
     layout
     {
-        modify("No.")
-        {
-            trigger OnAfterValidate();
-            begin
-                UpdatePage;
-            end;
-        }
-
-        modify("Unit of Measure Code")
-        {
-            trigger OnAfterValidate();
-            begin
-                UpdatePage;
-            end;
-        }
-
         addafter("Unit of Measure Code")
         {
             field("Start Time"; "DXS Start Time")
             {
                 ApplicationArea = All;
-                ToolTip = 'For time based entries enter the start time here.';
+                ToolTip = 'The start time of the entry.';
                 Editable = IsTimeEditable;
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsStartTimeVisible;
@@ -31,7 +15,7 @@ pageextension 62002 DxJobJournal extends "Job Journal"
             field("End Time"; "DXS End Time")
             {
                 ApplicationArea = All;
-                ToolTip = 'For time based entries enter the end time here.';
+                ToolTip = 'The end time pf the entry.';
                 Editable = IsTimeEditable;
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsEndTimeVisible;
@@ -39,7 +23,7 @@ pageextension 62002 DxJobJournal extends "Job Journal"
             field("Start Date Time"; "DXS Start Date Time")
             {
                 ApplicationArea = All;
-                ToolTip = 'For time based entries enter the start date-time here.';
+                ToolTip = 'The start date and time of the entry.';
                 Editable = IsTimeEditable;
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsStartDateTimeVisible;
@@ -47,7 +31,7 @@ pageextension 62002 DxJobJournal extends "Job Journal"
             field("End Date Time"; "DXS End Date Time")
             {
                 ApplicationArea = All;
-                ToolTip = 'For time based entries enter the end date-time here.';
+                ToolTip = 'The end date and time of the entry.';
                 Editable = IsTimeEditable;
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsEndDateTimeVisible;
@@ -55,24 +39,10 @@ pageextension 62002 DxJobJournal extends "Job Journal"
             field("Total Duration"; "DXS Total Duration")
             {
                 ApplicationArea = All;
-                ToolTip = 'For time based entries the total duration will show here.';
+                ToolTip = 'The duration of the entry.';
                 Enabled = IsTimeEntryEnabled;
                 Editable = IsTimeEditable;
                 Visible = IsTimeEntryEnabled;
-            }
-        }
-        addfirst(FactBoxes)
-        {
-            part(JobJournalSummeryFactBox; DxJobJournalSummaryFactBox)
-            {
-                ToolTip = 'Shows a summery of the current job and a job journal total.';
-                Enabled = IsTimeEntryEnabled;
-                ApplicationArea = All;
-                SubPageLink =
-                    "Journal Template Name" = FIELD ("Journal Template Name"),
-                    "Journal Batch Name" = FIELD ("Journal Batch Name"),
-                    "Line No." = FIELD ("Line No.");
-                Visible = true;
             }
         }
     }
@@ -80,23 +50,7 @@ pageextension 62002 DxJobJournal extends "Job Journal"
     trigger OnOpenPage();
     begin
         SetEnabledOnOpen;
-        UpdatePage;
-    end;
-
-    trigger OnInsertRecord(BelowxRec: Boolean): Boolean;
-    begin
-        UpdatePage;
-    end;
-
-    trigger OnNewRecord(BelowxRec: Boolean);
-    begin
-        InitStartEndTimes;
-        UpdatePage;
-    end;
-
-    trigger OnAfterGetCurrRecord();
-    begin
-        UpdatePage;
+        IsTimeEditable := false;
     end;
 
     var
@@ -107,13 +61,6 @@ pageextension 62002 DxJobJournal extends "Job Journal"
         IsEndTimeVisible: Boolean;
         IsStartDateTimeVisible: Boolean;
         IsEndDateTimeVisible: Boolean;
-
-    local procedure UpdatePage();
-    var
-        HourlyUnitHandler: Codeunit DxHourlyUnitHandler;
-    begin
-        IsTimeEditable := HourlyUnitHandler.IsHourlyUnit("Unit of Measure Code");
-    end;
 
     local procedure SetEnabledOnOpen();
     var

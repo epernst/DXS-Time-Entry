@@ -1,4 +1,4 @@
-pageextension 62006 DxResourceJournal extends "Resource Journal"
+pageextension 62006 DxsResourceJournal extends "Resource Journal"
 {
     layout
     {
