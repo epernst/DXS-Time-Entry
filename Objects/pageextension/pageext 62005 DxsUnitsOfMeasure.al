@@ -4,17 +4,19 @@ pageextension 62005 DxsUnitsOfMeasure extends "Units of Measure"
     {
         addbefore("International Standard Code")
         {
-            field("Hourly Unit";"DXS Hourly Unit")
+            field("Hourly Unit"; "DXS Hourly Unit")
             {
                 ToolTip = 'Specify if this unit of measure is used as an hourly unit, for entry of start and end times in journals.';
                 ApplicationArea = All;
+                Visible = TimeEntryEnabled;
             }
-            field("Time Rounding";"DXS Time Rounding")
+            field("Time Rounding"; "DXS Time Rounding")
             {
                 ToolTip = 'Specify how to round start and end time based entries. For example enter 0.25 to have 15 minutes as the minimum time to use.';
-                ApplicationArea = All;          
+                ApplicationArea = All;
                 Editable = IsHourlyUnit;
                 ShowMandatory = IsHourlyUnit;
+                Visible = TimeEntryEnabled;
             }
         }
     }
@@ -27,7 +29,7 @@ pageextension 62005 DxsUnitsOfMeasure extends "Units of Measure"
                 Caption = 'Dx365 Time';
                 action(DxTimeEntrySetup)
                 {
-                    AccessByPermission = TableData DxsTimeEntrySetup=R;
+                    AccessByPermission = TableData DxsTimeEntrySetup = R;
                     ApplicationArea = All;
                     Caption = 'Time Entry Setup';
                     Image = Setup;
@@ -43,8 +45,8 @@ pageextension 62005 DxsUnitsOfMeasure extends "Units of Measure"
     begin
         IsHourlyUnit := false;
     end;
-    
-    trigger OnNewRecord(BelowxRec : Boolean);
+
+    trigger OnNewRecord(BelowxRec: Boolean);
     begin
         UpdatePage;
     end;
@@ -53,12 +55,16 @@ pageextension 62005 DxsUnitsOfMeasure extends "Units of Measure"
     begin
         UpdatePage;
     end;
-    
+
     var
-        IsHourlyUnit : Boolean;
+        IsHourlyUnit: Boolean;
+        TimeEntryEnabled: Boolean;
 
     local procedure UpdatePage();
+    var
+        TimeEntrySetup: Record DxsTimeEntrySetup;
     begin
-        IsHourlyUnit := "DXS Hourly Unit";  
+        TimeEntryEnabled := TimeEntrySetup.GetSetupIfEnabled;
+        IsHourlyUnit := "DXS Hourly Unit";
     end;
 }
