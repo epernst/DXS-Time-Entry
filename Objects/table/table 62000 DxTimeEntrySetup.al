@@ -7,15 +7,15 @@ table 62000 DxsTimeEntrySetup
         {
             Caption = 'Primary Key';
         }
-        field(2; "Time App Enabled"; Boolean)
+        field(2; "App Enabled"; Boolean)
         {
-            Caption = 'Time App Enabled';
+            Caption = 'App Enabled';
             trigger OnValidate();
             var
                 HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
                 AssistedSetup: Record "Assisted Setup";
             begin
-                if "Time App Enabled" then begin
+                if "App Enabled" then begin
                     VerifySetupBeforeEnabling(GuiAllowed);
                     Status := Status::Completed;
                     if "Installation Date Time" = 0DT then
@@ -171,7 +171,7 @@ table 62000 DxsTimeEntrySetup
 
     procedure GetSetupIfEnabled(): Boolean;
     begin
-        exit(Get and "Time App Enabled");
+        exit(Get and "App Enabled");
     end;
 
     local procedure VerifySetupBeforeEnabling(ShowError: Boolean): Boolean;

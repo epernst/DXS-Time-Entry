@@ -8,7 +8,7 @@ codeunit 62009 DxsTimeAssistedSetup
         TimeEntrySetup : Record DxsTimeEntrySetup;
         SetupNameLbl : Label 'Setup DXS Time Entry extension';
         SetupDescriptionLbl : Label 'Setup the DXS Time Entry extension to allow entry of start and ending times.';
-        SetupKeywordsTxt : Label 'Jobs,Resources';
+        SetupKeywordsTxt : Label 'Jobs, Resources';
         IconInstream: InStream;
         RequiredPermissionMissingErr : Label 'You have not been granted required access rights to start the Assisted Setup.\\The Assisted Setup for G/L Source Names is about assigning the required permissions to users.  To be able to assign permissions you need to be granted either the SUPER og SECURITY permission set.';
 
@@ -87,7 +87,7 @@ codeunit 62009 DxsTimeAssistedSetup
 
         TempBusinessSetup.InsertExtensionBusinessSetup(
             TempBusinessSetup,
-            SetupNameLbl,
+            GetAppName,
             SetupDescriptionLbl,
             SetupKeywordsTxt,
             TempBusinessSetup.Area::Jobs,

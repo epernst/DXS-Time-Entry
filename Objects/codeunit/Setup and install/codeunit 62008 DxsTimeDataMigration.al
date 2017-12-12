@@ -86,7 +86,7 @@ codeunit 62008 DxsTimeDataMigration
             if not UnitOfMeasure.Get(Field(5).Value) then exit;
             TimeEntrySetup.Get;
             TimeEntrySetup."Hourly Units Only" := true;
-            TimeEntrySetup."Time App Enabled" := true;
+            TimeEntrySetup."App Enabled" := true;
             TimeEntrySetup.Status := TimeEntrySetup.Status::Completed;
             TimeEntrySetup.Modify;
             UnitOfMeasure."DXS Hourly Unit" := true;

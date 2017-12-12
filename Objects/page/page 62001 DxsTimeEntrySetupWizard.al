@@ -240,7 +240,7 @@ page 62001 DxsTimeEntrySetupWizard
         NextActionEnabled: Boolean;
         TempUnitOfMeasure: Record "Unit of Measure" temporary;
         NoHourlyUnitsSelectedErr: Label 'You have not selected any hourly units of measures. Please select at least one, before you continue.';
-        SetupNotCompleteQst: Label 'Dx Time App setup have not been completed.\\Are you sure you want to exit?';
+        SetupNotCompleteQst: Label 'DXS Time Entry setup have not been completed.\\Are you sure you want to exit?';
 
     trigger OnInit();
     begin
@@ -408,7 +408,7 @@ page 62001 DxsTimeEntrySetupWizard
             FindSet;
             repeat
                 TempUnitOfMeasure.TransferFields(UnitOfMeasure);
-            TempUnitOfMeasure.Insert;
+                TempUnitOfMeasure.Insert;
             until next = 0;
         end;
     end;
@@ -424,8 +424,8 @@ page 62001 DxsTimeEntrySetupWizard
             FindSet;
             repeat
                 UnitOfMeasure.TransferFields(TempUnitOfMeasure);
-            if UnitOfMeasure.Modify then;
-            if "DXS Hourly Unit" then HasHourlyUnitsOfMeasure := true;
+                if UnitOfMeasure.Modify then;
+                if "DXS Hourly Unit" then HasHourlyUnitsOfMeasure := true;
             until next = 0;
         end;
     end;
@@ -453,7 +453,7 @@ page 62001 DxsTimeEntrySetupWizard
         end;
 
         TimeEntrySetup.TransferFields(Rec, false);
-        TimeEntrySetup."Time App Enabled" := true;
+        TimeEntrySetup."App Enabled" := true;
         TimeEntrySetup.Modify(true);
         Commit;
     end;
