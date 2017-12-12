@@ -178,6 +178,11 @@
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
+        <trans-unit id="Codeunit 2660462426 - NamedType 2523365561" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TIME-ENTRY-SETUP</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3659473797 - NamedType 2223675934" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Set up Start and End Time Entry</source>
           <note from="Developer" annotates="general" priority="2" />
