@@ -18,8 +18,8 @@ table 62000 DxsTimeEntrySetup
                 if "Time App Enabled" then begin
                     VerifySetupBeforeEnabling(GuiAllowed);
                     Status := Status::Completed; 
-                    if "First Enabled Date" = 0DT then
-                        "First Enabled Date" := CurrentDateTime;
+                    if "Installation Date Time" = 0DT then
+                        "Installation Date Time" := CurrentDateTime;
                 end else 
                     Status := status::"Not Completed";
                 
@@ -68,12 +68,22 @@ table 62000 DxsTimeEntrySetup
         {
             Caption = 'Show End Date-Times';
         }
-        field(10;"First Enabled Date";DateTime)
+        field(10;"Installation Date Time";DateTime)
+        {
+            Caption = 'Installation Date Time';
+            Editable = false;
+        }
+        field(11;"Last Update Date Time";DateTime)
+        {
+            Caption = 'Last Update Date Time';
+            Editable = false;
+        }
+        field(12;"Enabled Date";DateTime)
         {
             Caption = 'First Enabled Date';
             Editable = false;
         }
-        field(12;Status;Option)
+        field(13;Status;Option)
         {
             Caption = 'Status';
             OptionCaption = 'Not Completed,Completed,Not Started,Seen,Watched,Read, ';
@@ -121,6 +131,11 @@ table 62000 DxsTimeEntrySetup
         field(33;"Next Registration Verification";DateTime)
         {
             Caption = 'Next Registration Verification';
+            Editable = false;
+        }
+        field(50;"Current Version";Text[20])
+        {
+            Caption = 'Current Version';
             Editable = false;
         }
     }
