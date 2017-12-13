@@ -4,16 +4,14 @@
 
 ### Clean out email/registration code
 
-
 ### Show Resources from Setup
-
-
 
 ## Documentation
 
-### Intro Video
+### Usage Video
 
 Show Usage from Job Journal
+
 - Enter Time
 - Post Journal
 - Show Ledger Entry
