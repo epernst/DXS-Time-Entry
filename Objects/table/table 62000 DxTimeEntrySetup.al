@@ -22,8 +22,8 @@ table 62000 DxsTimeEntrySetup
                         "Installation Date Time" := CurrentDateTime;
                 end else
                     Status := status::"Not Completed";
-
-                AssistedSetup.SetStatus(Page::DxsTimeEntrySetupWizard, Status);
+                if AssistedSetup.Get(Page::DxsTimeEntrySetupWizard) then
+                    AssistedSetup.SetStatus(Page::DxsTimeEntrySetupWizard, Status);
             end;
         }
         field(3; "Hourly Units Only"; Boolean)
@@ -147,22 +147,6 @@ table 62000 DxsTimeEntrySetup
         }
     }
 
-    trigger OnInsert();
-    begin
-    end;
-
-    trigger OnModify();
-    begin
-    end;
-
-    trigger OnDelete();
-    begin
-    end;
-
-    trigger OnRename();
-    begin
-    end;
-
     var
         NoHourlyUnitsCannotEnableErr: Label 'You need to setup at least one unit of measure as an Hourly Unit, before you can enable the Time Entry App.';
         NoRegistrationEmailAddressErr: Label 'You need to enter a valid email adress, before you can enable the app.';
@@ -178,7 +162,7 @@ table 62000 DxsTimeEntrySetup
     var
         HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
     begin
-        if "Hourly Units Only" and(not HourlyUnitHandler.HourlyUnitExits) then begin
+        if "Hourly Units Only" and (not HourlyUnitHandler.HourlyUnitExits) then begin
             if ShowError then
                 error(NoHourlyUnitsCannotEnableErr);
             exit(false);
@@ -194,22 +178,22 @@ table 62000 DxsTimeEntrySetup
         "Show End Date-Times" := false;
         case "Fields To Show" of
             "Fields To Show"::Times :
-        begin
-            "Show Start Times" := true;
-            "Show End Times" := true;
-        end;
-        "Fields To Show"::"Date Times" :
-        begin
-            "Show Start Date-Times" := true;
-            "Show End Date-Times" := true;
-        end;
-        "Fields To Show"::Both :
-        begin
-            "Show Start Times" := true;
-            "Show End Times" := true;
-            "Show Start Date-Times" := true;
-            "Show End Date-Times" := true;
-        end;
+                begin
+                    "Show Start Times" := true;
+                    "Show End Times" := true;
+                end;
+            "Fields To Show"::"Date Times" :
+                begin
+                    "Show Start Date-Times" := true;
+                    "Show End Date-Times" := true;
+                end;
+            "Fields To Show"::Both :
+                begin
+                    "Show Start Times" := true;
+                    "Show End Times" := true;
+                    "Show Start Date-Times" := true;
+                    "Show End Date-Times" := true;
+                end;
         end;
     end;
 
