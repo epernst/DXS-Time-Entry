@@ -31,7 +31,6 @@ codeunit 62012 DxsTimeNotificationHandler
     local procedure CreateSetupNotification();
     var
         MyNotifications : Record "My Notifications";
-        TimePermissionHandler : Codeunit DxsTimePermissionHandler;
         TimeNotification : Notification;
     begin
         if not MyNotifications.IsEnabled(GetNoSetupNotificationId) then exit;
@@ -50,7 +49,6 @@ codeunit 62012 DxsTimeNotificationHandler
     var
         TimePermissionHandler : Codeunit DxsTimePermissionHandler;
         TimeEntrySetup : Record DxsTimeEntrySetup;
-        HourlyUnitHandler : Codeunit DxsHourlyUnitHandler;
     begin
         if not TimePermissionHandler.IsSetupEnabled then exit;
         if not TimeEntrySetup.ValidateRegistration then
@@ -60,7 +58,6 @@ codeunit 62012 DxsTimeNotificationHandler
     local procedure CreateInvalidRegistrationNotification();
     var
         MyNotifications : Record "My Notifications";
-        TimePermissionHandler : Codeunit DxsTimePermissionHandler;
         TimeNotification : Notification;
     begin
         if not MyNotifications.IsEnabled(GetNoSetupNotificationId) then exit;
@@ -108,7 +105,6 @@ codeunit 62012 DxsTimeNotificationHandler
     
     procedure RunAssistedSetup(TimeNotification : Notification);
     var
-        TimeEntrySetup : Record DxsTimeEntrySetup;
         TimeEntrySetupWizard : Page DxsTimeEntrySetupWizard;
     begin
         TimeEntrySetupWizard.RunModal;

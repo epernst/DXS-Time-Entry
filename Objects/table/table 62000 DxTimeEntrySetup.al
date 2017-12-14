@@ -12,7 +12,6 @@ table 62000 DxsTimeEntrySetup
             Caption = 'App Enabled';
             trigger OnValidate();
             var
-                HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
                 AssistedSetup: Record "Assisted Setup";
             begin
                 if "App Enabled" then begin

@@ -11,6 +11,7 @@ tableextension 62001 DxsJob extends Job
                 "Qty. to Transfer to Invoice" = filter (> 0)));
             Caption = 'Invoicable Amount';
             FieldClass = FlowField;
+            Editable = false;
         }
     }
     keys

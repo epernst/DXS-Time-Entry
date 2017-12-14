@@ -3,21 +3,24 @@ codeunit 62004 DxsHourlyUnitHandler
     trigger OnRun();
     begin
     end;
-    
-    var
-        CanOnlyUseWithTypeErr : Label '%1 can only be used with a %2, which have been setup as a "%3".', Comment = '%1-fieldcaption %2-unit of measure table %3-hourly unit';
 
-    procedure ValidateHourlyUnitOfMeasure(UnitOfMeasureCode : Code[10];TestFieldCaption : Text;ShowMessage : Boolean) : Boolean;
     var
-        UnitOfMeasure : Record "Unit of Measure";
-        TimeEntrySetup : Record DxsTimeEntrySetup;
-    begin      
-        with TimeEntrySetup do begin 
-            if not GetSetupIfEnabled then exit(false);   
+        CanOnlyUseWithTypeErr: Label '%1 can only be used with a %2, which have been setup as a "%3".', Comment = '%1-fieldcaption %2-unit of measure table %3-hourly unit';
+
+    procedure ValidateHourlyUnitOfMeasure(
+        UnitOfMeasureCode: Code[10]; 
+        TestFieldCaption: Text; 
+        ShowMessage: Boolean): Boolean;
+    var
+        UnitOfMeasure: Record "Unit of Measure";
+        TimeEntrySetup: Record DxsTimeEntrySetup;
+    begin
+        with TimeEntrySetup do begin
+            if not GetSetupIfEnabled then exit(false);
             if not "Hourly Units Only" then exit(true);
         end;
         with UnitOfMeasure do begin
-            if get(UnitOfMeasureCode) and "DXS Hourly Unit" then 
+            if get(UnitOfMeasureCode) and "DXS Hourly Unit" then
                 exit(true);
             if ShowMessage and GuiAllowed then
                 Message(
@@ -29,13 +32,13 @@ codeunit 62004 DxsHourlyUnitHandler
         end;
     end;
 
-    procedure IsHourlyUnit(UnitOfMeasureCode : Code[10]) : Boolean;
+    procedure IsHourlyUnit(UnitOfMeasureCode: Code[10]): Boolean;
     var
-        UnitOfMeasure : Record "Unit of Measure";
-        TimeEntrySetup : Record DxsTimeEntrySetup;
-    begin 
-        with TimeEntrySetup do begin 
-            if not GetSetupIfEnabled then exit(false);   
+        UnitOfMeasure: Record "Unit of Measure";
+        TimeEntrySetup: Record DxsTimeEntrySetup;
+    begin
+        with TimeEntrySetup do begin
+            if not GetSetupIfEnabled then exit(false);
             if not "Hourly Units Only" then exit(true);
         end;
         with UnitOfMeasure do begin
@@ -44,21 +47,21 @@ codeunit 62004 DxsHourlyUnitHandler
         end;
     end;
 
-    procedure HourlyUnitExits() : Boolean;
+    procedure HourlyUnitExits(): Boolean;
     var
-        UnitOfMeasure : Record "Unit of Measure";
-    begin 
+        UnitOfMeasure: Record "Unit of Measure";
+    begin
         with UnitOfMeasure do begin
             SetRange("DXS Hourly Unit", true);
             exit(not IsEmpty);
         end;
     end;
-    
-    procedure GetHourlyUnitOfMeasureFilter() : Text;
+
+    procedure GetHourlyUnitOfMeasureFilter(): Text;
     var
-        UnitOfMeasure : Record "Unit of Measure";
-        FilterText : Text;
-    begin 
+        UnitOfMeasure: Record "Unit of Measure";
+        FilterText: Text;
+    begin
         with UnitOfMeasure do begin
             SetRange("DXS Hourly Unit", true);
             if IsEmpty then exit('');
@@ -67,7 +70,7 @@ codeunit 62004 DxsHourlyUnitHandler
             FindSet;
             repeat
                 if FilterText <> '' then
-                    FilterText += '|';
+                FilterText += '|';
                 FilterText += Code;
             until Next = 0;
         end;

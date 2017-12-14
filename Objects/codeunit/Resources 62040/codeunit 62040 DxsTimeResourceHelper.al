@@ -2,6 +2,7 @@ codeunit 62040 DxsTimeResourceHelper
 {
     trigger OnRun();
     begin
+        InitializeResources;
     end;
 
     procedure InitializeResources();

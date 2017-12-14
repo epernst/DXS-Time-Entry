@@ -94,17 +94,15 @@ codeunit 62008 DxsTimeDataMigration
         end;
     end;
 
-    local procedure AddUserAccess(AssignToUser: Guid; PermissionSet: Code[20]);
+    procedure AddUserAccess(AssignToUser: Guid; PermissionSet: Code[20]);
     var
         AccessControl: Record "Access Control";
-        AppId: Guid;
     begin
-        Evaluate(AppId, GetAppId);
         with AccessControl do
         begin
             Init;
             "User Security ID" := AssignToUser;
-            "App ID" := AppId;
+            "App ID" := GetAppId;
             Scope := Scope::Tenant;
             "Role ID" := PermissionSet;
             if not Find then

@@ -27,10 +27,5 @@ table 62001 DxsTimeHelpResource
             Clustered = true;
         }
     }
-
-    fieldgroups
-    {
-    }
-
 }
 

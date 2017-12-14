@@ -24,7 +24,11 @@ tableextension 62002 DxsJobJournalLine extends "Job Journal Line"
             var
                 HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
             begin
-                if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code", FieldCaption("DXS End Time"), true) then begin
+                if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure(
+                    "Unit of Measure Code", 
+                    FieldCaption("DXS End Time"), 
+                    true) 
+                then begin
                     InitStartEndTimes;
                     exit;
                 end;

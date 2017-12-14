@@ -6,7 +6,6 @@ codeunit 62002 DxsTimeChecker
     
     var
         EndTimeNotTodayErr : Label 'The end time must be on the same date as the start date-time.';
-
         EndTimeNotTodayMsg : Label 'You need to create a new line to enter an end time after %1.';
         EndTimeNotNextDayErr : Label 'The end date-time %1 is too late. It can only be same or next day from %2.';
 
