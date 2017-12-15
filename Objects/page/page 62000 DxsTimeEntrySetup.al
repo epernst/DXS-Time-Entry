@@ -6,6 +6,8 @@ page 62000 DxsTimeEntrySetup
     DeleteAllowed = false;
     InsertAllowed = false;
     UsageCategory = Administration;
+    AccessByPermission = tabledata DXSTimeEntrySetup = rmi;
+    ApplicationArea = Basic,Suite;
 
     layout
     {
