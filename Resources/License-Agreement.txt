@@ -1,0 +1,97 @@
+DX Solutions Customer License Agreement
+Important - Read through this agreement continuing registration. 
+
+By installing, having installed, subscribing to, or using the software product, you accept this agreement (including any modifications made to it from time to time).  
+If you do not accept this agreement, do not install, have installed, subscribe to, or use the software product.  
+
+1. SCOPE OF THIS CUSTOMER LICENSE AGREEMENT
+DX Solutions hereby grants to the Licensee a non-assignable, non-transferable and non-exclusive right to use the Product ("License") as stated in the EULA. The License shall cover the Licensee's own use of the Product. Accordingly, the Licensee shall have no right to grant any third party access to such third party's own data by means of Licensee's Products.
+
+2. DEFINITIONS
+
+    "Agreement" shall mean this customer license agreement, including any and all Addendum's made thereto (existing at the signing date or later created), which form an integral part of the Customer License Agreement.
+    "Bill-of-Sale" shall mean the invoice or final order confirmation confirming finalization of your Order Form and defining the Term of the Subscription.
+    "Customer" shall mean You, a customer, who has entered into this Agreement to use the Software Product in your company.
+    "Customer Data" means data, including all text, sound, video, or image files, and software, that are provided to DXS and/or Microsoft by You or on your behalf while using the Software Product.
+    "DXS" means Dynamics Experts Solutions ApS, a Danish company, and its affiliates.
+    "Partner" means an entity who has executed a Partner Agreement with Microsoft and/or is authorized to sell the Software Product to you.
+    "Software Product" and "Software Product and service" shall mean one or more of DXS's software solutions provided under this agreement. The specific Software Product may be specified in a separate agreement between you and Partner and/or DXS.
+    "Subscription" means a the right to use the Software Product as a service on a term basis, for one or more Units.
+    "Term" means the duration of a Subscription (e.g. 30 days or 12 months).
+    "Units" means a metric for a particular subscription license (e.g. licensed user seats, devices).
+    "You" shall mean the legal entity who has entered into this agreement.
+
+3. USAGE RIGHTS AND LIMITATIONS
+
+    Upon DXS's acceptance of your Order Form and for the duration of the term defined on your Bill-of-Sale, you have the non-exclusive, non-assignable, royalty free, worldwide limited right to use the services solely for your internal business operations and subject to the terms of this Agreement and the Order Form. You may allow your users to use the services for this purpose and you are responsible for your users' compliance.
+    The Software Product is sold to you as a Service on a fixed-term basis. These terms only give you some rights to use the Software Product for its intended purposes. DXS and its partners reserve all other rights. Unless applicable law gives you more rights despite this limitation, you may use the software only as expressly permitted in the Agreement. In doing so you must comply with any technical limitations in the software that only allow you to use it in certain ways. The Agreement does not grant you any rights to copy, modify, de-compile, re-engineer or distribute the Software Product.
+    
+    Ownership and restrictions. 
+    You retain all ownership and intellectual property rights in and to your data. DXS retains all ownership and intellectual property rights to the Software Product and the services.
+    If the Software Product is an extension for Microsoft Dynamics 365, then you must purchase and an active subscription for Microsoft Dynamics 365 from Microsoft or via a Partner of Microsoft. 
+    If the Software Product is an extension on to a perpetually-licensed DXS Software Product, the perpetual license must be on an active Enhancement Plan.
+
+4. INTELLECTUAL PROPERTY RIGHTS - INFRINGEMENT
+
+    All present intellectual property rights including copyright and industrial rights in the Software Product and/or accompanying material are the sole property of DXS and/or its suppliers. This Agreement does not in any way purport to transfer any such rights to you in any respect.
+    You shall notify DXS and/or Partner as soon as practicable after you become aware of: (i) any actual, threatened or suspected infringement of any intellectual property (including know-how) in respect of the Software Product, any related material or of any breach of confidence relating to any of the foregoing; (ii) any claim brought against you alleging that its use of the Software Product, any related material any intellectual property or other rights belonging to or alleged to belong to the claimant.
+
+5. PRODUCT SUPPORT
+
+    For the Software Product, DXS makes web-based support available and is your point of contact and reference in respect of queries, complaints and technical support. Web-based is available under the URL: https://dynamicsuser.net/dxs/f/support.
+    If you purchased the Software Product through Partner, then Partner is your first point of contact and reference in respect of queries, complaints and technical support and will render as much assistance as practically possible.
+    
+    Support Services. 
+    DXS will provide support services including but not limited to: "how to" articles, video's and FAQs; service and software updates; software product configuration.
+    Support hours and incident response time. 
+    DXS's support operate between the office hours of 9:00 to 16:00 CET, Monday-Friday, excluding public holidays in Denmark. DXS will use reasonable efforts to respond to support requests within 24 hours of their receipt (weekend's and holiday's excluded).
+    Costs of Additional Support and Services. Customer may request and DXS may offer additional support and/or services, through a separate Service Agreement and attached Statement of Work ("SOW"). DXS will then estimate the work needed, its costs and fees and time plan and respond with an offer to Customer if DXS deems, at its sole discretion.
+
+6. MAINTENANCE TIME AND SLA
+
+    Depending on the specific Software Product and service provided under this agreement, DXS may provide the service and/or host Customer Data in the cloud computing platform Microsoft Azure. It is expressly stated that DXS is not responsible for downtime or other interruptions in the service relating to Microsoft Azure and/or otherwise out of DXS's reasonable control.
+    Microsoft may make certain service level commitments, i.e. uptime guarantees and downtime credit policies in Microsoft's SLA for individual Azure services, which can be accessed under the URL: https://azure.microsoft.com/en-us/support/legal/sla/.
+
+7. CUSTOMER DATA
+
+    Use of Customer Data. 
+    Customer Data will be used only to provide you the Software Product and services including purposes compatible with providing those services. DXS will not use the Customer Data or derive information from it for any advertising or similar commercial purposes. You retain all right, title and interest in the Customer Data. DXS acquires no rights in Customer Data, other than the rights required by DXS to provide the Software Product and services.
+    Disclosure of Customer Data. 
+    DXS will not disclose Customer Data outside of DXS or its controlled subsidiaries and affiliates except (1) as Customer directs, (2) as described in this agreement, or (3) as required by law.
+    Customer Responsibilities. 
+    You shall have sole responsibility for the accuracy, quality, integrity, legality, reliability, appropriate and ownership of all of your data. You agree to provide any notices and obtain any consents related to your use and DXS's provision of the Software Product and services, including those related to the collection, use, processing, transfer and disclosure of personal information.
+    You agree to provide notification to the individual users of the Software Product that their data may be processed for the purpose of disclosing it to law enforcement or other governmental authorities, and agree to obtain the users consent for the same.
+    Customer Data Retention and Extraction. 
+    At all times during the Term of your subscription, you will have the ability to access and extract Customer Data. Except for free trials, DXS will retain Customer Data in a limited function account for 90 days after expiration or termination of your Subscription so that you may extract the data. After the 90-day retention period ends, DXS and/or Microsoft will delete the Customer Data.
+
+8. LIMITED WARRANTY AND LIABILITY - DISCLAIMER
+
+    DXS confirms and warrants that it is the owner of and/or controls all intellectual property rights and any other rights to the Software Product necessary to perform and administer this Agreement.
+    Limited Warranty. 
+    The Software Product is provided "as is" with all faults and, to the fullest extent permitted by law, DXS makes no other warranties or representations than described above and accepts no other conditions in relation to the Software Product. DXS does not give any further representation, warranty or undertaking as to the effectiveness, performance, quality, merchantability, durability or fitness for any purpose of the Software Product or any related material or documentation or services, or that the Software Product, or any related material or documentation or services supplied by DXS is free from any defect or error.
+    Limited Liability. 
+    To the maximum extent permitted by law, DXS (and/or its suppliers) is in no way liable to you by reason of any representation or the breach of any implied condition, warranty or other term or any duty under any law or statues, or under any express term of this Agreement, for any direct or indirect loss, damages, costs, expenses or other claim for compensation whatsoever (including without limitation, consequential, special or incidental damages, damages for lost profits or revenues, business interruption, or loss of business information), whether occasioned by the negligence of DXS, its servants or agents or otherwise, which arises out of or in connection with this Agreement, even if advised of the possibility of such damages or if such possibility was reasonably foreseeable.
+
+9. SUBSCRIPTION RENEWAL, TERM AND TERMINATION
+
+    As stated in section 3.1 of this Agreement, your Subscription shall commence on the date indicated in your Bill-of-Sale, once your Order Form has been accepted by DXS. The Subscription duration is for a limited Term. The Term of the subscription renews automatically unless terminated. During that Term, DXS or Partner may invoice you in regular increments by sending an invoice to a single individual or email address designated by you. DXS may charge the subscription fee to a credit card designated by you. This Customer License Agreement apply to you during the Term.
+    The Term of the agreement renews automatically unless, prior to the date of your next invoice, DXS receives either directly from you or through Partner, your written notification that you do not wish to renew. Otherwise, you agree to pay renewal charges.
+    At this time, subscriptions that are cancelled will not incur an early termination charge. At a future date, however, early termination charges may be incurred for new subscriptions that are cancelled prior to their expiration, at Microsoft's and/or DXS's discretion.
+    In addition to any other rights and remedies at law, DXS shall be entitled to terminate this Agreement forthwith by giving written notice if:
+        you commit any breach of this Agreement and if the breach is capable of remedy, fail to remedy it within 30 days after being given a written notice containing full particulars of the breach and requiring it to be remedied; or
+        you become directly or indirectly involved, in the design, development, manufacture and/or distribution of any products which compete directly with the Software Product.
+
+    Obligations Surviving Termination. 
+    Notwithstanding any expiration or termination of this Agreement and any exercise of rights by you or Partner under a separate agreement hereunder, the following rights and obligations shall survive any such termination or exercise of rights necessary to permit their complete fulfillment or discharge:
+        DXS right's right (or Partner's right if applicable) to receive or recover, and your obligation to pay any fees or other sums payable which are vested in, accrued or accruable at the time of termination or exercise of such rights.
+        Any rights or remedies of DXS or Partner under this Agreement, with regards any cause of action or claim of either party, whether or not accrued at the time of termination, arising from the other party's breach of or failure to perform any obligation under this Agreement.
+        In addition to the rights and obligations which survive as expressly provided in this Agreement, the Articles and Schedules which by their nature should survive, shall survive and continue after any termination or expiration hereunder.
+
+10. MISCELLANEOUS
+
+    This Agreement is personal to you, you are not entitled to assign, mortgage, charge, or otherwise transfer or sub-license any rights under this Agreement, except with prior written approval.
+    If any provision hereof is determined by a tribunal of competent jurisdiction to be illegal or unenforceable, it shall automatically be deemed conformed to the minimum requirements of law and, along with all other provisions hereof, shall thereupon be given full force and effect.
+    Whenever possible, each provision of this Agreement shall be interpreted in such a manner as to be effective and valid under applicable law, but if any provision of this Agreement shall be prohibited by or invalid under applicable law, such provision shall be ineffective only to the extent of such prohibition or invalidity and shall not invalidate the remainder of such provision or the remaining provisions of this Agreement that shall continue in full force and effect.
+    Governing Law - Jurisdiction.
+    This Agreement shall be governed by and construed in accordance with Danish law. The courts of Denmark shall have exclusive jurisdiction to adjudicate any dispute arising under or in connection with this Agreement.
+    Notwithstanding the foregoing, the DXS and/or Partner reserve the right to seek and obtain injunctive relief, whether in the form of a temporary restraining order, preliminary injunction, injunction to enforce an arbitration award, or other order of similar import, including obtaining full payment of all fees and costs under this Agreement from any court of competent jurisdiction.
