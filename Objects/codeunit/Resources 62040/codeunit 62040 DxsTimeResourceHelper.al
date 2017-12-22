@@ -23,7 +23,7 @@ codeunit 62040 DxsTimeResourceHelper
         HelpResource: Record DxsTimeHelpResource;
     begin
         with HelpResource do
-        if Get(SetupCode) then
+            if Get(SetupCode) then
             exit(Url);
     end;
 
@@ -41,70 +41,70 @@ codeunit 62040 DxsTimeResourceHelper
 
     procedure GetSetupHelpCode(): Code[50];
     var
-        SetupHelpCode: Label 'SETUPHELP';
+        SetupHelpCode: Label 'SETUPHELP', maxwidth = 50;
     begin
         exit(SetupHelpCode);
     end;
 
     procedure GetSetupVideoCode(): Code[50];
     var
-        SetupVideoCode: Label 'SETUPVIDEO';
+        SetupVideoCode: Label 'SETUPVIDEO', maxwidth = 50;
     begin
         exit(SetupVideoCode);
     end;
 
     procedure GetUsageHelpCode(): Code[50];
     var
-        UsageHelpCode: Label 'USAGEHELP';
+        UsageHelpCode: Label 'USAGEHELP', maxwidth = 50;
     begin
         exit(UsageHelpCode);
     end;
 
     procedure GetUsageVideoCode(): Code[50];
     var
-        UsageVideoCode: Label 'USAGEVIDEO';
+        UsageVideoCode: Label 'USAGEVIDEO', maxwidth = 50;
     begin
         exit(UsageVideoCode);
     end;
 
     procedure Get70PXIconCode(): Code[50];
     var
-        IconCode: Label 'DXTIME_70PXICON';
+        IconCode: Label 'DXTIME_70PXICON', maxwidth = 50;
     begin
         exit(IconCode)
     end;
 
     procedure Get150PXIconCode(): Code[50];
     var
-        IconCode: Label 'DXTIME_150PXICON';
+        IconCode: Label 'DXTIME_150PXICON', maxwidth = 50;
     begin
         exit(IconCode)
     end;
 
     procedure Get240PXIconCode(): Code[50];
     var
-        IconCode: Label 'DXTIME_240PXICON';
+        IconCode: Label 'DXTIME_240PXICON', maxwidth = 50;
     begin
         exit(IconCode)
     end;
 
     procedure Get250PXIconCode(): Code[50];
     var
-        IconCode: Label 'DXTIME_250PXICON';
+        IconCode: Label 'DXTIME_250PXICON', maxwidth = 50;
     begin
         exit(IconCode)
     end;
 
     procedure Get417PXIconCode(): Code[50];
     var
-        IconCode: Label 'DXTIME_417PXICON';
+        IconCode: Label 'DXTIME_417PXICON', maxwidth = 50;
     begin
         exit(IconCode)
     end;
 
     local procedure InitAssistedSetupHelpPageUrl();
     var
-        SetupHelpUrl: Label 'http://Objects4NAV.com/DXTIME', Locked = true;
+        SetupHelpUrl: Label 'https://dynamicsuser.net/isv/dxs/w', Locked = true;
     begin
         InitUrl(GetSetupHelpCode, SetupHelpUrl);
     end;
@@ -118,7 +118,7 @@ codeunit 62040 DxsTimeResourceHelper
 
     local procedure InitUsageHelpPageUrl();
     var
-        UsageHelpUrl: Label 'http://Objects4NAV.com/DXTIME', Locked = true;
+        UsageHelpUrl: Label 'https://dynamicsuser.net/isv/dxs/w', Locked = true;
     begin
         InitUrl(GetUsageHelpCode, UsageHelpUrl);
     end;
@@ -133,7 +133,7 @@ codeunit 62040 DxsTimeResourceHelper
     local procedure InitIcon70x70();
     var
         TempBlob: Record TempBlob;
-        IconDescription: Label 'Dx365 Time Icon 70x70';
+        IconDescription: Label 'DXS Time Icon 70x70';
         DxTimeIcon: Codeunit DxsTimeIcon70x70;
     begin
         DxTimeIcon.GetIcon(TempBlob);
@@ -143,7 +143,7 @@ codeunit 62040 DxsTimeResourceHelper
     local procedure InitIcon150x150();
     var
         TempBlob: Record TempBlob;
-        IconDescription: Label 'Dx365 Time Icon 150x150';
+        IconDescription: Label 'DXS Time Icon 150x150';
         DxTimeIcon: Codeunit DxsTimeIcon150x150;
     begin
         DxTimeIcon.GetIcon(TempBlob);
@@ -153,7 +153,7 @@ codeunit 62040 DxsTimeResourceHelper
     local procedure InitIcon240x240();
     var
         TempBlob: Record TempBlob;
-        IconDescription: Label 'Dx365 Time Icon 240x240';
+        IconDescription: Label 'DXS Time Icon 240x240';
         DxTimeIcon: Codeunit DxsTimeIcon240x240;
     begin
         DxTimeIcon.GetIcon(TempBlob);
@@ -163,7 +163,7 @@ codeunit 62040 DxsTimeResourceHelper
     local procedure InitIcon250x250();
     var
         TempBlob: Record TempBlob;
-        IconDescription: Label 'Dx365 Time Icon 250x250';
+        IconDescription: Label 'DXS Time Icon 250x250';
         DxTimeIcon: Codeunit DxsTimeIcon250x250;
     begin
         DxTimeIcon.GetIcon(TempBlob);
@@ -173,7 +173,7 @@ codeunit 62040 DxsTimeResourceHelper
     local procedure InitIcon417x417();
     var
         TempBlob: Record TempBlob;
-        IconDescription: Label 'Dx365 Time Icon 417x417';
+        IconDescription: Label 'DXS Time Icon 417x417';
         DxTimeIcon: Codeunit DxsTimeIcon417x417;
     begin
         DxTimeIcon.GetIcon(TempBlob);
@@ -186,10 +186,10 @@ codeunit 62040 DxsTimeResourceHelper
     begin
         with DxTimeHelpResource do
             if not Get(UrlCode) then begin
-                Code := UrlCode;
-                Url := UrlLink;
-                Insert;
-            end;
+            Code := UrlCode;
+            Url := UrlLink;
+            Insert;
+        end;
     end;
 
     procedure InitIcon(IconCode: Code[50]; IconDescription: Text; TempBlob: Record TempBlob);
@@ -199,10 +199,10 @@ codeunit 62040 DxsTimeResourceHelper
     begin
         with HelpResource do
             if not Get(IconCode) then begin
-                Code := IconCode;
-                TempBlob.Blob.CreateInStream(InStr);
-                Icon.ImportStream(InStr, IconDescription, 'image/png');
-                Insert;
-            end;
+            Code := IconCode;
+            TempBlob.Blob.CreateInStream(InStr);
+            Icon.ImportStream(InStr, IconDescription, 'image/png');
+            Insert;
+        end;
     end;
 }

@@ -13,12 +13,12 @@ page 62005 DxsJobSummaryFactBox
                 Caption = 'Job Journal';
                 field(TimeInvoicableJournal;BillableHours[1])
                 {
-                    Caption='Hours, chargeable';
+                    Caption='Hours, billable';
                     Editable=false;
                 }
                 field(TimeNonChargableJournal;NonBillableHours[1])
                 {
-                    Caption='Hours, non-chargeable';
+                    Caption='Hours, non-billable';
                     Editable=false;
                 }
                 field(PricePerHourJournal;AvgPricePerUOM[1])
@@ -32,12 +32,12 @@ page 62005 DxsJobSummaryFactBox
                 Caption = 'Time Sheets';
                 field(TimeInvoicableTimeSheet;BillableHours[2])
                 {
-                    Caption='Hours, chargeable';
+                    Caption='Hours, billable';
                     Editable=false;
                 }
                 field(TimeNonChargableTimeSheet;NonBillableHours[2])
                 {
-                    Caption='Hours, non-chargeable';
+                    Caption='Hours, non-billable';
                     Editable=false;
                 }
             }
@@ -46,12 +46,12 @@ page 62005 DxsJobSummaryFactBox
                 Caption='Job Usage';
                 field(TimeInvoicableUsage;BillableHours[3])
                 {
-                    Caption='Hours, chargeable';
+                    Caption='Hours, billable';
                     Editable=false;
                 }
                 field(TimeNonInvoiceUsage;NonBillableHours[3])
                 {
-                    Caption='Hours, non-chargeable';
+                    Caption='Hours, non-billable';
                     Editable=false;
                 }
                 field(TotalSales;TotalSales[3])

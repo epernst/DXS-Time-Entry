@@ -26,7 +26,7 @@ pageextension 62005 DxsUnitsOfMeasure extends "Units of Measure"
         {
             group(DxTimeEntry)
             {
-                Caption = 'Dx365 Time';
+                Caption = 'DXS Time';
                 action(DxTimeEntrySetup)
                 {
                     AccessByPermission = TableData DxsTimeEntrySetup = R;
@@ -35,7 +35,7 @@ pageextension 62005 DxsUnitsOfMeasure extends "Units of Measure"
                     Image = Setup;
                     RunPageMode = Edit;
                     RunObject = Page DxsTimeEntrySetup;
-                    ToolTip = 'Show the page setup of the Dx365 Time Entry App, which handles and enables entry of begin and end times in journals.';
+                    ToolTip = 'Show the page setup of the DXS Time Entry App, which handles and enables entry of begin and end times in journals.';
                 }
             }
         }
