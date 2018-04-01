@@ -5,7 +5,7 @@
 		{
 			"type": "al",
 			"request": "launch",
-			"server": "https://dxsolutions11.northeurope.cloudapp.azure.com",
+			"server": "https://dxsn11.northeurope.cloudapp.azure.com",
 			"serverInstance": "NAV",
 			"name": "Launch",
 			"tenant": "",
