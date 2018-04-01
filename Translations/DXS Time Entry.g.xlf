@@ -129,7 +129,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
         <trans-unit id="Codeunit 3955256770 - Method 3844081278 - NamedType 3031047135" maxWidth="999" size-unit="char" translate="no" xml:space="preserve">
-          <source>http://Objects4NAV.com/DXTIME</source>
+          <source>https://dynamicsuser.net/isv/dxs/w</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
@@ -139,7 +139,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
         <trans-unit id="Codeunit 3955256770 - Method 1060900626 - NamedType 1032451233" maxWidth="999" size-unit="char" translate="no" xml:space="preserve">
-          <source>http://Objects4NAV.com/DXTIME</source>
+          <source>https://dynamicsuser.net/isv/dxs/w</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
@@ -149,27 +149,27 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
         <trans-unit id="Codeunit 3955256770 - Method 2484516267 - NamedType 1288258319" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Dx365 Time Icon 70x70</source>
+          <source>DXS Time Icon 70x70</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
         <trans-unit id="Codeunit 3955256770 - Method 3378677603 - NamedType 1288258319" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Dx365 Time Icon 150x150</source>
+          <source>DXS Time Icon 150x150</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
         <trans-unit id="Codeunit 3955256770 - Method 4000611587 - NamedType 1288258319" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Dx365 Time Icon 240x240</source>
+          <source>DXS Time Icon 240x240</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
         <trans-unit id="Codeunit 3955256770 - Method 151507459 - NamedType 1288258319" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Dx365 Time Icon 250x250</source>
+          <source>DXS Time Icon 250x250</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
         <trans-unit id="Codeunit 3955256770 - Method 1328106787 - NamedType 1288258319" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Dx365 Time Icon 417x417</source>
+          <source>DXS Time Icon 417x417</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
@@ -709,12 +709,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
         <trans-unit id="Page 1096477163 - Control 158053822 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Hours, chargeable</source>
+          <source>Hours, billable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
         <trans-unit id="Page 1096477163 - Control 4062395002 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Hours, non-chargeable</source>
+          <source>Hours, non-billable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
@@ -729,12 +729,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
         <trans-unit id="Page 1096477163 - Control 797442019 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Hours, chargeable</source>
+          <source>Hours, billable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
         <trans-unit id="Page 1096477163 - Control 57250719 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Hours, non-chargeable</source>
+          <source>Hours, non-billable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
@@ -744,12 +744,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
         <trans-unit id="Page 1096477163 - Control 796250634 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Hours, chargeable</source>
+          <source>Hours, billable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
         <trans-unit id="Page 1096477163 - Control 3406763362 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Hours, non-chargeable</source>
+          <source>Hours, non-billable</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
         </trans-unit>
@@ -874,7 +874,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Control</note>
         </trans-unit>
         <trans-unit id="PageExtension 2144844773 - Action 423656215 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Dx365 Time</source>
+          <source>DXS Time</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Action</note>
         </trans-unit>
@@ -884,7 +884,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Action</note>
         </trans-unit>
         <trans-unit id="PageExtension 2144844773 - Action 4118145414 - Property 1295455071" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Show the page setup of the Dx365 Time Entry App, which handles and enables entry of begin and end times in journals.</source>
+          <source>Show the page setup of the DXS Time Entry App, which handles and enables entry of begin and end times in journals.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension - Action</note>
         </trans-unit>
