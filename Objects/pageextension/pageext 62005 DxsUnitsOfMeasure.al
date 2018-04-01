@@ -15,7 +15,6 @@ pageextension 62005 DxsUnitsOfMeasure extends "Units of Measure"
                 ToolTip = 'Specify how to round start and end time based entries. For example enter 0.25 to have 15 minutes as the minimum time to use.';
                 ApplicationArea = All;
                 Editable = IsHourlyUnit;
-                ShowMandatory = IsHourlyUnit;
                 Visible = TimeEntryEnabled;
             }
         }
