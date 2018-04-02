@@ -15,16 +15,19 @@ page 62005 DxsJobSummaryFactBox
                 {
                     Caption='Hours, billable';
                     Editable=false;
+                    ApplicationArea = All;
                 }
                 field(TimeNonChargableJournal;NonBillableHours[1])
                 {
                     Caption='Hours, non-billable';
                     Editable=false;
+                    ApplicationArea = All;
                 }
                 field(PricePerHourJournal;AvgPricePerUOM[1])
                 {
                     Caption='Price per hour';
                     Editable=false;
+                    ApplicationArea = All;
                 }
             }
             group(TimeSheet)
@@ -34,11 +37,13 @@ page 62005 DxsJobSummaryFactBox
                 {
                     Caption='Hours, billable';
                     Editable=false;
+                    ApplicationArea = All;
                 }
                 field(TimeNonChargableTimeSheet;NonBillableHours[2])
                 {
                     Caption='Hours, non-billable';
                     Editable=false;
+                    ApplicationArea = All;
                 }
             }
             group(JobUsage)
@@ -48,31 +53,37 @@ page 62005 DxsJobSummaryFactBox
                 {
                     Caption='Hours, billable';
                     Editable=false;
+                    ApplicationArea = All;
                 }
                 field(TimeNonInvoiceUsage;NonBillableHours[3])
                 {
                     Caption='Hours, non-billable';
+                    ApplicationArea = All;
                     Editable=false;
                 }
                 field(TotalSales;TotalSales[3])
                 {
                     Caption='Total sales, job';
+                    ApplicationArea = All;
                     Editable=false;
                 }
                 field(TotalCost;TotalCost[3])
                 {
                     Caption='Total costs, job';
                     Editable=false;
+                    ApplicationArea = All;
                 }
                 field(TotalProfit;TotalProfit[3])
                 {
                     Caption='Total profit, job';
                     Editable=false;
+                    ApplicationArea = All;
                 }
                 field(PricePerHour3;AvgPricePerUOM[3])
                 {
                     Caption='Price per hour';
                     Editable=false;
+                    ApplicationArea = All;
                 }
             }
         }
@@ -112,7 +123,7 @@ page 62005 DxsJobSummaryFactBox
         var
             UpdateFactbox : Codeunit DxsJobFactboxUpdater;
         begin
-            if not Job.GET(Job."No.") then Job.INIT;
+            if not Job.GET(Job."No.") then Job.Init();
             UpdateFactbox.UpdateJobData(Job,BillableHours,NonBillableHours,TotalSales,TotalCost,TotalProfit,AvgPricePerUOM);    
 
             CurrPage.UPDATE(false);

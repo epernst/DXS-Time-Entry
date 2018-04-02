@@ -6,14 +6,14 @@ pageextension 62001 DxsJobPlanningLines extends "Job Planning Lines"
         {
             trigger OnAfterValidate();
             begin
-                UpdatePage;
+                UpdatePage();
             end;
         }
 
         modify("Unit of Measure Code"){
             trigger OnAfterValidate();
             begin
-                UpdatePage;
+                UpdatePage();
             end;
         }
 
@@ -64,24 +64,24 @@ pageextension 62001 DxsJobPlanningLines extends "Job Planning Lines"
 
     trigger OnOpenPage();
     begin
-        SetEnabledOnOpen;
-        UpdatePage;
+        SetEnabledOnOpen();
+        UpdatePage();
     end;
     
     trigger OnInsertRecord(BelowxRec : Boolean) : Boolean;
     begin
-        UpdatePage;
+        UpdatePage();
     end;
 
     trigger OnNewRecord(BelowxRec : Boolean);
     begin
-        InitStartEndTimes;
-        UpdatePage;
+        InitStartEndTimes();
+        UpdatePage();
     end;
 
     trigger OnAfterGetCurrRecord();
     begin
-        UpdatePage;
+        UpdatePage();
     end;
   
     var
@@ -104,9 +104,9 @@ pageextension 62001 DxsJobPlanningLines extends "Job Planning Lines"
     var 
         TimePermissionHandler : Codeunit DxsTimePermissionHandler;
     begin
-        IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled; 
+        IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled(); 
         with TimeEntrySetup do begin
-            if not Get then Init;
+            if not Get() then Init();
             IsEndDateTimeVisible := IsTimeEntryEnabled and "Show End Date-Times"; 
             IsEndTimeVisible := IsTimeEntryEnabled and "Show End Times"; 
             IsStartDateTimeVisible := IsTimeEntryEnabled and "Show Start Date-Times"; 

@@ -214,6 +214,7 @@ page 62004 DxsJobJournalSummaryFactBox
                     Caption = 'Price per hour';
                     ToolTip = 'Shows the average hourly rate, for all job in this journal.';
                     Editable = false;
+                    ApplicationArea = All;
                 }
             }
         }
@@ -256,7 +257,7 @@ page 62004 DxsJobJournalSummaryFactBox
     var
         UpdateFactbox : Codeunit DxsJobFactboxUpdater;
     begin
-        if not Job.GET("Job No.") then Job.INIT;
+        if not Job.GET("Job No.") then Job.Init();
         UpdateFactbox.UpdateJobJurnalData(JobJournalLine,BillableHours,NonBillableHours,TotalSales,TotalCost,TotalProfit,AvgPricePerUOM);    
     end;
 }

@@ -17,7 +17,7 @@ codeunit 62002 DxsTimeChecker
     begin
         IsValidated := true;
         with TimeEntrySetup do begin
-            if not GetSetupIfEnabled then exit(false);
+            if not GetSetupIfEnabled() then exit(false);
             case "Allow Entries to Pass Midnight" of
                 "Allow Entries to Pass Midnight"::No :
                     if DT2Date(StartDateTime) < DT2Date(EndDateTime) then begin

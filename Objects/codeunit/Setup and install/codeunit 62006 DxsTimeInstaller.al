@@ -8,17 +8,17 @@ codeunit 62006 DxsTimeInstaller
         TimeAppInfo: ModuleInfo;
     begin
         NavApp.GetCurrentModuleInfo(TimeAppInfo);
-        if TimeAppInfo.DataVersion = Version.Create(0, 0, 0, 0) then
-            InitializeNewSetup
+        if TimeAppInfo.DataVersion() = Version.Create(0, 0, 0, 0) then
+            InitializeNewSetup()
         else
-            ReInitializeSetup;
+            ReInitializeSetup();
     end;
 
     trigger OnInstallAppPerDatabase();
     var
         ResourceHelper: Codeunit DxsTimeResourceHelper;
     begin
-        ResourceHelper.Run;
+        ResourceHelper.Run();
     end;
 
     local procedure InitializeNewSetup();
@@ -27,14 +27,14 @@ codeunit 62006 DxsTimeInstaller
         DataMigration: Codeunit DxsTimeDataMigration;
     begin
         with Setup do begin
-            if not IsEmpty then exit;
-            Init;
+            if not IsEmpty() then exit;
+            Init();
             Status := Status::"Not Started";
-            "Installation Date Time" := CurrentDateTime;
-            Insert;
+            "Installation Date Time" := CurrentDateTime();
+            Insert();
         end;
 
-        DataMigration.MigrateFromNAV2017;
+        DataMigration.MigrateFromNAV2017();
     end;
 
     local procedure ReInitializeSetup();
@@ -42,9 +42,9 @@ codeunit 62006 DxsTimeInstaller
         Setup: Record DxsTimeEntrySetup;
     begin
         with Setup do begin
-            Get;
-            "Installation Date Time" := CurrentDateTime;
-            Modify;
+            Get();
+            "Installation Date Time" := CurrentDateTime();
+            Modify();
         end;
     end;
 

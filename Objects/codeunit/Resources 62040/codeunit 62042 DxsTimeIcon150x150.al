@@ -7,7 +7,7 @@ codeunit 62042 DxsTimeIcon150x150
     
     procedure GetIcon(var TempBlob : Record TempBlob);
     begin
-        TempBlob.FromBase64String(IconSource);
+        TempBlob.FromBase64String(IconSource());
     end;
     
     local procedure IconSource() : Text;

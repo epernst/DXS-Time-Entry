@@ -35,6 +35,6 @@ page 62006 DxsTimeHelpResources
     var
         ResourceHelper : Codeunit DxsTimeResourceHelper;
     begin
-        ResourceHelper.InitializeResources;
+        ResourceHelper.InitializeResources();
     end;
 }

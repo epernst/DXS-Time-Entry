@@ -15,10 +15,10 @@ table 62000 DxsTimeEntrySetup
                 AssistedSetup: Record "Assisted Setup";
             begin
                 if "App Enabled" then begin
-                    VerifySetupBeforeEnabling(GuiAllowed);
+                    VerifySetupBeforeEnabling(GuiAllowed());
                     Status := Status::Completed;
                     if "Installation Date Time" = 0DT then
-                        "Installation Date Time" := CurrentDateTime;
+                        "Installation Date Time" := CurrentDateTime();
                 end else
                     Status := status::"Not Completed";
                 if AssistedSetup.Get(Page::DxsTimeEntrySetupWizard) then
@@ -46,7 +46,7 @@ table 62000 DxsTimeEntrySetup
                     ("Fields To Show" = "Fields To Show"::Mix)
                 then
                     exit;
-                InitShowFields;
+                InitShowFields();
             end;
         }
         field(6; "Show Start Times"; Boolean)
@@ -95,7 +95,7 @@ table 62000 DxsTimeEntrySetup
 
             trigger OnValidate();
             begin
-                if("Default Time Rounding" = 0) and(not "Hourly Units Only") then
+                if("Default Time Rounding" = 0) and (not "Hourly Units Only") then
                     error(RoundingMustBeEnteredErr, FieldCaption("Default Time Rounding"), FieldCaption("Hourly Units Only"));
             end;
         }
@@ -108,7 +108,7 @@ table 62000 DxsTimeEntrySetup
                 if(xRec."Registration E-Mail Address" <> '') then
                     if not Confirm(ChangeRegistrationQst, false, FieldCaption("Registration E-Mail Address"), FieldCaption("Registration Id")) then
                         error('');
-                ValidateRegistration;
+                ValidateRegistration();
             end;
         }
         field(31; "Installation Id"; Guid)
@@ -116,7 +116,7 @@ table 62000 DxsTimeEntrySetup
             Caption = 'Installation Id';
             trigger OnValidate();
             begin
-                ValidateRegistration;
+                ValidateRegistration();
             end;
         }
         field(32; "Registration Id"; Guid)
@@ -124,7 +124,7 @@ table 62000 DxsTimeEntrySetup
             Caption = 'Registration Id';
             trigger OnValidate();
             begin
-                ValidateRegistration;
+                ValidateRegistration();
             end;
         }
         field(33; "Next Registration Verification"; DateTime)
@@ -154,14 +154,14 @@ table 62000 DxsTimeEntrySetup
 
     procedure GetSetupIfEnabled(): Boolean;
     begin
-        exit(Get and "App Enabled");
+        exit(Get() and "App Enabled");
     end;
 
     local procedure VerifySetupBeforeEnabling(ShowError: Boolean): Boolean;
     var
         HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
     begin
-        if "Hourly Units Only" and (not HourlyUnitHandler.HourlyUnitExits) then begin
+        if "Hourly Units Only" and (not HourlyUnitHandler.HourlyUnitExits()) then begin
             if ShowError then
                 error(NoHourlyUnitsCannotEnableErr);
             exit(false);
@@ -200,7 +200,7 @@ table 62000 DxsTimeEntrySetup
     var
         TimeNotificationHandler: Codeunit DxsTimeNotificationHandler;
     begin
-        TimeNotificationHandler.CreateHourlyNotificationIfNoSetup;
+        TimeNotificationHandler.CreateHourlyNotificationIfNoSetup();
     end;
 
     procedure ValidateRegistration(): Boolean;
@@ -220,7 +220,7 @@ table 62000 DxsTimeEntrySetup
             ("Installation Id" <> '')
         then
             exit(0);
-        if "Next Registration Verification" > CurrentDateTime then
+        if "Next Registration Verification" > CurrentDateTime() then
             exit(3);
         exit(1);
     end;
@@ -229,6 +229,6 @@ table 62000 DxsTimeEntrySetup
     var
         TimeNotificationHandler: Codeunit DxsTimeNotificationHandler;
     begin
-        TimeNotificationHandler.CreateNotificationIfInvalidRegistration;
+        TimeNotificationHandler.CreateNotificationIfInvalidRegistration();
     end;
 }

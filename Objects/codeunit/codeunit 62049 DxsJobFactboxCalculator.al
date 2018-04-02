@@ -17,8 +17,8 @@ codeunit 62049 DxsJobFactboxCalculator
         Job: Record Job;
         HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
     begin
-        if HourlyUnitHandler.GetHourlyUnitOfMeasureFilter = '' then exit;
-        if(not Job.GET(JobJournalLine."Job No.")) and(ViewType <> ViewType::TotalJobJournal) then exit;
+        if HourlyUnitHandler.GetHourlyUnitOfMeasureFilter() = '' then exit;
+        if(not Job.GET(JobJournalLine."Job No.")) and (ViewType <> ViewType::TotalJobJournal) then exit;
 
         BillableHours := 0;
         NonBillableHours := 0;
@@ -51,7 +51,7 @@ codeunit 62049 DxsJobFactboxCalculator
     begin
         if Job."No." = '' then
             exit;
-        if HourlyUnitHandler.GetHourlyUnitOfMeasureFilter = '' then exit;
+        if HourlyUnitHandler.GetHourlyUnitOfMeasureFilter() = '' then exit;
 
         BillableHours := 0;
         NonBillableHours := 0;
@@ -87,7 +87,7 @@ codeunit 62049 DxsJobFactboxCalculator
             TotalSales := "Total Price (LCY)";
             TotalCost := "Total Cost (LCY)";
 
-            SetFilter("Unit of Measure Code", HourlyUnitHandler.GetHourlyUnitOfMeasureFilter);
+            SetFilter("Unit of Measure Code", HourlyUnitHandler.GetHourlyUnitOfMeasureFilter());
             SetRange(Chargeable, true);
             CalcSums(Quantity);
             BillableHours := Quantity;
@@ -123,7 +123,7 @@ codeunit 62049 DxsJobFactboxCalculator
             TotalSales := "Line Amount (LCY)";
             TotalCost := "Total Cost (LCY)";
 
-            SetRange("Unit of Measure Code", HourlyUnitHandler.GetHourlyUnitOfMeasureFilter);
+            SetRange("Unit of Measure Code", HourlyUnitHandler.GetHourlyUnitOfMeasureFilter());
             SetFilter("Total Price (LCY)", '<>%1', 0);
 
             CalcSums(Quantity);
@@ -144,7 +144,7 @@ codeunit 62049 DxsJobFactboxCalculator
         SalesTotal: Decimal;
         TotalHours: Decimal): Decimal;
     begin
-        if(SalesTotal <> 0) and(TotalHours <> 0) then
+        if(SalesTotal <> 0) and (TotalHours <> 0) then
             exit(SalesTotal / TotalHours)
         else
             exit(0);

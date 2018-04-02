@@ -28,7 +28,7 @@ page 62000 DxsTimeEntrySetup
                     trigger OnValidate();
                     begin
                         if "Hourly Units Only" then
-                            NoHourlyUnitsSetupNotification;
+                            NoHourlyUnitsSetupNotification();
                     end;
                 }
                 field("Default Time Rounding"; "Default Time Rounding")
@@ -48,7 +48,7 @@ page 62000 DxsTimeEntrySetup
                     ToolTip = 'Which start and end times should be visible? Only regular times (i.e. 12:00) or Date-Times. If you allow entries to pass midnight or stretch over mulitiple days, then Date-Times are recommended.';
                     trigger OnValidate();
                     begin
-                        UpdatePage;
+                        UpdatePage();
                     end;
                 }
                 group(ShowMix)
@@ -123,9 +123,9 @@ page 62000 DxsTimeEntrySetup
 
     trigger OnOpenPage();
     begin
-        InitSetupRecord;
-        NoHourlyUnitsSetupNotification;
-        UpdatePage;
+        InitSetupRecord();
+        NoHourlyUnitsSetupNotification();
+        UpdatePage();
     end;
 
     procedure UpdatePage();
@@ -136,9 +136,9 @@ page 62000 DxsTimeEntrySetup
 
     procedure InitSetupRecord();
     begin
-        If not get then begin
-            Init;
-            Insert;
+        If not get() then begin
+            Init();
+            Insert();
         end;
     end;
 

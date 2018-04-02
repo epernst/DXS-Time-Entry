@@ -6,8 +6,8 @@ codeunit 62009 DxsTimeAssistedSetup
 
     var
         TimeEntrySetup: Record DxsTimeEntrySetup;
-        SetupNameLbl: Label 'Setup DXS Time Entry extension';
-        SetupDescriptionLbl: Label 'Setup the DXS Time Entry extension to allow entry of start and ending times.';
+        SetupNameLbl: Label 'Setup DXS Time Entry extension', MaxLength=50;
+        SetupDescriptionLbl: Label 'Setup the DXS Time Entry extension to allow entry of start and ending times.', MaxLength=250;
         SetupKeywordsTxt: Label 'Jobs, Resources, Project Management, Time';
         RequiredPermissionMissingErr: Label 'You have not been granted required access rights to start the Assisted Setup.\\The Assisted Setup for G/L Source Names is about assigning the required permissions to users.  To be able to assign permissions you need to be granted either the SUPER og SECURITY permission set.';
 
@@ -15,8 +15,8 @@ codeunit 62009 DxsTimeAssistedSetup
     local procedure OnRegisterAssistedSetup(
         var TempAggregatedAssistedSetup: Record "Aggregated Assisted Setup" temporary);
     begin
-        if not TimeEntrySetup.WritePermission then exit;
-        InitializeSetup;
+        if not TimeEntrySetup.WritePermission() then exit;
+        InitializeSetup();
         AddToAssistedSetup(TempAggregatedAssistedSetup);
     end;
 
@@ -24,7 +24,7 @@ codeunit 62009 DxsTimeAssistedSetup
     local procedure OnUpdateAssistedSetupStatus(
         var TempAggregatedAssistedSetup: Record "Aggregated Assisted Setup" temporary);
     begin
-        TimeEntrySetup.Get;
+        TimeEntrySetup.Get();
         with TempAggregatedAssistedSetup do
             SetStatus(TempAggregatedAssistedSetup, Page::DxsTimeEntrySetupWizard, TimeEntrySetup.Status);
     end;
@@ -35,9 +35,9 @@ codeunit 62009 DxsTimeAssistedSetup
     begin
         with AccessControl do begin
             //SETRANGE("User Security ID",USERSECURITYID);
-            SetRange("User Name", UserId);
+            SetRange("User Name", UserId());
             SetFilter("Role ID", '%1|%2', 'SUPER', 'SECURITY');
-            if IsEmpty THEN
+            if IsEmpty() THEN
                 Error(RequiredPermissionMissingErr);
         end;
     end;
@@ -45,11 +45,11 @@ codeunit 62009 DxsTimeAssistedSetup
     local procedure InitializeSetup();
     begin
         with TimeEntrySetup do
-            if IsEmpty then begin
-                Init;
-                Insert;
+            if IsEmpty() then begin
+                Init();
+                Insert();
             end else
-                Get;
+                Get();
     end;
 
     local procedure AddToAssistedSetup(
@@ -63,15 +63,15 @@ codeunit 62009 DxsTimeAssistedSetup
         with TempAggregatedAssistedSetup do begin
             DxTimeIcon.GetIcon(TempBlob);
             TempBlob.Blob.CreateInStream(InStr);
-            InsertAssistedSetupIcon(ResourceHelper.Get240PXIconCode, InStr);
+            InsertAssistedSetupIcon(ResourceHelper.Get240PXIconCode(), InStr);
 
             AddExtensionAssistedSetup(
                 Page::DxsTimeEntrySetupWizard,
                 SetupNameLbl,
                 true,
-                TimeEntrySetup.RecordId,
+                TimeEntrySetup.RecordId(),
                 TimeEntrySetup.Status,
-                ResourceHelper.Get240PXIconCode);
+                ResourceHelper.Get240PXIconCode());
         end;
     end;
 
@@ -81,19 +81,18 @@ codeunit 62009 DxsTimeAssistedSetup
         TimeEntrySetup: Record DxsTimeEntrySetup;
         TempBlob: Record TempBlob;
         DxTimeIcon: Codeunit DxsTimeIcon240x240;
-        ResourceHelper: Codeunit DxsTimeResourceHelper;
         InStr: InStream;
     begin
-        if not TimeEntrySetup.WritePermission then exit;
+        if not TimeEntrySetup.WritePermission() then exit;
 
         TempBusinessSetup.InsertExtensionBusinessSetup(
             TempBusinessSetup,
-            GetAppName,
+            GetAppName(),
             SetupDescriptionLbl,
             SetupKeywordsTxt,
             TempBusinessSetup.Area::Jobs,
             Page::"DxsTimeEntrySetup",
-            GetAppName);
+            GetAppName());
 
         DxTimeIcon.GetIcon(TempBlob);
         TempBlob.Blob.CreateInStream(InStr);
@@ -114,7 +113,7 @@ codeunit 62009 DxsTimeAssistedSetup
         AppInfo: ModuleInfo;
     begin
         NavApp.GetCurrentModuleInfo(AppInfo);
-        exit(AppInfo.Name);
+        exit(AppInfo.Name());
     end;
 
 }

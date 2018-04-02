@@ -10,7 +10,7 @@ tableextension 62006 DxsResJournalLine extends "Res. Journal Line"
                 HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
             begin
                 if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code", FieldCaption("DXS Start Date Time"), true) then begin
-                    InitStartEndTimes;
+                    InitStartEndTimes();
                     exit;
                 end;
                 if "DXS Start Time" = xRec."DXS Start Time" then exit;
@@ -25,11 +25,11 @@ tableextension 62006 DxsResJournalLine extends "Res. Journal Line"
                 HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
             begin
                 if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code", FieldCaption("DXS End Time"), true) then begin
-                    InitStartEndTimes;
+                    InitStartEndTimes();
                     exit;
                 end;
                 if "Posting Date" = 0D then
-                    "Posting Date" := WorkDate;
+                    "Posting Date" := WorkDate();
                 if "DXS End Time" < "DXS Start Time" then
                     Validate("DXS End Date Time", CreateDateTime("Posting Date" + 1, "DXS End Time"))
                 else
@@ -44,13 +44,13 @@ tableextension 62006 DxsResJournalLine extends "Res. Journal Line"
                 HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
             begin
                 if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code", FieldCaption("DXS Start Date Time"), true) then begin
-                    InitStartEndTimes;
+                    InitStartEndTimes();
                     exit;
                 end;
                 if "DXS Start Date Time" = xRec."DXS Start Date Time" then exit;
                 "DXS Start Time" := DT2Time("DXS Start Date Time");
 
-                if("DXS Start Date Time" > "DXS End Date Time") AND("DXS End Date Time" <> 0DT) then begin
+                if("DXS Start Date Time" > "DXS End Date Time") AND ("DXS End Date Time" <> 0DT) then begin
                     "DXS End Date Time" := "DXS Start Date Time";
                     Validate("DXS End Date Time");
                 end;
@@ -65,10 +65,10 @@ tableextension 62006 DxsResJournalLine extends "Res. Journal Line"
                 TimeChecker: Codeunit DxsTimeChecker;
             begin
                 if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code", FieldCaption("DXS End Date Time"), true) then begin
-                    InitStartEndTimes;
+                    InitStartEndTimes();
                     exit;
                 end;
-                if("DXS Start Date Time" = 0DT) or("DXS End Date Time" = 0DT) then begin
+                if("DXS Start Date Time" = 0DT) or ("DXS End Date Time" = 0DT) then begin
                     "DXS Total Duration" := 0;
                     exit;
                 end;
@@ -87,7 +87,7 @@ tableextension 62006 DxsResJournalLine extends "Res. Journal Line"
                 HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
             begin
                 if not HourlyUnitHandler.ValidateHourlyUnitOfMeasure("Unit of Measure Code", FieldCaption("DXS Total Duration"), true) then begin
-                    InitStartEndTimes;
+                    InitStartEndTimes();
                     exit;
                 end;
                 if "DXS Total Duration" = 0 then exit;

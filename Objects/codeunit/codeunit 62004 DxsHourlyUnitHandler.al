@@ -16,17 +16,17 @@ codeunit 62004 DxsHourlyUnitHandler
         TimeEntrySetup: Record DxsTimeEntrySetup;
     begin
         with TimeEntrySetup do begin
-            if not GetSetupIfEnabled then exit(false);
+            if not GetSetupIfEnabled() then exit(false);
             if not "Hourly Units Only" then exit(true);
         end;
         with UnitOfMeasure do begin
             if get(UnitOfMeasureCode) and "DXS Hourly Unit" then
                 exit(true);
-            if ShowMessage and GuiAllowed then
+            if ShowMessage and GuiAllowed() then
                 Message(
                     CanOnlyUseWithTypeErr,
                     TestFieldCaption,
-                    TableCaption,
+                    TableCaption(),
                     FieldCaption("DXS Hourly Unit"));
             exit(false);
         end;
@@ -38,7 +38,7 @@ codeunit 62004 DxsHourlyUnitHandler
         TimeEntrySetup: Record DxsTimeEntrySetup;
     begin
         with TimeEntrySetup do begin
-            if not GetSetupIfEnabled then exit(false);
+            if not GetSetupIfEnabled() then exit(false);
             if not "Hourly Units Only" then exit(true);
         end;
         with UnitOfMeasure do begin
@@ -53,7 +53,7 @@ codeunit 62004 DxsHourlyUnitHandler
     begin
         with UnitOfMeasure do begin
             SetRange("DXS Hourly Unit", true);
-            exit(not IsEmpty);
+            exit(not IsEmpty());
         end;
     end;
 
@@ -64,15 +64,15 @@ codeunit 62004 DxsHourlyUnitHandler
     begin
         with UnitOfMeasure do begin
             SetRange("DXS Hourly Unit", true);
-            if IsEmpty then exit('');
+            if IsEmpty() then exit('');
 
             FilterText := '';
-            FindSet;
+            FindSet();
             repeat
                 if FilterText <> '' then
                 FilterText += '|';
                 FilterText += Code;
-            until Next = 0;
+            until Next() = 0;
         end;
         exit(FilterText);
     end;

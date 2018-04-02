@@ -11,7 +11,7 @@ tableextension 62005 DxsUnitOfMeasure extends "Unit of Measure"
             begin
                 if "DXS Hourly Unit" = xRec."DXS Hourly Unit" then exit;
                 if "DXS Hourly Unit" then begin
-                    if not TimeEntrySetup.get then TimeEntrySetup.init;
+                    if not TimeEntrySetup.get() then TimeEntrySetup.init();
                     "DXS Time Rounding" := TimeEntrySetup."Default Time Rounding";
                 end else
                     "DXS Time Rounding" := 0;
@@ -31,13 +31,12 @@ tableextension 62005 DxsUnitOfMeasure extends "Unit of Measure"
                             FieldCaption("DXS Time Rounding"),
                             FieldCaption("DXS Hourly Unit"),
                             Code);
-                end else begin
+                end else 
                     if not "DXS Hourly Unit" then
                         error(
                             NotHourlyUnitErr,
                             FieldCaption("DXS Time Rounding"),
                             FieldCaption("DXS Hourly Unit"));
-                end;
             end;
         }
     }
@@ -50,13 +49,11 @@ tableextension 62005 DxsUnitOfMeasure extends "Unit of Measure"
     var
         TimeEntrySetup: Record DxsTimeEntrySetup;
         UnitOfMeasure: Record "Unit of Measure";
-        HourlyUnitHandler: Codeunit DxsHourlyUnitHandler;
-        myInt: Record DxsTimeEntrySetup;
     begin
-        if UnitOfMeasure.get(UnitofMeasureCode) and(UnitOfMeasure."DXS Time Rounding" <> 0) then
+        if UnitOfMeasure.get(UnitofMeasureCode) and (UnitOfMeasure."DXS Time Rounding" <> 0) then
             exit(Unitofmeasure."DXS Time Rounding");
 
-        if TimeEntrySetup.get and(TimeEntrySetup."Default Time Rounding" <> 0) then
+        if TimeEntrySetup.get() and (TimeEntrySetup."Default Time Rounding" <> 0) then
             exit(TimeEntrySetup."Default Time Rounding");
 
         exit(0.25);

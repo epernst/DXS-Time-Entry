@@ -6,7 +6,7 @@ pageextension 62006 DxsResourceJournal extends "Resource Journal"
         {
             trigger OnAfterValidate();
             begin
-                UpdatePage;
+                UpdatePage();
             end;
         }
 
@@ -14,7 +14,7 @@ pageextension 62006 DxsResourceJournal extends "Resource Journal"
         {
             trigger OnAfterValidate();
             begin
-                UpdatePage;
+                UpdatePage();
             end;
         }
 
@@ -65,24 +65,24 @@ pageextension 62006 DxsResourceJournal extends "Resource Journal"
     }
     trigger OnOpenPage();
     begin
-        SetEnabledOnOpen;
-        UpdatePage;
+        SetEnabledOnOpen();
+        UpdatePage();
     end;
 
     trigger OnInsertRecord(BelowxRec: Boolean): Boolean;
     begin
-        UpdatePage;
+        UpdatePage();
     end;
 
     trigger OnNewRecord(BelowxRec: Boolean);
     begin
-        InitStartEndTimes;
-        UpdatePage;
+        InitStartEndTimes();
+        UpdatePage();
     end;
 
     trigger OnAfterGetCurrRecord();
     begin
-        UpdatePage;
+        UpdatePage();
     end;
 
     var
@@ -105,8 +105,8 @@ pageextension 62006 DxsResourceJournal extends "Resource Journal"
     var
         TimePermissionHandler: Codeunit DxsTimePermissionHandler;
     begin
-        IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled;
-        if not TimeEntrySetup.Get then TimeEntrySetup.Init;
+        IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled();
+        if not TimeEntrySetup.Get() then TimeEntrySetup.Init();
         IsEndDateTimeVisible := IsTimeEntryEnabled and TimeEntrySetup."Show End Date-Times";
         IsEndTimeVisible := IsTimeEntryEnabled and TimeEntrySetup."Show End Times";
         IsStartDateTimeVisible := IsTimeEntryEnabled and TimeEntrySetup."Show Start Date-Times";

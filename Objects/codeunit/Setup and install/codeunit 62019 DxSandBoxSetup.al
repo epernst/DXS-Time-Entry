@@ -2,7 +2,7 @@ codeunit 62019 DxSandBoxSetup
 { 
     trigger OnRun();
     begin
-        SetupSandbox;
+        SetupSandbox();
     end;
     
     local procedure SetupSandbox();
@@ -10,12 +10,12 @@ codeunit 62019 DxSandBoxSetup
         Setup : Record DxsTimeEntrySetup;
     begin
         with Setup do begin
-            if not IsEmpty then exit;    
-            Get;
+            if not IsEmpty() then exit;    
+            Get();
             "Hourly Units Only" := true;
             Validate("Fields To Show","Fields To Show"::Times);
            "App Enabled" := true;
-           Insert;  
+           Insert();  
 
         end;
     end;

@@ -29,6 +29,7 @@ page 62001 DxsTimeEntrySetupWizard
                 field(MediaResourcesDone; MediaResourcesDone."Media Reference")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                     ShowCaption = false;
                 }
             }
@@ -212,7 +213,7 @@ page 62001 DxsTimeEntrySetupWizard
                 InFooterBar = true;
                 trigger OnAction();
                 begin
-                    FinishAction;
+                    FinishAction();
                 end;
             }
         }
@@ -244,7 +245,7 @@ page 62001 DxsTimeEntrySetupWizard
 
     trigger OnInit();
     begin
-        LoadTopBanners;
+        LoadTopBanners();
     end;
 
     trigger OnOpenPage();
@@ -252,20 +253,20 @@ page 62001 DxsTimeEntrySetupWizard
         TimeEntrySetup: Record DxsTimeEntrySetup;
         AssistedSetup: Codeunit DxsTimeAssistedSetup;
     begin
-        AssistedSetup.VerifyUserAccess;
-        Init;
-        if TimeEntrySetup.Get then
+        AssistedSetup.VerifyUserAccess();
+        Init();
+        if TimeEntrySetup.Get() then
             TransferFields(TimeEntrySetup);
-        Insert;
+        Insert();
 
         Step := Step::Start;
-        EnableControls;
-        ResetTempUnitOfMeasure;
+        EnableControls();
+        ResetTempUnitOfMeasure();
     end;
 
     local procedure EnableControls();
     begin
-        ResetControls;
+        ResetControls();
 
         case Step of
             Step::Start :
@@ -285,10 +286,10 @@ page 62001 DxsTimeEntrySetupWizard
     begin
         Status := Status::Completed;
 
-        StoreTimeEntrySetup;
+        StoreTimeEntrySetup();
         if "Hourly Units Only" then
-            StoreUnitOfMeasure;
-        CurrPage.Close;
+            StoreUnitOfMeasure();
+        CurrPage.Close();
     end;
 
     local procedure NextStep(Backwards: Boolean);
@@ -299,7 +300,7 @@ page 62001 DxsTimeEntrySetupWizard
         else
             Step := Step + 1;
 
-        EnableControls;
+        EnableControls();
     end;
 
     local procedure ShowStartStep();
@@ -332,12 +333,12 @@ page 62001 DxsTimeEntrySetupWizard
     begin
         if LastStep = LastStep::UnitOfMeasureStep then
             CurrPage.UnitOfMeasurePart.Page.GetRecords(TempUnitOfMeasure);
-        if "Hourly Units Only" and(not HasHourlyUnitsOfMeasureTemp) then begin
+        if "Hourly Units Only" and (not HasHourlyUnitsOfMeasureTemp()) then begin
             OldStep := Step;
             Step := LastStep;
             LastStep := OldStep;
             Message(NoHourlyUnitsSelectedErr);
-            EnableControls;
+            EnableControls();
             Exit;
         end;
 
@@ -348,8 +349,6 @@ page 62001 DxsTimeEntrySetupWizard
     end;
 
     local procedure ShowRegistrationStep();
-    var
-        OldStep: Integer;
     begin
         RegistrationStepVisible := true;
         FinishActionEnabled := false;
@@ -388,28 +387,28 @@ page 62001 DxsTimeEntrySetupWizard
 
     local procedure LoadTopBanners();
     begin
-        if MediaRepositoryStandard.Get('AssistedSetup-NoText-400px.png', Format(CurrentClientType)) and
-            MediaRepositoryDone.Get('AssistedSetupDone-NoText-400px.png', Format(CurrentClientType))
+        if MediaRepositoryStandard.Get('AssistedSetup-NoText-400px.png', Format(CurrentClientType())) and
+            MediaRepositoryDone.Get('AssistedSetupDone-NoText-400px.png', Format(CurrentClientType()))
         then
             if MediaResourcesStandard.Get(MediaRepositoryStandard."Media Resources Ref") and
                 MediaResourcesDone.Get(MediaRepositoryDone."Media Resources Ref")
             then
-                TopBannerVisible := MediaResourcesDone."Media Reference".HASVALUE;
+                TopBannerVisible := MediaResourcesDone."Media Reference".HASVALUE();
     end;
 
     local procedure ResetTempUnitOfMeasure();
     var
         UnitOfMeasure: Record "Unit of Measure";
     begin
-        TempUnitOfMeasure.DeleteAll;
+        TempUnitOfMeasure.DeleteAll();
         with UnitOfMeasure do
         begin
-            if IsEmpty then exit;
-            FindSet;
+            if IsEmpty() then exit;
+            FindSet();
             repeat
                 TempUnitOfMeasure.TransferFields(UnitOfMeasure);
-                TempUnitOfMeasure.Insert;
-            until next = 0;
+                TempUnitOfMeasure.Insert();
+            until Next() = 0;
         end;
     end;
 
@@ -420,13 +419,13 @@ page 62001 DxsTimeEntrySetupWizard
         HasHourlyUnitsOfMeasure := false;
         with TempUnitOfMeasure do
         begin
-            if IsEmpty then exit;
-            FindSet;
+            if IsEmpty() then exit;
+            FindSet();
             repeat
                 UnitOfMeasure.TransferFields(TempUnitOfMeasure);
-                if UnitOfMeasure.Modify then;
+                if UnitOfMeasure.Modify() then;
                 if "DXS Hourly Unit" then HasHourlyUnitsOfMeasure := true;
-            until next = 0;
+            until Next() = 0;
         end;
     end;
 
@@ -437,7 +436,7 @@ page 62001 DxsTimeEntrySetupWizard
         with TempUnitOfMeasure do
         begin
             SetRange("DXS Hourly Unit", true);
-            NotEmpty := Not IsEmpty;
+            NotEmpty := Not IsEmpty();
             SetRange("DXS Hourly Unit");
             exit(NotEmpty);
         end;
@@ -447,15 +446,15 @@ page 62001 DxsTimeEntrySetupWizard
     var
         TimeEntrySetup: Record DxsTimeEntrySetup;
     begin
-        if not TimeEntrySetup.Get then begin
-            TimeEntrySetup.Init;
-            TimeEntrySetup.Insert;
+        if not TimeEntrySetup.Get() then begin
+            TimeEntrySetup.Init();
+            TimeEntrySetup.Insert();
         end;
 
         TimeEntrySetup.TransferFields(Rec, false);
         TimeEntrySetup."App Enabled" := true;
         TimeEntrySetup.Modify(true);
-        Commit;
+        Commit();
     end;
 
 }

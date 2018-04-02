@@ -43,12 +43,12 @@ page 62002 DxsUnitOfMeasurePart
 
     trigger OnOpenPage();
     begin
-        UpdatePage
+        UpdatePage()
     end;
 
     trigger OnAfterGetCurrRecord();
     begin 
-        UpdatePage
+        UpdatePage()
     end;
 
     procedure SetRecords(var TempUnitOfMeasure : Record "Unit of Measure" temporary);

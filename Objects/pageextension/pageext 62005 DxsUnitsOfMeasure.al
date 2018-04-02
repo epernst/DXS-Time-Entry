@@ -47,12 +47,12 @@ pageextension 62005 DxsUnitsOfMeasure extends "Units of Measure"
 
     trigger OnNewRecord(BelowxRec: Boolean);
     begin
-        UpdatePage;
+        UpdatePage();
     end;
 
     trigger OnAfterGetCurrRecord();
     begin
-        UpdatePage;
+        UpdatePage();
     end;
 
     var
@@ -63,7 +63,7 @@ pageextension 62005 DxsUnitsOfMeasure extends "Units of Measure"
     var
         TimeEntrySetup: Record DxsTimeEntrySetup;
     begin
-        TimeEntryEnabled := TimeEntrySetup.GetSetupIfEnabled;
+        TimeEntryEnabled := TimeEntrySetup.GetSetupIfEnabled();
         IsHourlyUnit := "DXS Hourly Unit";
     end;
 }

@@ -49,7 +49,7 @@ pageextension 62007 DxsResourceLedgerEntries extends "Resource Ledger Entries"
 
     trigger OnOpenPage();
     begin
-        SetEnabledOnOpen;
+        SetEnabledOnOpen();
         IsTimeEditable := false;
     end;
 
@@ -66,8 +66,8 @@ pageextension 62007 DxsResourceLedgerEntries extends "Resource Ledger Entries"
     var
         TimePermissionHandler: Codeunit DxsTimePermissionHandler;
     begin
-        IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled;
-        if not TimeEntrySetup.Get then TimeEntrySetup.Init;
+        IsTimeEntryEnabled := TimePermissionHandler.IsSetupEnabled();
+        if not TimeEntrySetup.Get() then TimeEntrySetup.Init();
         IsEndDateTimeVisible := IsTimeEntryEnabled and TimeEntrySetup."Show End Date-Times";
         IsEndTimeVisible := IsTimeEntryEnabled and TimeEntrySetup."Show End Times";
         IsStartDateTimeVisible := IsTimeEntryEnabled and TimeEntrySetup."Show Start Date-Times";

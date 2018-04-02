@@ -22,10 +22,10 @@ codeunit 62012 DxsTimeNotificationHandler
     var
         TimePermissionHandler : Codeunit DxsTimePermissionHandler;
     begin
-        if TimePermissionHandler.IsSetupEnabled then exit;
-        if not TimePermissionHandler.CanChangeTimeSetup then exit;
+        if TimePermissionHandler.IsSetupEnabled() then exit;
+        if not TimePermissionHandler.CanChangeTimeSetup() then exit;
 
-        CreateSetupNotification;
+        CreateSetupNotification();
     end;
 
     local procedure CreateSetupNotification();
@@ -33,15 +33,15 @@ codeunit 62012 DxsTimeNotificationHandler
         MyNotifications : Record "My Notifications";
         TimeNotification : Notification;
     begin
-        if not MyNotifications.IsEnabled(GetNoSetupNotificationId) then exit;
+        if not MyNotifications.IsEnabled(GetNoSetupNotificationId()) then exit;
 
         with TimeNotification do begin
-            Id := GetNoSetupNotificationId;
+            Id := GetNoSetupNotificationId();
             Message := NoSetupNotificationMsg;
-            Scope := Scope::LocalScope;
+            Scope := Scope(NotificationScope::LocalScope);
             AddAction(NoSetupNotificationAct,Codeunit::DxsTimeNotificationHandler,'RunAssistedSetup');
             AddAction(DismissFurtherNotificationsAct,Codeunit::DxsTimeNotificationHandler,'DismissNotification');
-            Send;
+            Send();
         end;
     end;
 
@@ -50,9 +50,9 @@ codeunit 62012 DxsTimeNotificationHandler
         TimePermissionHandler : Codeunit DxsTimePermissionHandler;
         TimeEntrySetup : Record DxsTimeEntrySetup;
     begin
-        if not TimePermissionHandler.IsSetupEnabled then exit;
-        if not TimeEntrySetup.ValidateRegistration then
-            CreateInvalidRegistrationNotification;
+        if not TimePermissionHandler.IsSetupEnabled() then exit;
+        if not TimeEntrySetup.ValidateRegistration() then
+            CreateInvalidRegistrationNotification();
     end;
 
     local procedure CreateInvalidRegistrationNotification();
@@ -60,15 +60,15 @@ codeunit 62012 DxsTimeNotificationHandler
         MyNotifications : Record "My Notifications";
         TimeNotification : Notification;
     begin
-        if not MyNotifications.IsEnabled(GetNoSetupNotificationId) then exit;
+        if not MyNotifications.IsEnabled(GetNoSetupNotificationId()) then exit;
 
         with TimeNotification do begin
-            Id := GetNoSetupNotificationId;
+            Id := GetNoSetupNotificationId();
             Message := NoSetupNotificationMsg;
-            Scope := Scope::LocalScope;
+            Scope := NotificationScope::LocalScope;
             AddAction(NoSetupNotificationAct,Codeunit::DxsTimeNotificationHandler,'RunAssistedSetup');
             AddAction(DismissFurtherNotificationsAct,Codeunit::DxsTimeNotificationHandler,'DismissNotification');
-            Send;
+            Send();
         end;
     end;
 
@@ -78,28 +78,27 @@ codeunit 62012 DxsTimeNotificationHandler
         TimeEntrySetup : Record DxsTimeEntrySetup;
         HourlyUnitHandler : Codeunit DxsHourlyUnitHandler;
     begin
-        if not TimePermissionHandler.IsSetupEnabled then exit;
+        if not TimePermissionHandler.IsSetupEnabled() then exit;
         if not TimeEntrySetup."Hourly Units Only" then exit;
-        if HourlyUnitHandler.HourlyUnitExits then exit;
-        CreateHourlySetupNotification;
+        if HourlyUnitHandler.HourlyUnitExits() then exit;
+        CreateHourlySetupNotification();
     end;
 
     local procedure CreateHourlySetupNotification();
     var
-        HourlyUnitHandler : Codeunit DxsHourlyUnitHandler;
         MyNotifications : Record "My Notifications";
         UnitOfMeasure : Record "Unit of Measure";
         TimeNotification : Notification;
     begin
-        if not UnitOfMeasure.WritePermission then exit;
-        if not MyNotifications.IsEnabled(GetNoHourUnitOfMeasureNotificationId) then exit;
+        if not UnitOfMeasure.WritePermission() then exit;
+        if not MyNotifications.IsEnabled(GetNoHourUnitOfMeasureNotificationId()) then exit;
         with TimeNotification do begin
-            Id := GetNoHourUnitOfMeasureNotificationId;
+            Id := GetNoHourUnitOfMeasureNotificationId();
             Message := NoHourUnitOfMeasureNotificationMsg;
-            Scope := Scope::LocalScope;
+            Scope := NotificationScope::LocalScope;
             AddAction(NoHourUnitOfMeasureSetupAct,Codeunit::DxsTimeNotificationHandler,'RunSetupHourUnitOfMeasure');
             AddAction(DismissFurtherNotificationsAct,Codeunit::DxsTimeNotificationHandler,'DismissNotification');
-            Send;
+            Send();
         end;
     end;
     
@@ -107,22 +106,22 @@ codeunit 62012 DxsTimeNotificationHandler
     var
         TimeEntrySetupWizard : Page DxsTimeEntrySetupWizard;
     begin
-        TimeEntrySetupWizard.RunModal;
+        TimeEntrySetupWizard.RunModal();
     end;
 
     procedure RunSetupHourUnitOfMeasure(TimeNotification : Notification);
     var
         UnitOfMeasurePage : Page "Units of Measure";
     begin
-        UnitOfMeasurePage.RunModal;
+        UnitOfMeasurePage.RunModal();
     end;
 
     procedure DismissNotification(TimeNotification : Notification);
     var
         MyNotifications : Record "My Notifications";
     begin
-        if not MyNotifications.Disable(TimeNotification.Id) then
-        case TimeNotification.Id of
+        if not MyNotifications.Disable(TimeNotification.Id()) then
+        case TimeNotification.Id() of
             GetNoHourUnitOfMeasureNotificationId:
                 NoHourUnitOfMeasureNotificationDefaultState(false);
             GetNoSetupNotificationId :
@@ -134,23 +133,23 @@ codeunit 62012 DxsTimeNotificationHandler
     var
         MyNotifications : Record "My Notifications";
     begin
-        if not MyNotifications.Disable(TimeNotification.Id) then exit;
+        if not MyNotifications.Disable(TimeNotification.Id()) then exit;
 
-        TimeNotification.Recall;
+        TimeNotification.Recall();
     end;
 
     procedure NoSetupNotificationDefaultState(TurnOn : Boolean);
     var
         MyNotifications : Record "My Notifications";
     begin
-        MyNotifications.InsertDefault(GetNoSetupNotificationId,NoSetupNotificationName,NoSetupNotificationDesc,TurnOn);
+        MyNotifications.InsertDefault(GetNoSetupNotificationId(),NoSetupNotificationName,NoSetupNotificationDesc,TurnOn);
     end;
     
     procedure NoHourUnitOfMeasureNotificationDefaultState(TurnOn : Boolean);
     var
         MyNotifications : Record "My Notifications";
     begin
-        MyNotifications.InsertDefault(GetNoHourUnitOfMeasureNotificationId,NoHourUnitOfMeasureSetupName,NoHourUnitOfMeasureSetupDesc,TurnOn);
+        MyNotifications.InsertDefault(GetNoHourUnitOfMeasureNotificationId(),NoHourUnitOfMeasureSetupName,NoHourUnitOfMeasureSetupDesc,TurnOn);
     end;
 
     local procedure GetNoHourUnitOfMeasureNotificationId() : Guid;

@@ -10,7 +10,9 @@
 			"name": "Launch",
 			"tenant": "",
 			"authentication": "UserPassword",
-			"startupObjectId": 209
+			"startupObjectId": 209,
+			"startupObjectType":"Page", 
+			"schemaUpdateMode": "Recreate"
 		}
 	]
 }
