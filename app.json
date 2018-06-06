@@ -6,9 +6,9 @@
   "description": "This app allow the user to enter start and end times (as opposed to just quantities) into and job planning lines, job and resource journals.",
   "version": "1.0.0.0",
   "privacyStatement": "https://dynamicsuser.net/p/privacy",
-  "EULA": "https://dynamicsuser.net/isv/dxs/p/license-agreement",
-  "help": "https://dynamicsuser.net/isv/dxs/f/dxs-time-entry",
-  "url": "https://dynamicsuser.net/isv/dxs",
+  "EULA": "https://dynamicsuser.net/partners/dxs/p/license-agreement",
+  "help": "https://dynamicsuser.net/partners/dxs/f/dxs-time-entry",
+  "url": "https://dynamicsuser.net/partners/dxs",
   "logo": "./Resources/Dxs417x417.png",
   "capabilities": [],
   "dependencies": [],
@@ -20,8 +20,6 @@
     "to": 62199
   },
   "showMyCode": true,
-  "features":[
-    "TranslationFile"
-  ] ,
+  "features": "TranslationFile",
   "target": "Solution"
 }

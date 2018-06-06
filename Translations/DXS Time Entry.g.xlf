@@ -83,47 +83,47 @@
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3955256770 - Method 245899503 - NamedType 133915093" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 3955256770 - Method 245899503 - NamedType 133915093" maxWidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>SETUPHELP</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3955256770 - Method 2556269663 - NamedType 4131345173" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 3955256770 - Method 2556269663 - NamedType 4131345173" maxWidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>SETUPVIDEO</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3955256770 - Method 2471557953 - NamedType 2635079363" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 3955256770 - Method 2471557953 - NamedType 2635079363" maxWidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>USAGEHELP</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3955256770 - Method 4138924577 - NamedType 2068054355" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 3955256770 - Method 4138924577 - NamedType 2068054355" maxWidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>USAGEVIDEO</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3955256770 - Method 2424527569 - NamedType 2197034666" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 3955256770 - Method 2424527569 - NamedType 2197034666" maxWidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXTIME_70PXICON</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3955256770 - Method 2331078000 - NamedType 2197034666" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 3955256770 - Method 2331078000 - NamedType 2197034666" maxWidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXTIME_150PXICON</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3955256770 - Method 2571162554 - NamedType 2197034666" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 3955256770 - Method 2571162554 - NamedType 2197034666" maxWidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXTIME_240PXICON</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3955256770 - Method 1033616249 - NamedType 2197034666" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 3955256770 - Method 1033616249 - NamedType 2197034666" maxWidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXTIME_250PXICON</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3955256770 - Method 1920203142 - NamedType 2197034666" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 3955256770 - Method 1920203142 - NamedType 2197034666" maxWidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXTIME_417PXICON</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
@@ -178,12 +178,22 @@
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3659473797 - NamedType 2223675934" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 2660462426 - Method 1636317954 - NamedType 3076612850" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Updating Job Ledger Entries\Record #1###### of #2######.</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2660462426 - Method 431310760 - NamedType 3076612850" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Updating Job Planning Lines\Record #1###### of #2######.</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3659473797 - NamedType 2223675934" maxWidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>Setup DXS Time Entry extension</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3659473797 - NamedType 858110245" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 3659473797 - NamedType 858110245" maxWidth="250" size-unit="char" translate="yes" xml:space="preserve">
           <source>Setup the DXS Time Entry extension to allow entry of start and ending times.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
@@ -277,6 +287,11 @@
           <source>Shows when the registration needs to be renewed.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
+        </trans-unit>
+        <trans-unit id="Page 325460675 - Action 1810662367 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Upgrade from NAV 2017</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Action</note>
         </trans-unit>
         <trans-unit id="Page 325460675 - Action 4170249732 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXS Time Help Resources</source>

@@ -5,14 +5,13 @@
 		{
 			"type": "al",
 			"request": "launch",
-			"server": "https://dxsn11.northeurope.cloudapp.azure.com",
+			"server": "http://DX-Dev",
 			"serverInstance": "NAV",
 			"name": "Launch",
 			"tenant": "",
 			"authentication": "UserPassword",
-			"startupObjectId": 209,
-			"startupObjectType":"Page", 
-			"schemaUpdateMode": "Recreate"
+			"startupObjectId": 62000,
+			"schemaUpdateMode": "Synchronize"
 		}
 	]
 }
