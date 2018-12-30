@@ -1,0 +1,26 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+
+		{
+			"type": "al",
+			"request": "launch",
+			"server": "http://DX-Time",
+			"serverInstance": "NAV",
+			"name": "Launch AL",
+			"tenant": "",
+			"authentication": "Windows",
+			"schemaUpdateMode": "Synchronize",
+			"startupObjectId": 62000,
+			"startupObjectType": "Page"
+		},
+       {
+            "type": "PowerShell",
+            "request": "launch",
+            "name": "PowerShell Launch Current File",
+            "script": "${file}",
+            "args": [],
+            "cwd": "${file}"
+        }
+    ]
+}

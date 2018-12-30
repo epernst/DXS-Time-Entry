@@ -1,0 +1,30 @@
+{
+	"folders": [
+		{
+			"path": "MainApp"
+		},
+		{
+			"path": "TestApp"
+		},
+		{
+			"path": "Dependencies"
+		},
+		{
+			"path": "Resources"
+		},
+		{
+			"path": "Scripts"
+		},
+		{
+			"path": ".alpackages"
+		}
+	],
+	"settings": {
+		"al.packageCachePath": "..\\.alpackages",
+		"navertical.IgnoreVerification": true,
+		"CRS.ObjectNamePrefix": "DXS.", 
+		"CRS.RemovePrefixFromFilename": true,
+		"CRS.OnSaveAlFileAction": "Rename",
+		"CRS.AlSubFolderName": "Source"
+	}
+}

@@ -1,0 +1,34 @@
+{
+  "id": "64e83ccf-1e93-47c3-8f2a-36618025f790",
+  "name": "DXS Time Entry.Tester",
+  "publisher": "Dynamics Experts Solutions ApS",
+  "brief": "Test app for DXS-Time Entry.",
+  "description": "Test extension for DXS-Time Entry.",
+  "version": "1.0.0.0",
+  "privacyStatement": "https://dynamicsuser.net/p/privacy",
+  "EULA": "https://dynamicsuser.net/partners/dxs/p/license-agreement",
+  "help": "https://dynamicsuser.net/partners/dxs/f",
+  "url": "https://dynamicsuser.net/partners/dxs",
+  "logo": "Resources/Dxs417x417.png",
+  "capabilities": [],
+  "dependencies": [
+    {
+      "appId": "d391a9da-a640-4a04-83dd-e2ed3ff77ee9",
+      "name": "DXS Time Entry",
+      "publisher": "Dynamics Experts Solutions ApS",
+      "version": "1.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "13.0.0.0",
+  "application": "13.0.0.0",
+  "features": [
+    "TranslationFile"
+  ],
+  "runtime": "2.2",
+  "showMyCode": true,
+  "idRange": {
+    "from": 50000,
+    "to": 99999
+  }
+}
