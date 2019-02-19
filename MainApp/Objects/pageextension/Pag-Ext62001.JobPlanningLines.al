@@ -20,7 +20,7 @@ pageextension 62001 "DXS.Job Planning Lines" extends "Job Planning Lines"
 
         addafter(Reserve)
         {
-            field("Start Time"; "DXS.Start Time")
+            field("Start Time"; "DXS Start Time")
             {
                 ApplicationArea = All;
                 ToolTip = 'For time based entries enter the start time here.';
@@ -28,7 +28,7 @@ pageextension 62001 "DXS.Job Planning Lines" extends "Job Planning Lines"
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsStartTimeVisible;
             }
-            field("End Time"; "DXS.End Time")
+            field("End Time"; "DXS End Time")
             {
                 ApplicationArea = All;
                 ToolTip = 'For time based entries enter the end time here.';
@@ -36,7 +36,7 @@ pageextension 62001 "DXS.Job Planning Lines" extends "Job Planning Lines"
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsEndTimeVisible;
             }
-            field("Start Date Time"; "DXS.Start Date Time")
+            field("Start Date Time"; "DXS Start Date Time")
             {
                 ApplicationArea = All;
                 ToolTip = 'For time based entries enter the start date-time here.';

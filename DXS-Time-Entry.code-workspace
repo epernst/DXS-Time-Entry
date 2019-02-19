@@ -21,8 +21,10 @@
 	],
 	"settings": {
 		"al.packageCachePath": "..\\.alpackages",
+		"al.enableCodeAnalysis": true,
+		"al.codeAnalyzers": ["${AppSourceCop}","${CodeCop}"],
 		"navertical.IgnoreVerification": true,
-		"CRS.ObjectNamePrefix": "DXS.", 
+		"CRS.ObjectNamePrefix": "DXS", 
 		"CRS.RemovePrefixFromFilename": true,
 		"CRS.OnSaveAlFileAction": "Rename",
 		"CRS.AlSubFolderName": "Source"

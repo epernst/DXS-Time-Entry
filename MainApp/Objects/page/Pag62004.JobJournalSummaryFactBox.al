@@ -243,6 +243,7 @@ page 62004 "DXS.JobJournal Summary FactBox"
     end;
 
     var
+        Job: Record Job;
         DrillDownFactbox: Codeunit "DXS.Drill Down Job FactBox";
         BillableHours: array[5] of Decimal;
         NonBillableHours: array[5] of Decimal;
@@ -251,7 +252,6 @@ page 62004 "DXS.JobJournal Summary FactBox"
         TotalProfit: array[5] of Decimal;
         AvgPricePerUOM: array[5] of Decimal;
         DrillDownField: Option BillableHours,NonBillableHours,TotalSales,TotalCost,TotalProfit;
-        Job: Record Job;
 
     procedure UpdateData(JobJournalLine: Record "Job Journal Line");
     var

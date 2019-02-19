@@ -29,8 +29,8 @@ codeunit 62040 "DXS.Time Resource Helper"
 
     procedure StartVideo(SetupCode: Code[50]);
     var
-        VideoLink: Page "Video link";
         ClientTypeMgt: Codeunit ClientTypeManagement;
+        VideoLink: Page "Video link";
     begin
         if ClientTypeMgt.IsCommonWebClientType() then begin
             VideoLink.SetURL(GetHelpUrl(SetupCode));
@@ -41,146 +41,146 @@ codeunit 62040 "DXS.Time Resource Helper"
 
     procedure GetSetupHelpCode(): Code[50];
     var
-        SetupHelpCode: Label 'SETUPHELP', MaxLength = 50;
+        SetupHelpCodeLbl: Label 'SETUPHELP', MaxLength = 50;
     begin
-        exit(SetupHelpCode);
+        exit(SetupHelpCodeLbl);
     end;
 
     procedure GetSetupVideoCode(): Code[50];
     var
-        SetupVideoCode: Label 'SETUPVIDEO', MaxLength = 50;
+        SetupVideoCodeLbl: Label 'SETUPVIDEO', MaxLength = 50;
     begin
-        exit(SetupVideoCode);
+        exit(SetupVideoCodeLbl);
     end;
 
     procedure GetUsageHelpCode(): Code[50];
     var
-        UsageHelpCode: Label 'USAGEHELP', MaxLength = 50;
+        UsageHelpCodeLbl: Label 'USAGEHELP', MaxLength = 50;
     begin
-        exit(UsageHelpCode);
+        exit(UsageHelpCodeLbl);
     end;
 
     procedure GetUsageVideoCode(): Code[50];
     var
-        UsageVideoCode: Label 'USAGEVIDEO', MaxLength = 50;
+        UsageVideoCodeLbl: Label 'USAGEVIDEO', MaxLength = 50;
     begin
-        exit(UsageVideoCode);
+        exit(UsageVideoCodeLbl);
     end;
 
     procedure Get70PXIconCode(): Code[50];
     var
-        IconCode: Label 'DXTIME_70PXICON', MaxLength = 50;
+        IconCodeLbl: Label 'DXTIME_70PXICON', MaxLength = 50;
     begin
-        exit(IconCode)
+        exit(IconCodeLbl)
     end;
 
     procedure Get150PXIconCode(): Code[50];
     var
-        IconCode: Label 'DXTIME_150PXICON', MaxLength = 50;
+        IconCodeLbl: Label 'DXTIME_150PXICON', MaxLength = 50;
     begin
-        exit(IconCode)
+        exit(IconCodeLbl)
     end;
 
     procedure Get240PXIconCode(): Code[50];
     var
-        IconCode: Label 'DXTIME_240PXICON', MaxLength = 50;
+        IconCodeLbl: Label 'DXTIME_240PXICON', MaxLength = 50;
     begin
-        exit(IconCode)
+        exit(IconCodeLbl)
     end;
 
     procedure Get250PXIconCode(): Code[50];
     var
-        IconCode: Label 'DXTIME_250PXICON', MaxLength = 50;
+        IconCodeLbl: Label 'DXTIME_250PXICON', MaxLength = 50;
     begin
-        exit(IconCode)
+        exit(IconCodeLbl)
     end;
 
     procedure Get417PXIconCode(): Code[50];
     var
-        IconCode: Label 'DXTIME_417PXICON', MaxLength = 50;
+        IconCodeLbl: Label 'DXTIME_417PXICON', MaxLength = 50;
     begin
-        exit(IconCode)
+        exit(IconCodeLbl)
     end;
 
     local procedure InitAssistedSetupHelpPageUrl();
     var
-        SetupHelpUrl: Label 'https://dynamicsuser.net/isv/dxs/w', Locked = true;
+        SetupHelpUrlLbl: Label 'https://dynamicsuser.net/isv/dxs/w', MaxLength = 250, Locked = true;
     begin
-        InitUrl(GetSetupHelpCode(), SetupHelpUrl);
+        InitUrl(GetSetupHelpCode(), SetupHelpUrlLbl);
     end;
 
     local procedure InitAssistedSetupEmbedVideoUrl();
     var
-        SetupVideoUrl: Label 'https://www.youtube.com/embed/TYo1ZJ5jizs', Locked = true;
+        SetupVideoUrlLbl: Label 'https://www.youtube.com/embed/TYo1ZJ5jizs', MaxLength = 250, Locked = true;
     begin
-        InitUrl(GetSetupVideoCode(), SetupVideoUrl);
+        InitUrl(GetSetupVideoCode(), SetupVideoUrlLbl);
     end;
 
     local procedure InitUsageHelpPageUrl();
     var
-        UsageHelpUrl: Label 'https://dynamicsuser.net/isv/dxs/w', Locked = true;
+        UsageHelpUrlLbl: Label 'https://dynamicsuser.net/isv/dxs/w', MaxLength = 250, Locked = true;
     begin
-        InitUrl(GetUsageHelpCode(), UsageHelpUrl);
+        InitUrl(GetUsageHelpCode(), UsageHelpUrlLbl);
     end;
 
     local procedure InitUsageHelpEmbedVideoUrl();
     var
-        UsageVideoUrl: Label 'https://www.youtube.com/embed/Xj5TATt7Pns', Locked = true;
+        UsageVideoUrlLbl: Label 'https://www.youtube.com/embed/Xj5TATt7Pns', MaxLength = 250, Locked = true;
     begin
-        InitUrl(GetUsageVideoCode(), UsageVideoUrl);
+        InitUrl(GetUsageVideoCode(), UsageVideoUrlLbl);
     end;
 
     local procedure InitIcon70x70();
     var
         TempBlob: Record TempBlob;
-        IconDescription: Label 'DXS Time Icon 70x70';
         DxTimeIcon: Codeunit "DXS.Time Icon 70x70";
+        IconDescriptionLbl: Label 'DXS Time Icon 70x70';
     begin
         DxTimeIcon.GetIcon(TempBlob);
-        InitIcon(Get70PXIconCode(), IconDescription, TempBlob);
+        InitIcon(Get70PXIconCode(), IconDescriptionLbl, TempBlob);
     end;
 
     local procedure InitIcon150x150();
     var
         TempBlob: Record TempBlob;
-        IconDescription: Label 'DXS Time Icon 150x150';
         DxTimeIcon: Codeunit "DXS.Time Icon 150x150";
+        IconDescriptionLbl: Label 'DXS Time Icon 150x150';
     begin
         DxTimeIcon.GetIcon(TempBlob);
-        InitIcon(Get150PXIconCode(), IconDescription, TempBlob);
+        InitIcon(Get150PXIconCode(), IconDescriptionLbl, TempBlob);
     end;
 
     local procedure InitIcon240x240();
     var
         TempBlob: Record TempBlob;
-        IconDescription: Label 'DXS Time Icon 240x240';
         DxTimeIcon: Codeunit "DXS.Time Icon 240x240";
+        IconDescriptionLbl: Label 'DXS Time Icon 240x240';
     begin
         DxTimeIcon.GetIcon(TempBlob);
-        InitIcon(Get240PXIconCode(), IconDescription, TempBlob);
+        InitIcon(Get240PXIconCode(), IconDescriptionLbl, TempBlob);
     end;
 
     local procedure InitIcon250x250();
     var
         TempBlob: Record TempBlob;
-        IconDescription: Label 'DXS Time Icon 250x250';
         DxTimeIcon: Codeunit "DXS.Time Icon 250x250";
+        IconDescriptionLbl: Label 'DXS Time Icon 250x250';
     begin
         DxTimeIcon.GetIcon(TempBlob);
-        InitIcon(Get250PXIconCode(), IconDescription, TempBlob);
+        InitIcon(Get250PXIconCode(), IconDescriptionLbl, TempBlob);
     end;
 
     local procedure InitIcon417x417();
     var
         TempBlob: Record TempBlob;
-        IconDescription: Label 'DXS Time Icon 417x417';
         DxTimeIcon: Codeunit "DXS.Time Icon 417x417";
+        IconDescriptionLbl: Label 'DXS Time Icon 417x417';
     begin
         DxTimeIcon.GetIcon(TempBlob);
-        InitIcon(Get417PXIconCode(), IconDescription, TempBlob);
+        InitIcon(Get417PXIconCode(), IconDescriptionLbl, TempBlob);
     end;
 
-    local procedure InitUrl(UrlCode: Code[50]; UrlLink: Text);
+    local procedure InitUrl(UrlCode: Code[50]; UrlLink: Text[250]);
     var
         DxTimeHelpResource: Record "DXS.Time Help Resource";
     begin

@@ -1,7 +1,7 @@
 codeunit 62008 "DXS.Time Data Migration"
 {
     var
-        UpdateSetupPermissionSet: Label 'TIME-ENTRY-SETUP';
+        UpdateSetupPermissionSetLbl: Label 'TIME-ENTRY-SETUP', MaxLength = 20;
 
     procedure MigrateFromNAV2017();
     begin
@@ -30,21 +30,21 @@ codeunit 62008 "DXS.Time Data Migration"
         with DXSJobLedgerEntry do begin
             Open(Database::"Job Ledger Entry");
             CurrRecNo := 0;
-            NoOfRecords := Count;
+            NoOfRecords := Count();
             If NoOfRecords < 1 then exit;
-            if GuiAllowed then
+            if GuiAllowed() then
                 UpdateWindow.Open(UpdatingLbl, CurrRecNo, NoOfRecords);
             FindSet();
             repeat
-                if GuiAllowed then begin
+                if GuiAllowed() then begin
                     CurrRecNo += 1;
                     UpdateWindow.Update(1);
                 end;
-                if JobLedgerEntry.Get(Field(1).Value) then begin
+                if JobLedgerEntry.Get(Field(1).Value()) then begin
                     xJobLedgerEntry := JobLedgerEntry;
                     if Format(Field(80010).Value()) <> FORMAT(0T) then begin
-                        JobLedgerEntry."DXS.Start Time" := Field(80010).Value();
-                        JobLedgerEntry."DXS.Start Date Time" := CreateDateTime(JobLedgerEntry."Posting Date", JobLedgerEntry."DXS.Start Time");
+                        JobLedgerEntry."DXS Start Time" := Field(80010).Value();
+                        JobLedgerEntry."DXS.Start Date Time" := CreateDateTime(JobLedgerEntry."Posting Date", JobLedgerEntry."DXS Start Time");
                     end;
                     if Format(Field(80011).Value()) <> FORMAT(0T) then begin
                         JobLedgerEntry."DXS.End Time" := Field(80011).Value();
@@ -71,27 +71,27 @@ codeunit 62008 "DXS.Time Data Migration"
         with DXSJobPlaningLine do begin
             Open(Database::"Job Planning Line");
             CurrRecNo := 0;
-            NoOfRecords := Count;
+            NoOfRecords := Count();
             If NoOfRecords < 1 then exit;
-            if GuiAllowed then
+            if GuiAllowed() then
                 UpdateWindow.Open(UpdatingLbl, CurrRecNo, NoOfRecords);
             FindSet();
             repeat
-                if GuiAllowed then begin
+                if GuiAllowed() then begin
                     CurrRecNo += 1;
                     UpdateWindow.Update(1);
                 end;
-                if JobPlanningLine.Get(Field(2).Value, Field(1000).Value, Field(1).Value) then begin
+                if JobPlanningLine.Get(Field(2).Value(), Field(1000).Value(), Field(1).Value()) then begin
                     xJobPlanningLine := JobPlanningLine;
                     if Format(Field(80010).Value()) <> FORMAT(0T) then begin
-                        JobPlanningLine.Validate("DXS.Start Time", Field(80010).Value());
-                        JobPlanningLine."DXS.Start Time" := Field(80010).Value();
-                        JobPlanningLine."DXS.Start Date Time" := CreateDateTime(JobPlanningLine."Planning Date", JobPlanningLine."DXS.Start Time");
+                        JobPlanningLine.Validate("DXS Start Time", Field(80010).Value());
+                        JobPlanningLine."DXS Start Time" := Field(80010).Value();
+                        JobPlanningLine."DXS Start Date Time" := CreateDateTime(JobPlanningLine."Planning Date", JobPlanningLine."DXS Start Time");
                     end;
                     if Format(Field(80011).Value()) <> FORMAT(0T) then begin
-                        JobPlanningLine."DXS.End Time" := Field(80011).Value();
-                        JobPlanningLine."DXS.End Date Time" := CreateDateTime(JobPlanningLine."Planning Date", JobPlanningLine."DXS.End Time");
-                        JobPlanningLine."DXS.Total Duration" := JobPlanningLine."DXS.End Date Time" - JobPlanningLine."DXS.Start Date Time";
+                        JobPlanningLine."DXS End Time" := Field(80011).Value();
+                        JobPlanningLine."DXS.End Date Time" := CreateDateTime(JobPlanningLine."Planning Date", JobPlanningLine."DXS End Time");
+                        JobPlanningLine."DXS.Total Duration" := JobPlanningLine."DXS.End Date Time" - JobPlanningLine."DXS Start Date Time";
                     end;
                     if Format(JobPlanningLine) <> Format(xJobPlanningLine) then
                         JobPlanningLine.Modify(false);
@@ -109,7 +109,7 @@ codeunit 62008 "DXS.Time Data Migration"
             if IsEmpty() then exit;
             FindSet();
             repeat
-                AddUserAccess("User Security ID", UpdateSetupPermissionSet);
+                AddUserAccess("User Security ID", UpdateSetupPermissionSetLbl);
             until Next() = 0;
         end;
     end;

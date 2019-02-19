@@ -224,6 +224,7 @@ page 62001 "DXS.Time Entry Setup Wizard"
         MediaRepositoryDone: Record "Media Repository";
         MediaResourcesStandard: Record "Media Resources";
         MediaResourcesDone: Record "Media Resources";
+        TempUnitOfMeasure: Record "Unit of Measure" temporary;
         Step: Option Start,HourlyUnitsStep,UnitOfMeasureStep,MultiDayStep,Finish;
         LastStep: Option Start,HourlyUnitsStep,UnitOfMeasureStep,MultiDayStep,Finish;
         HasHourlyUnitsOfMeasure: Boolean;
@@ -239,7 +240,6 @@ page 62001 "DXS.Time Entry Setup Wizard"
         FinishActionEnabled: Boolean;
         BackActionEnabled: Boolean;
         NextActionEnabled: Boolean;
-        TempUnitOfMeasure: Record "Unit of Measure" temporary;
         NoHourlyUnitsSelectedErr: Label 'You have not selected any hourly units of measures. Please select at least one, before you continue.';
         SetupNotCompleteQst: Label 'DXS Time Entry setup have not been completed.\\Are you sure you want to exit?';
 
@@ -270,15 +270,15 @@ page 62001 "DXS.Time Entry Setup Wizard"
 
         case Step of
             Step::Start:
-                ShowStartStep;
+                ShowStartStep();
             Step::HourlyUnitsStep:
-                ShowHourlyUnitsStep;
+                ShowHourlyUnitsStep();
             Step::UnitOfMeasureStep:
-                ShowUnitOfMeasureStep;
+                ShowUnitOfMeasureStep();
             Step::MultiDayStep:
-                ShowMultiDayStep;
+                ShowMultiDayStep();
             Step::Finish:
-                ShowFinishStep;
+                ShowFinishStep();
         end;
     end;
 

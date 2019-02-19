@@ -5,6 +5,7 @@ tableextension 62006 "DXS.Res. Journal Line" extends "Res. Journal Line"
         field(62000; "DXS.Start Time"; Time)
         {
             Caption = 'Start Time';
+            DataClassification = CustomerContent;
             trigger OnValidate();
             var
                 HourlyUnitHandler: Codeunit "DXS.Hourly Unit Handler";
@@ -20,6 +21,7 @@ tableextension 62006 "DXS.Res. Journal Line" extends "Res. Journal Line"
         field(62001; "DXS.End Time"; Time)
         {
             Caption = 'End Time';
+            DataClassification = CustomerContent;
             trigger OnValidate();
             var
                 HourlyUnitHandler: Codeunit "DXS.Hourly Unit Handler";
@@ -39,6 +41,7 @@ tableextension 62006 "DXS.Res. Journal Line" extends "Res. Journal Line"
         field(62003; "DXS.Start Date Time"; DateTime)
         {
             Caption = 'Start Date Time';
+            DataClassification = CustomerContent;
             trigger OnValidate();
             var
                 HourlyUnitHandler: Codeunit "DXS.Hourly Unit Handler";
@@ -59,6 +62,7 @@ tableextension 62006 "DXS.Res. Journal Line" extends "Res. Journal Line"
         field(62004; "DXS.End Date Time"; DateTime)
         {
             Caption = 'End Date Time';
+            DataClassification = CustomerContent;
             trigger OnValidate();
             var
                 HourlyUnitHandler: Codeunit "DXS.Hourly Unit Handler";
@@ -81,6 +85,7 @@ tableextension 62006 "DXS.Res. Journal Line" extends "Res. Journal Line"
         field(62005; "DXS.Total Duration"; Duration)
         {
             Caption = 'Total Duration';
+            DataClassification = CustomerContent;
             trigger OnValidate();
             var
                 UnitOfMeasure: Record "Unit of Measure";

@@ -7,16 +7,16 @@ codeunit 62012 "DXS.Time Notification Handler"
     var
         NoSetupNotificationLbl: Label 'DXS Time Entry extension is not enabled';
         NoSetupNotificationMsg: Label 'The DXS Time Entry extension to allow entry of start and end times has been installed, but it has not been setup and enabled.';
-        NoSetupNotificationAct: Label 'Enable now.';
-        NoSetupNotificationName: Label 'DXS Time Entry extension is not enabled.';
-        NoSetupNotificationDesc: Label 'Warns if the DXS Time Entry extension has been installed, but not been setup and enabled.';
+        NoSetupNotificationActLbl: Label 'Enable now.';
+        NoSetupNotificationNameLbl: Label 'DXS Time Entry extension is not enabled.', MaxLength = 128;
+        NoSetupNotificationDescLbl: Label 'Warns if the DXS Time Entry extension has been installed, but not been setup and enabled.';
         NoHourUnitOfMeasureNotificationLbl: Label 'No Hourly Unit Setup';
         NoHourUnitOfMeasureNotificationMsg: Label 'No Hourly Unit of Measure Codes have been setup to support time based entry.';
-        NoHourUnitOfMeasureSetupAct: Label 'Select or create hourly based Unit of Measure codes.';
-        NoHourUnitOfMeasureSetupName: Label 'DXS Time Entry - Hourly Unit of Measure Setup missing.';
-        NoHourUnitOfMeasureSetupDesc: Label 'Warns if no Hourly Unit of Measure codes have been setup.';
-        WatchVideoNotificationAct: Label 'Watch video help.';
-        DismissFurtherNotificationsAct: Label 'Dont show this message again.';
+        NoHourUnitOfMeasureSetupActLbl: Label 'Select or create hourly based Unit of Measure codes.';
+        NoHourUnitOfMeasureSetupNameLbl: Label 'DXS Time Entry - Hourly Unit of Measure Setup missing.', MaxLength = 128;
+        NoHourUnitOfMeasureSetupDescLbl: Label 'Warns if no Hourly Unit of Measure codes have been setup.';
+        WatchVideoNotificationActLbl: Label 'Watch video help.';
+        DismissFurtherNotificationsActLbl: Label 'Dont show this message again.';
 
     procedure CreateSetupNotificationIfNoSetup();
     var
@@ -39,16 +39,16 @@ codeunit 62012 "DXS.Time Notification Handler"
             Id := GetNoSetupNotificationId();
             Message := NoSetupNotificationMsg;
             Scope := Scope(NotificationScope::LocalScope);
-            AddAction(NoSetupNotificationAct, Codeunit::"DXS.Time Notification Handler", 'RunAssistedSetup');
-            AddAction(DismissFurtherNotificationsAct, Codeunit::"DXS.Time Notification Handler", 'DismissNotification');
+            AddAction(NoSetupNotificationActLbl, Codeunit::"DXS.Time Notification Handler", 'RunAssistedSetup');
+            AddAction(DismissFurtherNotificationsActLbl, Codeunit::"DXS.Time Notification Handler", 'DismissNotification');
             Send();
         end;
     end;
 
     procedure CreateNotificationIfInvalidRegistration();
     var
-        TimePermissionHandler: Codeunit "DXS.Time Permission Handler";
         TimeEntrySetup: Record "DXS.Time Entry Setup";
+        TimePermissionHandler: Codeunit "DXS.Time Permission Handler";
     begin
         if not TimePermissionHandler.IsSetupEnabled() then exit;
         if not TimeEntrySetup.ValidateRegistration() then
@@ -66,16 +66,16 @@ codeunit 62012 "DXS.Time Notification Handler"
             Id := GetNoSetupNotificationId();
             Message := NoSetupNotificationMsg;
             Scope := NotificationScope::LocalScope;
-            AddAction(NoSetupNotificationAct, Codeunit::"DXS.Time Notification Handler", 'RunAssistedSetup');
-            AddAction(DismissFurtherNotificationsAct, Codeunit::"DXS.Time Notification Handler", 'DismissNotification');
+            AddAction(NoSetupNotificationActLbl, Codeunit::"DXS.Time Notification Handler", 'RunAssistedSetup');
+            AddAction(DismissFurtherNotificationsActLbl, Codeunit::"DXS.Time Notification Handler", 'DismissNotification');
             Send();
         end;
     end;
 
     procedure CreateHourlyNotificationIfNoSetup();
     var
-        TimePermissionHandler: Codeunit "DXS.Time Permission Handler";
         TimeEntrySetup: Record "DXS.Time Entry Setup";
+        TimePermissionHandler: Codeunit "DXS.Time Permission Handler";
         HourlyUnitHandler: Codeunit "DXS.Hourly Unit Handler";
     begin
         if not TimePermissionHandler.IsSetupEnabled() then exit;
@@ -96,8 +96,8 @@ codeunit 62012 "DXS.Time Notification Handler"
             Id := GetNoHourUnitOfMeasureNotificationId();
             Message := NoHourUnitOfMeasureNotificationMsg;
             Scope := NotificationScope::LocalScope;
-            AddAction(NoHourUnitOfMeasureSetupAct, Codeunit::"DXS.Time Notification Handler", 'RunSetupHourUnitOfMeasure');
-            AddAction(DismissFurtherNotificationsAct, Codeunit::"DXS.Time Notification Handler", 'DismissNotification');
+            AddAction(NoHourUnitOfMeasureSetupActLbl, Codeunit::"DXS.Time Notification Handler", 'RunSetupHourUnitOfMeasure');
+            AddAction(DismissFurtherNotificationsActLbl, Codeunit::"DXS.Time Notification Handler", 'DismissNotification');
             Send();
         end;
     end;
@@ -142,14 +142,14 @@ codeunit 62012 "DXS.Time Notification Handler"
     var
         MyNotifications: Record "My Notifications";
     begin
-        MyNotifications.InsertDefault(GetNoSetupNotificationId(), NoSetupNotificationName, NoSetupNotificationDesc, TurnOn);
+        MyNotifications.InsertDefault(GetNoSetupNotificationId(), NoSetupNotificationNameLbl, NoSetupNotificationDescLbl, TurnOn);
     end;
 
     procedure NoHourUnitOfMeasureNotificationDefaultState(TurnOn: Boolean);
     var
         MyNotifications: Record "My Notifications";
     begin
-        MyNotifications.InsertDefault(GetNoHourUnitOfMeasureNotificationId(), NoHourUnitOfMeasureSetupName, NoHourUnitOfMeasureSetupDesc, TurnOn);
+        MyNotifications.InsertDefault(GetNoHourUnitOfMeasureNotificationId(), NoHourUnitOfMeasureSetupNameLbl, NoHourUnitOfMeasureSetupDescLbl, TurnOn);
     end;
 
     local procedure GetNoHourUnitOfMeasureNotificationId(): Guid;

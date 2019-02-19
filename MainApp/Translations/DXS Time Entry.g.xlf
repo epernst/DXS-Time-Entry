@@ -3,1115 +3,1115 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="DXS Time Entry">
     <body>
       <group id="body">
-        <trans-unit id="Table 284112499 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Time Entry Setup</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Primary Key</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Primary Key - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Primary Key - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 3103924496 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 3103924496 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>App Enabled</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field App Enabled - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field App Enabled - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 3164394312 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 3164394312 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hourly Units Only</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Hourly Units Only - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Hourly Units Only - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 3471255111 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 3471255111 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Allow Entries to Pass Midnight</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Allow Entries to Pass Midnight - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Allow Entries to Pass Midnight - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 3471255111 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 3471255111 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
           <source>No,Yes - Next Day,Yes - Multiple Days</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Allow Entries to Pass Midnight - Property OptionCaption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Allow Entries to Pass Midnight - Property OptionCaption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 764527443 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 764527443 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Fields To Show</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Fields To Show - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Fields To Show - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 764527443 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 764527443 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
           <source>Times,Date and Times,Both,Mix</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Fields To Show - Property OptionCaption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Fields To Show - Property OptionCaption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 483798663 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 483798663 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show Start Times</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Show Start Times - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Show Start Times - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 826663310 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 826663310 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show End Times</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Show End Times - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Show End Times - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 3247912144 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 3247912144 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show Start Date-Times</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Show Start Date-Times - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Show Start Date-Times - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 34218621 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 34218621 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show End Date-Times</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Show End Date-Times - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Show End Date-Times - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 590631399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 590631399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Installation Date Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Installation Date Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Installation Date Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 2035572686 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 2035572686 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Last Update Date Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Last Update Date Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Last Update Date Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 3972932123 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 3972932123 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>First Enabled Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Enabled Date - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Enabled Date - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Status</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Status - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Status - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 513339096 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 513339096 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
           <source>Not Completed,Completed,Not Started,Seen,Watched,Read, </source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Status - Property OptionCaption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Status - Property OptionCaption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 2839332712 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 2839332712 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Default Time Rounding</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Default Time Rounding - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Default Time Rounding - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 661833578 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 661833578 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Registration E-Mail Address</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Registration E-Mail Address - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Registration E-Mail Address - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 155626315 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 155626315 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Installation Id</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Installation Id - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Installation Id - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 1635236888 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 1635236888 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Registration Id</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Registration Id - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Registration Id - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 1413240321 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 1413240321 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Next Registration Verification</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Next Registration Verification - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Next Registration Verification - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - Field 260970101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - Field 260970101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Current Version</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - Field Current Version - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - Field Current Version - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - NamedType 3820715896" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - NamedType 3820715896" size-unit="char" translate="yes" xml:space="preserve">
           <source>You need to setup at least one unit of measure as an Hourly Unit, before you can enable the Time Entry App.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - NamedType NoHourlyUnitsCannotEnableErr</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - NamedType NoHourlyUnitsCannotEnableErr</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - NamedType 3032302345" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - NamedType 3032302345" size-unit="char" translate="yes" xml:space="preserve">
           <source>You need to enter a valid email adress, before you can enable the app.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - NamedType NoRegistrationEmailAddressErr</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - NamedType NoRegistrationEmailAddressErr</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - NamedType 2283111442" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - NamedType 2283111442" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 must be specified when %2 is selected. For example 0.25 will round to 15 minutes.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - NamedType RoundingMustBeEnteredErr</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - NamedType RoundingMustBeEnteredErr</note>
         </trans-unit>
-        <trans-unit id="Table 284112499 - NamedType 1884663683" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 732841769 - NamedType 1884663683" size-unit="char" translate="yes" xml:space="preserve">
           <source>Changing the %1, without changing the assosicated %2, may cause the app to stop working.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeEntrySetup - NamedType ChangeRegistrationQst</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Entry Setup - NamedType ChangeRegistrationQst</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXS Time Entry Setup</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Control General - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Control General - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Control 3103924496 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Control 3103924496 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Enables the app. If not enabled, then the start and end times cannot be entered and will to be shown.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Control App Enabled - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Control App Enabled - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Control 3164394312 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Control 3164394312 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Allow only time entry on lines using unit of measure codes marked as "Hourly Units".</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Control Hourly Units Only - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Control Hourly Units Only - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Control 2839332712 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Control 2839332712 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specify how to round start and end time based entries. For example enter 0.25 to have 15 minutes as the minimum time to use. The field is mandatory if "Hourly Units Only" has not been selected.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Control Default Time Rounding - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Control Default Time Rounding - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Control 3471255111 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Control 3471255111 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>May a ending time pass midnigth, or may stretch over multiple days?</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Control Allow Entries to Pass Midnight - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Control Allow Entries to Pass Midnight - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Control 764527443 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Control 764527443 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Which start and end times should be visible? Only regular times (i.e. 12:00) or Date-Times. If you allow entries to pass midnight or stretch over mulitiple days, then Date-Times are recommended.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Control Fields To Show - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Control Fields To Show - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Control 3094895897 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Control 3094895897 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Control ShowMix - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Control ShowMix - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Control 483798663 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Control 483798663 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show Start Times i.e. "8:00 AM".</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Control Show Start Times - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Control Show Start Times - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Control 826663310 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Control 826663310 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show End Times i.e. "6:00 PM".</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Control Show End Times - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Control Show End Times - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Control 3247912144 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Control 3247912144 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show Start Date-Times i.e. "2018-05-12 8:00".</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Control Show Start Date-Times - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Control Show Start Date-Times - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Control 34218621 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Control 34218621 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show Start Date-Times i.e. "2018-05-13 11:00".</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Control Show End Date-Times - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Control Show End Date-Times - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Control 684573827 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Control 684573827 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Registration</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Control Registration - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Control Registration - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Control 661833578 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Control 661833578 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>The Time Entry App will be registered on this E-Mail Address. When registering the registration key will be sent to this E-Mail Address.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Control Registration E-Mail Address - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Control Registration E-Mail Address - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Control 1635236888 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Control 1635236888 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>The registration id will be recived by email, after registration. Without this Id, then the App will remain in trail mode.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Control Registration Id - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Control Registration Id - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Control 1413240321 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Control 1413240321 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows when the registration needs to be renewed.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Control Next Registration Verification - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Control Next Registration Verification - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Action 2143947790 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Action 2143947790 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Upgrade from NAV 2017</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Action DXS UpgradeNAV2017 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Action DXS UpgradeNAV2017 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Action 1883002321 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Action 1883002321 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXS Time Help Resources</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Action DXS HelpResources - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Action DXS HelpResources - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 284112499 - Action 1883002321 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 732841769 - Action 1883002321 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Resources and links used by the app.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetup - Action DXS HelpResources - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup - Action DXS HelpResources - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Table 1847026067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1471641889 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXS Time Help Resource</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeHelpResource - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Help Resource - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1847026067 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1471641889 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeHelpResource - Field Code - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Help Resource - Field Code - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1847026067 - Field 4165234317 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1471641889 - Field 4165234317 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Url</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeHelpResource - Field Url - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Help Resource - Field Url - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1847026067 - Field 4036313429 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1471641889 - Field 4036313429 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Icon</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table DXS TimeHelpResource - Field Icon - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DXS.Time Help Resource - Field Icon - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Codeunit 4191302925 - NamedType 1325720567" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1105331271 - NamedType 1325720567" size-unit="char" translate="yes" xml:space="preserve">
           <source>The end time must be on the same date as the start date-time.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeChecker - NamedType EndTimeNotTodayErr</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Checker - NamedType EndTimeNotTodayErr</note>
         </trans-unit>
-        <trans-unit id="Codeunit 4191302925 - NamedType 1696550571" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1105331271 - NamedType 1696550571" size-unit="char" translate="yes" xml:space="preserve">
           <source>You need to create a new line to enter an end time after %1.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeChecker - NamedType EndTimeNotTodayMsg</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Checker - NamedType EndTimeNotTodayMsg</note>
         </trans-unit>
-        <trans-unit id="Codeunit 4191302925 - NamedType 61022435" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1105331271 - NamedType 61022435" size-unit="char" translate="yes" xml:space="preserve">
           <source>The end date-time %1 is too late. It can only be same or next day from %2.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeChecker - NamedType EndTimeNotNextDayErr</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Checker - NamedType EndTimeNotNextDayErr</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3589385688 - NamedType 1683352720" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 772431286 - NamedType 1683352720" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 can only be used with a %2, which have been setup as a "%3".</source>
           <note from="Developer" annotates="general" priority="2">%1-fieldcaption %2-unit of measure table %3-hourly unit</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXSHourlyUnitHandler - NamedType CanOnlyUseWithTypeErr</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Hourly Unit Handler - NamedType CanOnlyUseWithTypeErr</note>
         </trans-unit>
-        <trans-unit id="Codeunit 4089977994 - NamedType 2523365561" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 3244541956 - NamedType 3375422343" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
           <source>TIME-ENTRY-SETUP</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeDataMigration - NamedType UpdateSetupPermissionSet</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Data Migration - NamedType UpdateSetupPermissionSetLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 4089977994 - Method 1636317954 - NamedType 3076612850" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 3244541956 - Method 1636317954 - NamedType 3076612850" size-unit="char" translate="yes" xml:space="preserve">
           <source>Updating Job Ledger Entries\Record #1###### of #2######.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeDataMigration - Method MigrateJobLedgerEntryFields - NamedType UpdatingLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Data Migration - Method MigrateJobLedgerEntryFields - NamedType UpdatingLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 4089977994 - Method 431310760 - NamedType 3076612850" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 3244541956 - Method 431310760 - NamedType 3076612850" size-unit="char" translate="yes" xml:space="preserve">
           <source>Updating Job Planning Lines\Record #1###### of #2######.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeDataMigration - Method MigrateJobPlanningLineFields - NamedType UpdatingLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Data Migration - Method MigrateJobPlanningLineFields - NamedType UpdatingLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3724331285 - NamedType 2223675934" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 2080310343 - NamedType 2223675934" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>Setup DXS Time Entry extension</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeAssistedSetup - NamedType SetupNameLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Assisted Setup - NamedType SetupNameLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3724331285 - NamedType 858110245" maxwidth="250" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 2080310343 - NamedType 858110245" maxwidth="250" size-unit="char" translate="yes" xml:space="preserve">
           <source>Setup the DXS Time Entry extension to allow entry of start and ending times.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeAssistedSetup - NamedType SetupDescriptionLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Assisted Setup - NamedType SetupDescriptionLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3724331285 - NamedType 427376103" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 2080310343 - NamedType 427376103" maxwidth="250" size-unit="char" translate="yes" xml:space="preserve">
           <source>Jobs, Resources, Project Management, Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeAssistedSetup - NamedType SetupKeywordsTxt</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Assisted Setup - NamedType SetupKeywordsTxt</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3724331285 - NamedType 2069865725" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 2080310343 - NamedType 2069865725" size-unit="char" translate="yes" xml:space="preserve">
           <source>You have not been granted required access rights to start the Assisted Setup.\\The Assisted Setup for G/L Source Names is about assigning the required permissions to users.  To be able to assign permissions you need to be granted either the SUPER og SECURITY permission set.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeAssistedSetup - NamedType RequiredPermissionMissingErr</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Assisted Setup - NamedType RequiredPermissionMissingErr</note>
         </trans-unit>
-        <trans-unit id="Codeunit 502987745 - NamedType 11906307" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1526400259 - NamedType 11906307" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXS Time Entry extension is not enabled</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeNotificationHandler - NamedType NoSetupNotificationLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Notification Handler - NamedType NoSetupNotificationLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 502987745 - NamedType 3580538078" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1526400259 - NamedType 3580538078" size-unit="char" translate="yes" xml:space="preserve">
           <source>The DXS Time Entry extension to allow entry of start and end times has been installed, but it has not been setup and enabled.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeNotificationHandler - NamedType NoSetupNotificationMsg</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Notification Handler - NamedType NoSetupNotificationMsg</note>
         </trans-unit>
-        <trans-unit id="Codeunit 502987745 - NamedType 2209600855" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1526400259 - NamedType 2311031097" size-unit="char" translate="yes" xml:space="preserve">
           <source>Enable now.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeNotificationHandler - NamedType NoSetupNotificationAct</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Notification Handler - NamedType NoSetupNotificationActLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 502987745 - NamedType 3560183984" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1526400259 - NamedType 2492358858" maxwidth="128" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXS Time Entry extension is not enabled.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeNotificationHandler - NamedType NoSetupNotificationName</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Notification Handler - NamedType NoSetupNotificationNameLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 502987745 - NamedType 2341522694" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1526400259 - NamedType 1993713772" size-unit="char" translate="yes" xml:space="preserve">
           <source>Warns if the DXS Time Entry extension has been installed, but not been setup and enabled.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeNotificationHandler - NamedType NoSetupNotificationDesc</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Notification Handler - NamedType NoSetupNotificationDescLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 502987745 - NamedType 1254644315" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1526400259 - NamedType 1254644315" size-unit="char" translate="yes" xml:space="preserve">
           <source>No Hourly Unit Setup</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeNotificationHandler - NamedType NoHourUnitOfMeasureNotificationLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Notification Handler - NamedType NoHourUnitOfMeasureNotificationLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 502987745 - NamedType 3210064806" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1526400259 - NamedType 3210064806" size-unit="char" translate="yes" xml:space="preserve">
           <source>No Hourly Unit of Measure Codes have been setup to support time based entry.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeNotificationHandler - NamedType NoHourUnitOfMeasureNotificationMsg</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Notification Handler - NamedType NoHourUnitOfMeasureNotificationMsg</note>
         </trans-unit>
-        <trans-unit id="Codeunit 502987745 - NamedType 1383284001" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1526400259 - NamedType 4155768879" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select or create hourly based Unit of Measure codes.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeNotificationHandler - NamedType NoHourUnitOfMeasureSetupAct</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Notification Handler - NamedType NoHourUnitOfMeasureSetupActLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 502987745 - NamedType 594944330" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1526400259 - NamedType 2251182480" maxwidth="128" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXS Time Entry - Hourly Unit of Measure Setup missing.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeNotificationHandler - NamedType NoHourUnitOfMeasureSetupName</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Notification Handler - NamedType NoHourUnitOfMeasureSetupNameLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 502987745 - NamedType 1868610076" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1526400259 - NamedType 4016910294" size-unit="char" translate="yes" xml:space="preserve">
           <source>Warns if no Hourly Unit of Measure codes have been setup.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeNotificationHandler - NamedType NoHourUnitOfMeasureSetupDesc</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Notification Handler - NamedType NoHourUnitOfMeasureSetupDescLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 502987745 - NamedType 792521069" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1526400259 - NamedType 4019458011" size-unit="char" translate="yes" xml:space="preserve">
           <source>Watch video help.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeNotificationHandler - NamedType WatchVideoNotificationAct</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Notification Handler - NamedType WatchVideoNotificationActLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 502987745 - NamedType 3921350548" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1526400259 - NamedType 203287374" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dont show this message again.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeNotificationHandler - NamedType DismissFurtherNotificationsAct</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Notification Handler - NamedType DismissFurtherNotificationsActLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 245899503 - NamedType 133915093" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 245899503 - NamedType 1558374019" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>SETUPHELP</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method GetSetupHelpCode - NamedType SetupHelpCode</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method GetSetupHelpCode - NamedType SetupHelpCodeLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 2556269663 - NamedType 4131345173" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 2556269663 - NamedType 3634138435" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>SETUPVIDEO</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method GetSetupVideoCode - NamedType SetupVideoCode</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method GetSetupVideoCode - NamedType SetupVideoCodeLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 2471557953 - NamedType 2635079363" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 2471557953 - NamedType 409004485" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>USAGEHELP</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method GetUsageHelpCode - NamedType UsageHelpCode</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method GetUsageHelpCode - NamedType UsageHelpCodeLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 4138924577 - NamedType 2068054355" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 4138924577 - NamedType 3248659861" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>USAGEVIDEO</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method GetUsageVideoCode - NamedType UsageVideoCode</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method GetUsageVideoCode - NamedType UsageVideoCodeLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 2424527569 - NamedType 2197034666" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 2424527569 - NamedType 2646524528" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXTIME_70PXICON</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method Get70PXIconCode - NamedType IconCode</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method Get70PXIconCode - NamedType IconCodeLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 2331078000 - NamedType 2197034666" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 2331078000 - NamedType 2646524528" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXTIME_150PXICON</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method Get150PXIconCode - NamedType IconCode</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method Get150PXIconCode - NamedType IconCodeLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 2571162554 - NamedType 2197034666" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 2571162554 - NamedType 2646524528" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXTIME_240PXICON</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method Get240PXIconCode - NamedType IconCode</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method Get240PXIconCode - NamedType IconCodeLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 1033616249 - NamedType 2197034666" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 1033616249 - NamedType 2646524528" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXTIME_250PXICON</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method Get250PXIconCode - NamedType IconCode</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method Get250PXIconCode - NamedType IconCodeLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 1920203142 - NamedType 2197034666" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 1920203142 - NamedType 2646524528" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXTIME_417PXICON</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method Get417PXIconCode - NamedType IconCode</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method Get417PXIconCode - NamedType IconCodeLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 3844081278 - NamedType 3031047135" size-unit="char" translate="no" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 3844081278 - NamedType 2214866241" maxwidth="250" size-unit="char" translate="no" xml:space="preserve">
           <source>https://dynamicsuser.net/isv/dxs/w</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method InitAssistedSetupHelpPageUrl - NamedType SetupHelpUrl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method InitAssistedSetupHelpPageUrl - NamedType SetupHelpUrlLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 3245760214 - NamedType 2950263455" size-unit="char" translate="no" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 3245760214 - NamedType 1663176065" maxwidth="250" size-unit="char" translate="no" xml:space="preserve">
           <source>https://www.youtube.com/embed/TYo1ZJ5jizs</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method InitAssistedSetupEmbedVideoUrl - NamedType SetupVideoUrl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method InitAssistedSetupEmbedVideoUrl - NamedType SetupVideoUrlLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 1060900626 - NamedType 1032451233" size-unit="char" translate="no" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 1060900626 - NamedType 2035874735" maxwidth="250" size-unit="char" translate="no" xml:space="preserve">
           <source>https://dynamicsuser.net/isv/dxs/w</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method InitUsageHelpPageUrl - NamedType UsageHelpUrl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method InitUsageHelpPageUrl - NamedType UsageHelpUrlLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 1302256473 - NamedType 2565882737" size-unit="char" translate="no" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 1302256473 - NamedType 875327615" maxwidth="250" size-unit="char" translate="no" xml:space="preserve">
           <source>https://www.youtube.com/embed/Xj5TATt7Pns</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method InitUsageHelpEmbedVideoUrl - NamedType UsageVideoUrl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method InitUsageHelpEmbedVideoUrl - NamedType UsageVideoUrlLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 2484516267 - NamedType 1288258319" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 2484516267 - NamedType 3959214897" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXS Time Icon 70x70</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method InitIcon70x70 - NamedType IconDescription</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method InitIcon70x70 - NamedType IconDescriptionLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 3378677603 - NamedType 1288258319" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 3378677603 - NamedType 3959214897" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXS Time Icon 150x150</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method InitIcon150x150 - NamedType IconDescription</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method InitIcon150x150 - NamedType IconDescriptionLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 4000611587 - NamedType 1288258319" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 4000611587 - NamedType 3959214897" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXS Time Icon 240x240</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method InitIcon240x240 - NamedType IconDescription</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method InitIcon240x240 - NamedType IconDescriptionLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 151507459 - NamedType 1288258319" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 151507459 - NamedType 3959214897" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXS Time Icon 250x250</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method InitIcon250x250 - NamedType IconDescription</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method InitIcon250x250 - NamedType IconDescriptionLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2439559442 - Method 1328106787 - NamedType 1288258319" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1547181148 - Method 1328106787 - NamedType 3959214897" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXS Time Icon 417x417</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS TimeResourceHelper - Method InitIcon417x417 - NamedType IconDescription</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit DXS.Time Resource Helper - Method InitIcon417x417 - NamedType IconDescriptionLbl</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Time Entry Setup</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 1781509865 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 1781509865 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control TopBannerStart - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control TopBannerStart - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 3940792929 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 3940792929 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control TopBannersFinish - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control TopBannersFinish - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 1608380974 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 1608380974 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control StartStep - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control StartStep - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 392510610 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 392510610 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Welcome to Time Entry Setup</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control WelcomeToSetup - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control WelcomeToSetup - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 3800514526 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 3800514526 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control Welcome - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control Welcome - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 3800514526 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 3800514526 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>This Time Entry App will allow you to enter Start and End times into job planning lines, job journals or resource journals.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control Welcome - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control Welcome - Property InstructionalText</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 197798452 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 197798452 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control Welcome2 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control Welcome2 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 197798452 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 197798452 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>The app will use the entries to calculate the actual used time as a quantity in hours. The times are posted on the job and resource ledger entries.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control Welcome2 - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control Welcome2 - Property InstructionalText</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 926340698 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 926340698 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Let's go!</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control LetsGo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control LetsGo - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 522249930 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 522249930 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control LetsGoGo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control LetsGoGo - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 522249930 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 522249930 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>This wizard will take you through the setup in just a few steps, and you are ready to use it.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control LetsGoGo - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control LetsGoGo - Property InstructionalText</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 14469630 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 14469630 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control HourlyUnitsStep - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control HourlyUnitsStep - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 1390919282 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 1390919282 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Where to use Start and End times?</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control LimitUse - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control LimitUse - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 1390919282 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 1390919282 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Limit the use of Start and End times to selected hourly units of measure codes?</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control LimitUse - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control LimitUse - Property InstructionalText</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 2486829736 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 2486829736 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control LimitUse2 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control LimitUse2 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 2486829736 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 2486829736 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source> If not selected then Start and End times can be used on all entries. If selected, then on the next step you must specify which unit of measure codes to use.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control LimitUse2 - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control LimitUse2 - Property InstructionalText</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 3035001180 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 3035001180 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control HourlyUnits - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control HourlyUnits - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 4045745568 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 4045745568 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control DefaultTimeRounding - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control DefaultTimeRounding - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 4045745568 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 4045745568 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Please enter need a Time Default Rounding. Default value "0.25" will round up to nearest 15 minute interval. "1" will round up to nearest full hour.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control DefaultTimeRounding - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control DefaultTimeRounding - Property InstructionalText</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 2839332712 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 2839332712 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specify how to round start and end time based entries. For example enter 0.25 to have 15 minutes as the minimum time to use. The field is mandatory if "Hourly Units Only" has not been selected.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control Default Time Rounding - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control Default Time Rounding - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 3692446863 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 3692446863 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Please specify which unit of measure codes to use as "Hourly Units". I have already marked codes which might be hours. </source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control UnitOfMeasureStep - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control UnitOfMeasureStep - Property InstructionalText</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 3692446863 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 3692446863 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control UnitOfMeasureStep - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control UnitOfMeasureStep - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 556009180 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 556009180 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control UnitOfMeasurePart - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control UnitOfMeasurePart - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 1338265257 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 1338265257 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control TimeRounding - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control TimeRounding - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 1338265257 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 1338265257 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hourly Units also need a Time Rounding. Default value "0.25" will round up to nearest 15 minute interval. "1" will round up to nearest full hour.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control TimeRounding - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control TimeRounding - Property InstructionalText</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 1763852465 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 1763852465 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control MultiDayStep - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control MultiDayStep - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 1763852465 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 1763852465 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Do you want to allow times to pass midnight, or be multiple days?</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control MultiDayStep - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control MultiDayStep - Property InstructionalText</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 3094895897 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 3094895897 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control ShowMix - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control ShowMix - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 1471121939 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 1471121939 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control FinishStep - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control FinishStep - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 2630724845 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 2630724845 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control FinishStepInstuction - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control FinishStepInstuction - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 2630724845 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 2630724845 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Only thing left is to Finish. This will enable the app and make it visible to your users.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control FinishStepInstuction - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control FinishStepInstuction - Property InstructionalText</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 3565160585 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 3565160585 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>That's it!</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control ThatsIt - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control ThatsIt - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 4285215846 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 4285215846 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control ThatsItGrp - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control ThatsItGrp - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Control 4285215846 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Control 4285215846 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>To save this setup, choose Finish.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Control ThatsItGrp - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Control ThatsItGrp - Property InstructionalText</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Action 2199703790 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Action 2199703790 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Back</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Action DXS ActionBack - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Action DXS ActionBack - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Action 622932538 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Action 622932538 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Next</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Action DXS ActionNext - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Action DXS ActionNext - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - Action 3041003878 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - Action 3041003878 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Finish</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - Action DXS ActionFinish - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - Action DXS ActionFinish - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - NamedType 65011919" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - NamedType 65011919" size-unit="char" translate="yes" xml:space="preserve">
           <source>You have not selected any hourly units of measures. Please select at least one, before you continue.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - NamedType NoHourlyUnitsSelectedErr</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - NamedType NoHourlyUnitsSelectedErr</note>
         </trans-unit>
-        <trans-unit id="Page 3387114854 - NamedType 1797426583" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1325470152 - NamedType 1797426583" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXS Time Entry setup have not been completed.\\Are you sure you want to exit?</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeEntrySetupWizard - NamedType SetupNotCompleteQst</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Entry Setup Wizard - NamedType SetupNotCompleteQst</note>
         </trans-unit>
-        <trans-unit id="Page 3907366633 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 651782307 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Units Of Measure</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSUnitOfMeasurePart - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Unit Of Measure Part - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3907366633 - NamedType 2197395594" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 651782307 - NamedType 2197395594" size-unit="char" translate="yes" xml:space="preserve">
           <source>HUR</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSUnitOfMeasurePart - NamedType InternationalStandardCodeLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Unit Of Measure Part - NamedType InternationalStandardCodeLbl</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Summary</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 1368504227 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 1368504227 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Journal - This job</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control Journal - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control Journal - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 594946709 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 594946709 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, billable</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control BillableHoursJournal - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control BillableHoursJournal - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 594946709 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 594946709 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of billable hours for this job in this job journal.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control BillableHoursJournal - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control BillableHoursJournal - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 435291776 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 435291776 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, non-billable</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control NonBillableHoursJournal - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control NonBillableHoursJournal - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 435291776 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 435291776 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of non-billable hours for this job in this job journal.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control NonBillableHoursJournal - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control NonBillableHoursJournal - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 2800899053 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 2800899053 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total sales, job</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalSalesJournal - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalSalesJournal - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 2800899053 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 2800899053 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows sales total for this job in this job journal.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalSalesJournal - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalSalesJournal - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 3176013300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 3176013300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total costs, job</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalCost1 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalCost1 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 3176013300 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 3176013300 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the cost total for this job in this job journal.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalCost1 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalCost1 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 901009415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 901009415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total profit, job</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalProfit1 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalProfit1 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 901009415 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 901009415 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the total profit this job in this job journal.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalProfit1 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalProfit1 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 3093833773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 3093833773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price per hour</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control PricePerHour1 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control PricePerHour1 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 3093833773 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 3093833773 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the average price per hour job in this job journal.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control PricePerHour1 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control PricePerHour1 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 1510562767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 1510562767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Usage</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control Usage - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control Usage - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 1023732855 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 1023732855 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, billable</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TimeInvoiceable3 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TimeInvoiceable3 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 1023732855 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 1023732855 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of billable hours previously used for this job.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TimeInvoiceable3 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TimeInvoiceable3 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 322472564 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 322472564 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, not billable</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TimeNonInvoice3 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TimeNonInvoice3 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 322472564 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 322472564 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of non-billable hours previously used for this job.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TimeNonInvoice3 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TimeNonInvoice3 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 4077116427 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 4077116427 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total sales, job</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalSales3 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalSales3 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 4077116427 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 4077116427 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the total sales previously posted for this job.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalSales3 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalSales3 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 156439238 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 156439238 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total costs, job</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalCost3 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalCost3 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 156439238 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 156439238 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the total costs previously posted for this job.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalCost3 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalCost3 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 2176402649 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 2176402649 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total profit, job</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalProfit3 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalProfit3 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 2176402649 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 2176402649 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the total previously posted for this job.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalProfit3 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalProfit3 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 1818440539 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 1818440539 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price per hour</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control PricePerHour3 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control PricePerHour3 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 1818440539 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 1818440539 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the average hourly rate previously used for this job.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control PricePerHour3 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control PricePerHour3 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 245426702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 245426702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Journal - All Jobs</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control Total - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control Total - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 1192641878 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 1192641878 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, billable</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TimeInvoiceable4 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TimeInvoiceable4 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 1192641878 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 1192641878 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of billable hours for, all job in this journal.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TimeInvoiceable4 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TimeInvoiceable4 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 2704350009 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 2704350009 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, not billable</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TimeNonInvoice4 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TimeNonInvoice4 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 2704350009 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 2704350009 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of non-billable hours, for all job in this journal.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TimeNonInvoice4 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TimeNonInvoice4 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 3439419810 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 3439419810 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total sales, job</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalSales4 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalSales4 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 3439419810 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 3439419810 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of total sales, for all job in this journal.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalSales4 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalSales4 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 4282497511 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 4282497511 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total costs, job</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalCost4 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalCost4 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 4282497511 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 4282497511 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of total costs, for all job in this journal.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalCost4 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalCost4 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 4089492500 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 4089492500 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total profit, job</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalProfit4 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalProfit4 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 4089492500 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 4089492500 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the number of total profit, for all job in this journal.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control TotalProfit4 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control TotalProfit4 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 1180743922 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 1180743922 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price per hour</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control PricePerHour4 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control PricePerHour4 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1325510380 - Control 1180743922 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 132395922 - Control 1180743922 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the average hourly rate, for all job in this journal.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXSJobJournalSummaryFactBox - Control PricePerHour4 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.JobJournal Summary FactBox - Control PricePerHour4 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 511865051 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2132499169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Summary</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS JobSummaryFactBox - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Job Summary FactBox - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511865051 - Control 3996203218 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2132499169 - Control 3996203218 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Journal</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS JobSummaryFactBox - Control JobJournal - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Job Summary FactBox - Control JobJournal - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511865051 - Control 158053822 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2132499169 - Control 158053822 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, billable</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS JobSummaryFactBox - Control TimeInvoicableJournal - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Job Summary FactBox - Control TimeInvoicableJournal - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511865051 - Control 4062395002 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2132499169 - Control 4062395002 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, non-billable</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS JobSummaryFactBox - Control TimeNonChargableJournal - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Job Summary FactBox - Control TimeNonChargableJournal - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511865051 - Control 2393736861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2132499169 - Control 2393736861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price per hour</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS JobSummaryFactBox - Control PricePerHourJournal - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Job Summary FactBox - Control PricePerHourJournal - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511865051 - Control 1690309038 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2132499169 - Control 1690309038 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Time Sheets</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS JobSummaryFactBox - Control TimeSheet - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Job Summary FactBox - Control TimeSheet - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511865051 - Control 797442019 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2132499169 - Control 797442019 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, billable</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS JobSummaryFactBox - Control TimeInvoicableTimeSheet - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Job Summary FactBox - Control TimeInvoicableTimeSheet - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511865051 - Control 57250719 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2132499169 - Control 57250719 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, non-billable</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS JobSummaryFactBox - Control TimeNonChargableTimeSheet - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Job Summary FactBox - Control TimeNonChargableTimeSheet - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511865051 - Control 3866586150 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2132499169 - Control 3866586150 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Usage</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS JobSummaryFactBox - Control JobUsage - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Job Summary FactBox - Control JobUsage - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511865051 - Control 796250634 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2132499169 - Control 796250634 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, billable</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS JobSummaryFactBox - Control TimeInvoicableUsage - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Job Summary FactBox - Control TimeInvoicableUsage - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511865051 - Control 3406763362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2132499169 - Control 3406763362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hours, non-billable</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS JobSummaryFactBox - Control TimeNonInvoiceUsage - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Job Summary FactBox - Control TimeNonInvoiceUsage - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511865051 - Control 2958164510 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2132499169 - Control 2958164510 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total sales, job</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS JobSummaryFactBox - Control TotalSales - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Job Summary FactBox - Control TotalSales - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511865051 - Control 3694632347 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2132499169 - Control 3694632347 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total costs, job</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS JobSummaryFactBox - Control TotalCost - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Job Summary FactBox - Control TotalCost - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511865051 - Control 213745400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2132499169 - Control 213745400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total profit, job</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS JobSummaryFactBox - Control TotalProfit - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Job Summary FactBox - Control TotalProfit - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511865051 - Control 1818440539 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2132499169 - Control 1818440539 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price per hour</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS JobSummaryFactBox - Control PricePerHour3 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Job Summary FactBox - Control PricePerHour3 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1510817214 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1655921720 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXS Time Help Resources</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page DXS TimeHelpResources - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DXS.Time Help Resources - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4222884324 - Control 2169532623 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 385121410 - Control 2169532623 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the start time here.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSJobPlanningLines - Control Start Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Job Planning Lines - Control Start Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4222884324 - Control 4240670190 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 385121410 - Control 4240670190 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the end time here.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSJobPlanningLines - Control End Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Job Planning Lines - Control End Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4222884324 - Control 2185728859 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 385121410 - Control 2185728859 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the start date-time here.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSJobPlanningLines - Control Start Date Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Job Planning Lines - Control Start Date Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4222884324 - Control 233366074 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 385121410 - Control 233366074 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the end date-time here.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSJobPlanningLines - Control End Date Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Job Planning Lines - Control End Date Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4222884324 - Control 502811504 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 385121410 - Control 502811504 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries the total duration will show here.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSJobPlanningLines - Control Total Duration - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Job Planning Lines - Control Total Duration - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3552945403 - Control 2169532623 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2195313065 - Control 2169532623 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the start time here.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSJobJournal - Control Start Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Job Journal - Control Start Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3552945403 - Control 4240670190 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2195313065 - Control 4240670190 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the end time here.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSJobJournal - Control End Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Job Journal - Control End Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3552945403 - Control 2185728859 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2195313065 - Control 2185728859 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the start date-time here.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSJobJournal - Control Start Date Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Job Journal - Control Start Date Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3552945403 - Control 233366074 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2195313065 - Control 233366074 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the end date-time here.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSJobJournal - Control End Date Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Job Journal - Control End Date Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3552945403 - Control 502811504 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2195313065 - Control 502811504 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries the total duration will show here.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSJobJournal - Control Total Duration - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Job Journal - Control Total Duration - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3552945403 - Control 1559338389 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2195313065 - Control 1559338389 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows a summery of the current job and a job journal total.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSJobJournal - Control JobJournalSummeryFactBox - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Job Journal - Control JobJournalSummeryFactBox - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1686215270 - Control 3126759025 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 509701824 - Control 3126759025 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Summery</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSJobList - Control Job Summery - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Job List - Control Job Summery - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2928202569 - Control 2169532623 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 1149590603 - Control 2169532623 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>The start time of the entry.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSJobLedgerEntries - Control Start Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Job Ledger Entries - Control Start Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2928202569 - Control 4240670190 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The end time pf the entry.</source>
+        <trans-unit id="PageExtension 1149590603 - Control 4240670190 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The end time of the entry.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSJobLedgerEntries - Control End Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Job Ledger Entries - Control End Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2928202569 - Control 2185728859 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 1149590603 - Control 2185728859 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>The start date and time of the entry.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSJobLedgerEntries - Control Start Date Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Job Ledger Entries - Control Start Date Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2928202569 - Control 233366074 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 1149590603 - Control 233366074 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>The end date and time of the entry.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSJobLedgerEntries - Control End Date Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Job Ledger Entries - Control End Date Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2928202569 - Control 502811504 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 1149590603 - Control 502811504 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>The duration of the entry.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSJobLedgerEntries - Control Total Duration - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Job Ledger Entries - Control Total Duration - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3965053349 - Control 2253295877 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2017395199 - Control 2253295877 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specify if this unit of measure is used as an hourly unit, for entry of start and end times in journals.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSUnitsOfMeasure - Control Hourly Unit - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Units Of Measure - Control Hourly Unit - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3965053349 - Control 1207132617 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2017395199 - Control 1207132617 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specify how to round start and end time based entries. For example enter 0.25 to have 15 minutes as the minimum time to use.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSUnitsOfMeasure - Control Time Rounding - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Units Of Measure - Control Time Rounding - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3965053349 - Action 423656215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2017395199 - Action 423656215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>DXS Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSUnitsOfMeasure - Action DxTimeEntry - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Units Of Measure - Action DxTimeEntry - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3965053349 - Action 1107898519 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2017395199 - Action 786503064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Time Entry Setup</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSUnitsOfMeasure - Action DXS DxTimeEntrySetup - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Units Of Measure - Action DXS.DXS DxTimeEntrySetup - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3965053349 - Action 1107898519 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2017395199 - Action 786503064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show the page setup of the DXS Time Entry App, which handles and enables entry of begin and end times in journals.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSUnitsOfMeasure - Action DXS DxTimeEntrySetup - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Units Of Measure - Action DXS.DXS DxTimeEntrySetup - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4135087264 - Control 2169532623 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 4257442478 - Control 2169532623 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the start time here.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSResourceJournal - Control Start Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Resource Journal - Control Start Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4135087264 - Control 4240670190 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 4257442478 - Control 4240670190 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the end time here.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSResourceJournal - Control End Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Resource Journal - Control End Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4135087264 - Control 2185728859 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 4257442478 - Control 2185728859 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the start date-time here.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSResourceJournal - Control Start Date Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Resource Journal - Control Start Date Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4135087264 - Control 233366074 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 4257442478 - Control 233366074 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries enter the end date-time here.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSResourceJournal - Control End Date Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Resource Journal - Control End Date Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4135087264 - Control 502811504 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 4257442478 - Control 502811504 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>For time based entries the total duration will show here.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSResourceJournal - Control Total Duration - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Resource Journal - Control Total Duration - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1849886742 - Control 2169532623 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2686150752 - Control 365226176 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>The start time of the entry.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSResourceLedgerEntries - Control Start Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Resource Ledger Entries - Control DXS.Start Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1849886742 - Control 4240670190 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The end time pf the entry.</source>
+        <trans-unit id="PageExtension 2686150752 - Control 4240670190 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The end time of the entry.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSResourceLedgerEntries - Control End Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Resource Ledger Entries - Control End Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1849886742 - Control 2185728859 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2686150752 - Control 2185728859 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>The start date and time of the entry.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSResourceLedgerEntries - Control Start Date Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Resource Ledger Entries - Control Start Date Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1849886742 - Control 233366074 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2686150752 - Control 233366074 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>The end date and time of the entry.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSResourceLedgerEntries - Control End Date Time - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Resource Ledger Entries - Control End Date Time - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1849886742 - Control 502811504 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="PageExtension 2686150752 - Control 502811504 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>The duration of the entry.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXSResourceLedgerEntries - Control Total Duration - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DXS.Resource Ledger Entries - Control Total Duration - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="TableExtension 2048834044 - Field 2093840639 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 3634503330 - Field 1103419293 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Invoicable Amount</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSJob - Field DXS Invoicable Amount - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Job - Field DXS.Invoicable Amount - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1525734961 - Field 45291806 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start Time</source>
@@ -1138,130 +1138,125 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSJobJournalLine - Field DXS Total Duration - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3744128109 - Field 45291806 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 1713646199 - Field 45291806 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSJobPlanningLine - Field DXS Start Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Job Planning Line - Field DXS Start Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3744128109 - Field 221580191 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 1713646199 - Field 221580191 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>End Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSJobPlanningLine - Field DXS End Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Job Planning Line - Field DXS End Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3744128109 - Field 2717059658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 1713646199 - Field 2717059658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start Date Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSJobPlanningLine - Field DXS Start Date Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Job Planning Line - Field DXS Start Date Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3744128109 - Field 4120672331 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 1713646199 - Field 1522387121 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>End Date Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSJobPlanningLine - Field DXS End Date Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Job Planning Line - Field DXS.End Date Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3744128109 - Field 3708325501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 1713646199 - Field 2634338415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total Duration</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSJobPlanningLine - Field DXS Total Duration - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Job Planning Line - Field DXS.Total Duration - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 742662291 - Field 45291806 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 1521653393 - Field 45291806 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSJobLedgerEntry - Field DXS Start Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Job Ledger Entry - Field DXS Start Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 742662291 - Field 221580191 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 1521653393 - Field 2083529501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>End Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSJobLedgerEntry - Field DXS End Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Job Ledger Entry - Field DXS.End Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 742662291 - Field 2717059658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 1521653393 - Field 684375844 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start Date Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSJobLedgerEntry - Field DXS Start Date Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Job Ledger Entry - Field DXS.Start Date Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 742662291 - Field 4120672331 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 1521653393 - Field 1522387121 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>End Date Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSJobLedgerEntry - Field DXS End Date Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Job Ledger Entry - Field DXS.End Date Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 742662291 - Field 3708325501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 1521653393 - Field 2634338415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total Duration</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSJobLedgerEntry - Field DXS Total Duration - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Job Ledger Entry - Field DXS.Total Duration - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 1591415444 - Field 2703499456 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 1072849810 - Field 3472112286 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hourly Unit</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSUnitOfMeasure - Field DXS Hourly Unit - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Unit of Measure - Field DXS.Hourly Unit - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 1591415444 - Field 2176312860 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 1072849810 - Field 767146962 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Time Rounding</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSUnitOfMeasure - Field DXS Time Rounding - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Unit of Measure - Field DXS.Time Rounding - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 1591415444 - NamedType 3205819997" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 1072849810 - NamedType 3205819997" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>It is only possible to use %1 with %2's</source>
           <note from="Developer" annotates="general" priority="2">%1-Field caption, %2 Hourly Unit</note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSUnitOfMeasure - NamedType NotHourlyUnitErr</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Unit of Measure - NamedType NotHourlyUnitErr</note>
         </trans-unit>
-        <trans-unit id="TableExtension 1591415444 - NamedType 2283111442" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 1072849810 - NamedType 2283111442" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 must be specified if "%2" is selected. For example 0.25 will round to 15 minutes.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSUnitOfMeasure - NamedType RoundingMustBeEnteredErr</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Unit of Measure - NamedType RoundingMustBeEnteredErr</note>
         </trans-unit>
-        <trans-unit id="TableExtension 967590896 - Field 45291806 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 3836881816 - Field 365226176 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSResJournalLine - Field DXS Start Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Res. Journal Line - Field DXS.Start Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 967590896 - Field 221580191 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 3836881816 - Field 2083529501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>End Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSResJournalLine - Field DXS End Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Res. Journal Line - Field DXS.End Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 967590896 - Field 2717059658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 3836881816 - Field 684375844 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start Date Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSResJournalLine - Field DXS Start Date Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Res. Journal Line - Field DXS.Start Date Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 967590896 - Field 4120672331 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 3836881816 - Field 1522387121 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>End Date Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSResJournalLine - Field DXS End Date Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Res. Journal Line - Field DXS.End Date Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 967590896 - Field 3708325501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 3836881816 - Field 2634338415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total Duration</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSResJournalLine - Field DXS Total Duration - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Res. Journal Line - Field DXS.Total Duration - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3791716022 - Field 45291806 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 675632942 - Field 365226176 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSResLedgerEntry - Field DXS Start Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Res. Ledger Entry - Field DXS.Start Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3791716022 - Field 221580191 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 675632942 - Field 2083529501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>End Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSResLedgerEntry - Field DXS End Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Res. Ledger Entry - Field DXS.End Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3791716022 - Field 540124316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Total Time</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSResLedgerEntry - Field DXS Total Time - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 3791716022 - Field 2717059658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 675632942 - Field 684375844 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start Date Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSResLedgerEntry - Field DXS Start Date Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Res. Ledger Entry - Field DXS.Start Date Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3791716022 - Field 4120672331 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 675632942 - Field 1522387121 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>End Date Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSResLedgerEntry - Field DXS End Date Time - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Res. Ledger Entry - Field DXS.End Date Time - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3791716022 - Field 3708325501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="TableExtension 675632942 - Field 2634338415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total Duration</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXSResLedgerEntry - Field DXS Total Duration - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension DXS.Res. Ledger Entry - Field DXS.Total Duration - Property Caption</note>
         </trans-unit>
       </group>
     </body>

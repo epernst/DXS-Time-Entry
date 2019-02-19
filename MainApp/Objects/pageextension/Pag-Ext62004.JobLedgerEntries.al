@@ -4,7 +4,7 @@ pageextension 62004 "DXS.Job Ledger Entries" extends "Job Ledger Entries"
     {
         addafter("Unit of Measure Code")
         {
-            field("Start Time"; "DXS.Start Time")
+            field("Start Time"; "DXS Start Time")
             {
                 ApplicationArea = All;
                 ToolTip = 'The start time of the entry.';

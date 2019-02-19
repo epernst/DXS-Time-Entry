@@ -17,9 +17,10 @@
   "application": "13.0.0.0",
   "idRange": {
     "from": 62000,
-    "to": 62199
+    "to": 62999
   },
   "showMyCode": true,
   "features": ["TranslationFile"],
-  "target": "Extension"
+  "target": "Extension",
+  "runtime": "2.2"
 }

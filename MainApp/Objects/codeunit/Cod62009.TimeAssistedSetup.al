@@ -4,7 +4,7 @@ codeunit 62009 "DXS.Time Assisted Setup"
         TimeEntrySetup: Record "DXS.Time Entry Setup";
         SetupNameLbl: Label 'Setup DXS Time Entry extension', MaxLength = 50;
         SetupDescriptionLbl: Label 'Setup the DXS Time Entry extension to allow entry of start and ending times.', MaxLength = 250;
-        SetupKeywordsTxt: Label 'Jobs, Resources, Project Management, Time';
+        SetupKeywordsTxt: Label 'Jobs, Resources, Project Management, Time', MaxLength = 250;
         RequiredPermissionMissingErr: Label 'You have not been granted required access rights to start the Assisted Setup.\\The Assisted Setup for G/L Source Names is about assigning the required permissions to users.  To be able to assign permissions you need to be granted either the SUPER og SECURITY permission set.';
 
     [EventSubscriber(ObjectType::Table, Database::"Aggregated Assisted Setup", 'OnRegisterAssistedSetup', '', true, false)]
@@ -104,12 +104,12 @@ codeunit 62009 "DXS.Time Assisted Setup"
         TempBlob.Blob.CREATEINSTREAM(InStr);
     end;
 
-    procedure GetAppName(): Text;
+    procedure GetAppName(): Text[50];
     var
         AppInfo: ModuleInfo;
     begin
         NavApp.GetCurrentModuleInfo(AppInfo);
-        exit(AppInfo.Name());
+        exit(copystr(AppInfo.Name(), 1, 50));
     end;
 
 }

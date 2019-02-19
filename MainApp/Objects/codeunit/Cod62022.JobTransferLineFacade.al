@@ -6,11 +6,11 @@ codeunit 62022 "DXS.Job TransferLine Facade"
         JobJournalLine: Record "Job Journal Line");
     begin
         with JobLedgerEntry do begin
-            "DXS.Start Time" := JobJournalLine."DXS.Start Time";
-            "DXS.End Time" := JobJournalLine."DXS.End Time";
-            "DXS.Start Date Time" := JobJournalLine."DXS.Start Date Time";
-            "DXS.End Date Time" := JobJournalLine."DXS.End Date Time";
-            "DXS.Total Duration" := JobJournalLine."DXS.Total Duration";
+            "DXS Start Time" := JobJournalLine."DXS Start Time";
+            "DXS.End Time" := JobJournalLine."DXS End Time";
+            "DXS.Start Date Time" := JobJournalLine."DXS Start Date Time";
+            "DXS.End Date Time" := JobJournalLine."DXS End Date Time";
+            "DXS.Total Duration" := JobJournalLine."DXS Total Duration";
         end;
     end;
 
@@ -20,11 +20,11 @@ codeunit 62022 "DXS.Job TransferLine Facade"
         JobJournalLine: Record "Job Journal Line");
     begin
         with JobPlanningLine do begin
-            "DXS.Start Time" := JobJournalLine."DXS.Start Time";
-            "DXS.End Time" := JobJournalLine."DXS.End Time";
-            "DXS.Start Date Time" := JobJournalLine."DXS.Start Date Time";
-            "DXS.End Date Time" := JobJournalLine."DXS.End Date Time";
-            "DXS.Total Duration" := JobJournalLine."DXS.Total Duration";
+            "DXS Start Time" := JobJournalLine."DXS Start Time";
+            "DXS End Time" := JobJournalLine."DXS End Time";
+            "DXS Start Date Time" := JobJournalLine."DXS Start Date Time";
+            "DXS.End Date Time" := JobJournalLine."DXS End Date Time";
+            "DXS.Total Duration" := JobJournalLine."DXS Total Duration";
         end;
     end;
 
@@ -34,11 +34,11 @@ codeunit 62022 "DXS.Job TransferLine Facade"
         JobPlanningLine: Record "Job Planning Line");
     begin
         with JobJournalLine do begin
-            "DXS.Start Time" := JobPlanningLine."DXS.Start Time";
-            "DXS.End Time" := JobPlanningLine."DXS.End Time";
-            "DXS.Start Date Time" := JobPlanningLine."DXS.Start Date Time";
-            "DXS.End Date Time" := JobPlanningLine."DXS.End Date Time";
-            "DXS.Total Duration" := JobPlanningLine."DXS.Total Duration";
+            "DXS Start Time" := JobPlanningLine."DXS Start Time";
+            "DXS End Time" := JobPlanningLine."DXS End Time";
+            "DXS Start Date Time" := JobPlanningLine."DXS Start Date Time";
+            "DXS End Date Time" := JobPlanningLine."DXS.End Date Time";
+            "DXS Total Duration" := JobPlanningLine."DXS.Total Duration";
         end;
     end;
 
@@ -48,9 +48,9 @@ codeunit 62022 "DXS.Job TransferLine Facade"
         JobLedgEntry: Record "Job Ledger Entry");
     begin
         with JobPlanningLine do begin
-            "DXS.Start Time" := JobLedgEntry."DXS.Start Time";
-            "DXS.End Time" := JobLedgEntry."DXS.End Time";
-            "DXS.Start Date Time" := JobLedgEntry."DXS.Start Date Time";
+            "DXS Start Time" := JobLedgEntry."DXS Start Time";
+            "DXS End Time" := JobLedgEntry."DXS.End Time";
+            "DXS Start Date Time" := JobLedgEntry."DXS.Start Date Time";
             "DXS.End Date Time" := JobLedgEntry."DXS.End Date Time";
             "DXS.Total Duration" := JobLedgEntry."DXS.Total Duration";
         end;

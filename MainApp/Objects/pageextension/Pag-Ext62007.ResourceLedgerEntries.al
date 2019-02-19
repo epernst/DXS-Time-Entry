@@ -4,7 +4,7 @@ pageextension 62007 "DXS.Resource Ledger Entries" extends "Resource Ledger Entri
     {
         addafter("Unit of Measure Code")
         {
-            field("Start Time"; "DXS.Start Time")
+            field("DXS.Start Time"; "DXS.Start Time")
             {
                 ApplicationArea = All;
                 ToolTip = 'The start time of the entry.';
@@ -15,7 +15,7 @@ pageextension 62007 "DXS.Resource Ledger Entries" extends "Resource Ledger Entri
             field("End Time"; "DXS.End Time")
             {
                 ApplicationArea = All;
-                ToolTip = 'The end time pf the entry.';
+                ToolTip = 'The end time of the entry.';
                 Editable = IsTimeEditable;
                 Enabled = IsTimeEntryEnabled;
                 Visible = IsEndTimeVisible;

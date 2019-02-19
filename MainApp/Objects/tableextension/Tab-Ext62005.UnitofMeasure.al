@@ -5,6 +5,7 @@ tableextension 62005 "DXS.Unit of Measure" extends "Unit of Measure"
         field(62000; "DXS.Hourly Unit"; Boolean)
         {
             Caption = 'Hourly Unit';
+            DataClassification = CustomerContent;
             trigger OnValidate();
             var
                 TimeEntrySetup: Record "DXS.Time Entry Setup";
@@ -20,6 +21,7 @@ tableextension 62005 "DXS.Unit of Measure" extends "Unit of Measure"
         field(62001; "DXS.Time Rounding"; Decimal)
         {
             Caption = 'Time Rounding';
+            DataClassification = CustomerContent;
             trigger OnValidate();
             begin
                 if "DXS.Time Rounding" = xRec."DXS.Time Rounding" then exit;

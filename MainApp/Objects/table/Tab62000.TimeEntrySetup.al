@@ -1,15 +1,19 @@
 table 62000 "DXS.Time Entry Setup"
 {
     Caption = 'Time Entry Setup';
+    DataClassification = CustomerContent;
+
     fields
     {
         field(1; "Primary Key"; Code[10])
         {
             Caption = 'Primary Key';
+            DataClassification = CustomerContent;
         }
         field(2; "App Enabled"; Boolean)
         {
             Caption = 'App Enabled';
+            DataClassification = CustomerContent;
             trigger OnValidate();
             var
                 AssistedSetup: Record "Assisted Setup";
@@ -28,18 +32,21 @@ table 62000 "DXS.Time Entry Setup"
         field(3; "Hourly Units Only"; Boolean)
         {
             Caption = 'Hourly Units Only';
+            DataClassification = CustomerContent;
         }
         field(4; "Allow Entries to Pass Midnight"; Option)
         {
             Caption = 'Allow Entries to Pass Midnight';
             OptionMembers = No,NextDay,MultipleDays;
             OptionCaption = 'No,Yes - Next Day,Yes - Multiple Days';
+            DataClassification = CustomerContent;
         }
         field(5; "Fields To Show"; Option)
         {
             Caption = 'Fields To Show';
             OptionMembers = Times,"Date Times",Both,Mix;
             OptionCaption = 'Times,Date and Times,Both,Mix';
+            DataClassification = CustomerContent;
             trigger OnValidate();
             begin
                 if ("Fields To Show" = xrec."Fields To Show") or
@@ -53,46 +60,54 @@ table 62000 "DXS.Time Entry Setup"
         {
             Caption = 'Show Start Times';
             InitValue = true;
+            DataClassification = CustomerContent;
         }
         field(7; "Show End Times"; Boolean)
         {
             Caption = 'Show End Times';
             InitValue = true;
+            DataClassification = CustomerContent;
         }
         field(8; "Show Start Date-Times"; Boolean)
         {
             Caption = 'Show Start Date-Times';
+            DataClassification = CustomerContent;
         }
         field(9; "Show End Date-Times"; Boolean)
         {
             Caption = 'Show End Date-Times';
+            DataClassification = CustomerContent;
         }
         field(10; "Installation Date Time"; DateTime)
         {
             Caption = 'Installation Date Time';
             Editable = false;
+            DataClassification = CustomerContent;
         }
         field(11; "Last Update Date Time"; DateTime)
         {
             Caption = 'Last Update Date Time';
             Editable = false;
+            DataClassification = CustomerContent;
         }
         field(12; "Enabled Date"; DateTime)
         {
             Caption = 'First Enabled Date';
             Editable = false;
+            DataClassification = CustomerContent;
         }
         field(13; "Status"; Option)
         {
             Caption = 'Status';
             OptionCaption = 'Not Completed,Completed,Not Started,Seen,Watched,Read, ';
             OptionMembers = "Not Completed",Completed,"Not Started",Seen,Watched,Read," ";
+            DataClassification = CustomerContent;
         }
         field(20; "Default Time Rounding"; Decimal)
         {
             Caption = 'Default Time Rounding';
             InitValue = 0.25;
-
+            DataClassification = CustomerContent;
             trigger OnValidate();
             begin
                 if ("Default Time Rounding" = 0) and (not "Hourly Units Only") then
@@ -102,6 +117,7 @@ table 62000 "DXS.Time Entry Setup"
         field(30; "Registration E-Mail Address"; Text[50])
         {
             Caption = 'Registration E-Mail Address';
+            DataClassification = CustomerContent;
             trigger OnValidate();
             begin
                 if "Registration E-Mail Address" = xRec."Registration E-Mail Address" then exit;
@@ -114,6 +130,7 @@ table 62000 "DXS.Time Entry Setup"
         field(31; "Installation Id"; Guid)
         {
             Caption = 'Installation Id';
+            DataClassification = CustomerContent;
             trigger OnValidate();
             begin
                 ValidateRegistration();
@@ -122,6 +139,7 @@ table 62000 "DXS.Time Entry Setup"
         field(32; "Registration Id"; Guid)
         {
             Caption = 'Registration Id';
+            DataClassification = CustomerContent;
             trigger OnValidate();
             begin
                 ValidateRegistration();
@@ -129,6 +147,7 @@ table 62000 "DXS.Time Entry Setup"
         }
         field(33; "Next Registration Verification"; DateTime)
         {
+            DataClassification = CustomerContent;
             Caption = 'Next Registration Verification';
             Editable = false;
         }
@@ -136,6 +155,7 @@ table 62000 "DXS.Time Entry Setup"
         {
             Caption = 'Current Version';
             Editable = false;
+            DataClassification = CustomerContent;
         }
     }
     keys
